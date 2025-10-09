@@ -129,7 +129,7 @@ filterBtns.forEach(btn => {
     });
 });
 
-// Contact Form Submission
+// Contact Form Submission with Mailto
 const contactForm = document.getElementById('contactForm');
 
 contactForm.addEventListener('submit', function(e) {
@@ -148,41 +148,39 @@ contactForm.addEventListener('submit', function(e) {
     // Simple validation
     if (name && email && subject && message) {
         // Show loading state
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Preparing Email...';
         submitBtn.disabled = true;
         
-        // Create FormData object
-        const formData = new FormData();
-        formData.append('name', name);
-        formData.append('email', email);
-        formData.append('subject', subject);
-        formData.append('message', message);
+        // Encode the form data for the mailto URL
+        const encodedSubject = encodeURIComponent(`Portfolio Contact: ${subject}`);
+        const encodedBody = encodeURIComponent(
+            `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n\n---\nThis message was sent from your portfolio website.`
+        );
         
-        // AJAX request to PHP backend
-        fetch('send-email.php', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                // Success message
-                showNotification(data.message, 'success');
-                contactForm.reset();
-            } else {
-                // Error message
-                showNotification(data.message, 'error');
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            showNotification('An error occurred while sending your message. Please try again.', 'error');
-        })
-        .finally(() => {
+        // Create mailto URL
+        const mailtoUrl = `mailto:high.dee.dev@gmail.com?subject=${encodedSubject}&body=${encodedBody}`;
+        
+        // Show notification
+        showNotification('Opening your email client... Please check your default email application.', 'info');
+        
+        // Small delay to show the loading state
+        setTimeout(() => {
+            // Open the default email client
+            window.location.href = mailtoUrl;
+            
+            // Reset form
+            contactForm.reset();
+            
             // Reset button state
             submitBtn.innerHTML = originalBtnText;
             submitBtn.disabled = false;
-        });
+            
+            // Show success notification after a delay
+            setTimeout(() => {
+                showNotification('Email client opened! Please send the pre-filled email to complete your message.', 'success');
+            }, 1000);
+            
+        }, 1500);
         
     } else {
         showNotification('Please fill in all fields.', 'error');
@@ -192,102 +190,54 @@ contactForm.addEventListener('submit', function(e) {
 // Notification function
 function showNotification(message, type) {
     // Remove existing notifications
-    const existingNotification = document.querySelector('.form-notification');
+    const existingNotification = document.querySelector('.mailto-notification');
     if (existingNotification) {
         existingNotification.remove();
     }
     
     // Create notification element
     const notification = document.createElement('div');
-    notification.className = `form-notification alert alert-${type === 'success' ? 'success' : 'danger'} mt-3`;
+    notification.className = `mailto-notification ${type === 'error' ? 'error' : ''}`;
+    
+    let icon = 'fa-info-circle';
+    if (type === 'success') icon = 'fa-check-circle';
+    if (type === 'error') icon = 'fa-exclamation-circle';
+    if (type === 'info') icon = 'fa-envelope';
+    
     notification.innerHTML = `
-        <div class="d-flex align-items-center">
-            <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'} me-2"></i>
-            <span>${message}</span>
-        </div>
+        <i class="fas ${icon}"></i>
+        <span>${message}</span>
     `;
     
-    // Add styles for notification
-    notification.style.cssText = `
-        position: relative;
-        padding: 15px;
-        border-radius: 8px;
-        margin-top: 20px;
-        animation: slideIn 0.3s ease;
-    `;
+    // Add to page
+    document.body.appendChild(notification);
     
-    // Insert after the form
-    contactForm.appendChild(notification);
-    
-    // Auto-remove success notifications after 5 seconds
-    if (type === 'success') {
+    // Auto-remove after 7 seconds for success/info, or when clicked for errors
+    if (type === 'success' || type === 'info') {
         setTimeout(() => {
-            notification.style.animation = 'slideOut 0.3s ease';
-            setTimeout(() => {
-                if (notification.parentNode) {
-                    notification.remove();
-                }
-            }, 300);
-        }, 5000);
+            if (notification.parentNode) {
+                notification.style.animation = 'slideInRight 0.3s ease reverse';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.remove();
+                    }
+                }, 300);
+            }
+        }, 7000);
     }
     
-    // Add click to dismiss for error messages
-    if (type === 'error') {
-        notification.style.cursor = 'pointer';
-        notification.addEventListener('click', () => {
-            notification.style.animation = 'slideOut 0.3s ease';
+    // Add click to dismiss for all notifications
+    notification.addEventListener('click', () => {
+        if (notification.parentNode) {
+            notification.style.animation = 'slideInRight 0.3s ease reverse';
             setTimeout(() => {
                 if (notification.parentNode) {
                     notification.remove();
                 }
             }, 300);
-        });
-    }
+        }
+    });
 }
-
-// Add CSS animations for notifications
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes slideIn {
-        from {
-            opacity: 0;
-            transform: translateY(-10px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-    
-    @keyframes slideOut {
-        from {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        to {
-            opacity: 0;
-            transform: translateY(-10px);
-        }
-    }
-    
-    .form-notification {
-        border: none;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-    
-    .alert-success {
-        background-color: #d1fae5;
-        color: #065f46;
-        border-left: 4px solid #10b981;
-    }
-    
-    .alert-danger {
-        background-color: #fee2e2;
-        color: #991b1b;
-        border-left: 4px solid #ef4444;
-    }
-`;
-document.head.appendChild(style);
 
 // Intersection Observer for animations
 const observerOptions = {
