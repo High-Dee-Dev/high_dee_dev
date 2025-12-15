@@ -1,0 +1,1003 @@
+/* 
+============================================
+HighDeeDev Portfolio - Main Stylesheet
+============================================
+Description: Premium full-stack developer portfolio
+Version: 1.0
+Author: High Dee Dev
+============================================
+*/
+
+/* ============================================
+   CSS Reset & Base Styles
+============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-color: #fff;
+}
+
+/* Headings use Poppins font for premium look */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+/* Section spacing utility */
+section {
+    padding: 80px 0;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 60px 0;
+    }
+}
+
+/* ============================================
+   Color Palette & Theme Variables
+============================================ */
+:root {
+    /* Primary Colors - Navy Blue Theme */
+    --primary-color: #0a192f;
+    --primary-dark: #020c1b;
+    --primary-light: #112240;
+    
+    /* Accent Colors */
+    --accent-color: #64ffda;
+    --accent-light: #a8ffec;
+    
+    /* Neutral Colors */
+    --light-color: #f8f9fa;
+    --dark-color: #333;
+    --gray-color: #6c757d;
+    --light-gray: #e9ecef;
+    
+    /* Utility Colors */
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --info-color: #17a2b8;
+}
+
+/* ============================================
+   Typography Styles
+============================================ */
+.text-gradient {
+    background: linear-gradient(90deg, #0050c7, var(--info-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--gray-color);
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+/* ============================================
+   Navigation Styles
+============================================ */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled {
+    padding: 0.7rem 0;
+    background-color: rgba(10, 25, 47, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: white !important;
+}
+
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    margin: 0 0.2rem;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--accent-color) !important;
+}
+
+/* ============================================
+   Hero Section Styles
+============================================ */
+.hero {
+    background: linear-gradient(135deg, rgba(10, 25, 47, 0.5) 0%, rgba(2, 12, 27, 0.5) 100%), 
+                url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    min-height: 100vh;
+    padding-top: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* For project images, update these selectors: */
+.project-image {
+    height: 200px;
+    background: linear-gradient(45deg, rgba(10, 25, 47, 0.5), rgba(17, 34, 64, 0.5)), 
+                url('../images/project-1.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* For project-2.jpg */
+[data-category="fullstack react"] .project-image,
+[data-category="fullstack react"] .project-image-large {
+    background: linear-gradient(45deg, rgba(10, 25, 47, 0.5), rgba(17, 34, 64, 0.5)), 
+                url('../images/project-2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* For project-3.jpg */
+[data-category="fullstack laravel"]:nth-child(3) .project-image,
+[data-category="fullstack laravel"]:nth-child(3) .project-image-large {
+    background: linear-gradient(45deg, rgba(10, 25, 47, 0.5), rgba(17, 34, 64, 0.5)), 
+                url('../images/project-3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* For project-4.jpg */
+[data-category="frontend"] .project-image,
+[data-category="frontend"] .project-image-large {
+    background: linear-gradient(45deg, rgba(10, 25, 47, 0.5), rgba(17, 34, 64, 0.5)), 
+                url('../images/project-4.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    max-width: 600px;
+}
+
+.hero-buttons {
+    margin-top: 2rem;
+}
+
+.hero-image {
+    position: relative;
+    animation: float 6s ease-in-out infinite;
+}
+
+.profile-img {
+    margin-top: 20px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 50%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    transition: .5s ease-in all;
+}
+
+.profile-img:hover{
+    border: 5px solid white;
+}
+
+/* Code animation in hero */
+.code-animation {
+    width: 300px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.code-line {
+    height: 12px;
+    background: rgba(100, 255, 218, 0.3);
+    margin-bottom: 10px;
+    border-radius: 2px;
+    animation: codeTyping 3s ease-in-out infinite;
+}
+
+.code-line:nth-child(1) { width: 80%; animation-delay: 0s; }
+.code-line:nth-child(2) { width: 60%; animation-delay: 0.3s; }
+.code-line:nth-child(3) { width: 90%; animation-delay: 0.6s; }
+.code-line:nth-child(4) { width: 70%; animation-delay: 0.9s; }
+
+@keyframes codeTyping {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+}
+
+/* ============================================
+   Skills Preview Section
+============================================ */
+.skills-preview {
+    background-color: white;
+}
+
+.skill-card {
+    text-align: center;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.skill-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+    color: white;
+}
+
+.skill-icon.frontend {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+}
+
+.skill-icon.backend {
+    background: linear-gradient(45deg, #f46b45, #eea849);
+}
+
+.skill-icon.database {
+    background: linear-gradient(45deg, #134e5e, #71b280);
+}
+
+.skill-icon.tools {
+    background: linear-gradient(45deg, #8e2de2, #4a00e0);
+}
+
+.skill-card h5 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+/* ============================================
+   Projects Preview Section
+============================================ */
+.projects-preview {
+    background-color: var(--light-gray);
+}
+
+.project-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+    height: 200px;
+    background: linear-gradient(45deg, var(--primary-color), var(--primary-light));
+    position: relative;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-content h4 {
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+}
+
+.project-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: var(--accent-color);
+}
+
+.project-link i {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.project-link:hover i {
+    transform: translateX(5px);
+}
+
+/* ============================================
+   CTA Section Styles
+============================================ */
+.cta {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: white;
+    text-align: center;
+}
+
+.cta h2 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+/* ============================================
+   Footer Styles
+============================================ */
+.footer {
+    background-color: var(--primary-dark);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-brand {
+    color: white !important;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.social-link {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* ============================================
+   Scroll to Top Button
+============================================ */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-top-btn.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top-btn:hover {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+/* ============================================
+   About Page Specific Styles
+============================================ */
+.about-hero {
+    background: linear-gradient(135deg, rgba(10, 25, 47, 0.5) 0%, rgba(2, 12, 27, 0.5) 100%), 
+                url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    min-height: 80vh;
+    padding-top: 100px;
+}
+
+.profile-avatar {
+    position: relative;
+}
+
+.avatar-circle {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: rgba(100, 255, 218, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border: 3px solid var(--accent-color);
+}
+
+.avatar-circle i {
+    font-size: 8rem;
+    color: var(--accent-color);
+}
+
+.highlight-box {
+    background: rgba(100, 255, 218, 0.1);
+    border-left: 4px solid var(--accent-color);
+    border-radius: 5px;
+}
+
+/* Skill bars in About page */
+.skill-category {
+    color: var(--primary-color);
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--light-gray);
+}
+
+.progress {
+    height: 10px;
+    background-color: var(--light-gray);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: var(--accent-color);
+    transition: width 1s ease-in-out;
+}
+
+.soft-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.soft-skill-badge {
+    background: var(--light-gray);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+.approach-card {
+    padding: 2rem;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.approach-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.approach-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin: 0 auto;
+}
+
+/* ============================================
+   Projects Page Specific Styles
+============================================ */
+.projects-hero {
+    background: linear-gradient(135deg, rgba(10, 25, 47, 0.5) 0%, rgba(2, 12, 27, 0.5) 100%), 
+                url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    min-height: 50vh;
+    padding-top: 100px;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.filter-btn {
+    padding: 8px 20px;
+    background: white;
+    border: 2px solid var(--light-gray);
+    border-radius: 30px;
+    color: var(--gray-color);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.project-card-full {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.project-card-full:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.project-image-large {
+    height: 250px;
+    background: linear-gradient(45deg, var(--primary-color), var(--primary-light));
+    position: relative;
+}
+
+.project-content-full {
+    padding: 2rem;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-tag {
+    background: var(--light-gray);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+/* ============================================
+   Services Page Specific Styles
+============================================ */
+.services-hero {
+    background: linear-gradient(135deg, rgba(10, 25, 47, 0.5) 0%, rgba(2, 12, 27, 0.5) 100%), 
+                url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    min-height: 50vh;
+    padding-top: 100px;
+}
+
+.service-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+    position: relative;
+}
+
+.service-card.featured {
+    border: 2px solid var(--accent-color);
+    transform: scale(1.05);
+}
+
+.service-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent-color);
+    color: var(--primary-color);
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto;
+}
+
+.service-card h3 {
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.service-features {
+    list-style: none;
+    padding: 0;
+}
+
+.service-features li {
+    margin-bottom: 0.5rem;
+    padding-left: 0;
+}
+
+.service-features li i {
+    color: var(--accent-color);
+}
+
+.process-timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.process-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--accent-color);
+}
+
+.process-step {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.step-number {
+    position: absolute;
+    left: -40px;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.step-content {
+    padding-left: 30px;
+}
+
+.testimonial-card {
+    background: white;
+    border-radius: 10px;
+    padding: 3rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-author h5 {
+    color: var(--primary-color);
+    margin-bottom: 0.2rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+}
+
+.carousel-control-prev {
+    left: -25px;
+}
+
+.carousel-control-next {
+    right: -25px;
+}
+
+.faq .accordion-button {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.faq .accordion-button:not(.collapsed) {
+    background-color: rgba(100, 255, 218, 0.1);
+    color: var(--primary-color);
+}
+
+.faq-preview .faq-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    height: 100%;
+}
+
+/* ============================================
+   Contact Page Specific Styles
+============================================ */
+.contact-hero {
+    background: linear-gradient(135deg, rgba(10, 25, 47, 0.5) 0%, rgba(2, 12, 27, 0.5) 100%), 
+                url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    min-height: 50vh;
+    padding-top: 100px;
+}
+
+.contact-form-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.info-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.info-content h5 {
+    color: var(--primary-color);
+    margin-bottom: 0.3rem;
+}
+
+.info-content a {
+    color: var(--gray-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.info-content a:hover {
+    color: var(--accent-color);
+}
+
+.social-link-large {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link-large:hover {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+/* Form styles */
+.form-control,
+.form-select {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--light-gray);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.25rem rgba(100, 255, 218, 0.25);
+}
+
+/* ============================================
+   Button Styles
+============================================ */
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.btn-light {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.btn-light:hover {
+    background-color: var(--light-gray);
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.btn-lg {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+/* ============================================
+   Responsive Styles
+============================================ */
+@media (max-width: 992px) {
+    .service-card.featured {
+        transform: none;
+    }
+    
+    .carousel-control-prev {
+        left: 0;
+    }
+    
+    .carousel-control-next {
+        right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .avatar-circle {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .avatar-circle i {
+        font-size: 6rem;
+    }
+    
+    .service-card,
+    .contact-form-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .filter-buttons {
+        gap: 5px;
+    }
+    
+    .filter-btn {
+        padding: 6px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .hero-buttons .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-buttons .btn:last-child {
+        margin-bottom: 0;
+    }
+}

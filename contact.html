@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact High Dee Dev for web development projects, consultations, or collaborations. Get in touch today.">
+    <title>Contact | High Dee Dev</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-code me-2"></i>HighDeeDev
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-5 fw-bold mb-4">Let's <span class="text-gradient">Build Something</span> Together</h1>
+                    <p class="lead">Have a project in mind? I'd love to hear about it. Get in touch and let's discuss how we can work together.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Information -->
+                <div class="col-lg-5 mb-5 mb-lg-0">
+                    <h2 class="mb-4">Get In Touch</h2>
+                    <p class="mb-4">I'm currently available for new projects and collaborations. Whether you have a specific project in mind or just want to explore possibilities, feel free to reach out.</p>
+                    
+                    <div class="contact-info mb-5">
+                        <div class="info-item d-flex mb-4">
+                            <div class="info-icon me-3">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <h5>Email</h5>
+                                <a href="mailto:mailto:high.dee.dev@gmail.com">mailto:high.dee.dev@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item d-flex mb-4">
+                            <div class="info-icon me-3">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="info-content">
+                                <h5>Phone</h5>
+                                <a href="tel:+2349011686965">+234 901 168 6965</a>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item d-flex mb-4">
+                            <div class="info-icon me-3">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h5>Based In</h5>
+                                <p>Available for remote work worldwide</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h5 class="mb-3">Connect With Me</h5>
+                        <div class="d-flex">
+                            <a href="https://github.com/High1Dee" target="_blank" class="social-link-large me-3">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/high-dee-025332309" target="_blank" class="social-link-large me-3">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://x.com/HighDeeDev" target="_blank" class="social-link-large me-3">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://codepen.io" target="_blank" class="social-link-large">
+                                <i class="fab fa-codepen"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="col-lg-7">
+                    <div class="contact-form-card">
+                        <h3 class="mb-4">Send a Message</h3>
+                        
+                        <form id="contactForm" novalidate>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label">First Name *</label>
+                                    <input type="text" class="form-control" id="firstName" required>
+                                    <div class="invalid-feedback">
+                                        Please provide your first name.
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName">
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" id="email" required>
+                                <div class="invalid-feedback">
+                                    Please provide a valid email address.
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject *</label>
+                                <select class="form-select" id="subject" required>
+                                    <option value="" selected disabled>Select a subject</option>
+                                    <option value="web-development">Web Development Project</option>
+                                    <option value="consultation">Consultation Request</option>
+                                    <option value="maintenance">Maintenance & Support</option>
+                                    <option value="collaboration">Collaboration Opportunity</option>
+                                    <option value="other">Other Inquiry</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select a subject.
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                                <div class="invalid-feedback">
+                                    Please enter your message.
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="newsletter">
+                                    <label class="form-check-label" for="newsletter">
+                                        Subscribe to my newsletter for web development tips and updates
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                                </button>
+                            </div>
+                            
+                            <div id="formSuccess" class="alert alert-success mt-3 d-none" role="alert">
+                                Your message has been sent successfully! I'll get back to you within 24 hours.
+                            </div>
+                            
+                            <div id="formError" class="alert alert-danger mt-3 d-none" role="alert">
+                                There was an error sending your message. Please try again or email me directly at mailto:high.dee.dev@gmail.com
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Preview Section -->
+    <section class="faq-preview py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col">
+                    <h2 class="section-title text-center">Common Questions</h2>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="faq-item">
+                                <h5><i class="fas fa-question-circle me-2 text-primary"></i>How quickly will you respond?</h5>
+                                <p class="mb-0">I typically respond to inquiries within 24 hours on business days.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="faq-item">
+                                <h5><i class="fas fa-question-circle me-2 text-primary"></i>Do you offer free consultations?</h5>
+                                <p class="mb-0">Yes, I offer a free 30-minute consultation to discuss your project needs.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="faq-item">
+                                <h5><i class="fas fa-question-circle me-2 text-primary"></i>What information should I include?</h5>
+                                <p class="mb-0">Please include your project goals, timeline, and budget if available.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="faq-item">
+                                <h5><i class="fas fa-question-circle me-2 text-primary"></i>Do you work with international clients?</h5>
+                                <p class="mb-0">Yes, I work with clients from all over the world remotely.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 mb-3 mb-lg-0">
+                    <a class="footer-brand fw-bold" href="index.html">
+                        <i class="fas fa-code me-2"></i>HighDeeDev
+                    </a>
+                    <p class="mt-2 small">Building premium web solutions since 2021</p>
+                </div>
+                <div class="col-lg-4 mb-3 mb-lg-0 text-center">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item">
+                            <a href="https://github.com/High1Dee" target="_blank" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.linkedin.com/in/high-dee-025332309" target="_blank" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://x.com/HighDeeDev" target="_blank" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="mailto:mailto:high.dee.dev@gmail.com" class="social-link">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <p class="mb-0 small">&copy; <script>document.write(new Date().getFullYear());</script> High Dee Dev. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" class="scroll-top-btn">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Contact Form Validation JS -->
+    <script>
+        // Contact form validation and submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            const formSuccess = document.getElementById('formSuccess');
+            const formError = document.getElementById('formError');
+            
+            // Validate form on submit
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                event.stopPropagation();
+                
+                // Check if form is valid
+                if (!contactForm.checkValidity()) {
+                    contactForm.classList.add('was-validated');
+                    return;
+                }
+                
+                // Form is valid - simulate submission
+                // In a real implementation, this would send data to a server
+                
+                // Hide any previous messages
+                formSuccess.classList.add('d-none');
+                formError.classList.add('d-none');
+                
+                // Simulate API call delay
+                setTimeout(function() {
+                    // For demo purposes, always show success
+                    // In production, you would handle actual submission and show appropriate message
+                    formSuccess.classList.remove('d-none');
+                    
+                    // Reset form
+                    contactForm.reset();
+                    contactForm.classList.remove('was-validated');
+                    
+                    // Scroll to success message
+                    formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>
