@@ -1,0 +1,36 @@
+{
+  "name": "agencypro-template",
+  "version": "1.0.0",
+  "description": "Modern one-page template for agencies and small businesses",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server dist",
+    "build": "npm run clean && npm run copy && npm run optimize-images",
+    "clean": "rimraf dist",
+    "copy": "copyfiles -u 1 src/**/* dist/",
+    "optimize-images": "imagemin src/assets/img/* --out-dir=dist/assets/img",
+    "lint:html": "htmlhint dist/*.html",
+    "lint:css": "stylelint dist/assets/css/*.css",
+    "lint:js": "eslint dist/assets/js/*.js",
+    "test": "npm run lint:html && npm run lint:css && npm run lint:js",
+    "deploy": "npm run build && npm run test"
+  },
+  "keywords": [
+    "template",
+    "bootstrap",
+    "agency",
+    "business",
+    "one-page"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "eslint": "^8.44.0",
+    "htmlhint": "^1.1.4",
+    "imagemin-cli": "^7.0.0",
+    "live-server": "^1.2.2",
+    "rimraf": "^5.0.1",
+    "stylelint": "^15.10.1"
+  }
+}
