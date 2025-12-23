@@ -1,0 +1,60 @@
+<svg width="200" height="50" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c17c54"/>
+      <stop offset="100%" stop-color="#8b4513"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Logo Icon -->
+  <g transform="translate(0, 5)">
+    <!-- Plate/Circle Base -->
+    <circle cx="20" cy="20" r="15" fill="none" stroke="url(#logoGradient)" stroke-width="2"/>
+    
+    <!-- Utensil Icons -->
+    <!-- Fork -->
+    <g transform="translate(8, 12)">
+      <rect x="0" y="0" width="1.5" height="12" fill="url(#logoGradient)"/>
+      <rect x="0" y="0" width="6" height="1.5" fill="url(#logoGradient)"/>
+      <rect x="0" y="3" width="6" height="1.5" fill="url(#logoGradient)"/>
+      <rect x="0" y="6" width="6" height="1.5" fill="url(#logoGradient)"/>
+    </g>
+    
+    <!-- Knife -->
+    <g transform="translate(22, 12)">
+      <rect x="0" y="0" width="1.5" height="12" fill="url(#logoGradient)"/>
+      <path d="M 1.5,0 L 6,6 L 1.5,12 Z" fill="url(#logoGradient)"/>
+    </g>
+    
+    <!-- Spoon -->
+    <g transform="translate(30, 12)">
+      <rect x="0" y="0" width="1.5" height="8" fill="url(#logoGradient)"/>
+      <ellipse cx="0.75" cy="10" rx="3" ry="2" fill="url(#logoGradient)"/>
+    </g>
+  </g>
+  
+  <!-- Restaurant Name -->
+  <g transform="translate(45, 15)">
+    <!-- Bistro Text -->
+    <text x="0" y="20" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="url(#logoGradient)">
+      Bistro
+    </text>
+    
+    <!-- Elegante Text -->
+    <text x="75" y="20" font-family="Georgia, serif" font-size="24" font-weight="normal" fill="url(#logoGradient)">
+      Elegante
+    </text>
+    
+    <!-- Tagline -->
+    <text x="0" y="35" font-family="Arial, sans-serif" font-size="8" font-weight="normal" fill="#666">
+      MODERN DINING EXPERIENCE
+    </text>
+  </g>
+  
+  <!-- Decorative Elements -->
+  <g transform="translate(170, 5)">
+    <!-- Leaf/Herb decorative element -->
+    <path d="M 10,15 Q 15,5 20,15 Q 15,25 10,15 Z" fill="url(#logoGradient)" opacity="0.7"/>
+    <path d="M 15,10 Q 20,0 25,10 Q 20,20 15,10 Z" fill="url(#logoGradient)" opacity="0.5"/>
+  </g>
+</svg>
