@@ -79,8 +79,8 @@ body {
   color: var(--text);
   margin: 0 !important;
   background-color: var(--bg);
-  overflow-x: hidden !important;
   max-width: 100vw !important;
+  overflow-x: hidden !important;
 }
 
 .btn-outline-primary:active, .btn-outline-primary:focus, .btn-outline-primary:hover, .btn-light:active, .btn-light:focus, .btn-light:hover {
@@ -696,3 +696,4 @@ h5 { font-size: var(--h5); }
   100% { transform: rotate(360deg); }
 
 }
+
