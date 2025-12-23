@@ -339,6 +339,7 @@ h5 { font-size: var(--h5); }
 /* Footer */
 .footer {
   padding: var(--space-xxl) 0 var(--space-lg);
+  margin: 0 !important;
 }
 
 .footer a {
@@ -683,6 +684,7 @@ h5 { font-size: var(--h5); }
   100% { transform: rotate(360deg); }
 
 }
+
 
 
 
