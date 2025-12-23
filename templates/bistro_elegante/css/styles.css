@@ -71,7 +71,6 @@
 * {
   margin: 0 !important;
   padding: 0 !important;
-  overflow-x: hidden;
 }
 
 body {
@@ -700,6 +699,7 @@ h5 { font-size: var(--h5); }
   100% { transform: rotate(360deg); }
 
 }
+
 
 
 
