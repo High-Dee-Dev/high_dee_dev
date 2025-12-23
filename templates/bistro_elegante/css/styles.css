@@ -599,7 +599,10 @@ h5 { font-size: var(--h5); }
     --h2: 1.75rem;
     --h3: 1.25rem;
   }
-
+  *{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
   body{
     overflow-x: hidden !important;
   }
@@ -684,6 +687,7 @@ h5 { font-size: var(--h5); }
   100% { transform: rotate(360deg); }
 
 }
+
 
 
 
