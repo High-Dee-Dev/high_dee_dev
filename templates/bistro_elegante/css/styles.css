@@ -249,7 +249,7 @@ h5 { font-size: var(--h5); }
   left: 0;
   right: 0;
   width: 100%;
-  max-width: 100vw !important;
+  max-width: 100% !important;
   background: var(--bg);
   padding: var(--space-sm);
   box-shadow: var(--shadow-lg);
@@ -696,5 +696,6 @@ h5 { font-size: var(--h5); }
   100% { transform: rotate(360deg); }
 
 }
+
 
 
