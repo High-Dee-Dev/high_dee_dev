@@ -1,0 +1,214 @@
+<!--
+Thoughtful Reads - Footer Component
+This component contains the site footer with links, newsletter signup, and social media.
+Customize the links, contact information, and social media profiles as needed.
+-->
+
+<footer class="site-footer pt-5">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Brand and Description -->
+            <div class="col-lg-4 col-md-6">
+                <a href="index.html" class="footer-brand d-block mb-3">
+                    <i class="fas fa-book-open me-2" aria-hidden="true"></i>Thoughtful Reads
+                </a>
+                <p class="text-light mb-4">
+                    We bring you thoughtful takes, practical guides, and stories from people who've been there. 
+                    Read, subscribe, and join the conversation.
+                </p>
+                <div class="social-links">
+                    <a href="#" aria-label="Follow us on Twitter">
+                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" aria-label="Follow us on Facebook">
+                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" aria-label="Follow us on Instagram">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" aria-label="Follow us on LinkedIn">
+                        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" aria-label="Subscribe to our YouTube channel">
+                        <i class="fab fa-youtube" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-lg-2 col-md-6">
+                <h5 class="text-white mb-3">Explore</h5>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="category.html?cat=productivity">Productivity</a></li>
+                    <li><a href="category.html?cat=technology">Technology</a></li>
+                    <li><a href="category.html?cat=lifestyle">Lifestyle</a></li>
+                </ul>
+            </div>
+
+            <!-- Categories -->
+            <div class="col-lg-2 col-md-6">
+                <h5 class="text-white mb-3">Categories</h5>
+                <ul class="footer-links">
+                    <li><a href="category.html?cat=health">Health & Wellness</a></li>
+                    <li><a href="category.html?cat=business">Business</a></li>
+                    <li><a href="category.html?cat=travel">Travel</a></li>
+                    <li><a href="category.html?cat=personal">Personal Growth</a></li>
+                    <li><a href="category.html?cat=relationships">Relationships</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter Signup -->
+            <div class="col-lg-4 col-md-6">
+                <h5 class="text-white mb-3">Stay Updated</h5>
+                <p class="text-light mb-3">Get the latest articles and insights delivered to your inbox.</p>
+                <form class="newsletter-form">
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Your email address" 
+                               aria-label="Email address for newsletter" required>
+                        <button class="btn btn-primary" type="submit" aria-label="Subscribe to newsletter">
+                            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </form>
+                <p class="small text-light opacity-75 mb-0">
+                    <i class="fas fa-shield-alt me-1" aria-hidden="true"></i>
+                    We respect your privacy. Unsubscribe at any time.
+                </p>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom mt-5">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-light mb-0 small">
+                        &copy; 2024 Thoughtful Reads. All rights reserved.
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item">
+                            <a href="privacy.html" class="text-light text-decoration-none small">Privacy Policy</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <span class="text-light opacity-50">•</span>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="terms.html" class="text-light text-decoration-none small">Terms of Service</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <span class="text-light opacity-50">•</span>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="contact.html" class="text-light text-decoration-none small">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Back to Top Button -->
+<button class="btn back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up" aria-hidden="true"></i>
+</button>
+
+<style>
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 1rem;
+        right: 1rem;
+        width: 45px;
+        height: 45px;
+    }
+}
+</style>
+
+<script>
+// Back to top functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const backToTopButton = document.querySelector('.back-to-top');
+    
+    if (backToTopButton) {
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        // Scroll to top when clicked
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+    
+    // Footer newsletter form handling
+    const footerNewsletterForm = document.querySelector('.site-footer .newsletter-form');
+    if (footerNewsletterForm) {
+        footerNewsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const emailInput = this.querySelector('input[type="email"]');
+            const email = emailInput.value.trim();
+            
+            if (email) {
+                // Simulate successful subscription
+                const originalButtonText = this.querySelector('button').innerHTML;
+                this.querySelector('button').innerHTML = '<i class="fas fa-check"></i>';
+                this.querySelector('button').disabled = true;
+                
+                setTimeout(() => {
+                    this.reset();
+                    this.querySelector('button').innerHTML = originalButtonText;
+                    this.querySelector('button').disabled = false;
+                    
+                    // Show success message
+                    const successMessage = document.createElement('div');
+                    successMessage.className = 'alert alert-success mt-2 small';
+                    successMessage.textContent = 'Thank you for subscribing!';
+                    this.appendChild(successMessage);
+                    
+                    setTimeout(() => {
+                        successMessage.remove();
+                    }, 5000);
+                }, 1500);
+            }
+        });
+    }
+});
+</script>
