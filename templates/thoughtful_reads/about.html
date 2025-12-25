@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Thoughtful Reads | Our Story & Mission</title>
+    <meta name="description" content="Learn about Thoughtful Reads - our mission to deliver insightful content, our team of passionate writers, and our commitment to quality journalism.">
+    
+    <!-- Preload important resources -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <noscript>
+        <script src="https://kit.fontawesome.com/8140dd2669.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+    </noscript>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "About Thoughtful Reads",
+        "description": "Our mission to deliver insightful content and our team of passionate writers",
+        "url": "/about.html",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Thoughtful Reads",
+            "description": "Premium blog and magazine publishing insightful content"
+        }
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <!-- Site Logo/Brand -->
+                <a class="navbar-brand" href="index.html" aria-label="Thoughtful Reads - Home">
+                    <i class="fas fa-book-open me-2" aria-hidden="true"></i>Thoughtful Reads
+                </a>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" 
+                        aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Main Navigation -->
+                <div class="collapse navbar-collapse" id="navbarMain">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" 
+                            aria-expanded="false" aria-haspopup="true">
+                                Categories
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="category.html?cat=productivity">Productivity</a></li>
+                                <li><a class="dropdown-item" href="category.html?cat=technology">Technology</a></li>
+                                <li><a class="dropdown-item" href="category.html?cat=lifestyle">Lifestyle</a></li>
+                                <li><a class="dropdown-item" href="category.html?cat=health">Health & Wellness</a></li>
+                                <li><a class="dropdown-item" href="category.html?cat=business">Business</a></li>
+                                <li><a class="dropdown-item" href="category.html?cat=travel">Travel</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+
+                    <!-- Right Side Navigation Items -->
+                    <div class="d-flex align-items-center">
+                        <!-- Search Form -->
+                        <form class="search-form me-3 d-none d-md-flex" role="search">
+                            <div class="input-group input-group-sm">
+                                <input class="form-control search-input" type="search" placeholder="Search articles..." 
+                                    aria-label="Search articles">
+                                <button class="btn btn-outline-primary" type="submit" aria-label="Submit search">
+                                    <i class="fas fa-search" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </form>
+
+                        <!-- Newsletter Signup Button (Mobile) -->
+                        <button class="btn btn-outline-primary btn-sm me-2 d-lg-none" 
+                                data-bs-toggle="modal" data-bs-target="#newsletterModal"
+                                aria-label="Subscribe to newsletter">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                        </button>
+
+                        <!-- Mobile Search Toggle -->
+                        <button class="btn btn-outline-secondary btn-sm me-2 d-lg-none search-toggle" 
+                                type="button" aria-label="Toggle search">
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Search Form (Hidden by default) -->
+        <div class="mobile-search-container container d-lg-none" style="display: none;">
+            <form class="search-form py-3" role="search">
+                <div class="input-group">
+                    <input class="form-control search-input" type="search" placeholder="Search articles..." 
+                        aria-label="Search articles">
+                    <button class="btn btn-primary" type="submit" aria-label="Submit search">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Page Header -->
+        <section class="page-header py-5">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-8">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Our Story</li>
+                            </ol>
+                        </nav>
+                        <h1 class="display-4 fw-bold mb-4">Our Story</h1>
+                        <p class="lead">We believe thoughtful content has the power to inspire, educate, and connect people across the globe.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="mission-section py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <img src="assets/img/about-hero.jpg" 
+                             alt="Our team collaborating in a modern workspace"
+                             class="img-fluid rounded-3 shadow-sm loading"
+                             loading="lazy"
+                             srcset="assets/img/about-hero.jpg 800w,
+                                     assets/img/about-hero.jpg 1200w"
+                             sizes="(max-width: 768px) 100vw, 600px"
+                             onload="this.classList.add('loaded')">
+                    </div>
+                    <div class="col-lg-6">
+                        <span class="badge bg-primary mb-3">Our Mission</span>
+                        <h2 class="display-6 fw-bold mb-4">Creating Content That Matters</h2>
+                        <p class="lead mb-4">In a world overflowing with information, we're committed to publishing content that's not just read, but remembered—content that makes you think, feel, and act differently.</p>
+                        <p class="mb-4">Founded in 2020, Thoughtful Reads began as a small passion project among friends who believed digital content could be both beautiful and meaningful. Today, we've grown into a community of writers, editors, and creators united by a shared purpose: to cut through the noise and deliver substance.</p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <div class="text-center">
+                                <div class="h3 fw-bold text-primary mb-1">50K+</div>
+                                <div class="text-muted small">Monthly Readers</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="h3 fw-bold text-primary mb-1">500+</div>
+                                <div class="text-muted small">Articles Published</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="h3 fw-bold text-primary mb-1">25+</div>
+                                <div class="text-muted small">Expert Contributors</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="values-section py-5 bg-light">
+            <div class="container">
+                <div class="row justify-content-center text-center mb-5">
+                    <div class="col-lg-8">
+                        <span class="badge bg-primary mb-3">Our Values</span>
+                        <h2 class="display-6 fw-bold mb-4">What Guides Our Work</h2>
+                        <p class="lead text-muted">These principles shape every article we publish and every decision we make.</p>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="values-icon">
+                            <i class="fas fa-gem text-white display-6" aria-hidden="true"></i>
+                        </div>
+                        <h4 class="h5 fw-bold text-center mb-3">Quality Over Quantity</h4>
+                        <p class="text-center text-muted">We'd rather publish one exceptional article than ten mediocre ones. Every piece goes through careful editing and fact-checking.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="values-icon">
+                            <i class="fas fa-heart text-white display-6" aria-hidden="true"></i>
+                        </div>
+                        <h4 class="h5 fw-bold text-center mb-3">Reader-First Approach</h4>
+                        <p class="text-center text-muted">Our readers are at the heart of everything we do. We listen, adapt, and always prioritize your time and attention.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="values-icon">
+                            <i class="fas fa-lightbulb text-white display-6" aria-hidden="true"></i>
+                        </div>
+                        <h4 class="h5 fw-bold text-center mb-3">Always Learning</h4>
+                        <p class="text-center text-muted">We're always exploring new topics, formats, and ways to serve our community better. Curiosity is what drives us forward.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team-section py-5">
+            <div class="container">
+                <div class="row justify-content-center text-center mb-5">
+                    <div class="col-lg-8">
+                        <span class="badge bg-primary mb-3">Our Team</span>
+                        <h2 class="display-6 fw-bold mb-4">Meet the Minds Behind the Words</h2>
+                        <p class="lead text-muted">A diverse group of thinkers, writers, and creators passionate about sharing knowledge.</p>
+                    </div>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <!-- Team Member 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body text-center p-4">
+                                <img src="assets/img/author1.jpg" 
+                                     alt="Sarah Johnson" 
+                                     class="team-member-img rounded-circle mb-3 img-fluid"
+                                     width="120" height="120"
+                                     loading="lazy">
+                                <h5 class="fw-bold mb-2">Sarah Johnson</h5>
+                                <p class="text-primary small mb-3">Editor-in-Chief</p>
+                                <p class="card-text small mb-3">Sarah leads our editorial vision with over a decade of experience in digital publishing. She's passionate about storytelling that creates real impact.</p>
+                                <div class="social-links">
+                                    <a href="#" class="text-muted me-2" aria-label="Sarah's Twitter">
+                                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="#" class="text-muted me-2" aria-label="Sarah's LinkedIn">
+                                        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="#" class="text-muted" aria-label="Sarah's Email">
+                                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Member 2 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body text-center p-4">
+                                <img src="assets/img/author2.jpg" 
+                                     alt="Michael Chen" 
+                                     class="team-member-img rounded-circle mb-3 img-fluid"
+                                     width="120" height="120"
+                                     loading="lazy">
+                                <h5 class="fw-bold mb-2">Michael Chen</h5>
+                                <p class="text-primary small mb-3">Senior Technology Editor</p>
+                                <p class="card-text small mb-3">With eight years in tech journalism, Michael specializes in making complex topics accessible, engaging, and downright interesting.</p>
+                                <div class="social-links">
+                                    <a href="#" class="text-muted me-2" aria-label="Michael's Twitter">
+                                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="#" class="text-muted me-2" aria-label="Michael's LinkedIn">
+                                        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="#" class="text-muted" aria-label="Michael's Email">
+                                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Member 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body text-center p-4">
+                                <img src="assets/img/author4.jpg" 
+                                     alt="Emily Rodriguez" 
+                                     class="team-member-img rounded-circle mb-3 img-fluid"
+                                     width="120" height="120"
+                                     loading="lazy">
+                                <h5 class="fw-bold mb-2">Emily Rodriguez</h5>
+                                <p class="text-primary small mb-3">Lifestyle & Wellness Editor</p>
+                                <p class="card-text small mb-3">Emily blends her background in psychology with a passion for wellness to create content that truly nurtures both mind and body.</p>
+                                <div class="social-links">
+                                    <a href="#" class="text-muted me-2" aria-label="Emily's Twitter">
+                                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="#" class="text-muted me-2" aria-label="Emily's LinkedIn">
+                                        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="#" class="text-muted" aria-label="Emily's Email">
+                                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section py-5 bg-primary text-white">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-8">
+                        <h2 class="display-6 fw-bold mb-4">Join Our Community</h2>
+                        <p class="lead mb-4">Whether you're a reader, a writer, or a potential partner, we'd love to connect with you.</p>
+                        <div class="d-flex flex-wrap justify-content-center gap-3">
+                            <a href="contact.html" class="btn btn-light btn-lg">
+                                <i class="fas fa-envelope me-2" aria-hidden="true"></i>Get In Touch
+                            </a>
+                            <button class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#newsletterModal">
+                                <i class="fas fa-newspaper me-2" aria-hidden="true"></i>Subscribe
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <!-- Footer Component -->
+    <footer class="site-footer pt-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Brand and Description -->
+                <div class="col-lg-4 col-md-6">
+                    <a href="index.html" class="footer-brand d-block mb-3">
+                        <i class="fas fa-book-open me-2" aria-hidden="true"></i>Thoughtful Reads
+                    </a>
+                    <p class="text-light mb-4">
+                        We share insightful stories, practical guides, and advice from those who’ve been there. Read, subscribe, and join the conversation.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Follow us on Twitter">
+                            <i class="fab fa-twitter" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" aria-label="Follow us on Facebook">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" aria-label="Follow us on Instagram">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" aria-label="Follow us on LinkedIn">
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" aria-label="Subscribe to our YouTube channel">
+                            <i class="fab fa-youtube" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white mb-3">Explore</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="category.html?cat=productivity">Productivity</a></li>
+                        <li><a href="category.html?cat=technology">Technology</a></li>
+                        <li><a href="category.html?cat=lifestyle">Lifestyle</a></li>
+                    </ul>
+                </div>
+
+                <!-- Categories -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white mb-3">Categories</h5>
+                    <ul class="footer-links">
+                        <li><a href="category.html?cat=health">Health & Wellness</a></li>
+                        <li><a href="category.html?cat=business">Business</a></li>
+                        <li><a href="category.html?cat=travel">Travel</a></li>
+                        <li><a href="category.html?cat=personal">Personal Growth</a></li>
+                        <li><a href="category.html?cat=relationships">Relationships</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Signup -->
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-white mb-3">Stay Informed</h5>
+                    <p class="text-light mb-3">Get the latest articles and insights sent straight to your inbox.</p>
+                    <form class="newsletter-form">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Your email address" 
+                                aria-label="Email address for newsletter" required>
+                            <button class="btn btn-primary" type="submit" aria-label="Subscribe to newsletter">
+                                <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <p class="small text-light opacity-75 mb-0">
+                        <i class="fas fa-shield-alt me-1" aria-hidden="true"></i>
+                        We respect your privacy. You can unsubscribe anytime.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom mt-5">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="text-light mb-0 small">
+                            &copy; <script>document.write(new Date().getFullYear());</script> Thoughtful Reads. All rights reserved.
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item">
+                                <a href="privacy.html" class="text-light text-decoration-none small">Privacy Policy</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <span class="text-light opacity-50">•</span>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="terms.html" class="text-light text-decoration-none small">Terms of Service</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <span class="text-light opacity-50">•</span>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="contact.html" class="text-light text-decoration-none small">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="btn back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Newsletter Modal -->
+    <div class="modal fade" id="newsletterModal" tabindex="-1" aria-labelledby="newsletterModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center p-4">
+                    <i class="fas fa-gift text-primary display-4 mb-3" aria-hidden="true"></i>
+                    <h3 class="h4 fw-bold mb-3" id="newsletterModalLabel">Join Our Community</h3>
+                    <p class="text-muted mb-4">Subscribe today and receive our exclusive beginner's guide to mindful productivity <strong>for free</strong>.</p>
+                    <form class="newsletter-modal-form">
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your email address" required aria-label="Email address for newsletter with free gift">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 btn-lg">
+                            <i class="fas fa-download me-2" aria-hidden="true"></i>Get My Free Guide
+                        </button>
+                    </form>
+                    <p class="small text-muted mt-3">We value your privacy. Unsubscribe whenever you like.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    // Back to top functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const backToTopButton = document.querySelector('.back-to-top');
+        
+        if (backToTopButton) {
+            // Show/hide button based on scroll position
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('visible');
+                } else {
+                    backToTopButton.classList.remove('visible');
+                }
+            });
+            
+            // Scroll to top when clicked
+            backToTopButton.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+        
+        // Footer newsletter form handling
+        const footerNewsletterForm = document.querySelector('.site-footer .newsletter-form');
+        if (footerNewsletterForm) {
+            footerNewsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const emailInput = this.querySelector('input[type="email"]');
+                const email = emailInput.value.trim();
+                
+                if (email) {
+                    // Simulate successful subscription
+                    const originalButtonText = this.querySelector('button').innerHTML;
+                    this.querySelector('button').innerHTML = '<i class="fas fa-check"></i>';
+                    this.querySelector('button').disabled = true;
+                    
+                    setTimeout(() => {
+                        this.reset();
+                        this.querySelector('button').innerHTML = originalButtonText;
+                        this.querySelector('button').disabled = false;
+                        
+                        // Show success message
+                        const successMessage = document.createElement('div');
+                        successMessage.className = 'alert alert-success mt-2 small';
+                        successMessage.textContent = 'Thank you for subscribing!';
+                        this.appendChild(successMessage);
+                        
+                        setTimeout(() => {
+                            successMessage.remove();
+                        }, 5000);
+                    }, 1500);
+                }
+            });
+        }
+    });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/theme-toggle.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
