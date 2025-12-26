@@ -173,6 +173,7 @@ body {
 }
 
 .page-header{
+  margin-top:56px;
   background-color: var(--primary-color) !important;
   color: white !important;
 }
@@ -193,24 +194,6 @@ body {
 .cta-section .display-6{
   color: white;
 }
-/* Skip to main content link */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 6px;
-  background: var(--primary-color);
-  color: white;
-  padding: 8px;
-  text-decoration: none;
-  z-index: 10000;
-  border-radius: var(--border-radius);
-  font-weight: var(--font-weight-semibold);
-}
-
-.skip-link:focus {
-  top: 6px;
-}
-
 /* Screen reader only utility */
 .sr-only {
   position: absolute;
@@ -280,13 +263,14 @@ p {
 
 /* Header & Navigation */
 .site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-color);
-  position: sticky;
-  top: 0;
-  z-index: 1020;
   transition: var(--transition-base);
+  z-index: 1000;
 }
 
 .navbar-brand {
@@ -316,6 +300,7 @@ p {
 
 /* Hero Section */
 .hero-section {
+  margin-top: 56px; /* Height of fixed header */
   min-height: 80vh;
   position: relative;
   display: flex;
@@ -786,10 +771,6 @@ p {
     transition: transform 0.3s ease;
 }
 
-.offcanvas{
-  height: 100% !important;
-}
-
 .contact-info-item:hover {
     transform: translateY(-5px);
 }
@@ -956,8 +937,7 @@ p {
 
 /* Offcanvas Custom Styles */
 .offcanvas {
-    position: absolute !important;
-    width: 100% !important;
+    width: 100vw !important;
     background-color: var(--bg-light);
     color: var(--text-dark);
     transition: transform 0.3s ease-in-out;
@@ -968,11 +948,6 @@ p {
 
 .offcanvas-header {
     border-bottom: 1px solid var(--border-color);
-    padding: 1.5rem;
-}
-
-.offcanvas-body {
-    padding: 1.5rem;
 }
 
 .offcanvas-title {
