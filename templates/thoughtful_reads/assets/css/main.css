@@ -793,6 +793,10 @@ p {
     transform: translateY(-2px);
 }
 
+.article-header {
+    margin-top: 56px;
+}
+
 @media (max-width: 768px) {
     .back-to-top {
         bottom: 1rem;
@@ -1056,3 +1060,4 @@ p {
         width: 100% !important;
     }
 }
+
