@@ -1,0 +1,25 @@
+agencypro/
+├── index.html
+├── assets/
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── main.js
+│   ├── img/
+│   │   ├── hero-office.jpg
+│   │   ├── hero-office.webp
+│   │   ├── work-1.jpg
+│   │   ├── work-2.jpg
+│   │   ├── work-3.jpg
+│   │   ├── work-4.jpg
+│   │   ├── work-5.jpg
+│   │   ├── work-6.jpg
+│   │   ├── team-1.jpg
+│   │   ├── team-2.jpg
+│   │   ├── team-3.jpg
+│   │   └── team-4.jpg
+│   └── fonts/
+│       └── (Font Awesome optional local files)
+├── demo.json
+├── README.md
+└── package.json

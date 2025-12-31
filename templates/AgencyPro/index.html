@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AgencyPro - Modern one-page template for agencies and small businesses. Fast, accessible, conversion-focused design.">
+    
+    <!-- Primary Meta Tags -->
+    <title>AgencyPro | Modern Business Template</title>
+    <meta name="title" content="AgencyPro | Modern Business Template">
+    <meta name="description" content="Conversion-focused one-page template for agencies and small businesses. Built with Bootstrap 5.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:title" content="AgencyPro | Modern Business Template">
+    <meta property="og:description" content="Conversion-focused one-page template for agencies and small businesses.">
+    <meta property="og:image" content="https://yourdomain.com/assets/img/preview.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourdomain.com/">
+    <meta property="twitter:title" content="AgencyPro | Modern Business Template">
+    <meta property="twitter:description" content="Conversion-focused one-page template for agencies and small businesses.">
+    <meta property="twitter:image" content="https://yourdomain.com/assets/img/preview.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourdomain.com/">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "AgencyPro",
+        "url": "https://yourdomain.com",
+        "logo": "https://yourdomain.com/assets/img/logo.svg",
+        "description": "Modern business template for agencies and small businesses",
+        "sameAs": [
+            "https://twitter.com/agencypro",
+            "https://linkedin.com/company/agencypro"
+        ]
+    }
+    </script>
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome 6 -->
+    <script src="https://kit.fontawesome.com/8140dd2669.js" crossorigin="anonymous"></script>
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    
+    <!-- Preload hero image for LCP optimization -->
+    <link rel="preload" as="image" href="assets/img/hero-office.webp" type="image/webp">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <span class="fw-bold fs-3 text-primary">Agency</span><span class="fw-bold fs-3">Pro</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                        <a class="btn btn-primary btn-sm" href="#contact">Get Started</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section" aria-label="Hero section">
+        <div class="container">
+            <div class="row align-items-center pt-5 min-vh-100">
+                <div class="col-lg-8 col-xl-7">
+                    <h1 class="display-2 fw-bold my-4">We design products people actually use</h1>
+                    <p class="lead mb-5">We help ambitious teams ship polished digital experiences, fast. 
+                        Forget the jargon—we deliver results that matter to your business.</p>
+                    <div class="d-flex flex-wrap gap-3 mb-4">
+                        <a href="#contact" class="btn btn-primary btn-lg px-5 py-3">
+                            Get started <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                        <a href="#portfolio" class="btn btn-outline-light btn-lg px-5 py-3">
+                            View our work <i class="fas fa-eye ms-2"></i>
+                        </a>
+                    </div>
+                    <p class="text-light small">
+                        <i class="fas fa-check-circle me-2 text-success"></i>
+                        No credit card required • 14-day free trial • Cancel anytime
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+        <!-- Background image with fallback -->
+        <picture>
+            <source srcset="assets/img/hero-office.webp" type="image/webp">
+            <img src="assets/img/hero-office.jpg" alt="Creative team collaborating in modern office space" 
+                 class="hero-bg-img" loading="eager" width="1920" height="1080">
+        </picture>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding" aria-label="Our services">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <span class="badge bg-primary-subtle text-primary mb-3">What we do</span>
+                    <h2 class="display-5 fw-bold mb-3">Services that drive growth</h2>
+                    <p class="lead text-muted">We focus on three core areas that deliver measurable results for your business.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <!-- Service 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card text-center p-4 h-100">
+                        <div class="service-icon mb-4">
+                            <i class="fas fa-palette fa-2x"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Product Design</h3>
+                        <p class="text-muted">We refine product ideas into clear, usable interfaces that people love to use every day.</p>
+                        <a href="#contact" class="btn btn-link text-decoration-none">Learn more <i class="fas fa-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card text-center p-4 h-100">
+                        <div class="service-icon mb-4">
+                            <i class="fas fa-code fa-2x"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Web Development</h3>
+                        <p class="text-muted">Fast, maintainable code with attention to detail. We build digital experiences that perform.</p>
+                        <a href="#contact" class="btn btn-link text-decoration-none">Learn more <i class="fas fa-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card text-center p-4 h-100">
+                        <div class="service-icon mb-4">
+                            <i class="fas fa-chart-line fa-2x"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Digital Strategy</h3>
+                        <p class="text-muted">Clear plans that help teams ship confidently. We align technology with business goals.</p>
+                        <a href="#contact" class="btn btn-link text-decoration-none">Learn more <i class="fas fa-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section-padding bg-light" aria-label="Our features">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <span class="badge bg-primary-subtle text-primary mb-3">Why choose us</span>
+                    <h2 class="display-5 fw-bold mb-3">Built for modern teams</h2>
+                    <p class="lead text-muted">We combine technical excellence with practical business thinking.</p>
+                </div>
+            </div>
+            <!-- Feature 1 -->
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="feature-img-placeholder rounded-3">
+                        <!-- Replace with actual image -->
+                        <div class="feature-img d-flex align-items-center justify-content-center bg-primary bg-opacity-10 rounded-3" style="height: 400px;">
+                            <i class="fas fa-rocket fa-4x text-primary"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                    <span class="badge bg-primary-subtle text-primary mb-2">Feature</span>
+                    <h3 class="h2 fw-bold mb-3">Ship faster with confidence</h3>
+                    <p class="text-muted mb-4">Our iterative process means you see progress weekly, not quarterly. We focus on shipping value, not just meetings.</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Weekly progress updates</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Transparent communication</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Data-driven decisions</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Feature 2 -->
+            <div class="row align-items-center flex-lg-row-reverse">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="feature-img-placeholder rounded-3">
+                        <div class="feature-img d-flex align-items-center justify-content-center bg-secondary bg-opacity-10 rounded-3" style="height: 400px;">
+                            <i class="fas fa-shield-alt fa-4x text-secondary"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <span class="badge bg-secondary-subtle text-secondary mb-2">Security</span>
+                    <h3 class="h2 fw-bold mb-3">Enterprise-grade security</h3>
+                    <p class="text-muted mb-4">We build with security and privacy from day one. Your data is protected with industry-best practices.</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i> GDPR compliant</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Regular security audits</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Data encryption at rest</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section-padding" aria-label="Our portfolio">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <span class="badge bg-primary-subtle text-primary mb-3">Our work</span>
+                    <h2 class="display-5 fw-bold mb-3">Recent projects</h2>
+                    <p class="lead text-muted">See how we've helped businesses like yours succeed.</p>
+                </div>
+            </div>
+            <div class="row g-4" id="portfolio-grid">
+                <!-- Portfolio items will be loaded via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section-padding bg-light" aria-label="Pricing plans">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <span class="badge bg-primary-subtle text-primary mb-3">Pricing</span>
+                    <h2 class="display-5 fw-bold mb-3">Simple, transparent pricing</h2>
+                    <p class="lead text-muted">Choose the plan that fits your needs. No hidden fees, no surprises.</p>
+                </div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <!-- Plan 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <span class="badge bg-light text-dark mb-3">Starter</span>
+                            <h3 class="card-title h2 fw-bold">$29<span class="fs-6 text-muted">/month</span></h3>
+                            <p class="text-muted mb-4">Perfect for small projects and individual creators.</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 1 project</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Basic support</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 5GB storage</li>
+                                <li class="mb-2"><i class="fas fa-times text-muted me-2"></i> Advanced analytics</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline-primary w-100">Start free trial</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Plan 2 (Highlighted) -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-lg">
+                        <div class="card-body p-4 position-relative">
+                            <span class="badge bg-primary mb-3 position-absolute top-0 start-50 translate-middle">Most Popular</span>
+                            <span class="badge bg-light text-dark mb-3">Professional</span>
+                            <h3 class="card-title h2 fw-bold">$79<span class="fs-6 text-muted">/month</span></h3>
+                            <p class="text-muted mb-4">Ideal for growing businesses and teams.</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Up to 5 projects</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Priority support</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 50GB storage</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Advanced analytics</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-primary w-100">Start free trial</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Plan 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <span class="badge bg-light text-dark mb-3">Enterprise</span>
+                            <h3 class="card-title h2 fw-bold">$199<span class="fs-6 text-muted">/month</span></h3>
+                            <p class="text-muted mb-4">For large organizations with complex needs.</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Unlimited projects</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 24/7 support</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 500GB storage</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Custom solutions</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline-primary w-100">Contact sales</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <p class="text-muted small">
+                    <i class="fas fa-info-circle me-2"></i>
+                    All plans include 14-day free trial. No credit card required.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section-padding" aria-label="Our team">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <span class="badge bg-primary-subtle text-primary mb-3">Our team</span>
+                    <h2 class="display-5 fw-bold mb-3">Meet the experts</h2>
+                    <p class="lead text-muted">We're a diverse team passionate about building great products.</p>
+                </div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <!-- Team Member 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-card text-center">
+                        <div class="team-img mb-4">
+                            <img src="assets/img/team-1.jpg" alt="Alex Morgan - Product Designer" class="rounded-circle" loading="lazy">
+                        </div>
+                        <h3 class="h5 fw-bold mb-1">Alex Morgan</h3>
+                        <p class="text-muted mb-3">Product Designer</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Twitter profile"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#" aria-label="LinkedIn profile"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="GitHub profile"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-card text-center">
+                        <div class="team-img mb-4">
+                            <img src="assets/img/team-2.jpg" alt="Sam Rivera - Lead Developer" class="rounded-circle" loading="lazy">
+                        </div>
+                        <h3 class="h5 fw-bold mb-1">Sam Rivera</h3>
+                        <p class="text-muted mb-3">Lead Developer</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Twitter profile"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#" aria-label="LinkedIn profile"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="GitHub profile"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-card text-center">
+                        <div class="team-img mb-4">
+                            <img src="assets/img/team-3.jpg" alt="Jordan Lee - Marketing Lead" class="rounded-circle" loading="lazy">
+                        </div>
+                        <h3 class="h5 fw-bold mb-1">Jordan Lee</h3>
+                        <p class="text-muted mb-3">Marketing Lead</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Twitter profile"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#" aria-label="LinkedIn profile"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="Instagram profile"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-card text-center">
+                        <div class="team-img mb-4">
+                            <img src="assets/img/team-4.jpg" alt="Taylor Kim - Project Manager" class="rounded-circle" loading="lazy">
+                        </div>
+                        <h3 class="h5 fw-bold mb-1">Taylor Kim</h3>
+                        <p class="text-muted mb-3">Project Manager</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Twitter profile"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#" aria-label="LinkedIn profile"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="GitHub profile"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section-padding bg-light" aria-label="Customer testimonials">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <span class="badge bg-primary-subtle text-primary mb-3">Testimonials</span>
+                    <h2 class="display-5 fw-bold mb-3">What our clients say</h2>
+                    <p class="lead text-muted">Don't just take our word for it—hear from our satisfied customers.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="testimonial-slider">
+                        <div class="testimonial-slide active">
+                            <div class="testimonial-card p-5">
+                                <div class="rating mb-3">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                </div>
+                                <p class="fs-5 mb-4">"Working with AgencyPro transformed our online presence. Their team delivered exactly what they promised, on time and on budget. Our conversion rate increased by 45% in just three months."</p>
+                                <div class="d-flex align-items-center">
+                                    <img src="assets/img/team-1.jpg" alt="Maria Gonzalez" class="rounded-circle me-3" width="60" height="60">
+                                    <div>
+                                        <h4 class="h6 fw-bold mb-0">Maria Gonzalez</h4>
+                                        <p class="text-muted small mb-0">CEO, TechSolutions Inc.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card p-5">
+                                <div class="rating mb-3">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star-half-alt text-warning"></i>
+                                </div>
+                                <p class="fs-5 mb-4">"The attention to detail and strategic thinking brought by AgencyPro was exactly what we needed. They understood our business goals and translated them into a beautiful, functional website."</p>
+                                <div class="d-flex align-items-center">
+                                    <img src="assets/img/team-2.jpg" alt="David Chen" class="rounded-circle me-3" width="60" height="60">
+                                    <div>
+                                        <h4 class="h6 fw-bold mb-0">David Chen</h4>
+                                        <p class="text-muted small mb-0">Founder, GreenLeaf Organics</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card p-5">
+                                <div class="rating mb-3">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                </div>
+                                <p class="fs-5 mb-4">"As a small business, we needed a partner who could work within our budget while delivering professional results. AgencyPro exceeded our expectations at every step."</p>
+                                <div class="d-flex align-items-center">
+                                    <img src="assets/img/team-3.jpg" alt="Sarah Johnson" class="rounded-circle me-3" width="60" height="60">
+                                    <div>
+                                        <h4 class="h6 fw-bold mb-0">Sarah Johnson</h4>
+                                        <p class="text-muted small mb-0">Marketing Director, Bloom & Grow</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-controls text-center mt-4">
+                        <button class="btn btn-outline-primary btn-sm slider-prev" aria-label="Previous testimonial">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="slider-dots d-inline-block mx-3">
+                            <span class="dot active" data-slide="0" aria-label="Go to testimonial 1"></span>
+                            <span class="dot" data-slide="1" aria-label="Go to testimonial 2"></span>
+                            <span class="dot" data-slide="2" aria-label="Go to testimonial 3"></span>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm slider-next" aria-label="Next testimonial">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding" aria-label="Contact us">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <span class="badge bg-primary-subtle text-primary mb-3">Contact us</span>
+                    <h2 class="display-5 fw-bold mb-3">Let's build something great</h2>
+                    <p class="lead text-muted">Ready to start your project? Get in touch and we'll respond within 24 hours.</p>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <form id="contactForm" class="needs-validation" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="name" class="form-label">Full name *</label>
+                                <input type="text" class="form-control" id="name" required>
+                                <div class="invalid-feedback">Please enter your name.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email address *</label>
+                                <input type="email" class="form-control" id="email" required>
+                                <div class="invalid-feedback">Please enter a valid email address.</div>
+                            </div>
+                            <div class="col-12">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="subject">
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                                <div class="invalid-feedback">Please enter your message.</div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="privacy" required>
+                                    <label class="form-check-label small" for="privacy">
+                                        I agree to the <a href="#" class="text-decoration-none">privacy policy</a> *
+                                    </label>
+                                    <div class="invalid-feedback">You must agree before submitting.</div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary px-5 py-3">
+                                    Send message <i class="fas fa-paper-plane ms-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-info">
+                        <h3 class="h4 mb-4">Get in touch</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-4">
+                                <i class="fas fa-map-marker-alt text-primary me-3"></i>
+                                <div>
+                                    <strong>Our office</strong>
+                                    <p class="text-muted mb-0">123 Business Street, Suite 100<br>San Francisco, CA 94107</p>
+                                </div>
+                            </li>
+                            <li class="mb-4">
+                                <i class="fas fa-phone text-primary me-3"></i>
+                                <div>
+                                    <strong>Phone</strong>
+                                    <p class="text-muted mb-0">+1 (555) 123-4567</p>
+                                </div>
+                            </li>
+                            <li class="mb-4">
+                                <i class="fas fa-envelope text-primary me-3"></i>
+                                <div>
+                                    <strong>Email</strong>
+                                    <p class="text-muted mb-0">hello@agencypro.com</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="map-placeholder mt-4 rounded-3 overflow-hidden bg-light" style="height: 250px;">
+                            <!-- Replace with actual Google Maps embed -->
+                            <div class="h-100 w-100 d-flex align-items-center justify-content-center bg-primary bg-opacity-10">
+                                <div class="text-center">
+                                    <i class="fas fa-map-marked-alt fa-3x text-primary mb-3"></i>
+                                    <p class="text-muted">Map integration area</p>
+                                    <p class="small text-muted">Replace with Google Maps embed code</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a href="#home" class="text-decoration-none mb-4 d-inline-block">
+                        <span class="fw-bold fs-3 text-primary">Agency</span><span class="fw-bold fs-3 text-light">Pro</span>
+                    </a>
+                    <p class="text-light mb-4">We help ambitious teams ship polished digital experiences that drive real business results.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3" aria-label="Twitter"><i class="fa-brands fa-x-twitter fa-lg"></i></a>
+                        <a href="#" class="text-light me-3" aria-label="Facebook"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" class="text-light me-3" aria-label="LinkedIn"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                        <a href="#" class="text-light me-3" aria-label="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-light" aria-label="GitHub"><i class="fab fa-github fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h4 class="h5 mb-4">Company</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home" class="text-light text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="#services" class="text-light text-decoration-none">Services</a></li>
+                        <li class="mb-2"><a href="#portfolio" class="text-light text-decoration-none">Work</a></li>
+                        <li class="mb-2"><a href="#team" class="text-light text-decoration-none">Team</a></li>
+                        <li><a href="#contact" class="text-light text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h4 class="h5 mb-4">Resources</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none">Blog</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none">Case studies</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none">Support</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h4 class="h5 mb-4">Stay updated</h4>
+                    <p class="text-light mb-4">Subscribe to our newsletter for the latest updates and insights.</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email address" aria-label="Email address" required>
+                            <button class="btn btn-primary" type="submit">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <p class="small text-light opacity-75 mt-2">We respect your privacy. Unsubscribe at any time.</p>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-5 border-light opacity-25">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; <span id="currentYear"></span> AgencyPro. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">
+                        <a href="#" class="text-light text-decoration-none me-3">Terms of Service</a>
+                        <a href="#" class="text-light text-decoration-none">Privacy Policy</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Portfolio Modal -->
+    <div class="modal fade" id="portfolioModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="modalTitle">Project Title</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="" alt="" class="img-fluid mb-4 rounded" id="modalImage">
+                    <p id="modalDescription">Project description will appear here.</p>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <h5 class="h6 fw-bold">Technologies</h5>
+                            <p id="modalTech" class="text-muted small">HTML, CSS, JavaScript</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="h6 fw-bold">Timeline</h5>
+                            <p id="modalTimeline" class="text-muted small">4 weeks</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="#" class="btn btn-primary" id="modalLink" target="_blank">View project <i class="fas fa-external-link-alt ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="btn btn-primary rounded-circle" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Main JS -->
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>
