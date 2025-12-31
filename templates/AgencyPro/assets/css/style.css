@@ -143,9 +143,20 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
     *{
         overflow-x: hidden !important;
-        overflow-y: auto !important;
+        overflow-y: hidden;
+        box-sizing: content-box;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    body{
+        overflow-y: scroll !important;
     }
 
     .hero-section{
@@ -587,9 +598,21 @@ a:hover {
    ========================================================================== */
 
 @media (max-width: 768px) {
+    @media (max-width: 768px) {
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
     *{
         overflow-x: hidden !important;
-        overflow-y: auto !important;
+        overflow-y: hidden;
+        box-sizing: content-box;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    body{
+        overflow-y: scroll !important;
     }
 
     .display-2 {
@@ -620,9 +643,21 @@ a:hover {
 }
 
 @media (max-width: 576px) {
+    @media (max-width: 768px) {
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
     *{
         overflow-x: hidden !important;
-        overflow-y: auto !important;
+        overflow-y: hidden;
+        box-sizing: content-box;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    body{
+        overflow-y: scroll !important;
     }
     
     .section-padding {
