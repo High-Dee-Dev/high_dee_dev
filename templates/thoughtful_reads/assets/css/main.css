@@ -95,7 +95,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  overflow-x: hidden !important; 
 }
 
 html {
@@ -765,6 +764,9 @@ p {
     opacity: 1;
 }
 
+.article-header {
+    margin-top: 56px;
+}
 .category-header {
     margin-top: 56px;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
@@ -793,11 +795,14 @@ p {
     transform: translateY(-2px);
 }
 
-.article-header {
-    margin-top: 56px;
-}
-
 @media (max-width: 768px) {
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      overflow-x: hidden !important; 
+    }
+
     .back-to-top {
         bottom: 1rem;
         right: 1rem;
@@ -860,6 +865,13 @@ p {
  * ============================================================================= */
 
 @media (max-width: 768px) {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    overflow-x: hidden !important; 
+  }
+
   .hero-section {
     min-height: 50vh;
     width: 100%;
@@ -887,6 +899,13 @@ p {
 }
 
 @media (max-width: 576px) {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    overflow-x: hidden !important; 
+  }
+
   .hero-content{
     width: 100% !important;
     padding: 0 var(--spacing-3);
@@ -950,7 +969,9 @@ p {
     transition: transform 0.3s ease-in-out;
     z-index: 9999 !important;
     min-height: 100vh !important;
+    max-height: 300vh !important;
     overflow-x: hidden !important;
+    visibility: visible !important;
 }
 
 .offcanvas-header {
@@ -961,6 +982,14 @@ p {
     font-family: var(--font-heading);
     font-weight: var(--font-weight-bold);
     color: var(--primary-color);
+}
+
+.offcanvas-body {
+    display: block !important;
+    visibility: visible !important;
+    padding: 1rem;
+    height: 100% !important;
+    overflow-y: auto !important;
 }
 
 /* Mobile Navigation Items */
@@ -1052,6 +1081,8 @@ p {
 @media (max-width: 576px) {
     .offcanvas-body {
         padding: 1rem;
+        height: calc(100% - 56px) !important;
+        overflow-y: auto !important;
     }
 }
 
@@ -1060,4 +1091,3 @@ p {
         width: 100% !important;
     }
 }
-
