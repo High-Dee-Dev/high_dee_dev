@@ -145,6 +145,7 @@ a:hover {
 @media (max-width: 768px) {
     *{
         overflow-x: hidden !important;
+        overflow-y: auto !important;
     }
 
     .hero-section{
@@ -588,6 +589,7 @@ a:hover {
 @media (max-width: 768px) {
     *{
         overflow-x: hidden !important;
+        overflow-y: auto !important;
     }
 
     .display-2 {
@@ -620,6 +622,7 @@ a:hover {
 @media (max-width: 576px) {
     *{
         overflow-x: hidden !important;
+        overflow-y: auto !important;
     }
     
     .section-padding {
