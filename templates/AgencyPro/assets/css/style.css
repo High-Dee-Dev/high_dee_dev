@@ -143,27 +143,6 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-    ::-webkit-scrollbar {
-        display: none;
-    }
-
-    *{
-        overflow-x: hidden !important;
-        overflow-y: hidden;
-        box-sizing: content-box;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-    }
-
-    body{
-        overflow-y: scroll !important;
-    }
-
-    .hero-section{
-        margin-top: 56px;
-        text-align: center;
-    }
-
     .section-padding {
         padding-top: var(--spacing-xl);
         padding-bottom: var(--spacing-xl);
@@ -215,17 +194,17 @@ a:hover {
 
 /* Navigation */
 .navbar {
-    padding: 5px 0;
+    padding: 1rem 0;
     transition: all var(--transition-base);
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     box-shadow: var(--shadow-sm);
 }
 
-/* .navbar.shrink {
-    padding: 2px 0;
+.navbar.shrink {
+    padding: 0.5rem 0;
     box-shadow: var(--shadow-md);
-} */
+}
 
 .navbar-brand {
     font-size: 1.75rem;
@@ -598,29 +577,11 @@ a:hover {
    ========================================================================== */
 
 @media (max-width: 768px) {
-    @media (max-width: 768px) {
-    ::-webkit-scrollbar {
-        display: none;
-    }
-
-    *{
-        overflow-x: hidden !important;
-        overflow-y: hidden;
-        box-sizing: content-box;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-    }
-
-    body{
-        overflow-y: scroll !important;
-    }
-
     .display-2 {
         font-size: 2.5rem;
     }
     
     .hero-section {
-        margin-top: 56px;
         text-align: center;
     }
     
@@ -643,23 +604,6 @@ a:hover {
 }
 
 @media (max-width: 576px) {
-    @media (max-width: 768px) {
-    ::-webkit-scrollbar {
-        display: none;
-    }
-
-    *{
-        overflow-x: hidden !important;
-        overflow-y: hidden;
-        box-sizing: content-box;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-    }
-
-    body{
-        overflow-y: scroll !important;
-    }
-    
     .section-padding {
         padding-top: var(--spacing-lg);
         padding-bottom: var(--spacing-lg);
