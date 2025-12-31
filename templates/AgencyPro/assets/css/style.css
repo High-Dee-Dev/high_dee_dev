@@ -142,6 +142,10 @@ a:hover {
     padding-bottom: var(--spacing-xxl);
 }
 
+.overflow-hidden {
+    overflow-x: hidden;
+}
+
 @media (max-width: 768px) {
     .section-padding {
         padding-top: var(--spacing-xl);
