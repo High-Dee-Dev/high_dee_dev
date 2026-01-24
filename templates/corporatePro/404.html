@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page not found - CorporatePro Business Solutions">
+    
+    <title>Page Not Found | CorporatePro</title>
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/8140dd2669.js" crossorigin="anonymous"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/logos/favicon.ico">
+    
+    <style>
+        .error-section {
+            padding: 8rem 0;
+            text-align: center;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .error-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .error-code {
+            font-size: 8rem;
+            font-weight: 800;
+            color: #1abc9c;
+            line-height: 1;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+        }
+        
+        .error-title {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        
+        .error-text {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .error-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+        
+        .error-image {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .error-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .search-box-404 {
+            max-width: 500px;
+            margin: 2rem auto 3rem;
+        }
+        
+        .search-container {
+            position: relative;
+        }
+        
+        .search-container input {
+            padding-right: 50px;
+        }
+        
+        .search-btn-404 {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            bottom: 5px;
+            background: #1abc9c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .search-btn-404:hover {
+            background: #16a085;
+        }
+        
+        .quick-links-404 {
+            margin-top: 2rem;
+        }
+        
+        .quick-links-404 h4 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .link-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #2c3e50;
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+            text-align: left;
+        }
+        
+        .link-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-color: #1abc9c;
+            color: #1abc9c;
+        }
+        
+        .link-item i {
+            color: #1abc9c;
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 6rem;
+            }
+            
+            .error-title {
+                font-size: 2rem;
+            }
+            
+            .error-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .error-actions .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Simple Navigation -->
+    <nav class="navbar navbar-light" style="background-color: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="brand-text">Corporate</span><span class="brand-highlight">Pro</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Error Content -->
+    <section class="error-section">
+        <div class="container">
+            <div class="error-content animate-on-scroll">
+                <div class="error-code">404</div>
+                <h1 class="error-title">Page Not Found</h1>
+                <p class="error-text">The page you're looking for doesn't exist or has been moved. Don't worry - let's get you back on track.</p>
+                
+                <!-- Search Box -->
+                <div class="search-box-404">
+                    <h4>Search Our Site</h4>
+                    <div class="search-container">
+                        <input type="text" class="form-control" placeholder="What are you looking for?" id="searchInput404">
+                        <button class="search-btn-404" id="searchBtn404">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Action Buttons -->
+                <div class="error-actions">
+                    <a href="index.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-home"></i> Go to Homepage
+                    </a>
+                    <a href="contact.html" class="btn btn-outline-primary btn-lg">
+                        <i class="fas fa-headset"></i> Contact Support
+                    </a>
+                    <button onclick="history.back()" class="btn btn-outline-secondary btn-lg">
+                        <i class="fas fa-arrow-left"></i> Go Back
+                    </button>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="quick-links-404">
+                    <h4>Popular Pages</h4>
+                    <div class="links-grid">
+                        <a href="services.html" class="link-item">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <strong>Our Services</strong>
+                                <p>Explore our consulting solutions</p>
+                            </div>
+                        </a>
+                        
+                        <a href="about.html" class="link-item">
+                            <i class="fas fa-info-circle"></i>
+                            <div>
+                                <strong>About Us</strong>
+                                <p>Learn about our company</p>
+                            </div>
+                        </a>
+                        
+                        <a href="team.html" class="link-item">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <strong>Our Team</strong>
+                                <p>Meet our experts</p>
+                            </div>
+                        </a>
+                        
+                        <a href="contact.html" class="link-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Contact Us</strong>
+                                <p>Get in touch</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Error Image -->
+                <div class="error-image mt-5">
+                    <img src="assets/images/404-error.jpg" alt="404 error - page not found illustration" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p class="copyright">&copy; <script>document.write( new Date().getFullYear() );</script> CorporatePro. All Rights Reserved.</p>
+                        <div class="mt-2">
+                            <a href="index.html" class="footer-bottom-link">Home</a>
+                            <a href="about.html" class="footer-bottom-link">About</a>
+                            <a href="services.html" class="footer-bottom-link">Services</a>
+                            <a href="contact.html" class="footer-bottom-link">Contact</a>
+                            <a href="#" class="footer-bottom-link">Privacy Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+    
+    <script>
+        // 404 page specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Search functionality
+            const searchInput = document.getElementById('searchInput404');
+            const searchBtn = document.getElementById('searchBtn404');
+            
+            function performSearch() {
+                const searchTerm = searchInput.value.trim();
+                
+                if (searchTerm) {
+                    // In a real implementation, this would redirect to search results
+                    // For this demo, we'll show an alert
+                    alert(`Searching for: "${searchTerm}"\n\nIn a live implementation, this would show search results for your query.`);
+                    
+                    // Clear the search input
+                    searchInput.value = '';
+                } else {
+                    alert('Please enter a search term.');
+                }
+            }
+            
+            searchBtn.addEventListener('click', performSearch);
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    performSearch();
+                }
+            });
+            
+            // Add animation to error elements
+            const errorElements = document.querySelectorAll('.animate-on-scroll');
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            errorElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+        
+        // Simple page load animation
+        window.addEventListener('load', function() {
+            document.body.classList.add('page-load');
+        });
+    </script>
+</body>
+</html>

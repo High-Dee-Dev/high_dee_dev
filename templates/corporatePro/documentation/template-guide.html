@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Editing Guide | CorporatePro</title>
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/8140dd2669.js" crossorigin="anonymous"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        .guide-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .guide-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 3rem 0;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            border-radius: 10px;
+        }
+        
+        .guide-section {
+            margin-bottom: 4rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        .step-card {
+            border-left: 4px solid #1abc9c;
+            padding-left: 1.5rem;
+            margin-bottom: 2rem;
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            background: #1abc9c;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 36px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .code-example {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 1rem;
+            border-radius: 5px;
+            font-family: monospace;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+        
+        .color-palette {
+            display: flex;
+            gap: 10px;
+            margin: 1rem 0;
+        }
+        
+        .color-box {
+            width: 60px;
+            height: 60px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.8rem;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+        }
+        
+        .file-structure {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 5px;
+            font-family: monospace;
+            line-height: 1.8;
+        }
+        
+        .tip-box {
+            background: #e8f4fc;
+            border-left: 4px solid #3498db;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .warning-box {
+            background: #fdf2e9;
+            border-left: 4px solid #e67e22;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .success-box {
+            background: #eafaf1;
+            border-left: 4px solid #27ae60;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 5px 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="brand-text">Corporate</span><span class="brand-highlight">Pro</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="guide-container" style="padding-top: 80px;">
+        <!-- Header -->
+        <div class="guide-header">
+            <h1 class="hero-title">Template Editing Guide</h1>
+            <p class="hero-subtitle">Step-by-step instructions for customizing your CorporatePro template</p>
+        </div>
+
+        <!-- Introduction -->
+        <div class="guide-section">
+            <h2 class="section-title">Welcome to Your Template!</h2>
+            <p>This guide will help you customize the CorporatePro template even if you have limited coding experience. Each section explains how to modify different parts of the template.</p>
+            
+            <div class="tip-box">
+                <strong><i class="fas fa-lightbulb"></i> Tip:</strong> Before making changes, always backup your original files. Work on a copy of the template to preserve the original version.
+            </div>
+        </div>
+
+        <!-- File Structure -->
+        <div class="guide-section">
+            <h2 class="section-title">Understanding the File Structure</h2>
+            <p>Here's how your template files are organized:</p>
+            
+            <div class="file-structure">
+                corporate-business-template/<br>
+                ├── index.html <span style="color: #666;">(Home page)</span><br>
+                ├── about.html <span style="color: #666;">(About Us page)</span><br>
+                ├── services.html <span style="color: #666;">(Services overview)</span><br>
+                ├── service-details.html <span style="color: #666;">(Individual service)</span><br>
+                ├── team.html <span style="color: #666;">(Team members)</span><br>
+                ├── testimonials.html <span style="color: #666;">(Client testimonials)</span><br>
+                ├── pricing.html <span style="color: #666;">(Pricing plans)</span><br>
+                ├── blog.html <span style="color: #666;">(Blog/Insights)</span><br>
+                ├── contact.html <span style="color: #666;">(Contact page)</span><br>
+                ├── 404.html <span style="color: #666;">(Error page)</span><br>
+                ├── template-guide.html <span style="color: #666;">(This guide)</span><br>
+                ├── readme.html <span style="color: #666;">(Documentation)</span><br>
+                └── assets/<br>
+                    ├── css/<br>
+                    │   ├── style.css <span style="color: #666;">(Main styles)</span><br>
+                    │   ├── animations.css <span style="color: #666;">(Animations)</span><br>
+                    │   └── responsive.css <span style="color: #666;">(Mobile styles)</span><br>
+                    ├── js/<br>
+                    │   └── script.js <span style="color: #666;">(All JavaScript)</span><br>
+                    └── images/<br>
+                        ├── hero/ <span style="color: #666;">(Hero images)</span><br>
+                        ├── services/ <span style="color: #666;">(Service images)</span><br>
+                        ├── team/ <span style="color: #666;">(Team photos)</span><br>
+                        ├── blog/ <span style="color: #666;">(Blog images)</span><br>
+                        └── logos/ <span style="color: #666;">(Logos & icons)</span><br>
+            </div>
+        </div>
+
+        <!-- Changing Text Content -->
+        <div class="guide-section">
+            <h2 class="section-title">Changing Text Content</h2>
+            <p>Follow these steps to update text throughout the template:</p>
+            
+            <div class="step-card">
+                <h4><span class="step-number">1</span> Open the HTML File</h4>
+                <p>Open the HTML file you want to edit (e.g., index.html) in a code editor like Visual Studio Code, Sublime Text, or even Notepad.</p>
+            </div>
+            
+            <div class="step-card">
+                <h4><span class="step-number">2</span> Find the Text to Change</h4>
+                <p>Look for the text you want to change. Each section is clearly marked with comments like this:</p>
+                <div class="code-example">
+                    &lt;!-- Hero Section --&gt;<br>
+                    &lt;h1 class="hero-title"&gt;Transform Your Business with Expert Strategy&lt;/h1&gt;<br>
+                    &lt;p class="hero-subtitle"&gt;We help forward-thinking companies achieve sustainable growth...&lt;/p&gt;
+                </div>
+            </div>
+            
+            <div class="step-card">
+                <h4><span class="step-number">3</span> Edit the Text</h4>
+                <p>Replace the text between the HTML tags with your own content. For example:</p>
+                <div class="code-example">
+                    &lt;!-- Before --&gt;<br>
+                    &lt;h1 class="hero-title"&gt;Transform Your Business with Expert Strategy&lt;/h1&gt;<br><br>
+                    &lt;!-- After --&gt;<br>
+                    &lt;h1 class="hero-title"&gt;Your Company Name - Professional Business Solutions&lt;/h1&gt;
+                </div>
+            </div>
+            
+            <div class="step-card">
+                <h4><span class="step-number">4</span> Save and Test</h4>
+                <p>Save the file and open it in your browser to see the changes. Refresh the page if it's already open.</p>
+            </div>
+            
+            <div class="tip-box">
+                <strong><i class="fas fa-lightbulb"></i> Pro Tip:</strong> Use descriptive, benefit-focused text that speaks to your target audience. Highlight what makes your business unique.
+            </div>
+        </div>
+
+        <!-- Changing Colors -->
+        <div class="guide-section">
+            <h2 class="section-title">Changing Colors</h2>
+            <p>The template uses CSS variables for easy color customization. Here's the default color palette:</p>
+            
+            <div class="color-palette">
+                <div class="color-box" style="background-color: #2c3e50;">Primary<br>#2c3e50</div>
+                <div class="color-box" style="background-color: #3498db;">Secondary<br>#3498db</div>
+                <div class="color-box" style="background-color: #1abc9c;">Accent<br>#1abc9c</div>
+                <div class="color-box" style="background-color: #f8f9fa;">Light<br>#f8f9fa</div>
+                <div class="color-box" style="background-color: #7f8c8d;">Gray<br>#7f8c8d</div>
+            </div>
+            
+            <p>To change colors throughout the entire template:</p>
+            
+            <div class="step-card">
+                <h4><span class="step-number">1</span> Open the CSS File</h4>
+                <p>Open <strong>assets/css/style.css</strong> in your code editor.</p>
+            </div>
+            
+            <div class="step-card">
+                <h4><span class="step-number">2</span> Find the Color Variables</h4>
+                <p>Look for the :root section at the top of the file (around line 13):</p>
+                <div class="code-example">
+                    :root {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;/* Primary Colors */<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;--primary-color: #2c3e50;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;--secondary-color: #3498db;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;--accent-color: #1abc9c;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;/* Neutral Colors */<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;--light-color: #f8f9fa;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;--dark-color: #2c3e50;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;--gray-color: #7f8c8d;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;--light-gray: #ecf0f1;<br>
+                    }
+                </div>
+            </div>
+            
+            <div class="step-card">
+                <h4><span class="step-number">3</span> Change the Color Values</h4>
+                <p>Replace the hex color codes with your brand colors. For example:</p>
+                <div class="code-example">
+                    /* Your Brand Colors */<br>
+                    --primary-color: #003366;<br>
+                    --secondary-color: #0066cc;<br>
+                    --accent-color: #00a86b;<br>
+                    --light-color: #f5f7fa;<br>
+                    --dark-color: #1a2b3c;<br>
+                    --gray-color: #6c757d;<br>
+                    --light-gray: #e9ecef;
+                </div>
+            </div>
+            
+            <div class="step-card">
+                <h4><span class="step-number">4</span> Save and Refresh</h4>
+                <p>Save the file and refresh your browser to see all colors updated automatically.</p>
+            </div>
+            
+            <div class="warning-box">
+                <strong><i class="fas fa-exclamation-triangle"></i> Important:</strong> Changing these variables will update colors across the entire template. Test your color choices to ensure good contrast for readability.
+            </div>
+        </div>
+
+        <!-- Changing Images -->
+        <div class="guide-section">
+            <h2 class="section-title">Changing Images</h2>
+            <p>To replace placeholder images with your own:</p>
+            
+            <div class="step-card">
+                <h4><span class="step-number">1</span> Prepare Your Images</h4>
+                <p>Optimize your images for web use. Recommended sizes:</p>
+                <ul>
+                    <li>Hero images: 1200px × 800px (or similar ratio)</li>
+                    <li>Team photos: 400px × 400px (square format)</li>
+                    <li>Service images: 800px × 600px</li>
+                    <li>Blog images: 800px × 400px</li>
+                </ul>
+                <p>Use tools like Photoshop, Canva, or online compressors to optimize file size.</p>
+            </div>
+            
+            <div class="step-card">
+                <h4><span class="step-number">2</span> Replace Image Files</h4>
+                <p>Copy your images to the appropriate folders in <strong>assets/images/</strong>:</p>
+                <ul>
+                    <li>Hero/banner images → assets/images/hero/</li>
+                    <li>Team member photos → assets/images/team/</li>
+                    <li>Service-related images → assets/images/services/</li>
+                    <li>Blog/article images → assets/images/blog/</li>
+                    <li>Logos and icons → assets/images/logos/</li>
+                </ul>
+            </div>
+            
+            <div class="step-card">
+                <h4><span class="step-number">3</span> Update Image References</h4>
+                <p>In the HTML files, find image tags and update the src attribute. For example:</p>
+                <div class="code-example">
+                    &lt;!-- Before --&gt;<br>
+                    &lt;img src="assets/images/hero/hero-main.jpg" alt="Business team collaborating"&gt;<br><br>
+                    &lt;!-- After --&gt;<br>
+                    &lt;img src="assets/images/hero/your-hero-image.jpg" alt="Your company team meeting"&gt;
+                </div>
+            </div>
+            
+            <div class="step-card">
+                <h4><span class="step-number">4</span> Update Alt Text</h4>
+                <p>Always update the alt attribute with descriptive text for accessibility and SEO:</p>
+                <div class="code-example">
+                    &lt;img src="assets/images/team/leader-1.jpg" alt="Sarah Johnson, CEO of Your Company"&gt;
+                </div>
+            </div>
+            
+            <div class="success-box">
+                <strong><i class="fas fa-check-circle"></i> Best Practice:</strong> Use professional, high-quality images that represent your brand. Smiling team photos build trust, while clean office images convey professionalism.
+            </div>
+        </div>
+
+        <!-- Changing Icons -->
+        <div class="guide-section">
+            <h2 class="section-title">Changing Icons</h2>
+            <p>The template uses Font Awesome icons. To change an icon:</p>
+            
+            <div class="step-card">
+                <h4><span class="step-number">1</span> Find the Icon You Want</h4>
+                <p>Visit <a href="https://fontawesome.com/icons" target="_blank">fontawesome.com/icons</a> and browse or search for icons.</p>
+            </div>
+            
+            <div class="step-card">
+                <h4><span class="step-number">2</span> Get the Icon Class</h4>
+                <p>Click on an icon and copy the class name. For example, for a chart line icon:</p>
+                <div class="code-example">
+                    &lt;i class="fas fa-chart-line"&gt;&lt;/i&gt;
+                </div>
+            </div>
+            
+            <div class="step-card">
+                <h4><span class="step-number">3</span> Replace in Your HTML</h4>
+                <p>Find the icon you want to change in your HTML file and replace the class. For example:</p>
+                <div class="code-example">
+                    &lt;!-- Before --&gt;<br>
+                    &lt;div class="service-icon"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;i class="fas fa-chart-line"&gt;&lt;/i&gt;<br>
+                    &lt;/div&gt;<br><br>
+                    &lt;!-- After --&gt;<br>
+                    &lt;div class="service-icon"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;i class="fas fa-chart-bar"&gt;&lt;/i&gt;<br>
+                    &lt;/div&gt;
+                </div>
+            </div>
+            
+            <div class="tip-box">
+                <strong><i class="fas fa-lightbulb"></i> Tip:</strong> Stick to a consistent icon style (solid "fas", regular "far", or brands "fab") throughout your site for a cohesive look.
+            </div>
+        </div>
+
+        <!-- Adding New Pages -->
+        <div class="guide-section">
+            <h2 class="section-title">Adding New Pages</h2>
+            <p>To create additional pages based on the template:</p>
+            
+            <div class="step-card">
+                <h4><span class="step-number">1</span> Duplicate an Existing Page</h4>
+                <p>Copy an existing HTML file (like about.html) and rename it (e.g., portfolio.html).</p>
+            </div>
+            
+            <div class="step-card">
+                <h4><span class="step-number">2</span> Update Page Content</h4>
+                <p>Edit the content within the main content sections while keeping the header, navigation, and footer.</p>
+            </div>
+            
+            <div class="step-card">
+                <h4><span class="step-number">3</span> Update Navigation</h4>
+                <p>Add a link to your new page in the navigation menu. Edit the nav section in each HTML file:</p>
+                <div class="code-example">
+                    &lt;li class="nav-item"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="nav-link" href="portfolio.html"&gt;Portfolio&lt;/a&gt;<br>
+                    &lt;/li&gt;
+                </div>
+            </div>
+            
+            <div class="step-card">
+                <h4><span class="step-number">4</span> Update Page Title and Metadata</h4>
+                <p>Change the &lt;title&gt; tag and meta description for SEO:</p>
+                <div class="code-example">
+                    &lt;title&gt;Our Portfolio | CorporatePro Business Solutions&lt;/title&gt;<br>
+                    &lt;meta name="description" content="View our portfolio of successful business transformation projects and client case studies"&gt;
+                </div>
+            </div>
+        </div>
+
+        <!-- Advanced Customization -->
+        <div class="guide-section">
+            <h2 class="section-title">Advanced Customization</h2>
+            <p>For more advanced changes, here are some pointers:</p>
+            
+            <h4>Modifying Layout</h4>
+            <p>The template uses Bootstrap's grid system. To change layout structure:</p>
+            <ul>
+                <li>Study Bootstrap grid documentation at getbootstrap.com</li>
+                <li>Adjust column classes (col-lg-6, col-md-4, etc.)</li>
+                <li>Maintain responsiveness by using appropriate breakpoints</li>
+            </ul>
+            
+            <h4>Custom JavaScript</h4>
+            <p>The main JavaScript file is well-commented. Key functions include:</p>
+            <ul>
+                <li>Navigation and mobile menu</li>
+                <li>Form validation</li>
+                <li>Scroll animations</li>
+                <li>Testimonial slider</li>
+            </ul>
+            <p>You can extend or modify these functions in assets/js/script.js.</p>
+            
+            <h4>Responsive Adjustments</h4>
+            <p>For device-specific adjustments, edit responsive.css. The template uses a mobile-first approach.</p>
+            
+            <div class="warning-box">
+                <strong><i class="fas fa-exclamation-triangle"></i> Note:</strong> For complex customizations, consider hiring a professional developer if you're not comfortable with coding.
+            </div>
+        </div>
+
+        <!-- Troubleshooting -->
+        <div class="guide-section">
+            <h2 class="section-title">Troubleshooting Common Issues</h2>
+            
+            <h4>Images Not Displaying</h4>
+            <ul>
+                <li>Check file paths are correct</li>
+                <li>Ensure image files are in the right folder</li>
+                <li>Verify file names match exactly (case-sensitive on some servers)</li>
+            </ul>
+            
+            <h4>Layout Looks Broken</h4>
+            <ul>
+                <li>Clear browser cache (Ctrl+F5 or Cmd+Shift+R)</li>
+                <li>Check for missing closing HTML tags</li>
+                <li>Verify Bootstrap CSS is loading</li>
+            </ul>
+            
+            <h4>Mobile View Issues</h4>
+            <ul>
+                <li>Check responsive.css for specific styles</li>
+                <li>Ensure viewport meta tag is present</li>
+                <li>Test on actual mobile devices when possible</li>
+            </ul>
+            
+            <h4>JavaScript Not Working</h4>
+            <ul>
+                <li>Check browser console for errors (F12)</li>
+                <li>Verify script.js is loading</li>
+                <li>Ensure no syntax errors in custom code</li>
+            </ul>
+        </div>
+
+        <!-- Final Steps -->
+        <div class="guide-section">
+            <h2 class="section-title">Going Live</h2>
+            <p>When you're ready to publish your website:</p>
+            
+            <div class="step-card">
+                <h4><span class="step-number">1</span> Final Testing</h4>
+                <p>Test your site on different browsers and devices. Check all links and forms work correctly.</p>
+            </div>
+            
+            <div class="step-card">
+                <h4><span class="step-number">2</span> Optimization</h4>
+                <p>Compress images, minify CSS/JS files, and enable compression on your hosting server.</p>
+            </div>
+            
+            <div class="step-card">
+                <h4><span class="step-number">3</span> Upload to Hosting</h4>
+                <p>Upload all files to your web hosting account using FTP or your host's file manager.</p>
+            </div>
+            
+            <div class="step-card">
+                <h4><span class="step-number">4</span> Configure Domain</h4>
+                <p>Point your domain to your hosting and set up any necessary redirects.</p>
+            </div>
+            
+            <div class="success-box">
+                <strong><i class="fas fa-rocket"></i> Congratulations!</strong> Your professional business website is now live. Remember to update your content regularly and monitor your site's performance.
+            </div>
+        </div>
+
+        <!-- Support -->
+        <div class="guide-section text-center">
+            <h2 class="section-title">Need More Help?</h2>
+            <p>If you need additional assistance with the template:</p>
+            
+            <div class="row mt-4">
+                <div class="col-md-4 mb-4">
+                    <div class="p-3">
+                        <i class="fas fa-book fa-3x text-primary mb-3"></i>
+                        <h4>Documentation</h4>
+                        <p>Review the complete documentation in readme.html</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="p-3">
+                        <i class="fas fa-code fa-3x text-primary mb-3"></i>
+                        <h4>Code Comments</h4>
+                        <p>Check comments in HTML, CSS, and JS files</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="p-3">
+                        <i class="fas fa-hands-helping fa-3x text-primary mb-3"></i>
+                        <h4>Professional Help</h4>
+                        <p>Consider hiring a developer for complex customizations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p class="copyright">&copy; <script>document.write( new Date().getFullYear() );</script> CorporatePro Template Editing Guide</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

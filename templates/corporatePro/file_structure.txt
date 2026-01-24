@@ -1,0 +1,35 @@
+corporate-business-template/
+│
+├── index.html
+├── about.html
+├── services.html
+├── service-details.html
+├── team.html
+├── testimonials.html
+├── pricing.html
+├── blog.html
+├── contact.html
+├── 404.html
+├── template-guide.html
+├── readme.html
+│
+├── assets/
+│   ├── css/
+│   │   ├── style.css
+│   │   ├── animations.css
+│   │   └── responsive.css
+│   │
+│   ├── js/
+│   │   └── script.js
+│   │
+│   ├── images/
+│   │   ├── hero/
+│   │   ├── services/
+│   │   ├── team/
+│   │   ├── blog/
+│   │   └── logos/
+│   │
+│   └── fonts/
+│       └── (font files if using custom fonts)
+│
+└── README.txt

@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact CorporatePro for business consulting services, inquiries, or to schedule a consultation">
+    
+    <title>Contact Us | CorporatePro Business Solutions</title>
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/8140dd2669.js" crossorigin="anonymous"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/logos/favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="brand-text">Corporate</span><span class="brand-highlight">Pro</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                            <li><a class="dropdown-item" href="service-details.html">Strategic Consulting</a></li>
+                            <li><a class="dropdown-item" href="service-details.html">Digital Transformation</a></li>
+                            <li><a class="dropdown-item" href="service-details.html">Business Analytics</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="team.html">Our Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pricing.html">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Insights</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="page-title">Get in Touch</h1>
+                    <p class="page-subtitle">Ready to transform your business? Contact us to discuss your challenges and explore how our consulting services can help you achieve remarkable results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="contact-info-card animate-on-scroll">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Visit Our Office</h3>
+                        <p>123 Business Avenue, Suite 500<br>New York, NY 10001<br>United States</p>
+                        <a href="#" class="contact-link">Get Directions <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="contact-info-card animate-on-scroll">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Call Us</h3>
+                        <p>+1 (555) 123-4567<br>+1 (555) 987-6543</p>
+                        <p class="hours">Mon-Fri: 9:00 AM - 6:00 PM EST</p>
+                        <a href="tel:+15551234567" class="contact-link">Call Now <i class="fas fa-phone"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="contact-info-card animate-on-scroll">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email Us</h3>
+                        <p>info@corporatepro.com<br>support@corporatepro.com</p>
+                        <p class="response-time">Typically respond within 24 hours</p>
+                        <a href="mailto:info@corporatepro.com" class="contact-link">Send Email <i class="fas fa-paper-plane"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Map -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 mb-4">
+                    <div class="contact-form-card animate-on-scroll">
+                        <h2 class="form-title">Send Us a Message</h2>
+                        <p class="form-subtitle">Fill out the form below and we'll get back to you as soon as possible.</p>
+                        
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label">First Name *</label>
+                                    <input type="text" class="form-control" id="firstName" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">Last Name *</label>
+                                    <input type="text" class="form-control" id="lastName" required>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone">
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="company" class="form-label">Company Name</label>
+                                <input type="text" class="form-control" id="company">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="service" class="form-label">Service Interest</label>
+                                <select class="form-select" id="service">
+                                    <option value="">Select a service</option>
+                                    <option value="strategy">Strategic Consulting</option>
+                                    <option value="digital">Digital Transformation</option>
+                                    <option value="analytics">Business Analytics</option>
+                                    <option value="operations">Operational Excellence</option>
+                                    <option value="leadership">Leadership Development</option>
+                                    <option value="custom">Custom Solution</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Your Message *</label>
+                                <textarea class="form-control" id="message" rows="5" required placeholder="Tell us about your business challenges and how we can help..."></textarea>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="newsletter" checked>
+                                    <label class="form-check-label" for="newsletter">
+                                        Subscribe to our newsletter for business insights and updates
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="privacy" required>
+                                    <label class="form-check-label" for="privacy">
+                                        I agree to the <a href="#">Privacy Policy</a> and consent to being contacted by CorporatePro
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="col-lg-5 mb-4">
+                    <div class="contact-sidebar">
+                        <!-- Map -->
+                        <div class="map-section mb-4 animate-on-scroll">
+                            <h3 class="sidebar-title">Our Location</h3>
+                            <div id="contactMap" class="contact-map">
+                                <!-- Map will be loaded here by JavaScript -->
+                            </div>
+                            <div class="map-actions mt-2">
+                                <a href="#" class="btn btn-outline-primary btn-sm">
+                                    <i class="fas fa-directions"></i> Get Directions
+                                </a>
+                                <a href="#" class="btn btn-outline-primary btn-sm">
+                                    <i class="fas fa-map"></i> View Larger Map
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Office Hours -->
+                        <div class="office-hours mb-4 animate-on-scroll">
+                            <h3 class="sidebar-title">Office Hours</h3>
+                            <div class="hours-list">
+                                <div class="hour-item">
+                                    <span>Monday - Friday</span>
+                                    <span>9:00 AM - 6:00 PM</span>
+                                </div>
+                                <div class="hour-item">
+                                    <span>Saturday</span>
+                                    <span>10:00 AM - 2:00 PM</span>
+                                </div>
+                                <div class="hour-item">
+                                    <span>Sunday</span>
+                                    <span>Closed</span>
+                                </div>
+                            </div>
+                            <p class="timezone-note">All times are in Eastern Standard Time (EST)</p>
+                        </div>
+                        
+                        <!-- Quick Contact -->
+                        <div class="quick-contact animate-on-scroll">
+                            <h3 class="sidebar-title">Quick Contact</h3>
+                            <div class="quick-links">
+                                <a href="tel:+15551234567" class="quick-link">
+                                    <i class="fas fa-phone"></i>
+                                    <div>
+                                        <strong>Call Us</strong>
+                                        <p>+1 (555) 123-4567</p>
+                                    </div>
+                                </a>
+                                
+                                <a href="mailto:info@corporatepro.com" class="quick-link">
+                                    <i class="fas fa-envelope"></i>
+                                    <div>
+                                        <strong>Email Us</strong>
+                                        <p>info@corporatepro.com</p>
+                                    </div>
+                                </a>
+                                
+                                <a href="#" class="quick-link">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <div>
+                                        <strong>Schedule Call</strong>
+                                        <p>Book a consultation online</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="section-title">Common Questions</h2>
+                <p class="section-subtitle">Quick answers to frequently asked questions about contacting us</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="faq-item mb-4 animate-on-scroll">
+                        <h4>How soon will you respond to my inquiry?</h4>
+                        <p>We typically respond to all inquiries within 24 hours during business days. For urgent matters, please call our main office number.</p>
+                    </div>
+                    
+                    <div class="faq-item mb-4 animate-on-scroll">
+                        <h4>Do you offer free initial consultations?</h4>
+                        <p>Yes, we offer a complimentary 30-minute consultation to discuss your business challenges and determine how we can help. Schedule through our contact form or by calling our office.</p>
+                    </div>
+                    
+                    <div class="faq-item mb-4 animate-on-scroll">
+                        <h4>What information should I include in my message?</h4>
+                        <p>Please include your business challenges, goals, timeline, and any specific requirements. The more details you provide, the better we can understand how to assist you.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="faq-item mb-4 animate-on-scroll">
+                        <h4>Do you work with international clients?</h4>
+                        <p>Yes, we work with clients worldwide. We offer remote consulting services and can arrange on-site visits as needed for international engagements.</p>
+                    </div>
+                    
+                    <div class="faq-item mb-4 animate-on-scroll">
+                        <h4>What's your typical engagement process?</h4>
+                        <p>After initial contact, we schedule a discovery call, then provide a tailored proposal. Once approved, we begin the engagement with regular check-ins and progress updates.</p>
+                    </div>
+                    
+                    <div class="faq-item mb-4 animate-on-scroll">
+                        <h4>How do I schedule an in-person meeting?</h4>
+                        <p>You can request an in-person meeting through our contact form or by calling our office. We'll coordinate with you to find a suitable time at our office or your location.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Offices -->
+    <section class="offices-section">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="section-title">Global Offices</h2>
+                <p class="section-subtitle">We serve clients from strategic locations around the world</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="office-card animate-on-scroll">
+                        <div class="office-header">
+                            <div class="office-flag">
+                                <i class="fas fa-flag-usa"></i>
+                            </div>
+                            <h3>New York, USA</h3>
+                        </div>
+                        <div class="office-content">
+                            <p><i class="fas fa-map-marker-alt"></i> 123 Business Avenue, Suite 500<br>New York, NY 10001</p>
+                            <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                            <p><i class="fas fa-clock"></i> 9:00 AM - 6:00 PM EST</p>
+                            <a href="mailto:ny@corporatepro.com" class="office-email">ny@corporatepro.com</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="office-card animate-on-scroll">
+                        <div class="office-header">
+                            <div class="office-flag">
+                                <i class="fas fa-flag-europe"></i>
+                            </div>
+                            <h3>London, UK</h3>
+                        </div>
+                        <div class="office-content">
+                            <p><i class="fas fa-map-marker-alt"></i> 45 Business Square<br>London, EC2A 4QP</p>
+                            <p><i class="fas fa-phone"></i> +44 (0) 20 7123 4567</p>
+                            <p><i class="fas fa-clock"></i> 9:00 AM - 6:00 PM GMT</p>
+                            <a href="mailto:london@corporatepro.com" class="office-email">london@corporatepro.com</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="office-card animate-on-scroll">
+                        <div class="office-header">
+                            <div class="office-flag">
+                                <i class="fas fa-flag-asia"></i>
+                            </div>
+                            <h3>Singapore</h3>
+                        </div>
+                        <div class="office-content">
+                            <p><i class="fas fa-map-marker-alt"></i> 10 Marina Boulevard<br>Singapore 018983</p>
+                            <p><i class="fas fa-phone"></i> +65 6123 4567</p>
+                            <p><i class="fas fa-clock"></i> 9:00 AM - 6:00 PM SGT</p>
+                            <a href="mailto:singapore@corporatepro.com" class="office-email">singapore@corporatepro.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="cta-title">Ready to Start Your Success Story?</h2>
+                    <p class="cta-text">Contact us today to schedule your free consultation and discover how CorporatePro can help transform your business.</p>
+                    <a href="#contactForm" class="btn btn-light btn-lg">Contact Us Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h3 class="footer-brand">Corporate<span class="brand-highlight">Pro</span></h3>
+                    <p class="footer-text">Providing strategic business solutions since 2010. We help companies navigate complexity and achieve sustainable growth.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="service-details.html">Strategic Consulting</a></li>
+                        <li><a href="service-details.html">Digital Solutions</a></li>
+                        <li><a href="service-details.html">Business Analytics</a></li>
+                        <li><a href="service-details.html">Leadership Training</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Business Avenue, Suite 500</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@corporatepro.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="copyright">&copy; <script>document.write( new Date().getFullYear() );</script> CorporatePro. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="#" class="footer-bottom-link">Privacy Policy</a>
+                        <a href="#" class="footer-bottom-link">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+    
+    <script>
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                company: document.getElementById('company').value,
+                service: document.getElementById('service').value,
+                message: document.getElementById('message').value,
+                newsletter: document.getElementById('newsletter').checked
+            };
+            
+            // Validate form
+            if (!formData.firstName || !formData.lastName || !formData.email || !formData.message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Show loading state
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission (in real implementation, this would be an AJAX call)
+            setTimeout(() => {
+                // Show success message
+                alert('Thank you for your message! We have received your inquiry and will respond within 24 hours.');
+                
+                // Reset form
+                this.reset();
+                
+                // Reset button
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 1500);
+        });
+        
+        // Initialize map
+        document.addEventListener('DOMContentLoaded', function() {
+            const mapElement = document.getElementById('contactMap');
+            
+            if (mapElement) {
+                // Create a simple map placeholder (in a real implementation, this would be Google Maps or similar)
+                mapElement.innerHTML = `
+                    <div class="map-placeholder">
+                        <div class="map-overlay">
+                            <h4><i class="fas fa-map-marker-alt"></i> Our Headquarters</h4>
+                            <p>123 Business Avenue, Suite 500</p>
+                            <p>New York, NY 10001</p>
+                            <a href="https://maps.google.com/?q=123+Business+Avenue+New+York" target="_blank" class="btn btn-sm btn-primary mt-2">Open in Maps</a>
+                        </div>
+                    </div>
+                `;
+                
+                // Add map placeholder styles
+                const style = document.createElement('style');
+                style.textContent = `
+                    .map-placeholder {
+                        width: 100%;
+                        height: 300px;
+                        background: linear-gradient(45deg, #2c3e50 25%, #34495e 25%, #34495e 50%, #2c3e50 50%, #2c3e50 75%, #34495e 75%);
+                        background-size: 20px 20px;
+                        position: relative;
+                        border-radius: 8px;
+                        overflow: hidden;
+                    }
+                    
+                    .map-overlay {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        background: white;
+                        padding: 2rem;
+                        border-radius: 8px;
+                        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+                        text-align: center;
+                        max-width: 280px;
+                        width: 100%;
+                    }
+                    
+                    .map-overlay h4 {
+                        color: #2c3e50;
+                        margin-bottom: 1rem;
+                    }
+                    
+                    .map-overlay i {
+                        color: #1abc9c;
+                        margin-right: 0.5rem;
+                    }
+                    
+                    .map-actions {
+                        display: flex;
+                        gap: 10px;
+                        flex-wrap: wrap;
+                    }
+                    
+                    .office-hours .hours-list {
+                        margin-bottom: 1rem;
+                    }
+                    
+                    .hour-item {
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 0.5rem 0;
+                        border-bottom: 1px solid #eee;
+                    }
+                    
+                    .hour-item:last-child {
+                        border-bottom: none;
+                    }
+                    
+                    .timezone-note {
+                        font-size: 0.9rem;
+                        color: #666;
+                        margin-top: 0.5rem;
+                    }
+                    
+                    .quick-links {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+                    }
+                    
+                    .quick-link {
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+                        padding: 1rem;
+                        background: white;
+                        border-radius: 8px;
+                        text-decoration: none;
+                        color: #2c3e50;
+                        transition: all 0.3s ease;
+                        border: 1px solid #eee;
+                    }
+                    
+                    .quick-link:hover {
+                        transform: translateY(-2px);
+                        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                        border-color: #1abc9c;
+                    }
+                    
+                    .quick-link i {
+                        font-size: 1.5rem;
+                        color: #1abc9c;
+                    }
+                    
+                    .office-card {
+                        background: white;
+                        border-radius: 8px;
+                        padding: 1.5rem;
+                        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                        height: 100%;
+                        transition: transform 0.3s ease;
+                    }
+                    
+                    .office-card:hover {
+                        transform: translateY(-5px);
+                    }
+                    
+                    .office-header {
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+                        margin-bottom: 1.5rem;
+                    }
+                    
+                    .office-flag {
+                        width: 40px;
+                        height: 40px;
+                        background: #1abc9c;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: white;
+                        font-size: 1.2rem;
+                    }
+                    
+                    .office-content p {
+                        margin-bottom: 0.5rem;
+                        display: flex;
+                        align-items: flex-start;
+                        gap: 0.5rem;
+                    }
+                    
+                    .office-content i {
+                        color: #1abc9c;
+                        margin-top: 0.2rem;
+                    }
+                    
+                    .office-email {
+                        display: inline-block;
+                        margin-top: 1rem;
+                        color: #3498db;
+                        text-decoration: none;
+                    }
+                    
+                    .office-email:hover {
+                        text-decoration: underline;
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+        });
+    </script>
+</body>
+</html>

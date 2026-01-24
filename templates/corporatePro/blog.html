@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Business insights, industry trends, and expert advice from CorporatePro consultants">
+    
+    <title>Business Insights | CorporatePro Blog</title>
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/8140dd2669.js" crossorigin="anonymous"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/logos/favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="brand-text">Corporate</span><span class="brand-highlight">Pro</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                            <li><a class="dropdown-item" href="service-details.html">Strategic Consulting</a></li>
+                            <li><a class="dropdown-item" href="service-details.html">Digital Transformation</a></li>
+                            <li><a class="dropdown-item" href="service-details.html">Business Analytics</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="team.html">Our Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pricing.html">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="blog.html">Insights</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="page-title">Business Insights & Resources</h1>
+                    <p class="page-subtitle">Expert analysis, industry trends, and practical advice to help your business navigate challenges and seize opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="featured-article">
+        <div class="container">
+            <div class="featured-card animate-on-scroll">
+                <div class="row g-0">
+                    <div class="col-lg-6">
+                        <div class="featured-image">
+                            <img src="assets/images/blog/featured-article.jpg" alt="Future of business strategy in digital age" class="img-fluid">
+                            <div class="featured-badge">Featured Article</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="featured-content">
+                            <div class="article-meta">
+                                <span class="category-badge strategy">Strategy</span>
+                                <span class="date">November 15, <script>document.write( new Date().getFullYear() );</script></span>
+                                <span class="read-time">8 min read</span>
+                            </div>
+                            <h2 class="article-title">The Future of Business Strategy in the Digital Age</h2>
+                            <p class="article-excerpt">Discover how digital transformation is reshaping traditional business strategy and what leaders need to know to stay competitive in an increasingly digital world. We explore key trends, challenges, and opportunities.</p>
+                            <div class="article-author">
+                                <img src="assets/images/team/leader-1.jpg" alt="Sarah Johnson">
+                                <div>
+                                    <h5>Sarah Johnson</h5>
+                                    <p>CEO & Senior Strategy Consultant</p>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary">Read Full Article</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="row">
+                <!-- Main Content -->
+                <div class="col-lg-8">
+                    <!-- Category Filters -->
+                    <div class="category-filters mb-5">
+                        <h4 class="filter-title">Filter by Category:</h4>
+                        <div class="filter-buttons">
+                            <button class="btn btn-filter active" data-category="all">All Articles</button>
+                            <button class="btn btn-filter" data-category="strategy">Business Strategy</button>
+                            <button class="btn btn-filter" data-category="digital">Digital Transformation</button>
+                            <button class="btn btn-filter" data-category="leadership">Leadership</button>
+                            <button class="btn btn-filter" data-category="analytics">Data & Analytics</button>
+                            <button class="btn btn-filter" data-category="operations">Operations</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Articles Grid -->
+                    <div class="row" id="articlesGrid">
+                        <!-- Article 1 -->
+                        <div class="col-md-6 mb-4" data-category="strategy">
+                            <div class="blog-card animate-on-scroll">
+                                <div class="blog-image">
+                                    <img src="assets/images/blog/article-1.jpg" alt="Strategic planning process visualization" class="img-fluid">
+                                    <div class="category-badge strategy">Strategy</div>
+                                </div>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <span><i class="far fa-calendar"></i> Nov 10, <script>document.write( new Date().getFullYear() );</script></span>
+                                        <span><i class="far fa-clock"></i> 6 min read</span>
+                                    </div>
+                                    <h3 class="blog-title">5 Essential Elements of a Winning Business Strategy</h3>
+                                    <p class="blog-excerpt">Learn the key components that separate successful business strategies from those that fail to deliver results. Practical insights for leaders at all levels.</p>
+                                    <div class="blog-author">
+                                        <img src="assets/images/team/consultant-1.jpg" alt="Jessica Williams">
+                                        <span>By Jessica Williams</span>
+                                    </div>
+                                    <a href="#" class="blog-link">Read Article <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Article 2 -->
+                        <div class="col-md-6 mb-4" data-category="digital">
+                            <div class="blog-card animate-on-scroll">
+                                <div class="blog-image">
+                                    <img src="assets/images/blog/article-2.jpg" alt="Digital transformation technology" class="img-fluid">
+                                    <div class="category-badge digital">Digital</div>
+                                </div>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <span><i class="far fa-calendar"></i> Nov 5, <script>document.write( new Date().getFullYear() );</script></span>
+                                        <span><i class="far fa-clock"></i> 10 min read</span>
+                                    </div>
+                                    <h3 class="blog-title">Overcoming Common Digital Transformation Challenges</h3>
+                                    <p class="blog-excerpt">Digital transformation initiatives often face obstacles. Discover proven strategies to overcome resistance and ensure successful implementation.</p>
+                                    <div class="blog-author">
+                                        <img src="assets/images/team/leader-3.jpg" alt="David Rodriguez">
+                                        <span>By David Rodriguez</span>
+                                    </div>
+                                    <a href="#" class="blog-link">Read Article <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Article 3 -->
+                        <div class="col-md-6 mb-4" data-category="analytics">
+                            <div class="blog-card animate-on-scroll">
+                                <div class="blog-image">
+                                    <img src="assets/images/blog/article-3.jpg" alt="Data analytics dashboard visualization" class="img-fluid">
+                                    <div class="category-badge analytics">Analytics</div>
+                                </div>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <span><i class="far fa-calendar"></i> Oct 28, <script>document.write( new Date().getFullYear() );</script></span>
+                                        <span><i class="far fa-clock"></i> 7 min read</span>
+                                    </div>
+                                    <h3 class="blog-title">Turning Data into Actionable Business Insights</h3>
+                                    <p class="blog-excerpt">Many organizations collect data but struggle to derive value from it. Learn frameworks for transforming raw data into strategic insights that drive decisions.</p>
+                                    <div class="blog-author">
+                                        <img src="assets/images/team/consultant-3.jpg" alt="Amanda Patel">
+                                        <span>By Amanda Patel</span>
+                                    </div>
+                                    <a href="#" class="blog-link">Read Article <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Article 4 -->
+                        <div class="col-md-6 mb-4" data-category="leadership">
+                            <div class="blog-card animate-on-scroll">
+                                <div class="blog-image">
+                                    <img src="assets/images/blog/article-4.jpg" alt="Leadership development workshop" class="img-fluid">
+                                    <div class="category-badge leadership">Leadership</div>
+                                </div>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <span><i class="far fa-calendar"></i> Oct 20, <script>document.write( new Date().getFullYear() );</script></span>
+                                        <span><i class="far fa-clock"></i> 5 min read</span>
+                                    </div>
+                                    <h3 class="blog-title">Building Resilient Leadership Teams for Uncertain Times</h3>
+                                    <p class="blog-excerpt">In today's volatile business environment, resilient leadership is more important than ever. Discover practices that strengthen leadership teams.</p>
+                                    <div class="blog-author">
+                                        <img src="assets/images/team/consultant-4.jpg" alt="James Wilson">
+                                        <span>By James Wilson</span>
+                                    </div>
+                                    <a href="#" class="blog-link">Read Article <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Article 5 -->
+                        <div class="col-md-6 mb-4" data-category="operations">
+                            <div class="blog-card animate-on-scroll">
+                                <div class="blog-image">
+                                    <img src="assets/images/blog/article-5.jpg" alt="Operational efficiency process flow" class="img-fluid">
+                                    <div class="category-badge operations">Operations</div>
+                                </div>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <span><i class="far fa-calendar"></i> Oct 15, <script>document.write( new Date().getFullYear() );</script></span>
+                                        <span><i class="far fa-clock"></i> 9 min read</span>
+                                    </div>
+                                    <h3 class="blog-title">Streamlining Operations for Maximum Efficiency</h3>
+                                    <p class="blog-excerpt">Operational excellence is a key competitive advantage. Explore methodologies for identifying inefficiencies and optimizing business processes.</p>
+                                    <div class="blog-author">
+                                        <img src="assets/images/team/leader-2.jpg" alt="Michael Chen">
+                                        <span>By Michael Chen</span>
+                                    </div>
+                                    <a href="#" class="blog-link">Read Article <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Article 6 -->
+                        <div class="col-md-6 mb-4" data-category="strategy">
+                            <div class="blog-card animate-on-scroll">
+                                <div class="blog-image">
+                                    <img src="assets/images/blog/article-6.jpg" alt="Market analysis and competitive intelligence" class="img-fluid">
+                                    <div class="category-badge strategy">Strategy</div>
+                                </div>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <span><i class="far fa-calendar"></i> Oct 8, <script>document.write( new Date().getFullYear() );</script></span>
+                                        <span><i class="far fa-clock"></i> 8 min read</span>
+                                    </div>
+                                    <h3 class="blog-title">Competitive Intelligence: Staying Ahead in Your Market</h3>
+                                    <p class="blog-excerpt">Understanding your competitive landscape is crucial for strategic planning. Learn effective techniques for gathering and analyzing competitive intelligence.</p>
+                                    <div class="blog-author">
+                                        <img src="assets/images/team/consultant-1.jpg" alt="Jessica Williams">
+                                        <span>By Jessica Williams</span>
+                                    </div>
+                                    <a href="#" class="blog-link">Read Article <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <nav aria-label="Blog pagination" class="mt-5">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <!-- Search Box -->
+                    <div class="sidebar-widget mb-4 animate-on-scroll">
+                        <h4 class="widget-title">Search Articles</h4>
+                        <div class="search-box">
+                            <input type="text" class="form-control" placeholder="Search for articles...">
+                            <button class="search-btn"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Categories Widget -->
+                    <div class="sidebar-widget mb-4 animate-on-scroll">
+                        <h4 class="widget-title">Categories</h4>
+                        <ul class="category-list">
+                            <li>
+                                <a href="#" class="category-item">
+                                    <span class="category-name">Business Strategy</span>
+                                    <span class="category-count">12</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="category-item">
+                                    <span class="category-name">Digital Transformation</span>
+                                    <span class="category-count">8</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="category-item">
+                                    <span class="category-name">Leadership & Management</span>
+                                    <span class="category-count">6</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="category-item">
+                                    <span class="category-name">Data & Analytics</span>
+                                    <span class="category-count">5</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="category-item">
+                                    <span class="category-name">Operations Excellence</span>
+                                    <span class="category-count">7</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="category-item">
+                                    <span class="category-name">Industry Trends</span>
+                                    <span class="category-count">9</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Popular Articles -->
+                    <div class="sidebar-widget mb-4 animate-on-scroll">
+                        <h4 class="widget-title">Popular Articles</h4>
+                        <div class="popular-articles">
+                            <a href="#" class="popular-article">
+                                <div class="popular-thumb">
+                                    <img src="assets/images/blog/article-1.jpg" alt="Strategic planning">
+                                </div>
+                                <div class="popular-content">
+                                    <h5>5 Essential Elements of a Winning Business Strategy</h5>
+                                    <div class="article-meta">
+                                        <span>Nov 10, <script>document.write( new Date().getFullYear() );</script></span>
+                                        <span>• 6 min read</span>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="popular-article">
+                                <div class="popular-thumb">
+                                    <img src="assets/images/blog/article-2.jpg" alt="Digital transformation">
+                                </div>
+                                <div class="popular-content">
+                                    <h5>Overcoming Digital Transformation Challenges</h5>
+                                    <div class="article-meta">
+                                        <span>Nov 5, <script>document.write( new Date().getFullYear() );</script></span>
+                                        <span>• 10 min read</span>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="popular-article">
+                                <div class="popular-thumb">
+                                    <img src="assets/images/blog/article-3.jpg" alt="Data analytics">
+                                </div>
+                                <div class="popular-content">
+                                    <h5>Turning Data into Actionable Insights</h5>
+                                    <div class="article-meta">
+                                        <span>Oct 28, <script>document.write( new Date().getFullYear() );</script></span>
+                                        <span>• 7 min read</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Newsletter Signup -->
+                    <div class="sidebar-widget mb-4 animate-on-scroll">
+                        <div class="newsletter-card">
+                            <h4 class="widget-title">Stay Updated</h4>
+                            <p>Subscribe to our newsletter for the latest business insights and industry trends.</p>
+                            <form class="newsletter-form">
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Your email address" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+                            </form>
+                            <p class="form-text">We respect your privacy. Unsubscribe at any time.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Tags Widget -->
+                    <div class="sidebar-widget animate-on-scroll">
+                        <h4 class="widget-title">Popular Tags</h4>
+                        <div class="tag-cloud">
+                            <a href="#" class="tag">Strategy</a>
+                            <a href="#" class="tag">Digital Transformation</a>
+                            <a href="#" class="tag">Leadership</a>
+                            <a href="#" class="tag">Analytics</a>
+                            <a href="#" class="tag">Operations</a>
+                            <a href="#" class="tag">Innovation</a>
+                            <a href="#" class="tag">Growth</a>
+                            <a href="#" class="tag">Change Management</a>
+                            <a href="#" class="tag">Business Intelligence</a>
+                            <a href="#" class="tag">Market Trends</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="resources-section bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="section-title">Additional Resources</h2>
+                <p class="section-subtitle">Downloadable guides, templates, and tools to help your business succeed</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="resource-card animate-on-scroll">
+                        <div class="resource-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <h3>Strategic Planning Template</h3>
+                        <p>Comprehensive template to guide your strategic planning process, including SWOT analysis, goal setting, and implementation tracking.</p>
+                        <a href="#" class="resource-link">Download Template <i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="resource-card animate-on-scroll">
+                        <div class="resource-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3>Digital Readiness Assessment</h3>
+                        <p>Tool to evaluate your organization's readiness for digital transformation across technology, processes, and people dimensions.</p>
+                        <a href="#" class="resource-link">Take Assessment <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="resource-card animate-on-scroll">
+                        <div class="resource-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3>Leadership Webinar Series</h3>
+                        <p>Access our library of recorded webinars on leadership development, change management, and strategic decision-making.</p>
+                        <a href="#" class="resource-link">Watch Now <i class="fas fa-play"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="cta-title">Want More Insights?</h2>
+                    <p class="cta-text">Subscribe to our newsletter for regular updates on business strategy, industry trends, and expert advice delivered to your inbox.</p>
+                    <a href="#" class="btn btn-light btn-lg">Subscribe to Newsletter</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h3 class="footer-brand">Corporate<span class="brand-highlight">Pro</span></h3>
+                    <p class="footer-text">Providing strategic business solutions since 2010. We help companies navigate complexity and achieve sustainable growth.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="service-details.html">Strategic Consulting</a></li>
+                        <li><a href="service-details.html">Digital Solutions</a></li>
+                        <li><a href="service-details.html">Business Analytics</a></li>
+                        <li><a href="service-details.html">Leadership Training</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Business Avenue, Suite 500</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@corporatepro.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="copyright">&copy; <script>document.write( new Date().getFullYear() );</script> CorporatePro. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="#" class="footer-bottom-link">Privacy Policy</a>
+                        <a href="#" class="footer-bottom-link">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+    
+    <script>
+        // Category filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.btn-filter');
+            const articles = document.querySelectorAll('[data-category]');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    
+                    // Show/hide articles based on category
+                    articles.forEach(article => {
+                        if (category === 'all' || article.getAttribute('data-category') === category) {
+                            article.style.display = 'block';
+                        } else {
+                            article.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Search functionality
+            const searchInput = document.querySelector('.search-box input');
+            const searchBtn = document.querySelector('.search-btn');
+            
+            function performSearch() {
+                const searchTerm = searchInput.value.toLowerCase();
+                
+                articles.forEach(article => {
+                    const title = article.querySelector('.blog-title').textContent.toLowerCase();
+                    const excerpt = article.querySelector('.blog-excerpt').textContent.toLowerCase();
+                    
+                    if (title.includes(searchTerm) || excerpt.includes(searchTerm)) {
+                        article.style.display = 'block';
+                    } else {
+                        article.style.display = 'none';
+                    }
+                });
+                
+                // Reset filter buttons
+                filterButtons.forEach(btn => {
+                    if (btn.getAttribute('data-category') === 'all') {
+                        btn.classList.add('active');
+                    } else {
+                        btn.classList.remove('active');
+                    }
+                });
+            }
+            
+            searchBtn.addEventListener('click', performSearch);
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    performSearch();
+                }
+            });
+            
+            // Newsletter form submission
+            document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = this.querySelector('input[type="email"]').value;
+                
+                // In a real implementation, this would submit to a newsletter service
+                alert(`Thank you for subscribing with email: ${email}. You'll receive our next newsletter shortly.`);
+                this.reset();
+            });
+        });
+    </script>
+</body>
+</html>

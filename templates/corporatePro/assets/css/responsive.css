@@ -1,0 +1,591 @@
+/* 
+CorporatePro - Responsive Styles
+Mobile-first responsive design approach
+*/
+
+/* ===========================================
+   Extra Small Devices (Phones, <576px)
+=========================================== */
+
+@media (max-width: 575.98px) {
+    /* Typography */
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+        padding: 6rem 0 3rem;
+        min-height: auto;
+    }
+    
+    .hero-content {
+        padding-right: 0;
+        text-align: center;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    /* Navigation */
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+    
+    .nav-link {
+        padding: 0.5rem 0 !important;
+    }
+    
+    /* Stats Row */
+    .stats-row {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .stat-item {
+        text-align: center;
+    }
+    
+    /* Timeline */
+    .timeline {
+        padding-left: 20px;
+    }
+    
+    .timeline::before {
+        left: 10px;
+    }
+    
+    .timeline-item {
+        padding-left: 50px;
+    }
+    
+    .timeline-date {
+        width: 40px;
+        font-size: 0.9rem;
+    }
+    
+    /* Service Cards */
+    .service-card {
+        padding: var(--spacing-md);
+    }
+    
+    /* Footer */
+    .footer {
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+    }
+    
+    .footer-bottom-link {
+        margin: 0 var(--spacing-xs);
+    }
+    
+    /* Buttons */
+    .btn-lg {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+    
+    /* Page Header */
+    .page-header {
+        padding: 6rem 0 3rem;
+    }
+    
+    /* Error Page */
+    .error-code {
+        font-size: 5rem;
+    }
+    
+    .error-title {
+        font-size: 1.75rem;
+    }
+    
+    /* Contact Form */
+    .contact-form {
+        padding: var(--spacing-md);
+    }
+    
+    /* Pricing Cards */
+    .pricing-card.featured {
+        transform: none;
+        margin-bottom: var(--spacing-lg);
+    }
+}
+
+/* ===========================================
+   Small Devices (Landscape Phones, ≥576px)
+=========================================== */
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .stats-row {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .stat-item {
+        flex: 0 0 45%;
+        text-align: center;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .timeline-item {
+        padding-left: 60px;
+    }
+    
+    .timeline-date {
+        width: 50px;
+    }
+}
+
+/* ===========================================
+   Medium Devices (Tablets, ≥768px)
+=========================================== */
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .mission-content {
+        padding-left: 0;
+        margin-top: var(--spacing-lg);
+    }
+    
+    .stats-row {
+        justify-content: space-around;
+    }
+    
+    .team-member-img {
+        height: 200px;
+    }
+}
+
+/* ===========================================
+   Large Devices (Desktops, ≥992px)
+=========================================== */
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .hero-title {
+        font-size: 3.2rem;
+    }
+    
+    .team-member-img {
+        height: 220px;
+    }
+}
+
+/* ===========================================
+   Extra Large Devices (Large Desktops, ≥1200px)
+=========================================== */
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    .hero-title {
+        font-size: 3.5rem;
+    }
+}
+
+/* ===========================================
+   XXL Devices (Extra Large Desktops, ≥1400px)
+=========================================== */
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+    
+    .hero-title {
+        font-size: 4rem;
+    }
+}
+
+/* ===========================================
+   Tablet Portrait Specific
+=========================================== */
+
+@media (max-width: 991.98px) and (orientation: portrait) {
+    .hero-image {
+        margin-top: var(--spacing-lg);
+    }
+    
+    .service-card,
+    .value-card,
+    .team-member-card {
+        margin-bottom: var(--spacing-md);
+    }
+}
+
+/* ===========================================
+   Tablet Landscape Specific
+=========================================== */
+
+@media (max-width: 991.98px) and (orientation: landscape) {
+    .hero-section {
+        min-height: auto;
+        padding: 7rem 0 4rem;
+    }
+    
+    .team-member-img {
+        height: 180px;
+    }
+}
+
+/* ===========================================
+   Mobile Landscape Specific
+=========================================== */
+
+@media (max-width: 767.98px) and (orientation: landscape) {
+    .hero-section {
+        padding: 5rem 0 3rem;
+    }
+    
+    .navbar {
+        padding: 0.5rem 0;
+    }
+}
+
+/* ===========================================
+   High Resolution Displays
+=========================================== */
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero-image img {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+/* ===========================================
+   Print Styles
+=========================================== */
+
+@media print {
+    .navbar,
+    .footer,
+    .hero-buttons,
+    .social-links,
+    .btn {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+        color: #000;
+        background: #fff;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: none;
+    }
+    
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+    
+    .hero-section,
+    .cta-section {
+        background: #fff !important;
+        color: #000 !important;
+        padding: 1rem 0 !important;
+    }
+    
+    .hero-title,
+    .section-title,
+    .page-title {
+        color: #000 !important;
+    }
+    
+    .service-card,
+    .value-card,
+    .team-member-card {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        break-inside: avoid;
+    }
+    
+    img {
+        max-width: 300px !important;
+    }
+}
+
+/* ===========================================
+   Reduced Motion Preferences
+=========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ===========================================
+   Dark Mode Support
+=========================================== */
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #e0e0e0;
+    }
+    
+    .navbar,
+    .footer,
+    .service-card,
+    .value-card,
+    .team-member-card,
+    .pricing-card,
+    .blog-card {
+        background-color: #1e1e1e;
+        color: #e0e0e0;
+    }
+    
+    .navbar {
+        background-color: rgba(30, 30, 30, 0.95);
+    }
+    
+    .nav-link {
+        color: #e0e0e0 !important;
+    }
+    
+    .section-title,
+    .page-title,
+    .hero-title,
+    .footer-heading,
+    .footer-brand {
+        color: #ffffff;
+    }
+    
+    .section-subtitle,
+    .page-subtitle,
+    .service-card p,
+    .value-card p,
+    .team-bio {
+        color: #b0b0b0;
+    }
+    
+    .light-color-bg {
+        background-color: #2a2a2a !important;
+    }
+    
+    .form-control {
+        background-color: #2a2a2a;
+        border-color: #3a3a3a;
+        color: #e0e0e0;
+    }
+    
+    .form-control:focus {
+        background-color: #2a2a2a;
+        border-color: var(--accent-color);
+        color: #e0e0e0;
+    }
+}
+
+/* ===========================================
+   Accessibility: High Contrast Mode
+=========================================== */
+
+@media (prefers-contrast: high) {
+    .btn-primary {
+        border: 3px solid #000;
+    }
+    
+    .nav-link.active {
+        text-decoration: underline;
+        text-decoration-thickness: 3px;
+    }
+    
+    .service-card:hover {
+        outline: 3px solid #000;
+    }
+}
+
+/* ===========================================
+   Touch Device Optimizations
+=========================================== */
+
+@media (hover: none) and (pointer: coarse) {
+    .service-card:hover,
+    .team-member-card:hover,
+    .value-card:hover,
+    .pricing-card:hover {
+        transform: none;
+    }
+    
+    .btn:hover::after {
+        animation: none;
+    }
+    
+    /* Increase tap target sizes */
+    .btn,
+    .nav-link,
+    .service-link,
+    .blog-link {
+        min-height: 44px;
+        min-width: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .social-links a {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Remove hover effects that don't work well on touch */
+    .hover-lift:hover {
+        transform: none;
+    }
+    
+    .icon-hover:hover {
+        transform: none;
+    }
+}
+
+/* ===========================================
+   Very Small Height Devices
+=========================================== */
+
+@media (max-height: 500px) {
+    .hero-section {
+        min-height: auto;
+        padding: 5rem 0 2rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .error-section {
+        padding: 3rem 0;
+    }
+}
+
+/* ===========================================
+   Navigation Responsive Adjustments
+=========================================== */
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: white;
+        padding: var(--spacing-md);
+        border-radius: var(--border-radius-md);
+        box-shadow: var(--shadow-lg);
+        margin-top: var(--spacing-sm);
+    }
+    
+    .nav-item {
+        margin-bottom: var(--spacing-xs);
+    }
+    
+    .dropdown-menu {
+        border: none;
+        box-shadow: none;
+        padding-left: var(--spacing-md);
+        background-color: var(--light-gray);
+    }
+}
+
+/* ===========================================
+   Form Responsive Adjustments
+=========================================== */
+
+@media (max-width: 767.98px) {
+    .contact-form .row > div {
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .form-control {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+}
+
+/* ===========================================
+   Image Responsive Adjustments
+=========================================== */
+
+@media (max-width: 767.98px) {
+    .hero-image img,
+    .mission-image img,
+    .team-member-img img,
+    .blog-image img {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        object-fit: cover;
+    }
+}
+
+/* ===========================================
+   Utility Class Responsive Adjustments
+=========================================== */
+
+@media (max-width: 767.98px) {
+    .text-md-start {
+        text-align: left !important;
+    }
+    
+    .text-md-end {
+        text-align: right !important;
+    }
+    
+    .mt-md-0 {
+        margin-top: 0 !important;
+    }
+    
+    .mb-md-0 {
+        margin-bottom: 0 !important;
+    }
+    
+    .d-md-flex {
+        display: flex !important;
+    }
+    
+    .d-md-none {
+        display: none !important;
+    }
+}
