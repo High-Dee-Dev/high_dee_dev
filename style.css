@@ -902,4 +902,9 @@ ul {
 
 .validation-message.success {
     color: #28a745;
+
+}
+
+body nav, body section, body footer{
+    overflow-x: hidden;
 }
