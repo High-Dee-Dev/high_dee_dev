@@ -1,0 +1,41 @@
+[
+    {
+        "id": 1,
+        "title": "AgencyPro",
+        "description": "AgencyPro is a beautiful, fast, accessible, and conversion-focused one-page HTML template designed specifically for agencies and small businesses. Built with Bootstrap 5, modern HTML5, clean CSS, and lightweight vanilla JavaScript.",
+        "image": "images/agencypro.PNG",
+        "url": "https://highdeedev.space/templates/AgencyPro/",
+        "category": "frontend",
+        "tech": ["HTML", "CSS", "Bootstrap", "JavaScript", "FontAwesome"]
+    },
+
+    {
+        "id": 2,
+        "title": "Bistro Elegante",
+        "description": "A beautiful, modern, and conversion-focused website template for restaurants and cafes. Built with Bootstrap 5, plain HTML, CSS, and vanilla JavaScript. Perfect for restaurant owners who want a professional online presence that drives reservations and orders.",
+        "image": "images/bistro_elegante.PNG",
+        "url": "https://highdeedev.space/templates/bistro_elegante/",
+        "category": "frontend",
+        "tech": ["HTML", "CSS", "Bootstrap", "JavaScript", "FontAwesome"]
+    },
+
+    {
+        "id": 3,
+        "title": "CorporatePro",
+        "description": "CorporatePro is built with modern web standards and best practices. It features a clean, professional design that conveys trust and expertise. The template is fully responsive, working perfectly on all devices from mobile phones to desktop computers.",
+        "image": "images/corporatePro.PNG",
+        "url": "https://highdeedev.space/templates/corporatePro/",
+        "category": "frontend",
+        "tech": ["HTML", "CSS", "Bootstrap", "JavaScript", "FontAwesome"]
+    },
+
+    {
+        "id": 4,
+        "title": "Thoughtful Reads",
+        "description": "A beautiful, modern, and conversion-optimized blog and magazine template built with Bootstrap 5, featuring dark mode, responsive design, and comprehensive monetization features.",
+        "image": "images/thoughtful_reads.PNG",
+        "url": "https://highdeedev.space/templates/thoughtful_reads/",
+        "category": "frontend",
+        "tech": ["HTML", "CSS", "Bootstrap", "JavaScript", "FontAwesome"]
+    }
+]
