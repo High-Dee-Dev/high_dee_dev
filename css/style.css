@@ -949,6 +949,7 @@ a:hover {
     .timeline-date {
         width: 40px;
         font-size: 0.9rem;
+        text-align: right;
     }
     
     .timeline-item::before {
@@ -1243,4 +1244,5 @@ body.keyboard-navigation :focus {
 
 .mailto-instructions li {
     margin-bottom: 0.25rem;
+
 }
