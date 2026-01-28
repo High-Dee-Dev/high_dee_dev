@@ -947,7 +947,7 @@ a:hover {
     }
     
     .timeline-date {
-        width: 40px;
+        width: 80px;
         font-size: 0.9rem;
         text-align: right;
     }
@@ -1246,3 +1246,4 @@ body.keyboard-navigation :focus {
     margin-bottom: 0.25rem;
 
 }
+
