@@ -1,0 +1,27 @@
+startup-saas-template/
+├── index.html
+├── css/
+│   ├── style.css
+│   └── responsive.css
+├── js/
+│   └── main.js
+├── images/
+│   ├── hero-dashboard.png
+│   ├── feature-analytics.png
+│   ├── feature-collaborate.png
+│   ├── feature-automate.png
+│   ├── screenshot-dashboard-1.png
+│   ├── screenshot-dashboard-2.png
+│   ├── team-adebayo.jpg
+│   ├── team-luca.jpg
+│   ├── team-nia.jpg
+│   ├── team-tomasz.jpg
+│   ├── team-farouk.jpg
+│   ├── client-logo-1.png
+│   ├── client-logo-2.png
+│   ├── client-logo-3.png
+│   ├── client-logo-4.png
+│   └── client-logo-5.png
+└── documentation/
+    ├── customization-guide.html
+    └── readme-embed.html

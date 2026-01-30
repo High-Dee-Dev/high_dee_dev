@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusFlow Template - Customization Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+            padding-top: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+        
+        h1, h2, h3, h4 {
+            color: #2c3e50;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            border-bottom: 3px solid #6366f1;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+        
+        h3 {
+            color: #6366f1;
+            padding-left: 10px;
+            border-left: 4px solid #6366f1;
+        }
+        
+        code {
+            background: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #d63384;
+        }
+        
+        pre {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        
+        .alert {
+            border-radius: 8px;
+            border: none;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .alert-info {
+            background: #e0f2fe;
+            color: #0369a1;
+        }
+        
+        .alert-warning {
+            background: #fef3c7;
+            color: #92400e;
+        }
+        
+        .alert-success {
+            background: #d1fae5;
+            color: #065f46;
+        }
+        
+        .color-swatch {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            margin-right: 10px;
+            vertical-align: middle;
+            border: 1px solid #ddd;
+        }
+        
+        .file-structure {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        
+        .file-structure li {
+            list-style-type: none;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .file-structure li:before {
+            content: '📁';
+            position: absolute;
+            left: 0;
+        }
+        
+        .file-structure li.file:before {
+            content: '📄';
+        }
+        
+        .step {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: transform 0.2s ease;
+        }
+        
+        .step:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: white;
+            border-radius: 50%;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #6366f1;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-book me-2"></i>NexusFlow Template - Complete Customization Guide</h1>
+        
+        <div class="alert alert-info">
+            <i class="fas fa-info-circle me-2"></i>
+            This guide will help you customize every aspect of the NexusFlow SaaS template. No advanced coding skills required.
+        </div>
+        
+        <div class="row mb-5">
+            <div class="col-md-4">
+                <div class="card text-center h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <i class="fas fa-palette fa-3x mb-3" style="color: #6366f1;"></i>
+                        <h4>Design & Colors</h4>
+                        <p>Learn how to change colors, fonts, and overall design</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <i class="fas fa-code fa-3x mb-3" style="color: #10b981;"></i>
+                        <h4>Code Structure</h4>
+                        <p>Understand the HTML, CSS, and JavaScript organization</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <i class="fas fa-images fa-3x mb-3" style="color: #8b5cf6;"></i>
+                        <h4>Content & Images</h4>
+                        <p>Replace text, images, and add your own content</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#file-structure">File Structure Overview</a></li>
+            <li><a href="#color-customization">Color Customization</a></li>
+            <li><a href="#font-customization">Font Customization</a></li>
+            <li><a href="#content-replacement">Content Replacement</a></li>
+            <li><a href="#image-replacement">Image Replacement</a></li>
+            <li><a href="#navigation-customization">Navigation Customization</a></li>
+            <li><a href="#form-integration">Form Integration</a></li>
+            <li><a href="#javascript-features">JavaScript Features</a></li>
+            <li><a href="#responsive-adjustments">Responsive Adjustments</a></li>
+            <li><a href="#deployment">Deployment Guidelines</a></li>
+        </ul>
+        
+        <h2 id="file-structure">File Structure Overview</h2>
+        
+        <div class="file-structure">
+            <ul>
+                <li>startup-saas-template/
+                    <ul>
+                        <li class="file">index.html - Main HTML file</li>
+                        <li>css/
+                            <ul>
+                                <li class="file">style.css - Main stylesheet</li>
+                                <li class="file">responsive.css - Responsive styles</li>
+                            </ul>
+                        </li>
+                        <li>js/
+                            <ul>
+                                <li class="file">main.js - All JavaScript functionality</li>
+                            </ul>
+                        </li>
+                        <li>images/ - All template images</li>
+                        <li>documentation/
+                            <ul>
+                                <li class="file">customization-guide.html - This file</li>
+                                <li class="file">readme-embed.html - README in textarea</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+        <h2 id="color-customization">Color Customization</h2>
+        
+        <p>The template uses CSS custom properties (variables) for easy color customization. All colors are defined in the <code>:root</code> selector in <code>css/style.css</code>.</p>
+        
+        <div class="alert alert-warning">
+            <i class="fas fa-exclamation-triangle me-2"></i>
+            Always change colors using CSS variables - don't edit individual color values throughout the file.
+        </div>
+        
+        <h3>Primary Colors</h3>
+        <p>To change the primary color scheme, locate this section in <code>css/style.css</code>:</p>
+        
+        <pre><code>:root {
+    --primary: #6366f1;      /* Main brand color */
+    --primary-dark: #4f46e5; /* Darker shade for hover states */
+    --secondary: #10b981;    /* Secondary accent color */
+    --light: #f9fafb;        /* Light backgrounds */
+    --dark: #111827;         /* Dark text and elements */
+    --gray: #6b7280;         /* Gray text */
+    --light-gray: #f3f4f6;   /* Light gray backgrounds */
+    --border: #e5e7eb;       /* Border colors */
+}</code></pre>
+        
+        <h3>Gradient Colors</h3>
+        <p>The template uses gradients in several places. To change them, search for <code>linear-gradient</code> in the CSS file.</p>
+        
+        <div class="step">
+            <div class="d-flex align-items-center mb-3">
+                <span class="step-number">1</span>
+                <h4 class="mb-0">Change Primary Color</h4>
+            </div>
+            <p>Replace the <code>--primary</code> value with your brand color. For example:</p>
+            <pre><code>--primary: #3b82f6; /* Change to blue */</code></pre>
+        </div>
+        
+        <div class="step">
+            <div class="d-flex align-items-center mb-3">
+                <span class="step-number">2</span>
+                <h4 class="mb-0">Update Gradient Colors</h4>
+            </div>
+            <p>Update gradient values to match your brand. Search for:</p>
+            <pre><code>background: linear-gradient(135deg, #6366f1, #8b5cf6);</code></pre>
+            <p>Replace with your colors:</p>
+            <pre><code>background: linear-gradient(135deg, #3b82f6, #1d4ed8);</code></pre>
+        </div>
+        
+        <h2 id="font-customization">Font Customization</h2>
+        
+        <p>The template uses Google Fonts (Inter and Poppins). To change fonts:</p>
+        
+        <div class="step">
+            <div class="d-flex align-items-center mb-3">
+                <span class="step-number">1</span>
+                <h4 class="mb-0">Change Google Fonts</h4>
+            </div>
+            <p>In <code>index.html</code>, find the Google Fonts link:</p>
+            <pre><code>&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"&gt;</code></pre>
+            <p>Replace with your preferred fonts from <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>.</p>
+        </div>
+        
+        <div class="step">
+            <div class="d-flex align-items-center mb-3">
+                <span class="step-number">2</span>
+                <h4 class="mb-0">Update Font Family in CSS</h4>
+            </div>
+            <p>In <code>css/style.css</code>, update the font-family declarations:</p>
+            <pre><code>body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+}</code></pre>
+            <p>Replace 'Inter' and 'Poppins' with your new font families.</p>
+        </div>
+        
+        <h2 id="content-replacement">Content Replacement</h2>
+        
+        <p>To replace the template content with your own:</p>
+        
+        <div class="step">
+            <div class="d-flex align-items-center mb-3">
+                <span class="step-number">1</span>
+                <h4 class="mb-0">Update Text Content</h4>
+            </div>
+            <p>Open <code>index.html</code> and replace all text content. Pay attention to:</p>
+            <ul>
+                <li>Page title and meta description in the <code>&lt;head&gt;</code></li>
+                <li>Hero section headline and description</li>
+                <li>Feature descriptions</li>
+                <li>Testimonial text and names</li>
+                <li>Team member bios</li>
+                <li>FAQ questions and answers</li>
+                <li>Footer content</li>
+            </ul>
+        </div>
+        
+        <div class="step">
+            <div class="d-flex align-items-center mb-3">
+                <span class="step-number">2</span>
+                <h4 class="mb-0">Update Pricing Information</h4>
+            </div>
+            <p>In the pricing section, update:</p>
+            <ul>
+                <li>Plan names and descriptions</li>
+                <li>Price amounts</li>
+                <li>Feature lists for each plan</li>
+                <li>CTA button text</li>
+            </ul>
+            <p>Each pricing card has a structure like:</p>
+            <pre><code>&lt;div class="pricing-card"&gt;
+    &lt;div class="pricing-header"&gt;
+        &lt;h3&gt;Starter&lt;/h3&gt;
+        &lt;p&gt;For small teams getting started&lt;/p&gt;
+        &lt;div class="price"&gt;
+            &lt;span class="currency"&gt;$&lt;/span&gt;
+            &lt;span class="amount"&gt;49&lt;/span&gt;
+            &lt;span class="period"&gt;/month&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- ... --&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        
+        <h2 id="image-replacement">Image Replacement</h2>
+        
+        <p>The template includes placeholder images from Unsplash. To replace them:</p>
+        
+        <div class="step">
+            <div class="d-flex align-items-center mb-3">
+                <span class="step-number">1</span>
+                <h4 class="mb-0">Prepare Your Images</h4>
+            </div>
+            <p>Create or source images for:</p>
+            <ul>
+                <li>Hero dashboard screenshot</li>
+                <li>Feature illustrations</li>
+                <li>Product screenshots</li>
+                <li>Team member photos</li>
+                <li>Client logos</li>
+            </ul>
+            <p>Optimize images for web (use tools like TinyPNG). Recommended sizes:</p>
+            <ul>
+                <li>Hero image: 1200x800px</li>
+                <li>Screenshots: 1000x600px</li>
+                <li>Team photos: 400x400px</li>
+                <li>Client logos: 150x50px</li>
+            </ul>
+        </div>
+        
+        <div class="step">
+            <div class="d-flex align-items-center mb-3">
+                <span class="step-number">2</span>
+                <h4 class="mb-0">Replace Image Files</h4>
+            </div>
+            <p>Place your images in the <code>images/</code> folder and update the <code>src</code> attributes in <code>index.html</code>:</p>
+            <pre><code>&lt;!-- Before --&gt;
+&lt;img src="images/hero-dashboard.png" alt="NexusFlow Dashboard"&gt;
+
+&lt;!-- After --&gt;
+&lt;img src="images/your-hero-image.jpg" alt="Your Product Dashboard"&gt;</code></pre>
+            <p>Don't forget to update the <code>alt</code> text for accessibility.</p>
+        </div>
+        
+        <h2 id="navigation-customization">Navigation Customization</h2>
+        
+        <p>To update the navigation menu:</p>
+        
+        <div class="step">
+            <div class="d-flex align-items-center mb-3">
+                <span class="step-number">1</span>
+                <h4 class="mb-0">Update Menu Items</h4>
+            </div>
+            <p>Find the navigation in <code>index.html</code>:</p>
+            <pre><code>&lt;ul class="navbar-nav mx-auto"&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" href="#features"&gt;Features&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;!-- More items --&gt;
+&lt;/ul&gt;</code></pre>
+            <p>Update the <code>href</code> and text for each menu item.</p>
+        </div>
+        
+        <div class="step">
+            <div class="d-flex align-items-center mb-3">
+                <span class="step-number">2</span>
+                <h4 class="mb-0">Update Logo and Brand</h4>
+            </div>
+            <p>Update the brand logo and name:</p>
+            <pre><code>&lt;a class="navbar-brand" href="#"&gt;
+    &lt;span class="brand-logo"&gt;NF&lt;/span&gt;
+    &lt;span class="brand-text"&gt;NexusFlow&lt;/span&gt;
+&lt;/a&gt;</code></pre>
+            <p>Change <code>NF</code> to your initials and <code>NexusFlow</code> to your brand name.</p>
+        </div>
+        
+        <h2 id="form-integration">Form Integration</h2>
+        
+        <p>The template includes a contact form in the hero section. To connect it to your backend:</p>
+        
+        <div class="step">
+            <div class="d-flex align-items-center mb-3">
+                <span class="step-number">1</span>
+                <h4 class="mb-0">Update Form Attributes</h4>
+            </div>
+            <p>Find the form in <code>index.html</code>:</p>
+            <pre><code>&lt;form class="cta-form" id="heroForm"&gt;
+    &lt;!-- Form fields --&gt;
+&lt;/form&gt;</code></pre>
+            <p>Add the <code>action</code> and <code>method</code> attributes for your form handler:</p>
+            <pre><code>&lt;form class="cta-form" id="heroForm" action="https://your-form-endpoint.com" method="POST"&gt;</code></pre>
+        </div>
+        
+        <div class="step">
+            <div class="d-flex align-items-center mb-3">
+                <span class="step-number">2</span>
+                <h4 class="mb-0">Add Form Fields</h4>
+            </div>
+            <p>To collect more information, add form fields inside the form:</p>
+            <pre><code>&lt;div class="mb-3"&gt;
+    &lt;input type="text" class="form-control" placeholder="Full Name" name="name" required&gt;
+&lt;/div&gt;</code></pre>
+            <p>The JavaScript in <code>main.js</code> includes form validation that you can extend.</p>
+        </div>
+        
+        <h2 id="javascript-features">JavaScript Features</h2>
+        
+        <p>The template includes several JavaScript features. To customize them:</p>
+        
+        <div class="step">
+            <div class="d-flex align-items-center mb-3">
+                <span class="step-number">1</span>
+                <h4 class="mb-0">Update Pricing Toggle</h4>
+            </div>
+            <p>The pricing toggle switches between monthly and annual prices. To update the prices, edit the JavaScript in <code>main.js</code> or update the HTML directly.</p>
+            <p>In <code>index.html</code>, you'll find elements with classes <code>monthly-price</code> and <code>annual-price</code>. Update the values there.</p>
+        </div>
+        
+        <div class="step">
+            <div class="d-flex align-items-center mb-3">
+                <span class="step-number">2</span>
+                <h4 class="mb-0">Customize Animations</h4>
+            </div>
+            <p>All animations are controlled through CSS and JavaScript. To adjust animation timing or effects:</p>
+            <ul>
+                <li>CSS animations: Look for <code>@keyframes</code> and <code>animation</code> properties in <code>css/style.css</code></li>
+                <li>JavaScript animations: See the Intersection Observer setup in <code>main.js</code></li>
+                <li>Scroll animations: Adjust the <code>threshold</code> and <code>rootMargin</code> in the observer</li>
+            </ul>
+        </div>
+        
+        <h2 id="responsive-adjustments">Responsive Adjustments</h2>
+        
+        <p>The template is fully responsive. To make adjustments:</p>
+        
+        <div class="step">
+            <div class="d-flex align-items-center mb-3">
+                <span class="step-number">1</span>
+                <h4 class="mb-0">Breakpoint Customization</h4>
+            </div>
+            <p>The template uses Bootstrap's breakpoints. To adjust layout at specific screen sizes, edit the media queries in <code>css/responsive.css</code>.</p>
+            <p>Bootstrap breakpoints:</p>
+            <ul>
+                <li>Extra small: < 576px</li>
+                <li>Small: ≥ 576px</li>
+                <li>Medium: ≥ 768px</li>
+                <li>Large: ≥ 992px</li>
+                <li>Extra large: ≥ 1200px</li>
+            </ul>
+        </div>
+        
+        <div class="step">
+            <div class="d-flex align-items-center mb-3">
+                <span class="step-number">2</span>
+                <h4 class="mb-0">Mobile-Specific Adjustments</h4>
+            </div>
+            <p>For mobile-specific changes, add CSS inside the appropriate media query in <code>css/responsive.css</code>:</p>
+            <pre><code>@media (max-width: 768px) {
+    /* Your mobile styles here */
+    .hero-title {
+        font-size: 32px;
+    }
+}</code></pre>
+        </div>
+        
+        <h2 id="deployment">Deployment Guidelines</h2>
+        
+        <div class="step">
+            <div class="d-flex align-items-center mb-3">
+                <span class="step-number">1</span>
+                <h4 class="mb-0">Testing Before Deployment</h4>
+            </div>
+            <p>Before deploying your site:</p>
+            <ul>
+                <li>Test all links and buttons</li>
+                <li>Test the form submission</li>
+                <li>Check responsiveness on different devices</li>
+                <li>Validate HTML and CSS using online validators</li>
+                <li>Test loading speed and optimize images if needed</li>
+                <li>Check browser compatibility (Chrome, Firefox, Safari, Edge)</li>
+            </ul>
+        </div>
+        
+        <div class="step">
+            <div class="d-flex align-items-center mb-3">
+                <span class="step-number">2</span>
+                <h4 class="mb-0">Deployment Options</h4>
+            </div>
+            <p>You can deploy this template to any web hosting service. Popular options:</p>
+            <ul>
+                <li><strong>Netlify:</strong> Drag and drop the folder to Netlify Drop</li>
+                <li><strong>Vercel:</strong> Import from GitHub repository</li>
+                <li><strong>GitHub Pages:</strong> Push to a GitHub repository and enable Pages</li>
+                <li><strong>Traditional hosting:</strong> Upload via FTP to any web host</li>
+            </ul>
+            <p>For production deployment, consider:</p>
+            <ul>
+                <li>Enabling HTTPS/SSL</li>
+                <li>Setting up proper caching headers</li>
+                <li>Implementing a CDN for faster global delivery</li>
+                <li>Setting up analytics (Google Analytics, etc.)</li>
+            </ul>
+        </div>
+        
+        <div class="alert alert-success mt-5">
+            <i class="fas fa-check-circle me-2"></i>
+            <strong>Customization Complete!</strong> Your NexusFlow template is now ready for deployment. If you need additional help, refer to the included documentation or contact support.
+        </div>
+        
+        <div class="text-center mt-5 pt-4 border-top">
+            <p class="text-muted">NexusFlow Template v1.0.0 | Created with ❤️ for SaaS founders</p>
+        </div>
+    </div>
+    
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    
+    <script>
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.style.display = 'flex';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+        
+        backToTop.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Initialize tooltips
+        const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    </script>
+</body>
+</html>
