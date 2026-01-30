@@ -1,0 +1,31 @@
+fashion-bootstrap-template/
+├── index.html
+├── shop.html
+├── product-details.html
+├── cart.html
+├── checkout.html
+├── about.html
+├── contact.html
+├── account.html
+├── style.css
+├── script.js
+├── documentation/
+│   ├── editing-guide.html
+│   └── readme.html
+├── images/
+│   ├── hero-main.jpg
+│   ├── hero-secondary.jpg
+│   ├── product-01.jpg
+│   ├── product-02.jpg
+│   ├── product-03.jpg
+│   ├── product-04.jpg
+│   ├── product-05.jpg
+│   ├── product-06.jpg
+│   ├── product-detail-main.jpg
+│   ├── product-detail-alt-01.jpg
+│   ├── product-detail-alt-02.jpg
+│   ├── about-founder.jpg
+│   ├── about-studio.jpg
+│   ├── brand-logo.svg
+│   └── payment-methods.png
+└── favicon.ico

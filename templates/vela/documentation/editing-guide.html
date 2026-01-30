@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editing Guide | Vela Template</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .guide-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        .guide-header {
+            border-bottom: 2px solid #1a1a1a;
+            padding-bottom: 1rem;
+            margin-bottom: 3rem;
+        }
+        .guide-section {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .guide-step {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-left: 4px solid #1a1a1a;
+            margin-bottom: 1.5rem;
+        }
+        .code-block {
+            background: #1a1a1a;
+            color: #f8f9fa;
+            padding: 1rem;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        .screenshot-placeholder {
+            background: #e9ecef;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem 0;
+            border: 2px dashed #6c757d;
+        }
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        .warning {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        h2, h3, h4 {
+            color: #1a1a1a;
+            margin-top: 2rem;
+        }
+        h1 {
+            font-weight: 300;
+        }
+    </style>
+</head>
+<body>
+    <div class="guide-container">
+        <div class="guide-header">
+            <h1 class="display-5">Vela Template Editing Guide</h1>
+            <p class="lead">Complete instructions for customizing your fashion e-commerce template</p>
+        </div>
+
+        <div class="guide-section">
+            <h2>Getting Started</h2>
+            <p>This template is built with HTML5, CSS3, JavaScript, and Bootstrap 5. No build tools or preprocessors are required. All files are ready to edit directly.</p>
+            
+            <div class="guide-step">
+                <h4>1. File Structure Overview</h4>
+                <p>Here's what you'll find in the template package:</p>
+                <div class="code-block"><pre>
+fashion-bootstrap-template/
+├── index.html              # Homepage
+├── shop.html               # Product listing
+├── product-details.html    # Single product page
+├── cart.html               # Shopping cart
+├── checkout.html           # Checkout process
+├── about.html              # Brand story
+├── contact.html            # Contact page
+├── account.html            # User account
+├── style.css              # Main stylesheet
+├── script.js              # All JavaScript functionality
+├── images/                # All image assets
+└── documentation/         # This guide and README
+                </pre></div>
+            </div>
+        </div>
+
+        <div class="guide-section">
+            <h2>Editing the Header & Navigation</h2>
+            
+            <div class="guide-step">
+                <h4>1. Logo Replacement</h4>
+                <p>Replace the logo in the navigation bar:</p>
+                <div class="code-block"><pre>
+&lt;!-- In every HTML file, find this line in the navigation section --&gt;
+&lt;a class="navbar-brand" href="index.html"&gt;
+    &lt;img src="images/brand-logo.svg" alt="Vela" height="32"&gt;
+&lt;/a&gt;
+
+&lt;!-- Replace with your logo --&gt;
+&lt;a class="navbar-brand" href="index.html"&gt;
+    &lt;img src="images/your-logo.png" alt="Your Brand" height="40"&gt;
+&lt;/a&gt;
+                </pre></div>
+                <p>Recommended logo dimensions: minimum 160px width, SVG or PNG format.</p>
+            </div>
+
+            <div class="guide-step">
+                <h4>2. Navigation Links</h4>
+                <p>Update the navigation menu items in all HTML files:</p>
+                <div class="code-block"><pre>
+&lt;ul class="navbar-nav mx-auto"&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" href="index.html"&gt;Home&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" href="shop.html"&gt;Shop&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" href="about.html"&gt;Our Story&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" href="contact.html"&gt;Contact&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+                </pre></div>
+                <p>Add or remove menu items as needed. The "active" class indicates the current page.</p>
+            </div>
+        </div>
+
+        <div class="guide-section">
+            <h2>Updating Products</h2>
+            
+            <div class="guide-step">
+                <h4>1. Adding New Products</h4>
+                <p>Products are managed in the <strong>script.js</strong> file. Find the products array:</p>
+                <div class="code-block"><pre>
+const products = [
+    {
+        id: 1,
+        name: 'Linen Relaxed Blazer',
+        category: 'outerwear',
+        price: 248,
+        image: 'images/product-01.jpg',
+        color: 'Natural',
+        material: 'Linen',
+        description: 'Unlined blazer in breathable European linen...',
+        featured: true
+    },
+    // Add more products here
+];
+                </pre></div>
+                <p>Add a new product object following the same structure. Make sure each product has a unique ID.</p>
+            </div>
+
+            <div class="guide-step">
+                <h4>2. Product Images</h4>
+                <p>Add your product images to the <strong>images/</strong> folder. Update the image path in the product object:</p>
+                <div class="code-block"><pre>
+{
+    id: 7,
+    name: 'Your Product Name',
+    category: 'category',
+    price: 199,
+    image: 'images/your-product-image.jpg',  // Update this
+    // ... other properties
+}
+                </pre></div>
+                <div class="note">
+                    <strong>Image Guidelines:</strong><br>
+                    • Recommended size: 800x1000px for product images<br>
+                    • Use consistent aspect ratios<br>
+                    • Optimize images for web (compress before uploading)<br>
+                    • Include multiple angles for product detail pages
+                </pre></div>
+            </div>
+
+            <div class="guide-step">
+                <h4>3. Product Categories & Filters</h4>
+                <p>Update the filter sidebar in <strong>shop.html</strong> to match your product categories:</p>
+                <div class="code-block"><pre>
+&lt;!-- Category filters --&gt;
+&lt;div class="form-check mb-2"&gt;
+    &lt;input class="form-check-input" type="checkbox" id="cat-tops"&gt;
+    &lt;label class="form-check-label small" for="cat-tops"&gt;Tops&lt;/label&gt;
+&lt;/div&gt;
+&lt;!-- Add more categories here --&gt;
+                </pre></div>
+                <p>Make sure the category names match those in your products array.</p>
+            </div>
+        </div>
+
+        <div class="guide-section">
+            <h2>Customizing Colors</h2>
+            
+            <div class="guide-step">
+                <h4>1. Primary Color Scheme</h4>
+                <p>Edit the CSS variables at the top of <strong>style.css</strong>:</p>
+                <div class="code-block"><pre>
+:root {
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-secondary: 'Playfair Display', serif;
+    --color-dark: #1a1a1a;      /* Main text and dark elements */
+    --color-light: #f8f9fa;     /* Light backgrounds */
+    --color-gray: #6c757d;      /* Secondary text */
+    --color-border: #e9ecef;    /* Borders and dividers */
+    --transition-base: all 0.2s ease;
+}
+                </pre></div>
+                <p>Change the hex values to your brand colors. The template uses these variables consistently throughout.</p>
+            </div>
+
+            <div class="guide-step">
+                <h4>2. Button Colors</h4>
+                <p>Bootstrap button classes are used throughout. To change button colors globally:</p>
+                <div class="code-block"><pre>
+/* Add to the end of style.css */
+.btn-dark {
+    background-color: #your-color;
+    border-color: #your-color;
+}
+
+.btn-dark:hover {
+    background-color: #your-darkened-color;
+    border-color: #your-darkened-color;
+}
+
+.btn-outline-dark {
+    color: #your-color;
+    border-color: #your-color;
+}
+
+.btn-outline-dark:hover {
+    background-color: #your-color;
+    border-color: #your-color;
+}
+                </pre></div>
+            </div>
+        </div>
+
+        <div class="guide-section">
+            <h2>Changing Fonts</h2>
+            
+            <div class="guide-step">
+                <h4>1. Google Fonts Replacement</h4>
+                <p>In the <code>&lt;head&gt;</code> of each HTML file, update the Google Fonts link:</p>
+                <div class="code-block"><pre>
+&lt;!-- Current fonts --&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet"&gt;
+
+&lt;!-- Replace with your chosen fonts --&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Your+Font:wght@400;500;600&family=Your+Secondary+Font&display=swap" rel="stylesheet"&gt;
+                </pre></div>
+                <p>Then update the CSS variables in <strong>style.css</strong>:</p>
+                <div class="code-block"><pre>
+:root {
+    --font-primary: 'Your Font', sans-serif;
+    --font-secondary: 'Your Secondary Font', serif;
+    /* ... other variables */
+}
+                </pre></div>
+            </div>
+        </div>
+
+        <div class="guide-section">
+            <h2>Cart & Checkout Customization</h2>
+            
+            <div class="guide-step">
+                <h4>1. Shipping Settings</h4>
+                <p>Update shipping information in <strong>cart.html</strong> and <strong>checkout.html</strong>:</p>
+                <div class="code-block"><pre>
+&lt;!-- Find and update this text --&gt;
+&lt;p class="small text-muted"&gt;Free shipping on orders over $200. Taxes and shipping calculated at checkout.&lt;/p&gt;
+
+&lt;!-- Update the amount --&gt;
+&lt;p class="small text-muted"&gt;Free shipping on orders over $[your-amount]. Taxes and shipping calculated at checkout.&lt;/p&gt;
+                </pre></div>
+            </div>
+
+            <div class="guide-step">
+                <h4>2. Payment Methods</h4>
+                <p>Replace the payment methods image in the footer:</p>
+                <div class="code-block"><pre>
+&lt;!-- In every HTML file footer --&gt;
+&lt;img src="images/payment-methods.png" alt="Accepted payment methods" height="24"&gt;
+
+&lt;!-- Replace with your payment methods graphic --&gt;
+&lt;img src="images/your-payment-methods.png" alt="We accept Visa, Mastercard, etc." height="30"&gt;
+                </pre></div>
+                <p>Create a graphic showing your accepted payment methods (recommended width: 200px).</p>
+            </div>
+
+            <div class="guide-step">
+                <h4>3. Tax Calculation</h4>
+                <p>The template shows static tax amounts. For real tax calculation, you'll need to:</p>
+                <ol>
+                    <li>Integrate with a tax calculation API (like TaxJar or Avalara)</li>
+                    <li>Update the <strong>updateCartTotals()</strong> function in <strong>script.js</strong></li>
+                    <li>Implement server-side validation for checkout</li>
+                </ol>
+                <div class="warning">
+                    <strong>Important:</strong> This template provides front-end functionality only. For production use, you must implement proper backend validation, payment processing, and tax calculation.
+                </pre></div>
+            </div>
+        </div>
+
+        <div class="guide-section">
+            <h2>Brand Content Updates</h2>
+            
+            <div class="guide-step">
+                <h4>1. About Page Content</h4>
+                <p>Edit <strong>about.html</strong> to tell your brand story:</p>
+                <ul>
+                    <li>Replace founder name "Elara Vance" with your founder's name</li>
+                    <li>Update the studio location and details</li>
+                    <li>Replace materials list with your actual materials</li>
+                    <li>Update brand values and philosophy text</li>
+                </ul>
+            </div>
+
+            <div class="guide-step">
+                <h4>2. Contact Information</h4>
+                <p>Update contact details in <strong>contact.html</strong> and footer:</p>
+                <div class="code-block"><pre>
+&lt;!-- Update these in contact.html --&gt;
+&lt;p class="mb-1"&gt;123 Design District&lt;/p&gt;
+&lt;p class="mb-1"&gt;Portland, OR 97209&lt;/p&gt;
+&lt;p class="mb-1"&gt;&lt;a href="mailto:hello@vela.com"&gt;hello@vela.com&lt;/a&gt;&lt;/p&gt;
+&lt;p class="mb-1"&gt;&lt;a href="tel:+15551234567"&gt;(555) 123-4567&lt;/a&gt;&lt;/p&gt;
+
+&lt;!-- Also update in every footer --&gt;
+&lt;p class="small text-muted"&gt;Studio visits by appointment only.&lt;br&gt;123 Design District, Portland, OR&lt;/p&gt;
+                </pre></div>
+            </div>
+
+            <div class="guide-step">
+                <h4>3. Social Media Links</h4>
+                <p>Update social media icons in the footer of each HTML file:</p>
+                <div class="code-block"><pre>
+&lt;div class="mb-3"&gt;
+    &lt;a href="#" class="text-dark me-3"&gt;&lt;i class="fab fa-instagram"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a href="#" class="text-dark me-3"&gt;&lt;i class="fab fa-pinterest"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a href="#" class="text-dark"&gt;&lt;i class="fab fa-tiktok"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!-- Replace # with your actual profile URLs --&gt;
+&lt;a href="https://instagram.com/yourbrand" class="text-dark me-3"&gt;&lt;i class="fab fa-instagram"&gt;&lt;/i&gt;&lt;/a&gt;
+                </pre></div>
+            </div>
+        </div>
+
+        <div class="guide-section">
+            <h2>Advanced Customizations</h2>
+            
+            <div class="guide-step">
+                <h4>1. Adding New Pages</h4>
+                <p>To add a new page:</p>
+                <ol>
+                    <li>Duplicate an existing HTML file (like <strong>about.html</strong>)</li>
+                    <li>Rename it (e.g., <strong>lookbook.html</strong>)</li>
+                    <li>Update the navigation links in all files to include the new page</li>
+                    <li>Customize the content as needed</li>
+                </ol>
+            </div>
+
+            <div class="guide-step">
+                <h4>2. Integrating with E-commerce Platforms</h4>
+                <p>This template is front-end only. To connect to a backend:</p>
+                
+                <h5>Option A: Shopify</h5>
+                <ul>
+                    <li>Convert HTML/CSS to Shopify Liquid theme</li>
+                    <li>Replace product data with Shopify product loops</li>
+                    <li>Use Shopify's cart and checkout system</li>
+                </ul>
+                
+                <h5>Option B: WooCommerce</h5>
+                <ul>
+                    <li>Convert to WordPress theme</li>
+                    <li>Implement WooCommerce template files</li>
+                    <li>Use WooCommerce hooks for cart functionality</li>
+                </ul>
+                
+                <h5>Option C: Custom Backend</h5>
+                <ul>
+                    <li>Set up a database for products and orders</li>
+                    <li>Convert JavaScript functions to API calls</li>
+                    <li>Implement secure payment processing</li>
+                </ul>
+            </div>
+
+            <div class="guide-step">
+                <h4>3. Performance Optimization</h4>
+                <p>Before launching your site:</p>
+                <ol>
+                    <li>Compress all images using tools like TinyPNG or Squoosh</li>
+                    <li>Minify CSS and JavaScript files</li>
+                    <li>Implement lazy loading for images below the fold</li>
+                    <li>Set up proper caching headers</li>
+                    <li>Use a CDN for static assets</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="guide-section">
+            <h2>Troubleshooting</h2>
+            
+            <div class="guide-step">
+                <h4>Common Issues</h4>
+                
+                <h5>Images not loading</h5>
+                <ul>
+                    <li>Check file paths are correct</li>
+                    <li>Ensure image filenames match exactly (case-sensitive on some servers)</li>
+                    <li>Verify images are in the correct folder</li>
+                </ul>
+                
+                <h5>JavaScript not working</h5>
+                <ul>
+                    <li>Check browser console for errors (F12 → Console)</li>
+                    <li>Ensure script.js is loaded after jQuery and Bootstrap</li>
+                    <li>Check for missing semicolons or syntax errors</li>
+                </ul>
+                
+                <h5>Responsive issues</h5>
+                <ul>
+                    <li>Test on actual mobile devices, not just browser emulation</li>
+                    <li>Check that viewport meta tag is present</li>
+                    <li>Verify Bootstrap CSS is properly loaded</li>
+                </ul>
+            </div>
+
+            <div class="guide-step">
+                <h4>Getting Help</h4>
+                <p>If you encounter issues not covered in this guide:</p>
+                <ol>
+                    <li>Check the browser console for error messages</li>
+                    <li>Validate your HTML at validator.w3.org</li>
+                    <li>Search for Bootstrap 5 documentation</li>
+                    <li>Consult with a front-end developer for complex customizations</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="guide-section">
+            <h2>Final Steps Before Launch</h2>
+            
+            <div class="guide-step">
+                <h4>Pre-launch Checklist</h4>
+                <ul>
+                    <li>✓ Test all links and navigation</li>
+                    <li>✓ Test checkout flow (with test payments)</li>
+                    <li>✓ Test on multiple browsers (Chrome, Firefox, Safari, Edge)</li>
+                    <li>✓ Test on mobile and tablet devices</li>
+                    <li>✓ Update favicon.ico with your logo</li>
+                    <li>✓ Update page titles and meta descriptions</li>
+                    <li>✓ Add your Google Analytics tracking code</li>
+                    <li>✓ Set up 404 error page</li>
+                    <li>✓ Implement SSL certificate (HTTPS)</li>
+                    <li>✓ Set up email forwarding for contact form</li>
+                </ul>
+            </div>
+
+            <div class="note">
+                <strong>Note:</strong> This template is designed to be easily customizable while maintaining professional code quality. Take your time with customizations, and test each change thoroughly before deploying to production.
+            </div>
+        </div>
+
+        <footer class="mt-5 pt-4 border-top">
+            <p class="text-muted small">Vela E-commerce Template &copy; <script>document.write(new Date().getFullYear());</script></p>
+        </footer>
+    </div>
+</body>
+</html>

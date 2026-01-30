@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vela | Modern Fashion & Apparel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/brand-logo.svg" alt="Vela" height="32">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Our Story</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <a href="account.html" class="text-dark me-3 d-none d-md-inline"><i class="far fa-user"></i></a>
+                    <a href="#" class="text-dark me-3 position-relative" data-bs-toggle="offcanvas" data-bs-target="#wishlistOffcanvas">
+                        <i class="far fa-heart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">2</span>
+                    </a>
+                    <a href="cart.html" class="text-dark position-relative">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">3</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container-fluid g-0">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2 g-0">
+                    <div class="hero-image-container">
+                        <img src="images/hero-main.jpg" alt="Woman wearing our signature linen dress in natural light" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="hero-content py-5 py-lg-0">
+                        <h1 class="display-4 fw-light mb-4">Garments with intention.<br>Worn with purpose.</h1>
+                        <p class="lead mb-4">Vela creates considered apparel for those who value substance over trends. Each piece is designed for longevity, comfort, and quiet confidence.</p>
+                        <a href="shop.html" class="btn btn-dark btn-lg rounded-0 px-5">View Collection</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Collections -->
+    <section class="py-5 py-lg-7">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="h3 fw-normal text-uppercase letter-spacing">Designed for Movement</h2>
+                    <p class="text-muted">Collections that adapt to your life, not the other way around.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="collection-card">
+                        <a href="shop.html" class="text-decoration-none text-dark">
+                            <div class="img-zoom-container mb-3">
+                                <img src="images/product-01.jpg" alt="The Everyday Linen collection" class="img-fluid">
+                            </div>
+                            <h3 class="h5 fw-normal">Everyday Linen</h3>
+                            <p class="text-muted small">Breathable layers for work and leisure</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="collection-card">
+                        <a href="shop.html" class="text-decoration-none text-dark">
+                            <div class="img-zoom-container mb-3">
+                                <img src="images/product-02.jpg" alt="The Structured Silhouettes collection" class="img-fluid">
+                            </div>
+                            <h3 class="h5 fw-normal">Structured Silhouettes</h3>
+                            <p class="text-muted small">Tailored pieces with architectural detail</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="collection-card">
+                        <a href="shop.html" class="text-decoration-none text-dark">
+                            <div class="img-zoom-container mb-3">
+                                <img src="images/product-03.jpg" alt="The Evening Essentials collection" class="img-fluid">
+                            </div>
+                            <h3 class="h5 fw-normal">Evening Essentials</h3>
+                            <p class="text-muted small">Minimalist pieces for after hours</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Editorial Section -->
+    <section class="bg-light py-5 py-lg-7">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="images/hero-secondary.jpg" alt="Founder Elara Vance in the studio examining fabric samples" class="img-fluid rounded-0">
+                </div>
+                <div class="col-lg-6 ps-lg-5 mt-5 mt-lg-0">
+                    <span class="text-uppercase small letter-spacing">Our Philosophy</span>
+                    <h2 class="h1 fw-light mt-2">Fewer pieces,<br>better worn.</h2>
+                    <p class="mt-4">Vela was founded by designer Elara Vance after years of witnessing industry waste. We believe in creating a concise collection where every garment earns its place in your wardrobe.</p>
+                    <p>Our fabrics are sourced from suppliers who share our commitment to ethical production. Each style is tested and refined for fit, feel, and durability before it reaches you.</p>
+                    <a href="about.html" class="btn btn-outline-dark rounded-0 mt-3">Read Our Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Arrivals -->
+    <section class="py-5 py-lg-7">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-5">
+                <h2 class="h3 fw-normal text-uppercase letter-spacing">Recent Arrivals</h2>
+                <a href="shop.html" class="btn btn-link text-dark text-decoration-none">View All <i class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+            <div class="row g-4" id="recent-products">
+                <!-- Products loaded via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="bg-dark text-white py-5 py-lg-7">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 text-center">
+                    <h2 class="h3 fw-light mb-3">Stay Connected</h2>
+                    <p class="mb-4 opacity-75">Receive updates on new releases, studio notes, and exclusive early access.</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control rounded-0 bg-transparent text-white border-white" placeholder="Your email address" aria-label="Email address" required>
+                            <button class="btn btn-outline-light rounded-0" type="submit">Subscribe</button>
+                        </div>
+                        <div class="form-text mt-2 opacity-75">We respect your privacy. Unsubscribe at any time.</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-5 border-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <img src="images/brand-logo.svg" alt="Vela" height="28" class="mb-3">
+                    <p class="text-muted small">Thoughtfully designed apparel for modern life.</p>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-lg-0">
+                    <h6 class="text-uppercase small mb-3">Shop</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="shop.html" class="text-muted small text-decoration-none">All Products</a></li>
+                        <li><a href="shop.html" class="text-muted small text-decoration-none">Tops</a></li>
+                        <li><a href="shop.html" class="text-muted small text-decoration-none">Bottoms</a></li>
+                        <li><a href="shop.html" class="text-muted small text-decoration-none">Outerwear</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-lg-0">
+                    <h6 class="text-uppercase small mb-3">Brand</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-muted small text-decoration-none">Our Story</a></li>
+                        <li><a href="about.html" class="text-muted small text-decoration-none">Materials</a></li>
+                        <li><a href="contact.html" class="text-muted small text-decoration-none">Contact</a></li>
+                        <li><a href="documentation/readme.html" class="text-muted small text-decoration-none">Documentation</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h6 class="text-uppercase small mb-3">Connect</h6>
+                    <div class="mb-3">
+                        <a href="#" class="text-dark me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-dark me-3"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="text-dark"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                    <p class="small text-muted">Studio visits by appointment only.<br>123 Design District, Portland, OR</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="small text-muted mb-0">&copy; <script>document.write(new Date().getFullYear());</script> Vela. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <img src="images/payment-methods.png" alt="Accepted payment methods" height="100">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Wishlist Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="wishlistOffcanvas">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title">Your Wishlist</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="wishlist-item d-flex mb-3">
+                <img src="images/product-01.jpg" alt="Linen Relaxed Blazer" class="me-3" width="60">
+                <div class="flex-grow-1">
+                    <h6 class="mb-0">Linen Relaxed Blazer</h6>
+                    <p class="small text-muted mb-0">Natural</p>
+                    <p class="mb-0">$248</p>
+                </div>
+                <a href="#" class="align-self-start text-dark"><i class="far fa-trash-alt"></i></a>
+            </div>
+            <div class="wishlist-item d-flex mb-3">
+                <img src="images/product-04.jpg" alt="High-Rise Wide Leg Trousers" class="me-3" width="60">
+                <div class="flex-grow-1">
+                    <h6 class="mb-0">High-Rise Wide Leg Trousers</h6>
+                    <p class="small text-muted mb-0">Black</p>
+                    <p class="mb-0">$165</p>
+                </div>
+                <a href="#" class="align-self-start text-dark"><i class="far fa-trash-alt"></i></a>
+            </div>
+            <div class="d-grid mt-4">
+                <a href="cart.html" class="btn btn-dark rounded-0">View Wishlist</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Load recent products on homepage
+        document.addEventListener('DOMContentLoaded', function() {
+            loadRecentProducts();
+        });
+    </script>
+</body>
+</html>

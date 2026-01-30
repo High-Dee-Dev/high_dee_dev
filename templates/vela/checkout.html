@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Vela</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- Navigation (same as index.html) -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/brand-logo.svg" alt="Vela" height="32">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Our Story</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <a href="account.html" class="text-dark me-3 d-none d-md-inline"><i class="far fa-user"></i></a>
+                    <a href="#" class="text-dark me-3 position-relative" data-bs-toggle="offcanvas" data-bs-target="#wishlistOffcanvas">
+                        <i class="far fa-heart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">2</span>
+                    </a>
+                    <a href="cart.html" class="text-dark position-relative">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">3</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Checkout -->
+    <div class="container py-5 mt-5">
+        <div class="row">
+            <div class="col-lg-7">
+                <h1 class="h2 fw-light mb-5">Checkout</h1>
+                <!-- Checkout Form -->
+                <form id="checkoutForm">
+                    <!-- Contact Information -->
+                    <div class="mb-5">
+                        <h5 class="h6 text-uppercase mb-3">Contact Information</h5>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label small">Email Address *</label>
+                                <input type="email" class="form-control rounded-0" id="email" required>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Shipping Address -->
+                    <div class="mb-5">
+                        <h5 class="h6 text-uppercase mb-3">Shipping Address</h5>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="firstName" class="form-label small">First Name *</label>
+                                <input type="text" class="form-control rounded-0" id="firstName" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="lastName" class="form-label small">Last Name *</label>
+                                <input type="text" class="form-control rounded-0" id="lastName" required>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label for="address" class="form-label small">Address *</label>
+                                <input type="text" class="form-control rounded-0" id="address" required>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="city" class="form-label small">City *</label>
+                                <input type="text" class="form-control rounded-0" id="city" required>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="state" class="form-label small">State *</label>
+                                <select class="form-select rounded-0" id="state" required>
+                                    <option value="">Select State</option>
+                                    <option value="CA">California</option>
+                                    <option value="NY">New York</option>
+                                    <option value="OR">Oregon</option>
+                                    <option value="WA">Washington</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="zip" class="form-label small">ZIP Code *</label>
+                                <input type="text" class="form-control rounded-0" id="zip" required>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label for="phone" class="form-label small">Phone Number</label>
+                                <input type="tel" class="form-control rounded-0" id="phone">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Shipping Method -->
+                    <div class="mb-5">
+                        <h5 class="h6 text-uppercase mb-3">Shipping Method</h5>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="radio" name="shipping" id="standard" checked>
+                            <label class="form-check-label small" for="standard">
+                                Standard Shipping - Free
+                                <span class="text-muted d-block">3-5 business days</span>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="shipping" id="express">
+                            <label class="form-check-label small" for="express">
+                                Express Shipping - $15.00
+                                <span class="text-muted d-block">1-2 business days</span>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- Payment -->
+                    <div class="mb-5">
+                        <h5 class="h6 text-uppercase mb-3">Payment</h5>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="payment" id="creditCard" checked>
+                            <label class="form-check-label small" for="creditCard">Credit Card</label>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <label for="cardNumber" class="form-label small">Card Number *</label>
+                                <input type="text" class="form-control rounded-0" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="expiry" class="form-label small">Expiry Date *</label>
+                                <input type="text" class="form-control rounded-0" id="expiry" placeholder="MM/YY" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="cvc" class="form-label small">CVC *</label>
+                                <input type="text" class="form-control rounded-0" id="cvc" placeholder="123" required>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Terms -->
+                    <div class="form-check mb-5">
+                        <input class="form-check-input" type="checkbox" id="terms" required>
+                        <label class="form-check-label small" for="terms">
+                            I agree to the <a href="#" class="text-decoration-none">Terms of Service</a> and <a href="#" class="text-decoration-none">Privacy Policy</a> *
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-dark rounded-0 py-3 px-5">Complete Order</button>
+                </form>
+            </div>
+            <div class="col-lg-5 mt-5 mt-lg-0">
+                <!-- Order Summary -->
+                <div class="sticky-top" style="top: 100px;">
+                    <div class="bg-light p-4">
+                        <h5 class="h6 text-uppercase mb-3">Order Summary</h5>
+                        <!-- Order Items -->
+                        <div class="order-items mb-3">
+                            <div class="order-item d-flex justify-content-between mb-2">
+                                <div>
+                                    <p class="small mb-0">Linen Relaxed Blazer × 1</p>
+                                    <p class="small text-muted mb-0">Natural / S</p>
+                                </div>
+                                <span>$248</span>
+                            </div>
+                            <div class="order-item d-flex justify-content-between mb-2">
+                                <div>
+                                    <p class="small mb-0">High-Rise Wide Leg Trousers × 1</p>
+                                    <p class="small text-muted mb-0">Black / M</p>
+                                </div>
+                                <span>$165</span>
+                            </div>
+                            <div class="order-item d-flex justify-content-between mb-2">
+                                <div>
+                                    <p class="small mb-0">Silk Blend Tank × 1</p>
+                                    <p class="small text-muted mb-0">Taupe / XS</p>
+                                </div>
+                                <span>$98</span>
+                            </div>
+                        </div>
+                        <hr>
+                        <!-- Totals -->
+                        <div class="totals">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="text-muted">Subtotal</span>
+                                <span>$511</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="text-muted">Shipping</span>
+                                <span>$0.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                                <span class="text-muted">Tax</span>
+                                <span>$41.45</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between mb-4">
+                                <span class="fw-medium">Total</span>
+                                <span class="fw-medium">$552.45</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Help Text -->
+                    <div class="mt-3">
+                        <p class="small text-muted">Need help? <a href="contact.html" class="text-decoration-none">Contact our team</a>. All transactions are secure and encrypted.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="bg-white py-5 border-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <img src="images/brand-logo.svg" alt="Vela" height="28" class="mb-3">
+                    <p class="text-muted small">Thoughtfully designed apparel for modern life.</p>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-lg-0">
+                    <h6 class="text-uppercase small mb-3">Shop</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="shop.html" class="text-muted small text-decoration-none">All Products</a></li>
+                        <li><a href="shop.html" class="text-muted small text-decoration-none">Tops</a></li>
+                        <li><a href="shop.html" class="text-muted small text-decoration-none">Bottoms</a></li>
+                        <li><a href="shop.html" class="text-muted small text-decoration-none">Outerwear</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-lg-0">
+                    <h6 class="text-uppercase small mb-3">Brand</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-muted small text-decoration-none">Our Story</a></li>
+                        <li><a href="about.html" class="text-muted small text-decoration-none">Materials</a></li>
+                        <li><a href="contact.html" class="text-muted small text-decoration-none">Contact</a></li>
+                        <li><a href="documentation/readme.html" class="text-muted small text-decoration-none">Documentation</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h6 class="text-uppercase small mb-3">Connect</h6>
+                    <div class="mb-3">
+                        <a href="#" class="text-dark me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-dark me-3"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="text-dark"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                    <p class="small text-muted">Studio visits by appointment only.<br>123 Design District, Portland, OR</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="small text-muted mb-0">&copy; <script>document.write(new Date().getFullYear());</script> Vela. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <img src="images/payment-methods.png" alt="Accepted payment methods" height="24" class="mt-2 mt-md-0">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Wishlist Offcanvas (same as index.html) -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="wishlistOffcanvas">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title">Your Wishlist</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="wishlist-item d-flex mb-3">
+                <img src="images/product-01.jpg" alt="Linen Relaxed Blazer" class="me-3" width="60">
+                <div class="flex-grow-1">
+                    <h6 class="mb-0">Linen Relaxed Blazer</h6>
+                    <p class="small text-muted mb-0">Natural</p>
+                    <p class="mb-0">$248</p>
+                </div>
+                <a href="#" class="align-self-start text-dark"><i class="far fa-trash-alt"></i></a>
+            </div>
+            <div class="wishlist-item d-flex mb-3">
+                <img src="images/product-04.jpg" alt="High-Rise Wide Leg Trousers" class="me-3" width="60">
+                <div class="flex-grow-1">
+                    <h6 class="mb-0">High-Rise Wide Leg Trousers</h6>
+                    <p class="small text-muted mb-0">Black</p>
+                    <p class="mb-0">$165</p>
+                </div>
+                <a href="#" class="align-self-start text-dark"><i class="far fa-trash-alt"></i></a>
+            </div>
+            <div class="d-grid mt-4">
+                <a href="cart.html" class="btn btn-dark rounded-0">View Wishlist</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            initCheckout();
+        });
+    </script>
+</body>
+</html>
