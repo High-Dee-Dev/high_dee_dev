@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="32" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Vela wordmark with subtle fashion-inspired details -->
+    <style>
+        .vela-text {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+            font-size: 28px;
+            letter-spacing: 1px;
+            fill: #1a1a1a;
+        }
+        .vela-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            font-size: 8px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            fill: #6c757d;
+        }
+        .stitch-line {
+            stroke: #1a1a1a;
+            stroke-width: 0.5;
+            stroke-dasharray: 1, 2;
+            opacity: 0.3;
+        }
+    </style>
+    
+    <!-- Main logo container -->
+    <g>
+        <!-- Decorative stitch lines (subtle fashion detail) -->
+        <path class="stitch-line" d="M0,4 L120,4" />
+        <path class="stitch-line" d="M0,28 L120,28" />
+        
+        <!-- Main brand name -->
+        <text class="vela-text" x="0" y="22">VELA</text>
+        
+        <!-- Subtle tagline -->
+        <text class="vela-subtitle" x="65" y="30">APPAREL</text>
+        
+        <!-- Minimalist fashion detail: subtle intersecting lines -->
+        <path d="M55,8 L58,5" stroke="#1a1a1a" stroke-width="0.7" opacity="0.5"/>
+        <path d="M58,8 L55,5" stroke="#1a1a1a" stroke-width="0.7" opacity="0.5"/>
+    </g>
+</svg>
