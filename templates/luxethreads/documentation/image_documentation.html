@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Documentation | LuxeThreads</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/8140dd2669.js" crossorigin="anonymous"></script>
+    
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+            color: white;
+            padding: 3rem 0;
+            margin-bottom: 3rem;
+            border-radius: 0 0 10px 10px;
+        }
+        
+        .image-table {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 3rem;
+        }
+        
+        .table th {
+            background-color: #1a1a1a;
+            color: white;
+            border: none;
+            padding: 1rem;
+        }
+        
+        .table td {
+            padding: 1rem;
+            vertical-align: middle;
+            border-color: #dee2e6;
+        }
+        
+        .img-thumbnail {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 5px;
+            border: 1px solid #dee2e6;
+        }
+        
+        .badge-free {
+            background-color: #198754;
+        }
+        
+        .badge-required {
+            background-color: #dc3545;
+        }
+        
+        .note {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            border-radius: 5px;
+            margin-bottom: 2rem;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .table-responsive {
+                font-size: 0.9rem;
+            }
+            
+            .img-thumbnail {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .header {
+                padding: 2rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-3">Image Documentation</h1>
+            <p class="lead mb-0">Complete list of all images used in the LuxeThreads template with source information</p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="note">
+            <h5><i class="fas fa-info-circle me-2"></i>Important Note</h5>
+            <p class="mb-0">All images used in the demo template are from free stock photo websites and are for demonstration purposes only. You <strong>must replace all these images</strong> with your own product photos and brand imagery before launching your website. The image URLs provided are the original source locations where these demo images can be found.</p>
+        </div>
+        
+        <div class="image-table">
+            <div class="table-responsive">
+                <table class="table table-hover mb-0">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Image Preview</th>
+                            <th>Directory Path</th>
+                            <th>Original Source URL</th>
+                            <th>Alt Text Used</th>
+                            <th>License</th>
+                            <th>Replace Required</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Hero & Banner Images -->
+                        <tr class="table-secondary">
+                            <td colspan="7" class="fw-bold">HERO & BANNER IMAGES</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Hero Banner" class="img-thumbnail">
+                            </td>
+                            <td><code>assets/images/banners/hero-banner.jpg</code></td>
+                            <td>
+                                <a href="https://unsplash.com/photos/woman-in-white-dress-standing-on-stairs-during-daytime-QXevDflbl8A" target="_blank">
+                                    Unsplash: Fashion Model
+                                </a>
+                            </td>
+                            <td>Summer Fashion Collection <script>document.write(new Date().getFullYear());</script></td>
+                            <td><span class="badge badge-free">Free to use</span></td>
+                            <td><span class="badge bg-danger">Required</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>
+                                <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Summer Collection" class="img-thumbnail">
+                            </td>
+                            <td><code>assets/images/banners/summer-collection.jpg</code></td>
+                            <td>
+                                <a href="https://unsplash.com/photos/woman-in-white-long-sleeve-shirt-and-blue-denim-jeans-sitting-on-white-chair-KWoGdQqkaro" target="_blank">
+                                    Unsplash: Summer Fashion
+                                </a>
+                            </td>
+                            <td>Summer Essentials</td>
+                            <td><span class="badge badge-free">Free to use</span></td>
+                            <td><span class="badge bg-danger">Required</span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>
+                                <img src="https://images.unsplash.com/photo-1544441893-675973e31985?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Winter Collection" class="img-thumbnail">
+                            </td>
+                            <td><code>assets/images/banners/winter-collection.jpg</code></td>
+                            <td>
+                                <a href="https://unsplash.com/photos/woman-in-brown-coat-standing-on-snow-covered-ground-during-daytime-UtcOhVC-3VU" target="_blank">
+                                    Unsplash: Winter Fashion
+                                </a>
+                            </td>
+                            <td>Winter Collection</td>
+                            <td><span class="badge badge-free">Free to use</span></td>
+                            <td><span class="badge bg-danger">Required</span></td>
+                        </tr>
+                        
+                        <!-- Product Images -->
+                        <tr class="table-secondary">
+                            <td colspan="7" class="fw-bold">PRODUCT IMAGES (Women's Fashion)</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>
+                                <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Product 1" class="img-thumbnail">
+                            </td>
+                            <td><code>assets/images/products/product1.jpg</code></td>
+                            <td>
+                                <a href="https://unsplash.com/photos/woman-in-black-dress-sitting-on-chair-during-daytime-Sot0dfuR1MU" target="_blank">
+                                    Unsplash: Black Evening Dress
+                                </a>
+                            </td>
+                            <td>Silk Evening Dress - Front View</td>
+                            <td><span class="badge badge-free">Free to use</span></td>
+                            <td><span class="badge bg-danger">Required</span></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>
+                                <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Product 2" class="img-thumbnail">
+                            </td>
+                            <td><code>assets/images/products/product2.jpg</code></td>
+                            <td>
+                                <a href="https://unsplash.com/photos/woman-in-gray-long-sleeve-shirt-holding-gray-scarf-XvXpZBWpMtc" target="_blank">
+                                    Unsplash: Wool Coat
+                                </a>
+                            </td>
+                            <td>Premium Wool Blend Coat</td>
+                            <td><span class="badge badge-free">Free to use</span></td>
+                            <td><span class="badge bg-danger">Required</span></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>
+                                <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Product 3" class="img-thumbnail">
+                            </td>
+                            <td><code>assets/images/products/product3.jpg</code></td>
+                            <td>
+                                <a href="https://unsplash.com/photos/woman-in-white-button-up-shirt-VWcPlbHglYc" target="_blank">
+                                    Unsplash: White Oxford Shirt
+                                </a>
+                            </td>
+                            <td>Classic Cotton Oxford Shirt</td>
+                            <td><span class="badge badge-free">Free to use</span></td>
+                            <td><span class="badge bg-danger">Required</span></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>
+                                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Product 4" class="img-thumbnail">
+                            </td>
+                            <td><code>assets/images/products/product4.jpg</code></td>
+                            <td>
+                                <a href="https://unsplash.com/photos/brown-leather-handbag-on-table-5KIKPQGjEaM" target="_blank">
+                                    Unsplash: Leather Handbag
+                                </a>
+                            </td>
+                            <td>Designer Leather Handbag</td>
+                            <td><span class="badge badge-free">Free to use</span></td>
+                            <td><span class="badge bg-danger">Required</span></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>
+                                <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Product 5" class="img-thumbnail">
+                            </td>
+                            <td><code>assets/images/products/product5.jpg</code></td>
+                            <td>
+                                <a href="https://unsplash.com/photos/woman-in-gray-blazer-and-black-pants-sitting-on-chair-SyggCwJf1eY" target="_blank">
+                                    Unsplash: Tailored Trousers
+                                </a>
+                            </td>
+                            <td>Tailored Wool Trousers</td>
+                            <td><span class="badge badge-free">Free to use</span></td>
+                            <td><span class="badge bg-danger">Required</span></td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>
+                                <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Product 6" class="img-thumbnail">
+                            </td>
+                            <td><code>assets/images/products/product6.jpg</code></td>
+                            <td>
+                                <a href="https://unsplash.com/photos/woman-in-gray-long-sleeve-top-standing-beside-wall-TIM531j4tQc" target="_blank">
+                                    Unsplash: Cashmere Sweater
+                                </a>
+                            </td>
+                            <td>Cashmere Sweater</td>
+                            <td><span class="badge badge-free">Free to use</span></td>
+                            <td><span class="badge bg-danger">Required</span></td>
+                        </tr>
+                        
+                        <!-- Men's Fashion -->
+                        <tr class="table-secondary">
+                            <td colspan="7" class="fw-bold">PRODUCT IMAGES (Men's Fashion)</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>
+                                <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Product 7" class="img-thumbnail">
+                            </td>
+                            <td><code>assets/images/products/product7.jpg</code></td>
+                            <td>
+                                <a href="https://unsplash.com/photos/man-in-gray-suit-jacket-and-pants-6W4F62sN_yI" target="_blank">
+                                    Unsplash: Men's Suit
+                                </a>
+                            </td>
+                            <td>Men's Premium Suit</td>
+                            <td><span class="badge badge-free">Free to use</span></td>
+                            <td><span class="badge bg-danger">Required</span></td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>
+                                <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Product 8" class="img-thumbnail">
+                            </td>
+                            <td><code>assets/images/products/product8.jpg</code></td>
+                            <td>
+                                <a href="https://unsplash.com/photos/man-in-white-dress-shirt-holding-black-framed-eyeglasses-X_9p13WZ0z4" target="_blank">
+                                    Unsplash: Men's Formal Shirt
+                                </a>
+                            </td>
+                            <td>Men's Formal Dress Shirt</td>
+                            <td><span class="badge badge-free">Free to use</span></td>
+                            <td><span class="badge bg-danger">Required</span></td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>
+                                <img src="https://images.unsplash.com/photo-1544441893-675973e31985?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Product 9" class="img-thumbnail">
+                            </td>
+                            <td><code>assets/images/products/product9.jpg</code></td>
+                            <td>
+                                <a href="https://unsplash.com/photos/man-in-black-leather-jacket-standing-on-snow-covered-ground-during-daytime-UtcOhVC-3VU" target="_blank">
+                                    Unsplash: Leather Jacket
+                                </a>
+                            </td>
+                            <td>Men's Leather Jacket</td>
+                            <td><span class="badge badge-free">Free to use</span></td>
+                            <td><span class="badge bg-danger">Required</span></td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>
+                                <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Product 10" class="img-thumbnail">
+                            </td>
+                            <td><code>assets/images/products/product10.jpg</code></td>
+                            <td>
+                                <a href="https://unsplash.com/photos/a-pair-of-white-and-black-nike-air-force-1-shoes-N_aihp118p8" target="_blank">
+                                    Unsplash: Sneakers
+                                </a>
+                            </td>
+                            <td>Premium Leather Sneakers</td>
+                            <td><span class="badge badge-free">Free to use</span></td>
+                            <td><span class="badge bg-danger">Required</span></td>
+                        </tr>
+                        
+                        <!-- Blog Images -->
+                        <tr class="table-secondary">
+                            <td colspan="7" class="fw-bold">BLOG POST IMAGES</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>
+                                <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Blog 1" class="img-thumbnail">
+                            </td>
+                            <td><code>assets/images/blog/blog1.jpg</code></td>
+                            <td>
+                                <a href="https://unsplash.com/photos/woman-in-white-long-sleeve-shirt-and-blue-denim-jeans-sitting-on-brown-wooden-chair-jFTlLwMUl_c" target="_blank">
+                                    Unsplash: Fashion Blog 1
+                                </a>
+                            </td>
+                            <td>Spring Fashion Trends <script>document.write(new Date().getFullYear());</script></td>
+                            <td><span class="badge badge-free">Free to use</span></td>
+                            <td><span class="badge bg-danger">Required</span></td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>
+                                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Blog 2" class="img-thumbnail">
+                            </td>
+                            <td><code>assets/images/blog/blog2.jpg</code></td>
+                            <td>
+                                <a href="https://unsplash.com/photos/woman-in-white-dress-standing-on-stairs-during-daytime-QXevDflbl8A" target="_blank">
+                                    Unsplash: Fashion Blog 2
+                                </a>
+                            </td>
+                            <td>How to Style Evening Wear</td>
+                            <td><span class="badge badge-free">Free to use</span></td>
+                            <td><span class="badge bg-danger">Required</span></td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>
+                                <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Blog 3" class="img-thumbnail">
+                            </td>
+                            <td><code>assets/images/blog/blog3.jpg</code></td>
+                            <td>
+                                <a href="https://unsplash.com/photos/woman-in-white-long-sleeve-shirt-and-blue-denim-jeans-sitting-on-white-chair-KWoGdQqkaro" target="_blank">
+                                    Unsplash: Fashion Blog 3
+                                </a>
+                            </td>
+                            <td>Sustainable Fashion Guide</td>
+                            <td><span class="badge badge-free">Free to use</span></td>
+                            <td><span class="badge bg-danger">Required</span></td>
+                        </tr>
+                        
+                        <!-- Testimonial Images -->
+                        <tr class="table-secondary">
+                            <td colspan="7" class="fw-bold">TESTIMONIAL / CUSTOMER IMAGES</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616b786d4d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Testimonial 1" class="img-thumbnail">
+                            </td>
+                            <td><code>assets/images/testimonials/testimonial1.jpg</code></td>
+                            <td>
+                                <a href="https://unsplash.com/photos/woman-smiling-beside-window-C8Ta0gwPbQg" target="_blank">
+                                    Unsplash: Customer 1
+                                </a>
+                            </td>
+                            <td>Sarah Johnson</td>
+                            <td><span class="badge badge-free">Free to use</span></td>
+                            <td><span class="badge bg-danger">Required</span></td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Testimonial 2" class="img-thumbnail">
+                            </td>
+                            <td><code>assets/images/testimonials/testimonial2.jpg</code></td>
+                            <td>
+                                <a href="https://unsplash.com/photos/man-in-gray-crew-neck-t-shirt-7YVZYZeITc8" target="_blank">
+                                    Unsplash: Customer 2
+                                </a>
+                            </td>
+                            <td>Michael Chen</td>
+                            <td><span class="badge badge-free">Free to use</span></td>
+                            <td><span class="badge bg-danger">Required</span></td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>
+                                <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Testimonial 3" class="img-thumbnail">
+                            </td>
+                            <td><code>assets/images/testimonials/testimonial3.jpg</code></td>
+                            <td>
+                                <a href="https://unsplash.com/photos/woman-in-white-long-sleeve-shirt-holding-white-ceramic-mug-while-smiling-1z_HoPx5p6M" target="_blank">
+                                    Unsplash: Customer 3
+                                </a>
+                            </td>
+                            <td>Jessica Williams</td>
+                            <td><span class="badge badge-free">Free to use</span></td>
+                            <td><span class="badge bg-danger">Required</span></td>
+                        </tr>
+                        
+                        <!-- Instagram Gallery -->
+                        <tr class="table-secondary">
+                            <td colspan="7" class="fw-bold">INSTAGRAM GALLERY IMAGES</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>
+                                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Instagram 1" class="img-thumbnail">
+                            </td>
+                            <td><code>assets/images/gallery/insta1.jpg</code></td>
+                            <td>
+                                <a href="https://unsplash.com/photos/woman-in-white-sleeveless-top-holding-black-and-white-striped-cloth-f9v7h2iW-tM" target="_blank">
+                                    Unsplash: Fashion Photo 1
+                                </a>
+                            </td>
+                            <td>Instagram post 1</td>
+                            <td><span class="badge badge-free">Free to use</span></td>
+                            <td><span class="badge bg-danger">Required</span></td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>
+                                <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Instagram 2" class="img-thumbnail">
+                            </td>
+                            <td><code>assets/images/gallery/insta2.jpg</code></td>
+                            <td>
+                                <a href="https://unsplash.com/photos/woman-in-black-and-white-striped-long-sleeve-shirt-holding-black-framed-eyeglasses-NPoHLNe3BhI" target="_blank">
+                                    Unsplash: Fashion Photo 2
+                                </a>
+                            </td>
+                            <td>Instagram post 2</td>
+                            <td><span class="badge badge-free">Free to use</span></td>
+                            <td><span class="badge bg-danger">Required</span></td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>
+                                <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Instagram 3" class="img-thumbnail">
+                            </td>
+                            <td><code>assets/images/gallery/insta3.jpg</code></td>
+                            <td>
+                                <a href="https://unsplash.com/photos/woman-in-black-sweater-holding-white-ceramic-mug-Fg15LdqpWrs" target="_blank">
+                                    Unsplash: Fashion Photo 3
+                                </a>
+                            </td>
+                            <td>Instagram post 3</td>
+                            <td><span class="badge badge-free">Free to use</span></td>
+                            <td><span class="badge bg-danger">Required</span></td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Instagram 4" class="img-thumbnail">
+                            </td>
+                            <td><code>assets/images/gallery/insta4.jpg</code></td>
+                            <td>
+                                <a href="https://unsplash.com/photos/woman-with-brown-curly-hair-4HG3Ca3EzWw" target="_blank">
+                                    Unsplash: Fashion Photo 4
+                                </a>
+                            </td>
+                            <td>Instagram post 4</td>
+                            <td><span class="badge badge-free">Free to use</span></td>
+                            <td><span class="badge bg-danger">Required</span></td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>
+                                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Instagram 5" class="img-thumbnail">
+                            </td>
+                            <td><code>assets/images/gallery/insta5.jpg</code></td>
+                            <td>
+                                <a href="https://unsplash.com/photos/woman-wearing-black-spaghetti-strap-dress-7YVZYZeITc8" target="_blank">
+                                    Unsplash: Fashion Photo 5
+                                </a>
+                            </td>
+                            <td>Instagram post 5</td>
+                            <td><span class="badge badge-free">Free to use</span></td>
+                            <td><span class="badge bg-danger">Required</span></td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>
+                                <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Instagram 6" class="img-thumbnail">
+                            </td>
+                            <td><code>assets/images/gallery/insta6.jpg</code></td>
+                            <td>
+                                <a href="https://unsplash.com/photos/woman-in-white-tank-top-holding-white-flower-vase-nOmjk2y4g7k" target="_blank">
+                                    Unsplash: Fashion Photo 6
+                                </a>
+                            </td>
+                            <td>Instagram post 6</td>
+                            <td><span class="badge badge-free">Free to use</span></td>
+                            <td><span class="badge bg-danger">Required</span></td>
+                        </tr>
+                        
+                        <!-- Brand Logos -->
+                        <tr class="table-secondary">
+                            <td colspan="7" class="fw-bold">BRAND LOGOS (Placeholder)</td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>
+                                <div class="img-thumbnail bg-light d-flex align-items-center justify-content-center">
+                                    <span class="text-muted">Brand 1</span>
+                                </div>
+                            </td>
+                            <td><code>assets/images/brands/brand1.png</code></td>
+                            <td>Placeholder - Add your brand logo</td>
+                            <td>Fashion Brand 1</td>
+                            <td><span class="badge badge-free">N/A</span></td>
+                            <td><span class="badge bg-danger">Required</span></td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>
+                                <div class="img-thumbnail bg-light d-flex align-items-center justify-content-center">
+                                    <span class="text-muted">Brand 2</span>
+                                </div>
+                            </td>
+                            <td><code>assets/images/brands/brand2.png</code></td>
+                            <td>Placeholder - Add your brand logo</td>
+                            <td>Fashion Brand 2</td>
+                            <td><span class="badge badge-free">N/A</span></td>
+                            <td><span class="badge bg-danger">Required</span></td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td>
+                                <div class="img-thumbnail bg-light d-flex align-items-center justify-content-center">
+                                    <span class="text-muted">Brand 3</span>
+                                </div>
+                            </td>
+                            <td><code>assets/images/brands/brand3.png</code></td>
+                            <td>Placeholder - Add your brand logo</td>
+                            <td>Fashion Brand 3</td>
+                            <td><span class="badge badge-free">N/A</span></td>
+                            <td><span class="badge bg-danger">Required</span></td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td>
+                                <div class="img-thumbnail bg-light d-flex align-items-center justify-content-center">
+                                    <span class="text-muted">Brand 4</span>
+                                </div>
+                            </td>
+                            <td><code>assets/images/brands/brand4.png</code></td>
+                            <td>Placeholder - Add your brand logo</td>
+                            <td>Fashion Brand 4</td>
+                            <td><span class="badge badge-free">N/A</span></td>
+                            <td><span class="badge bg-danger">Required</span></td>
+                        </tr>
+                        
+                        <!-- Icons (SVG) -->
+                        <tr class="table-secondary">
+                            <td colspan="7" class="fw-bold">ICONS & BADGES (SVG)</td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td>
+                                <div class="img-thumbnail bg-light d-flex align-items-center justify-content-center">
+                                    <i class="fas fa-shipping-fast fa-2x text-muted"></i>
+                                </div>
+                            </td>
+                            <td><code>assets/images/icons/shipping.svg</code></td>
+                            <td>Custom SVG icon - Can keep or replace</td>
+                            <td>Free Shipping</td>
+                            <td><span class="badge badge-free">Template Asset</span></td>
+                            <td><span class="badge bg-warning">Optional</span></td>
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                            <td>
+                                <div class="img-thumbnail bg-light d-flex align-items-center justify-content-center">
+                                    <i class="fas fa-undo fa-2x text-muted"></i>
+                                </div>
+                            </td>
+                            <td><code>assets/images/icons/returns.svg</code></td>
+                            <td>Custom SVG icon - Can keep or replace</td>
+                            <td>Easy Returns</td>
+                            <td><span class="badge badge-free">Template Asset</span></td>
+                            <td><span class="badge bg-warning">Optional</span></td>
+                        </tr>
+                        <tr>
+                            <td>32</td>
+                            <td>
+                                <div class="img-thumbnail bg-light d-flex align-items-center justify-content-center">
+                                    <i class="fas fa-shield-alt fa-2x text-muted"></i>
+                                </div>
+                            </td>
+                            <td><code>assets/images/icons/secure-payment.svg</code></td>
+                            <td>Custom SVG icon - Can keep or replace</td>
+                            <td>Secure Payment</td>
+                            <td><span class="badge badge-free">Template Asset</span></td>
+                            <td><span class="badge bg-warning">Optional</span></td>
+                        </tr>
+                        <tr>
+                            <td>33</td>
+                            <td>
+                                <div class="img-thumbnail bg-light d-flex align-items-center justify-content-center">
+                                    <i class="fas fa-award fa-2x text-muted"></i>
+                                </div>
+                            </td>
+                            <td><code>assets/images/icons/trust-badge.svg</code></td>
+                            <td>Custom SVG icon - Can keep or replace</td>
+                            <td>Quality Guarantee</td>
+                            <td><span class="badge badge-free">Template Asset</span></td>
+                            <td><span class="badge bg-warning">Optional</span></td>
+                        </tr>
+                        
+                        <!-- Logo -->
+                        <tr class="table-secondary">
+                            <td colspan="7" class="fw-bold">LOGO</td>
+                        </tr>
+                        <tr>
+                            <td>34</td>
+                            <td>
+                                <div class="img-thumbnail bg-light d-flex align-items-center justify-content-center">
+                                    <span class="fw-bold">LT</span>
+                                </div>
+                            </td>
+                            <td><code>assets/images/logo.svg</code></td>
+                            <td>Template logo - Must replace with your logo</td>
+                            <td>LuxeThreads Logo</td>
+                            <td><span class="badge badge-free">Template Asset</span></td>
+                            <td><span class="badge bg-danger">Required</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="note">
+            <h5><i class="fas fa-camera me-2"></i>Image Replacement Guidelines</h5>
+            <ul class="mb-0">
+                <li><strong>Product Images:</strong> Use high-quality photos with clean backgrounds. Show multiple angles and details.</li>
+                <li><strong>Size & Format:</strong> Optimize images for web (JPEG for photos, PNG for graphics, SVG for icons).</li>
+                <li><strong>Naming:</strong> Use descriptive file names (e.g., "black-dress-front-view.jpg").</li>
+                <li><strong>Alt Text:</strong> Always add descriptive alt text for accessibility and SEO.</li>
+                <li><strong>Sources:</strong> Use your own photos or purchase from stock photo websites.</li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <p class="mb-0">LuxeThreads E-Commerce Template - Image Documentation v1.0</p>
+            <p class="text-muted small">All demo images are from Unsplash and are free to use under the Unsplash License.</p>
+        </div>
+    </div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

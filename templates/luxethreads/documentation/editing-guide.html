@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxeThreads - Template Editing Guide</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/8140dd2669.js" crossorigin="anonymous"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        
+        .guide-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .guide-header {
+            background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+        
+        .guide-content {
+            background: white;
+            border-radius: 10px;
+            padding: 3rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .guide-section {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .guide-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .section-title {
+            color: #1a1a1a;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #d4af73;
+            display: inline-block;
+        }
+        
+        .step-card {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #d4af73;
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            background-color: #d4af73;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 36px;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+        
+        .code-block {
+            background-color: #1a1a1a;
+            color: #f8f9fa;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .code-comment {
+            color: #6c757d;
+        }
+        
+        .code-tag {
+            color: #e83e8c;
+        }
+        
+        .code-attr {
+            color: #20c997;
+        }
+        
+        .code-value {
+            color: #fd7e14;
+        }
+        
+        .note-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 5px;
+        }
+        
+        .warning-box {
+            background-color: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 5px;
+        }
+        
+        .success-box {
+            background-color: #d1e7dd;
+            border-left: 4px solid #198754;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 5px;
+        }
+        
+        .file-path {
+            background-color: #e9ecef;
+            padding: 0.25rem 0.5rem;
+            border-radius: 3px;
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+        
+        .color-preview {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+            margin-right: 0.5rem;
+            vertical-align: middle;
+            border: 1px solid #dee2e6;
+        }
+        
+        .table-responsive {
+            margin: 1.5rem 0;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: #1a1a1a;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 1000;
+        }
+        
+        .back-to-top:hover {
+            background-color: #d4af73;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .guide-container {
+                padding: 1rem;
+            }
+            
+            .guide-content {
+                padding: 1.5rem;
+            }
+            
+            .guide-header {
+                padding: 2rem 1rem;
+            }
+            
+            .step-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="guide-container">
+        <div class="guide-header text-center">
+            <h1 class="display-4 fw-bold mb-3">Template Editing Guide</h1>
+            <p class="lead mb-4">Step-by-step instructions for customizing your LuxeThreads template</p>
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+                <span class="badge bg-light text-dark">Beginner Friendly</span>
+                <span class="badge bg-light text-dark">Step-by-Step</span>
+                <span class="badge bg-light text-dark">Code Examples</span>
+                <span class="badge bg-light text-dark">Visual Guides</span>
+            </div>
+        </div>
+        
+        <div class="guide-content">
+            <!-- Table of Contents -->
+            <div class="guide-section">
+                <h2 class="section-title">Table of Contents</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#getting-started" class="text-decoration-none"><i class="fas fa-play me-2"></i>Getting Started</a></li>
+                            <li class="mb-2"><a href="#changing-colors" class="text-decoration-none"><i class="fas fa-palette me-2"></i>Changing Colors</a></li>
+                            <li class="mb-2"><a href="#replacing-images" class="text-decoration-none"><i class="fas fa-image me-2"></i>Replacing Images</a></li>
+                            <li class="mb-2"><a href="#editing-text" class="text-decoration-none"><i class="fas fa-font me-2"></i>Editing Text Content</a></li>
+                            <li class="mb-2"><a href="#modifying-products" class="text-decoration-none"><i class="fas fa-tshirt me-2"></i>Modifying Products</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#changing-fonts" class="text-decoration-none"><i class="fas fa-text-height me-2"></i>Changing Fonts</a></li>
+                            <li class="mb-2"><a href="#adding-pages" class="text-decoration-none"><i class="fas fa-file me-2"></i>Adding New Pages</a></li>
+                            <li class="mb-2"><a href="#customizing-animations" class="text-decoration-none"><i class="fas fa-magic me-2"></i>Customizing Animations</a></li>
+                            <li class="mb-2"><a href="#connecting-backend" class="text-decoration-none"><i class="fas fa-server me-2"></i>Connecting to Backend</a></li>
+                            <li class="mb-2"><a href="#going-live" class="text-decoration-none"><i class="fas fa-rocket me-2"></i>Going Live Checklist</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Getting Started -->
+            <div id="getting-started" class="guide-section">
+                <h2 class="section-title">Getting Started</h2>
+                <p>Welcome to the LuxeThreads editing guide! This section will help you understand the template structure and how to begin customizing it for your fashion brand.</p>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">1</span> Understand the File Structure</h4>
+                    <p>Before making changes, familiarize yourself with the template's file structure:</p>
+                    <div class="file-path">fashion-ecommerce-template/</div>
+                    <p class="mt-2">The main folders are:</p>
+                    <ul>
+                        <li><strong>root folder</strong> - Contains the main HTML files</li>
+                        <li><strong>pages/</strong> - All additional HTML pages</li>
+                        <li><strong>assets/css/</strong> - Stylesheets</li>
+                        <li><strong>assets/js/</strong> - JavaScript files</li>
+                        <li><strong>assets/images/</strong> - All images organized by type</li>
+                    </ul>
+                </div>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">2</span> Choose Your Editor</h4>
+                    <p>Use a code editor that you're comfortable with. Recommended editors:</p>
+                    <ul>
+                        <li><strong>Visual Studio Code</strong> (Free, recommended)</li>
+                        <li><strong>Sublime Text</strong></li>
+                        <li><strong>Atom</strong></li>
+                        <li><strong>Notepad++</strong> (Windows)</li>
+                    </ul>
+                    <p>Install the editor and open the entire template folder in it.</p>
+                </div>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">3</span> View the Template</h4>
+                    <p>Open <span class="file-path">index.html</span> in your web browser to see how the template looks. Navigate through all pages to understand the complete structure.</p>
+                    <div class="note-box">
+                        <p><strong>Tip:</strong> Keep the browser open while editing. After saving changes in your editor, refresh the browser (F5) to see the updates.</p>
+                    </div>
+                </div>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">4</span> Make a Backup</h4>
+                    <p>Before making any changes, create a backup copy of the entire template folder. This way, you can always revert to the original if needed.</p>
+                    <div class="warning-box">
+                        <p><strong>Important:</strong> Always work on a copy, not the original files, especially if you plan to make extensive customizations.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Changing Colors -->
+            <div id="changing-colors" class="guide-section">
+                <h2 class="section-title">Changing Colors</h2>
+                <p>The template uses CSS variables for colors, making it easy to change the entire color scheme in one place.</p>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">1</span> Locate Color Variables</h4>
+                    <p>Open <span class="file-path">assets/css/style.css</span> and find the <code>:root</code> selector at the top of the file:</p>
+                    <div class="code-block">
+                        <span class="code-comment">/* ===== CSS Variables ===== */</span><br>
+                        <span class="code-tag">:root</span> {<br>
+                        &nbsp;&nbsp;<span class="code-comment">/* Primary Colors */</span><br>
+                        &nbsp;&nbsp;--primary-dark: <span class="code-value">#1a1a1a</span>;<br>
+                        &nbsp;&nbsp;--primary-light: <span class="code-value">#f8f9fa</span>;<br>
+                        &nbsp;&nbsp;--accent-color: <span class="code-value">#d4af73</span>;<br>
+                        &nbsp;&nbsp;--accent-hover: <span class="code-value">#c19a5b</span>;<br>
+                        <br>
+                        &nbsp;&nbsp;<span class="code-comment">/* Text Colors */</span><br>
+                        &nbsp;&nbsp;--text-dark: <span class="code-value">#212529</span>;<br>
+                        &nbsp;&nbsp;--text-muted: <span class="code-value">#6c757d</span>;<br>
+                        &nbsp;&nbsp;--text-light: <span class="code-value">#f8f9fa</span>;<br>
+                        }
+                    </div>
+                </div>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">2</span> Change Color Values</h4>
+                    <p>Replace the hex color codes with your own brand colors. Here's what each variable controls:</p>
+                    
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Variable</th>
+                                <th>Default Color</th>
+                                <th>Used For</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>--primary-dark</code></td>
+                                <td><span class="color-preview" style="background-color: #1a1a1a;"></span> #1a1a1a</td>
+                                <td>Dark backgrounds, footer, buttons</td>
+                            </tr>
+                            <tr>
+                                <td><code>--primary-light</code></td>
+                                <td><span class="color-preview" style="background-color: #f8f9fa;"></span> #f8f9fa</td>
+                                <td>Light backgrounds, cards</td>
+                            </tr>
+                            <tr>
+                                <td><code>--accent-color</code></td>
+                                <td><span class="color-preview" style="background-color: #d4af73;"></span> #d4af73</td>
+                                <td>Primary accent, highlights, hover states</td>
+                            </tr>
+                            <tr>
+                                <td><code>--accent-hover</code></td>
+                                <td><span class="color-preview" style="background-color: #c19a5b;"></span> #c19a5b</td>
+                                <td>Accent color on hover</td>
+                            </tr>
+                            <tr>
+                                <td><code>--text-dark</code></td>
+                                <td><span class="color-preview" style="background-color: #212529;"></span> #212529</td>
+                                <td>Main text color</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">3</span> Test Your Changes</h4>
+                    <p>After changing the colors, save the file and refresh your browser. The entire template should update with your new color scheme.</p>
+                    <div class="note-box">
+                        <p><strong>Tip:</strong> Use a color palette generator like <a href="https://coolors.co" target="_blank">Coolors</a> or <a href="https://colorhunt.co" target="_blank">ColorHunt</a> to create harmonious color schemes for your brand.</p>
+                    </div>
+                </div>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">4</span> Additional Color Customization</h4>
+                    <p>If you need to change specific elements that aren't controlled by the variables, you can add custom CSS at the end of the style.css file:</p>
+                    <div class="code-block">
+                        <span class="code-comment">/* Custom color overrides */</span><br>
+                        <span class="code-tag">.navbar</span> {<br>
+                        &nbsp;&nbsp;<span class="code-attr">background-color</span>: <span class="code-value">your-color</span> <span class="code-comment">!important</span>;<br>
+                        }<br>
+                        <br>
+                        <span class="code-tag">.btn-primary</span> {<br>
+                        &nbsp;&nbsp;<span class="code-attr">background-color</span>: <span class="code-value">your-color</span>;<br>
+                        &nbsp;&nbsp;<span class="code-attr">border-color</span>: <span class="code-value">your-color</span>;<br>
+                        }
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Replacing Images -->
+            <div id="replacing-images" class="guide-section">
+                <h2 class="section-title">Replacing Images</h2>
+                <p>All demo images should be replaced with your own product and brand images before launching your website.</p>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">1</span> Image Folder Structure</h4>
+                    <p>The images are organized in subfolders within <span class="file-path">assets/images/</span>:</p>
+                    <ul>
+                        <li><strong>products/</strong> - Product photos</li>
+                        <li><strong>banners/</strong> - Hero and promotional banners</li>
+                        <li><strong>blog/</strong> - Blog post images</li>
+                        <li><strong>testimonials/</strong> - Customer photos</li>
+                        <li><strong>gallery/</strong> - Instagram-style gallery</li>
+                        <li><strong>brands/</strong> - Brand logos</li>
+                        <li><strong>icons/</strong> - SVG icons and badges</li>
+                    </ul>
+                </div>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">2</span> Method 1: Replace with Same Names</h4>
+                    <p>The easiest way is to replace the existing images with your own images while keeping the same file names:</p>
+                    <ol>
+                        <li>Take your product photo</li>
+                        <li>Rename it to match an existing file (e.g., <code>product1.jpg</code>)</li>
+                        <li>Replace the file in the appropriate folder</li>
+                        <li>Refresh your browser to see the change</li>
+                    </ol>
+                    <div class="note-box">
+                        <p><strong>Image Sizing Tips:</strong>
+                        <ul>
+                            <li>Product images: 800x1000px (portrait orientation)</li>
+                            <li>Banner images: 1920x800px (landscape orientation)</li>
+                            <li>Blog images: 800x500px</li>
+                            <li>Optimize all images for web (use tools like TinyPNG)</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">3</span> Method 2: Update Image Paths</h4>
+                    <p>If you want to use different file names, update the image paths in the HTML files:</p>
+                    <div class="code-block">
+                        <span class="code-comment">&lt;!-- Find this in index.html --&gt;</span><br>
+                        &lt;<span class="code-tag">img</span> <span class="code-attr">src</span>=<span class="code-value">"assets/images/products/product1.jpg"</span> <span class="code-attr">alt</span>=<span class="code-value">"Product name"</span>&gt;<br>
+                        <br>
+                        <span class="code-comment">&lt;!-- Change to your image path --&gt;</span><br>
+                        &lt;<span class="code-tag">img</span> <span class="code-attr">src</span>=<span class="code-value">"assets/images/products/my-product.jpg"</span> <span class="code-attr">alt</span>=<span class="code-value">"My Product Name"</span>&gt;
+                    </div>
+                    <p>Search for all instances of the old file name and replace them with your new file name.</p>
+                </div>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">4</span> Image Optimization</h4>
+                    <p>For best performance, optimize your images before uploading:</p>
+                    <ul>
+                        <li>Use JPEG format for photos</li>
+                        <li>Use PNG format for logos and graphics with transparency</li>
+                        <li>Use SVG for icons and simple graphics</li>
+                        <li>Compress images using:
+                            <ul>
+                                <li><a href="https://tinypng.com" target="_blank">TinyPNG</a> (online)</li>
+                                <li><a href="https://imageoptim.com" target="_blank">ImageOptim</a> (Mac)</li>
+                                <li><a href="https://riot-optimizer.com" target="_blank">RIOT</a> (Windows)</li>
+                            </ul>
+                        </li>
+                        <li>Add descriptive alt text for SEO and accessibility</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Editing Text -->
+            <div id="editing-text" class="guide-section">
+                <h2 class="section-title">Editing Text Content</h2>
+                <p>Replace all demo text with your own brand messaging, product descriptions, and content.</p>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">1</span> Finding Text to Edit</h4>
+                    <p>Open any HTML file in your editor. Text content is found between HTML tags:</p>
+                    <div class="code-block">
+                        <span class="code-comment">&lt;!-- Page title --&gt;</span><br>
+                        &lt;<span class="code-tag">h1</span> <span class="code-attr">class</span>=<span class="code-value">"display-4"</span>&gt;<span class="code-value">Summer Collection <script>document.write(new Date().getFullYear());</script></span>&lt;/<span class="code-tag">h1</span>&gt;<br>
+                        <br>
+                        <span class="code-comment">&lt;!-- Product name --&gt;</span><br>
+                        &lt;<span class="code-tag">h2</span> <span class="code-attr">class</span>=<span class="code-value">"product-title"</span>&gt;<span class="code-value">Elegant Silk Evening Dress</span>&lt;/<span class="code-tag">h2</span>&gt;<br>
+                        <br>
+                        <span class="code-comment">&lt;!-- Product description --&gt;</span><br>
+                        &lt;<span class="code-tag">p</span> <span class="code-attr">class</span>=<span class="code-value">"product-description"</span>&gt;<br>
+                        &nbsp;&nbsp;Crafted from premium mulberry silk, this elegant evening dress...<br>
+                        &lt;/<span class="code-tag">p</span>&gt;
+                    </div>
+                    <p>Simply replace the text between the opening and closing tags with your own content.</p>
+                </div>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">2</span> Text Editing Best Practices</h4>
+                    <ul>
+                        <li><strong>Keep it concise:</strong> Online readers scan content</li>
+                        <li><strong>Use headings:</strong> Break content with H1, H2, H3 tags</li>
+                        <li><strong>Add keywords:</strong> Include relevant keywords for SEO</li>
+                        <li><strong>Be authentic:</strong> Write in your brand voice</li>
+                        <li><strong>Check spelling:</strong> Use a spell checker</li>
+                        <li><strong>Mobile-friendly:</strong> Short paragraphs work better on mobile</li>
+                    </ul>
+                </div>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">3</span> Common Text Sections to Update</h4>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Section</th>
+                                <th>File</th>
+                                <th>What to Update</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Navigation</td>
+                                <td>All HTML files</td>
+                                <td>Menu items, brand name</td>
+                            </tr>
+                            <tr>
+                                <td>Hero Banner</td>
+                                <td>index.html</td>
+                                <td>Headline, subheadline, button text</td>
+                            </tr>
+                            <tr>
+                                <td>Product Info</td>
+                                <td>shop.html, product-details.html</td>
+                                <td>Product names, descriptions, prices</td>
+                            </tr>
+                            <tr>
+                                <td>About Page</td>
+                                <td>about.html</td>
+                                <td>Brand story, mission, team bios</td>
+                            </tr>
+                            <tr>
+                                <td>Footer</td>
+                                <td>All HTML files</td>
+                                <td>Contact info, copyright, links</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">4</span> Using Find and Replace</h4>
+                    <p>To update text that appears multiple times (like brand name), use your editor's Find and Replace feature:</p>
+                    <ol>
+                        <li>Open the Find dialog (usually Ctrl+F or Cmd+F)</li>
+                        <li>Enter the text to find (e.g., "LuxeThreads")</li>
+                        <li>Enter the replacement text (e.g., "Your Brand Name")</li>
+                        <li>Use "Replace All" to update all instances</li>
+                    </ol>
+                    <div class="warning-box">
+                        <p><strong>Caution:</strong> Be careful with "Replace All" - make sure you're only replacing the specific text you intend to change. Preview changes before applying to all files.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modifying Products -->
+            <div id="modifying-products" class="guide-section">
+                <h2 class="section-title">Modifying Products</h2>
+                <p>The template includes sample product data that you need to replace with your actual products.</p>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">1</span> Understanding Product Data Structure</h4>
+                    <p>Product information is stored in two places:</p>
+                    <ol>
+                        <li><strong>HTML files:</strong> For static display</li>
+                        <li><strong>JavaScript files:</strong> For dynamic functionality (cart, filtering, etc.)</li>
+                    </ol>
+                    <p>Open <span class="file-path">assets/js/main.js</span> and find the products array:</p>
+                    <div class="code-block">
+                        <span class="code-comment">// Sample product data</span><br>
+                        <span class="code-tag">const</span> products = [<br>
+                        &nbsp;&nbsp;{<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-attr">id</span>: <span class="code-value">1</span>,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-attr">name</span>: <span class="code-value">"Elegant Silk Evening Dress"</span>,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-attr">category</span>: <span class="code-value">"Dresses"</span>,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-attr">price</span>: <span class="code-value">189.99</span>,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-attr">oldPrice</span>: <span class="code-value">249.99</span>,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-attr">image</span>: <span class="code-value">"assets/images/products/product1.jpg"</span>,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-attr">rating</span>: <span class="code-value">4.5</span>,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-attr">reviewCount</span>: <span class="code-value">128</span>,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-attr">sale</span>: <span class="code-value">true</span>,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-attr">new</span>: <span class="code-value">false</span><br>
+                        &nbsp;&nbsp;},<br>
+                        &nbsp;&nbsp;<span class="code-comment">// ... more products</span><br>
+                        ];
+                    </div>
+                </div>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">2</span> Adding Your Products</h4>
+                    <p>Replace the sample products with your own product data:</p>
+                    <ol>
+                        <li>Copy the product object structure</li>
+                        <li>Update all values with your product information</li>
+                        <li>Add or remove products as needed</li>
+                        <li>Ensure each product has a unique ID</li>
+                        <li>Update image paths to your product photos</li>
+                    </ol>
+                    <div class="note-box">
+                        <p><strong>Product Data Fields:</strong>
+                        <ul>
+                            <li><code>id</code>: Unique number for each product</li>
+                            <li><code>name</code>: Product title (keep it descriptive)</li>
+                            <li><code>category</code>: Product category for filtering</li>
+                            <li><code>price</code>: Current price (number)</li>
+                            <li><code>oldPrice</code>: Original price for sales (null if not on sale)</li>
+                            <li><code>image</code>: Path to product image</li>
+                            <li><code>rating</code>: Average rating (1-5)</li>
+                            <li><code>reviewCount</span>: Number of reviews</li>
+                            <li><code>sale</code>: true/false for sale badge</li>
+                            <li><code>new</code>: true/false for new badge</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">3</span> Updating Product HTML</h4>
+                    <p>For static product displays (like featured products), update the HTML directly:</p>
+                    <div class="code-block">
+                        <span class="code-comment">&lt;!-- Find product cards in HTML files --&gt;</span><br>
+                        &lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-value">"product-card"</span>&gt;<br>
+                        &nbsp;&nbsp;&lt;<span class="code-tag">img</span> <span class="code-attr">src</span>=<span class="code-value">"assets/images/products/product1.jpg"</span> <span class="code-attr">alt</span>=<span class="code-value">"Elegant Silk Dress"</span>&gt;<br>
+                        &nbsp;&nbsp;&lt;<span class="code-tag">h3</span>&gt;Elegant Silk Evening Dress&lt;/<span class="code-tag">h3</span>&gt;<br>
+                        &nbsp;&nbsp;&lt;<span class="code-tag">p</span> <span class="code-attr">class</span>=<span class="code-value">"price"</span>&gt;$189.99&lt;/<span class="code-tag">p</span>&gt;<br>
+                        &lt;/<span class="code-tag">div</span>&gt;
+                    </div>
+                    <p>Update the image source, alt text, product name, and price with your product details.</p>
+                </div>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">4</span> Connecting to a Real Database</h4>
+                    <p>For a production website with many products, you'll want to connect to a backend database:</p>
+                    <ol>
+                        <li>Set up a server (Node.js, PHP, Python, etc.)</li>
+                        <li>Create a database to store products</li>
+                        <li>Build API endpoints to serve product data</li>
+                        <li>Update JavaScript to fetch products from your API</li>
+                        <li>Implement search, filtering, and pagination on the server</li>
+                    </ol>
+                    <div class="note-box">
+                        <p><strong>For Small Stores:</strong> If you have fewer than 50 products, you can manage them directly in the JavaScript file. For larger stores, a database is essential.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Changing Fonts -->
+            <div id="changing-fonts" class="guide-section">
+                <h2 class="section-title">Changing Fonts</h2>
+                <p>The template uses Google Fonts for typography. You can easily change to different fonts that match your brand personality.</p>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">1</span> Current Font Setup</h4>
+                    <p>Open any HTML file and look in the <code>&lt;head&gt;</code> section:</p>
+                    <div class="code-block">
+                        &lt;<span class="code-tag">link</span> <span class="code-attr">href</span>=<span class="code-value">"https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"</span> <span class="code-attr">rel</span>=<span class="code-value">"stylesheet"</span>&gt;
+                    </div>
+                    <p>The template uses two fonts:</p>
+                    <ul>
+                        <li><strong>Playfair Display:</strong> For headings (elegant, serif font)</li>
+                        <li><strong>Montserrat:</strong> For body text (clean, sans-serif font)</li>
+                    </ul>
+                </div>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">2</span> Choosing New Fonts</h4>
+                    <p>Visit <a href="https://fonts.google.com" target="_blank">Google Fonts</a> to browse available fonts:</p>
+                    <ol>
+                        <li>Search for fonts that match your brand</li>
+                        <li>Select 1-2 fonts (one for headings, one for body)</li>
+                        <li>Click "Select this style" for each weight you need</li>
+                        <li>Copy the link code from the "Use on the web" section</li>
+                    </ol>
+                    <div class="note-box">
+                        <p><strong>Font Pairing Tips:</strong>
+                        <ul>
+                            <li>Pair a serif with a sans-serif for contrast</li>
+                            <li>Don't use more than 2-3 different fonts</li>
+                            <li>Ensure good readability, especially for body text</li>
+                            <li>Consider loading only the weights you actually use</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">3</span> Updating Font Links</h4>
+                    <p>Replace the existing Google Fonts link with your new one in all HTML files:</p>
+                    <div class="code-block">
+                        <span class="code-comment">&lt;!-- Replace this line in all HTML files --&gt;</span><br>
+                        &lt;<span class="code-tag">link</span> <span class="code-attr">href</span>=<span class="code-value">"https://fonts.googleapis.com/css2?family=YOUR_NEW_FONTS&display=swap"</span> <span class="code-attr">rel</span>=<span class="code-value">"stylesheet"</span>&gt;
+                    </div>
+                    <p>Use Find and Replace to update all HTML files at once.</p>
+                </div>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">4</span> Updating CSS Font Variables</h4>
+                    <p>Open <span class="file-path">assets/css/style.css</span> and update the font variables:</p>
+                    <div class="code-block">
+                        <span class="code-comment">/* Typography */</span><br>
+                        <span class="code-tag">:root</span> {<br>
+                        &nbsp;&nbsp;<span class="code-attr">--font-heading</span>: <span class="code-value">'Your Heading Font', serif</span>;<br>
+                        &nbsp;&nbsp;<span class="code-attr">--font-body</span>: <span class="code-value">'Your Body Font', sans-serif</span>;<br>
+                        }
+                    </div>
+                    <p>Replace 'Your Heading Font' and 'Your Body Font' with the actual font family names from Google Fonts.</p>
+                </div>
+            </div>
+            
+            <!-- Adding New Pages -->
+            <div id="adding-pages" class="guide-section">
+                <h2 class="section-title">Adding New Pages</h2>
+                <p>Learn how to create additional pages for your website while maintaining consistent design.</p>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">1</span> Duplicate an Existing Page</h4>
+                    <p>The easiest way to create a new page is to duplicate an existing one:</p>
+                    <ol>
+                        <li>Copy an HTML file that has a similar layout to what you need</li>
+                        <li>Rename the copy (e.g., <code>new-page.html</code>)</li>
+                        <li>Place it in the <span class="file-path">pages/</span> folder</li>
+                        <li>Open the new file in your editor</li>
+                    </ol>
+                    <div class="note-box">
+                        <p><strong>Good Templates to Duplicate:</strong>
+                        <ul>
+                            <li><code>about.html</code> - For content pages</li>
+                            <li><code>shop.html</code> - For product listing pages</li>
+                            <li><code>contact.html</code> - For forms and information</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">2</span> Update Page Content</h4>
+                    <p>Edit the duplicated page with your new content:</p>
+                    <ol>
+                        <li>Update the <code>&lt;title&gt;</code> in the head section</li>
+                        <li>Change the main heading and page content</li>
+                        <li>Update the breadcrumb navigation if present</li>
+                        <li>Remove or modify sections as needed</li>
+                    </ol>
+                    <div class="code-block">
+                        <span class="code-comment">&lt;!-- Update page title --&gt;</span><br>
+                        &lt;<span class="code-tag">title</span>&gt;Your New Page Title | Your Brand&lt;/<span class="code-tag">title</span>&gt;<br>
+                        <br>
+                        <span class="code-comment">&lt;!-- Update main heading --&gt;</span><br>
+                        &lt;<span class="code-tag">h1</span> <span class="code-attr">class</span>=<span class="code-value">"display-5"</span>&gt;Your New Page Heading&lt;/<span class="code-tag">h1</span>&gt;
+                    </div>
+                </div>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">3</span> Add to Navigation</h4>
+                    <p>To make your new page accessible, add it to the main navigation:</p>
+                    <ol>
+                        <li>Open <span class="file-path">index.html</span> and all page files in the <span class="file-path">pages/</span> folder</li>
+                        <li>Find the navigation section (look for <code>&lt;nav class="navbar"&gt;</code>)</li>
+                        <li>Add a new menu item in the appropriate place</li>
+                    </ol>
+                    <div class="code-block">
+                        <span class="code-comment">&lt;!-- Add this to the navigation --&gt;</span><br>
+                        &lt;<span class="code-tag">li</span> <span class="code-attr">class</span>=<span class="code-value">"nav-item"</span>&gt;<br>
+                        &nbsp;&nbsp;&lt;<span class="code-tag">a</span> <span class="code-attr">class</span>=<span class="code-value">"nav-link"</span> <span class="code-attr">href</span>=<span class="code-value">"pages/new-page.html"</span>&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;New Page<br>
+                        &nbsp;&nbsp;&lt;/<span class="code-tag">a</span>&gt;<br>
+                        &lt;/<span class="code-tag">li</span>&gt;
+                    </div>
+                </div>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">4</span> Test and Link</h4>
+                    <p>After creating your new page:</p>
+                    <ol>
+                        <li>Open it in your browser to check the layout</li>
+                        <li>Test all links on the page</li>
+                        <li>Ensure the navigation highlights correctly</li>
+                        <li>Add links to the new page from other pages if needed</li>
+                        <li>Test on mobile devices</li>
+                    </ol>
+                    <div class="success-box">
+                        <p><strong>Success Tip:</strong> Keep a consistent layout and design across all pages to maintain a professional look and user experience.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Customizing Animations -->
+            <div id="customizing-animations" class="guide-section">
+                <h2 class="section-title">Customizing Animations</h2>
+                <p>The template includes subtle, professional animations that can be easily customized or disabled.</p>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">1</span> Animation Files</h4>
+                    <p>All animations are defined in <span class="file-path">assets/css/animations.css</span>. This file contains:</p>
+                    <ul>
+                        <li>CSS keyframe animations</li>
+                        <li>Animation utility classes</li>
+                        <li>Hover effects and transitions</li>
+                        <li>Scroll-based animations</li>
+                    </ul>
+                    <p>The main stylesheet (<span class="file-path">style.css</span>) includes animation classes for specific elements.</p>
+                </div>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">2</span> Disabling Animations</h4>
+                    <p>If you prefer fewer animations (for performance or preference):</p>
+                    <div class="code-block">
+                        <span class="code-comment">/* Disable all animations */</span><br>
+                        <span class="code-tag">*</span>,<br>
+                        <span class="code-tag">*</span>::<span class="code-tag">before</span>,<br>
+                        <span class="code-tag">*</span>::<span class="code-tag">after</span> {<br>
+                        &nbsp;&nbsp;<span class="code-attr">animation-duration</span>: <span class="code-value">0.01ms !important</span>;<br>
+                        &nbsp;&nbsp;<span class="code-attr">animation-iteration-count</span>: <span class="code-value">1 !important</span>;<br>
+                        &nbsp;&nbsp;<span class="code-attr">transition-duration</span>: <span class="code-value">0.01ms !important</span>;<br>
+                        }
+                    </div>
+                    <p>Add this CSS at the end of <span class="file-path">animations.css</span> to disable all animations.</p>
+                </div>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">3</span> Modifying Specific Animations</h4>
+                    <p>To change a specific animation, find its keyframe definition:</p>
+                    <div class="code-block">
+                        <span class="code-comment">/* Example: Modify fadeIn animation */</span><br>
+                        <span class="code-tag">@keyframes</span> fadeIn {<br>
+                        &nbsp;&nbsp;<span class="code-tag">from</span> {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-attr">opacity</span>: <span class="code-value">0</span>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-attr">transform</span>: <span class="code-value">translateY(20px)</span>;<br>
+                        &nbsp;&nbsp;}<br>
+                        &nbsp;&nbsp;<span class="code-tag">to</span> {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-attr">opacity</span>: <span class="code-value">1</span>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-attr">transform</span>: <span class="code-value">translateY(0)</span>;<br>
+                        &nbsp;&nbsp;}<br>
+                        }
+                    </div>
+                    <p>Adjust the values to change the animation behavior. For example, change <code>translateY(20px)</code> to <code>translateY(10px)</code> for a smaller movement.</p>
+                </div>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">4</span> Changing Animation Timing</h4>
+                    <p>Animation timing is controlled by the <code>animation</code> property:</p>
+                    <div class="code-block">
+                        <span class="code-tag">.animate-fade-in</span> {<br>
+                        &nbsp;&nbsp;<span class="code-attr">animation</span>: <span class="code-value">fadeIn 0.6s ease-out</span>;<br>
+                        }
+                    </div>
+                    <p>To make animations faster or slower, change the duration (0.6s). To change the timing function, replace <code>ease-out</code> with another value like <code>linear</code>, <code>ease-in</code>, or <code>cubic-bezier()</code>.</p>
+                    <div class="note-box">
+                        <p><strong>Timing Functions:</strong>
+                        <ul>
+                            <li><code>linear</code> - Constant speed</li>
+                            <li><code>ease</code> - Slow start and end, fast middle (default)</li>
+                            <li><code>ease-in</code> - Slow start</li>
+                            <li><code>ease-out</code> - Slow end</li>
+                            <li><code>ease-in-out</code> - Slow start and end</li>
+                            <li><code>cubic-bezier()</code> - Custom timing</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Connecting to Backend -->
+            <div id="connecting-backend" class="guide-section">
+                <h2 class="section-title">Connecting to a Backend</h2>
+                <p>While the template works as a static site, for a full e-commerce store you'll need to connect it to a backend system.</p>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">1</span> Backend Options</h4>
+                    <p>Choose a backend technology based on your needs and skills:</p>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Technology</th>
+                                <th>Best For</th>
+                                <th>Difficulty</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Node.js + Express</td>
+                                <td>JavaScript full-stack</td>
+                                <td>Intermediate</td>
+                            </tr>
+                            <tr>
+                                <td>PHP + MySQL</td>
+                                <td>Traditional web hosting</td>
+                                <td>Beginner to Intermediate</td>
+                            </tr>
+                            <tr>
+                                <td>Python + Django</td>
+                                <td>Rapid development</td>
+                                <td>Intermediate</td>
+                            </tr>
+                            <tr>
+                                <td>Ruby on Rails</td>
+                                <td>Convention over configuration</td>
+                                <td>Intermediate</td>
+                            </tr>
+                            <tr>
+                                <td>Headless CMS</td>
+                                <td>Content management without coding</td>
+                                <td>Beginner</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">2</span> Headless CMS Option</h4>
+                    <p>For beginners, a headless CMS is the easiest way to add backend functionality:</p>
+                    <ol>
+                        <li>Sign up for a service like:
+                            <ul>
+                                <li><a href="https://strapi.io" target="_blank">Strapi</a> (open source)</li>
+                                <li><a href="https://contentful.com" target="_blank">Contentful</a></li>
+                                <li><a href="https://sanity.io" target="_blank">Sanity</a></li>
+                                <li><a href="https://prismic.io" target="_blank">Prismic</a></li>
+                            </ul>
+                        </li>
+                        <li>Create content models for Products, Categories, etc.</li>
+                        <li>Add your products through the CMS admin panel</li>
+                        <li>Use the CMS API to fetch data in your template</li>
+                    </ol>
+                    <div class="note-box">
+                        <p><strong>Benefits of Headless CMS:</strong>
+                        <ul>
+                            <li>No server setup required</li>
+                            <li>Easy content management</li>
+                            <li>Scalable and secure</li>
+                            <li>API-first architecture</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">3</span> Connecting with JavaScript</h4>
+                    <p>To fetch data from your backend API, update the JavaScript files:</p>
+                    <div class="code-block">
+                        <span class="code-comment">// Replace static product data with API call</span><br>
+                        <span class="code-tag">async function</span> loadProducts() {<br>
+                        &nbsp;&nbsp;<span class="code-tag">try</span> {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-tag">const</span> response = <span class="code-tag">await</span> fetch(<span class="code-value">'https://your-api.com/products'</span>);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-tag">const</span> products = <span class="code-tag">await</span> response.json();<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;displayProducts(products);<br>
+                        &nbsp;&nbsp;} <span class="code-tag">catch</span> (error) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;console.error(<span class="code-value">'Error loading products:'</span>, error);<br>
+                        &nbsp;&nbsp;}<br>
+                        }
+                    </div>
+                    <p>Update all data fetching in <span class="file-path">main.js</span>, <span class="file-path">cart.js</span>, and <span class="file-path">product.js</span> to use your API endpoints.</p>
+                </div>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">4</span> E-Commerce Platforms</h4>
+                    <p>For a complete solution, consider integrating with an e-commerce platform:</p>
+                    <ul>
+                        <li><strong>Shopify:</strong> Use Storefront API</li>
+                        <li><strong>WooCommerce:</strong> WordPress plugin with REST API</li>
+                        <li><strong>BigCommerce:</strong> Headless commerce platform</li>
+                        <li><strong>Saleor:</strong> Open-source GraphQL API</li>
+                    </ul>
+                    <p>These platforms handle products, inventory, payments, and shipping, allowing you to focus on the frontend design.</p>
+                    <div class="success-box">
+                        <p><strong>Implementation Path:</strong> Start with static data → Move to headless CMS → Integrate with e-commerce platform as your business grows.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Going Live Checklist -->
+            <div id="going-live" class="guide-section">
+                <h2 class="section-title">Going Live Checklist</h2>
+                <p>Before launching your website, complete these essential checks to ensure everything works correctly.</p>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">1</span> Content Review</h4>
+                    <ul>
+                        <li>✅ All demo text replaced with your content</li>
+                        <li>✅ All demo images replaced with your images</li>
+                        <li>✅ Product information accurate and complete</li>
+                        <li>✅ Prices and currency correct</li>
+                        <li>✅ Contact information updated</li>
+                        <li>✅ Legal pages (Privacy Policy, Terms) added</li>
+                        <li>✅ SEO meta tags updated for each page</li>
+                        <li>✅ Alt text added to all images</li>
+                    </ul>
+                </div>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">2</span> Functionality Testing</h4>
+                    <ul>
+                        <li>✅ All links work correctly (no 404 errors)</li>
+                        <li>✅ Navigation highlights current page</li>
+                        <li>✅ Forms submit correctly (contact, newsletter)</li>
+                        <li>✅ Add to cart functionality works</li>
+                        <li>✅ Product filtering and sorting works</li>
+                        <li>✅ Checkout process tested</li>
+                        <li>✅ Mobile menu works on all devices</li>
+                        <li>✅ Search functionality works</li>
+                        <li>✅ Image loading optimized and fast</li>
+                    </ul>
+                </div>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">3</span> Design and Responsiveness</h4>
+                    <ul>
+                        <li>✅ Website looks good on desktop (all screen sizes)</li>
+                        <li>✅ Website looks good on tablet (portrait and landscape)</li>
+                        <li>✅ Website looks good on mobile (various screen sizes)</li>
+                        <li>✅ No horizontal scrolling on mobile</li>
+                        <li>✅ Text readable without zooming</li>
+                        <li>✅ Buttons and links easily tappable on mobile</li>
+                        <li>✅ Images scale properly on all devices</li>
+                        <li>✅ No layout breaks at different zoom levels</li>
+                    </ul>
+                </div>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">4</span> Performance and SEO</h4>
+                    <ul>
+                        <li>✅ Images optimized for web (compressed)</li>
+                        <li>✅ CSS and JavaScript minified for production</li>
+                        <li>✅ Page loading speed acceptable (under 3 seconds)</li>
+                        <li>✅ SSL certificate installed (HTTPS)</li>
+                        <li>✅ XML sitemap created and submitted</li>
+                        <li>✅ robots.txt file configured</li>
+                        <li>✅ Analytics tracking code added</li>
+                        <li>✅ Social media meta tags added</li>
+                        <li>✅ Favicon and app icons set</li>
+                    </ul>
+                </div>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">5</span> Browser Compatibility</h4>
+                    <p>Test your website in different browsers:</p>
+                    <ul>
+                        <li>✅ Google Chrome (latest)</li>
+                        <li>✅ Mozilla Firefox (latest)</li>
+                        <li>✅ Safari (latest)</li>
+                        <li>✅ Microsoft Edge (latest)</li>
+                        <li>✅ Mobile browsers (Chrome, Safari)</li>
+                    </ul>
+                    <div class="note-box">
+                        <p><strong>Testing Tools:</strong> Use <a href="https://www.browserstack.com" target="_blank">BrowserStack</a> or <a href="https://crossbrowsertesting.com" target="_blank">CrossBrowserTesting</a> for comprehensive browser testing.</p>
+                    </div>
+                </div>
+                
+                <div class="step-card">
+                    <h4><span class="step-number">6</span> Launch Day</h4>
+                    <p>When you're ready to go live:</p>
+                    <ol>
+                        <li>Back up your local files</li>
+                        <li>Upload all files to your web hosting server</li>
+                        <li>Test the live website thoroughly</li>
+                        <li>Set up email accounts if needed</li>
+                        <li>Configure domain email forwarding</li>
+                        <li>Submit your sitemap to Google Search Console</li>
+                        <li>Set up social media profiles</li>
+                        <li>Plan your marketing launch</li>
+                    </ol>
+                    <div class="success-box">
+                        <p><strong>Congratulations!</strong> Your LuxeThreads e-commerce website is now live. Remember that launching is just the beginning - continue to optimize, add new products, and engage with your customers to grow your business.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Final Notes -->
+            <div class="guide-section">
+                <h2 class="section-title">Need More Help?</h2>
+                <p>If you need additional assistance with customizing your LuxeThreads template:</p>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="fas fa-code me-2"></i>Code Resources</h5>
+                                <ul>
+                                    <li><a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/" target="_blank">Bootstrap 5 Documentation</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">HTML Reference (MDN)</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS Reference (MDN)</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript Reference (MDN)</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="fas fa-tools me-2"></i>Tools & Services</h5>
+                                <ul>
+                                    <li><a href="https://tinypng.com" target="_blank">TinyPNG (Image Compression)</a></li>
+                                    <li><a href="https://fonts.google.com" target="_blank">Google Fonts</a></li>
+                                    <li><a href="https://coolors.co" target="_blank">Coolors (Color Palettes)</a></li>
+                                    <li><a href="https://unsplash.com" target="_blank">Unsplash (Free Images)</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4 text-center">
+                    <p class="lead">Thank you for using LuxeThreads! We wish you success with your fashion e-commerce business.</p>
+                    <p>Remember: Great design + Great products + Great customer service = Success!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTop.style.display = 'flex';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+        
+        backToTop.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Add copy functionality to code blocks
+        document.querySelectorAll('.code-block').forEach(block => {
+            block.style.position = 'relative';
+            block.style.cursor = 'pointer';
+            
+            block.addEventListener('click', function() {
+                const text = this.textContent;
+                navigator.clipboard.writeText(text).then(() => {
+                    // Show temporary notification
+                    const notification = document.createElement('div');
+                    notification.textContent = 'Code copied!';
+                    notification.style.cssText = `
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                        background: #198754;
+                        color: white;
+                        padding: 5px 10px;
+                        border-radius: 3px;
+                        font-size: 12px;
+                        z-index: 10;
+                    `;
+                    
+                    this.appendChild(notification);
+                    
+                    setTimeout(() => {
+                        if (notification.parentNode) {
+                            notification.remove();
+                        }
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Copy failed:', err);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

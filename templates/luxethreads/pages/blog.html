@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LuxeThreads Blog - Fashion tips, style guides, and industry insights">
+    <title>Fashion Blog | LuxeThreads</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/8140dd2669.js" crossorigin="anonymous"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/images/logo.svg" alt="LuxeThreads Logo" height="40">
+                <span class="brand-name">LuxeThreads</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="shopDropdown" role="button" data-bs-toggle="dropdown">
+                            Shop
+                        </a>
+                        <div class="dropdown-menu mega-menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <h6>Women's Fashion</h6>
+                                        <a class="dropdown-item" href="shop.html?category=women-dresses">Dresses</a>
+                                        <a class="dropdown-item" href="shop.html?category=women-tops">Tops</a>
+                                        <a class="dropdown-item" href="shop.html?category=women-jeans">Jeans</a>
+                                        <a class="dropdown-item" href="shop.html?category=women-activewear">Activewear</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6>Men's Fashion</h6>
+                                        <a class="dropdown-item" href="shop.html?category=men-shirts">Shirts</a>
+                                        <a class="dropdown-item" href="shop.html?category=men-pants">Pants</a>
+                                        <a class="dropdown-item" href="shop.html?category=men-jackets">Jackets</a>
+                                        <a class="dropdown-item" href="shop.html?category=men-shoes">Shoes</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6>Accessories</h6>
+                                        <a class="dropdown-item" href="shop.html?category=bags">Bags</a>
+                                        <a class="dropdown-item" href="shop.html?category=jewelry">Jewelry</a>
+                                        <a class="dropdown-item" href="shop.html?category=watches">Watches</a>
+                                        <a class="dropdown-item" href="shop.html?category=sunglasses">Sunglasses</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6>Featured Collections</h6>
+                                        <a class="dropdown-item" href="shop.html?collection=summer">Summer <script>document.write(new Date().getFullYear());</script></a>
+                                        <a class="dropdown-item" href="shop.html?collection=new">New Arrivals</a>
+                                        <a class="dropdown-item" href="shop.html?sale=true">Sale Items</a>
+                                        <a class="dropdown-item" href="shop.html?bestsellers=true">Best Sellers</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex align-items-center">
+                    <a href="#" class="nav-icon me-3" id="searchToggle">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a href="wishlist.html" class="nav-icon me-3">
+                        <i class="far fa-heart"></i>
+                        <span class="badge bg-danger wishlist-count">3</span>
+                    </a>
+                    <a href="account.html" class="nav-icon me-3">
+                        <i class="far fa-user"></i>
+                    </a>
+                    <a href="cart.html" class="nav-icon position-relative">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="badge bg-primary cart-count">2</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-bar-container" id="searchBar">
+                <div class="container">
+                    <form class="search-form">
+                        <input type="text" class="form-control" placeholder="Search for products, brands, or categories...">
+                        <button type="submit" class="btn btn-dark">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <button type="button" class="btn btn-link" id="closeSearch">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Header -->
+    <section class="blog-header py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold mb-3">Fashion Blog</h1>
+                    <p class="lead text-muted">Style tips, trends, and inspiration from our experts</p>
+                </div>
+                <div class="col-lg-6">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-lg-end">
+                            <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Blog</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="blog-content py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Main Blog Posts -->
+                <div class="col-lg-8 mb-5 mb-lg-0">
+                    <!-- Featured Post -->
+                    <div class="featured-post mb-5">
+                        <div class="card border-0 shadow-lg">
+                            <div class="featured-image">
+                                <img src="../assets/images/blog/blog2.jpg" alt="Spring Fashion Trends" class="card-img-top">
+                                <div class="featured-badge">
+                                    <span class="badge bg-dark">Featured</span>
+                                </div>
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="post-meta d-flex align-items-center mb-3">
+                                    <span class="post-date me-3">
+                                        <i class="far fa-calendar me-1"></i> March 15, <script>document.write(new Date().getFullYear());</script>
+                                    </span>
+                                    <span class="post-category">
+                                        <i class="far fa-folder me-1"></i> Trends
+                                    </span>
+                                </div>
+                                <h2 class="card-title mb-3">
+                                    <a href="blog-details.html" class="text-decoration-none text-dark">Spring <script>document.write(new Date().getFullYear());</script> Fashion Trends: What to Wear This Season</a>
+                                </h2>
+                                <p class="card-text text-muted mb-4">Discover the must-have styles and key pieces that will define your spring wardrobe this year. From bold colors to sophisticated silhouettes, we break down everything you need to know.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="blog-details.html" class="btn btn-outline-dark">Read More</a>
+                                    <span class="text-muted small">
+                                        <i class="far fa-clock me-1"></i> 8 min read
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Blog Posts Grid -->
+                    <div class="row">
+                        <!-- Post 1 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="blog-card card h-100 border-0 shadow-sm">
+                                <div class="blog-image">
+                                    <img src="../assets/images/blog/blog3.jpg" alt="Sustainable Fashion" class="card-img-top">
+                                </div>
+                                <div class="card-body">
+                                    <div class="post-meta d-flex align-items-center mb-2">
+                                        <span class="post-date me-3 small">
+                                            <i class="far fa-calendar me-1"></i> March 10, <script>document.write(new Date().getFullYear());</script>
+                                        </span>
+                                        <span class="post-category small">
+                                            <i class="far fa-folder me-1"></i> Sustainability
+                                        </span>
+                                    </div>
+                                    <h3 class="h5 card-title mb-3">
+                                        <a href="blog-details.html" class="text-decoration-none text-dark">The Rise of Sustainable Fashion: How to Build an Eco-Friendly Wardrobe</a>
+                                    </h3>
+                                    <p class="card-text text-muted small mb-3">Learn practical tips for creating a sustainable wardrobe that doesn't compromise on style or quality.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <a href="blog-details.html" class="small text-decoration-none">Read More →</a>
+                                        <span class="text-muted small">
+                                            <i class="far fa-clock me-1"></i> 5 min
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Post 2 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="blog-card card h-100 border-0 shadow-sm">
+                                <div class="blog-image">
+                                    <img src="../assets/images/blog/blog1.jpg" alt="Winter Style Guide" class="card-img-top">
+                                </div>
+                                <div class="card-body">
+                                    <div class="post-meta d-flex align-items-center mb-2">
+                                        <span class="post-date me-3 small">
+                                            <i class="far fa-calendar me-1"></i> March 5, <script>document.write(new Date().getFullYear());</script>
+                                        </span>
+                                        <span class="post-category small">
+                                            <i class="far fa-folder me-1"></i> Style Guides
+                                        </span>
+                                    </div>
+                                    <h3 class="h5 card-title mb-3">
+                                        <a href="blog-details.html" class="text-decoration-none text-dark">Mastering Winter Layering: Stay Warm Without Sacrificing Style</a>
+                                    </h3>
+                                    <p class="card-text text-muted small mb-3">Essential tips for layering effectively during colder months while maintaining a polished look.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <a href="blog-details.html" class="small text-decoration-none">Read More →</a>
+                                        <span class="text-muted small">
+                                            <i class="far fa-clock me-1"></i> 6 min
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Post 3 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="blog-card card h-100 border-0 shadow-sm">
+                                <div class="blog-image">
+                                    <img src="../assets/images/blog/blog4.jpg" alt="Accessory Trends" class="card-img-top">
+                                </div>
+                                <div class="card-body">
+                                    <div class="post-meta d-flex align-items-center mb-2">
+                                        <span class="post-date me-3 small">
+                                            <i class="far fa-calendar me-1"></i> February 28, <script>document.write(new Date().getFullYear());</script>
+                                        </span>
+                                        <span class="post-category small">
+                                            <i class="far fa-folder me-1"></i> Accessories
+                                        </span>
+                                    </div>
+                                    <h3 class="h5 card-title mb-3">
+                                        <a href="blog-details.html" class="text-decoration-none text-dark">Accessory Trends <script>document.write(new Date().getFullYear());</script>: Elevate Your Outfits with These Statement Pieces</a>
+                                    </h3>
+                                    <p class="card-text text-muted small mb-3">Discover the accessory trends that will transform your outfits from ordinary to extraordinary this year.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <a href="blog-details.html" class="small text-decoration-none">Read More →</a>
+                                        <span class="text-muted small">
+                                            <i class="far fa-clock me-1"></i> 4 min
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Post 4 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="blog-card card h-100 border-0 shadow-sm">
+                                <div class="blog-image">
+                                    <img src="../assets/images/blog/blog5.jpg" alt="Capsule Wardrobe" class="card-img-top">
+                                </div>
+                                <div class="card-body">
+                                    <div class="post-meta d-flex align-items-center mb-2">
+                                        <span class="post-date me-3 small">
+                                            <i class="far fa-calendar me-1"></i> February 20, <script>document.write(new Date().getFullYear());</script>
+                                        </span>
+                                        <span class="post-category small">
+                                            <i class="far fa-folder me-1"></i> Wardrobe Essentials
+                                        </span>
+                                    </div>
+                                    <h3 class="h5 card-title mb-3">
+                                        <a href="blog-details.html" class="text-decoration-none text-dark">Building a Timeless Capsule Wardrobe: The Essential Pieces You Need</a>
+                                    </h3>
+                                    <p class="card-text text-muted small mb-3">Create a versatile wardrobe with investment pieces that will serve you for years to come.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <a href="blog-details.html" class="small text-decoration-none">Read More →</a>
+                                        <span class="text-muted small">
+                                            <i class="far fa-clock me-1"></i> 7 min
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <nav aria-label="Blog pagination" class="mt-5">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <!-- Search Widget -->
+                    <div class="sidebar-widget mb-4">
+                        <h4 class="mb-3">Search Blog</h4>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search articles...">
+                            <button class="btn btn-dark" type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Categories Widget -->
+                    <div class="sidebar-widget mb-4">
+                        <h4 class="mb-3">Categories</h4>
+                        <ul class="list-group list-group-flush category-list">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <a href="#" class="text-decoration-none text-dark">Trends</a>
+                                <span class="badge bg-secondary rounded-pill">12</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <a href="#" class="text-decoration-none text-dark">Style Guides</a>
+                                <span class="badge bg-secondary rounded-pill">8</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <a href="#" class="text-decoration-none text-dark">Sustainability</a>
+                                <span class="badge bg-secondary rounded-pill">6</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <a href="#" class="text-decoration-none text-dark">Wardrobe Essentials</a>
+                                <span class="badge bg-secondary rounded-pill">10</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <a href="#" class="text-decoration-none text-dark">Accessories</a>
+                                <span class="badge bg-secondary rounded-pill">7</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <a href="#" class="text-decoration-none text-dark">Behind the Scenes</a>
+                                <span class="badge bg-secondary rounded-pill">4</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Popular Posts Widget -->
+                    <div class="sidebar-widget mb-4">
+                        <h4 class="mb-3">Popular Posts</h4>
+                        <div class="popular-posts">
+                            <div class="popular-post d-flex mb-3">
+                                <div class="popular-post-image flex-shrink-0">
+                                    <img src="../assets/images/blog/blog1.jpg" alt="Popular Post" class="rounded" style="width:60px; height:60px">
+                                </div>
+                                <div class="popular-post-content ms-3">
+                                    <h6 class="mb-1">
+                                        <a href="blog-details.html" class="text-decoration-none text-dark">10 Wardrobe Staples Every Woman Needs</a>
+                                    </h6>
+                                    <p class="small text-muted mb-0">Feb 15, <script>document.write(new Date().getFullYear());</script></p>
+                                </div>
+                            </div>
+                            <div class="popular-post d-flex mb-3">
+                                <div class="popular-post-image flex-shrink-0">
+                                    <img src="../assets/images/blog/blog2.jpg" alt="Popular Post" class="rounded" style="width:60px; height:60px">
+                                </div>
+                                <div class="popular-post-content ms-3">
+                                    <h6 class="mb-1">
+                                        <a href="blog-details.html" class="text-decoration-none text-dark">Men's Fashion: Building a Professional Wardrobe</a>
+                                    </h6>
+                                    <p class="small text-muted mb-0">Feb 10, <script>document.write(new Date().getFullYear());</script></p>
+                                </div>
+                            </div>
+                            <div class="popular-post d-flex">
+                                <div class="popular-post-image flex-shrink-0">
+                                    <img src="../assets/images/blog/blog3.jpg" alt="Popular Post" class="rounded" style="width:60px; height:60px">
+                                </div>
+                                <div class="popular-post-content ms-3">
+                                    <h6 class="mb-1">
+                                        <a href="blog-details.html" class="text-decoration-none text-dark">The Art of Mixing Prints and Patterns</a>
+                                    </h6>
+                                    <p class="small text-muted mb-0">Feb 5, <script>document.write(new Date().getFullYear());</script></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tags Widget -->
+                    <div class="sidebar-widget mb-4">
+                        <h4 class="mb-3">Tags</h4>
+                        <div class="tag-list">
+                            <a href="#" class="tag">Fashion Trends</a>
+                            <a href="#" class="tag">Style Tips</a>
+                            <a href="#" class="tag">Sustainable Fashion</a>
+                            <a href="#" class="tag">Wardrobe Essentials</a>
+                            <a href="#" class="tag">Seasonal Guides</a>
+                            <a href="#" class="tag">Accessories</a>
+                            <a href="#" class="tag">Luxury Fashion</a>
+                            <a href="#" class="tag">Capsule Wardrobe</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Newsletter Widget -->
+                    <div class="sidebar-widget">
+                        <div class="card bg-dark text-white">
+                            <div class="card-body">
+                                <h4 class="mb-3">Subscribe to Our Blog</h4>
+                                <p class="small mb-3">Get the latest fashion insights and style tips delivered to your inbox.</p>
+                                <form class="blog-newsletter-form">
+                                    <div class="input-group mb-3">
+                                        <input type="email" class="form-control" placeholder="Your email" required>
+                                        <button class="btn btn-light" type="submit">
+                                            <i class="fas fa-paper-plane"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mb-3">Never Miss a Post</h2>
+                    <p class="mb-4">Subscribe to our blog newsletter for the latest fashion insights and exclusive content.</p>
+                    <form class="newsletter-form">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Enter your email address" required>
+                            <button class="btn btn-light" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <a href="../index.html" class="d-flex align-items-center mb-3 text-white text-decoration-none">
+                        <img src="../assets/images/logo.svg" alt="LuxeThreads Logo" height="40">
+                        <span class="brand-name ms-2">LuxeThreads</span>
+                    </a>
+                    <p class="text-light">Premium fashion and apparel for the modern individual. Quality craftsmanship meets contemporary design.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Shop</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="shop.html" class="text-light text-decoration-none">All Products</a></li>
+                        <li><a href="shop.html?category=women" class="text-light text-decoration-none">Women</a></li>
+                        <li><a href="shop.html?category=men" class="text-light text-decoration-none">Men</a></li>
+                        <li><a href="shop.html?category=accessories" class="text-light text-decoration-none">Accessories</a></li>
+                        <li><a href="shop.html?sale=true" class="text-light text-decoration-none">Sale</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-light text-decoration-none">About Us</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none">Contact Us</a></li>
+                        <li><a href="faq.html" class="text-light text-decoration-none">FAQs</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Shipping Policy</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Return Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled text-light">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Fashion Avenue, New York, NY</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> (555) 123-4567</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> hello@luxethreads.com</li>
+                        <li><i class="fas fa-clock me-2"></i> Mon-Fri: 9AM-6PM EST</li>
+                    </ul>
+                    <div class="payment-methods mt-3 h2">
+                        <i class="fa-brands fa-cc-visa me-2" width="40"></i>
+                        <i class="fa-brands fa-cc-mastercard me-2" width="40"></i>
+                        <i class="fa-brands fa-paypal me-2" width="40"></i>
+                        <i class="fa-brands fa-apple-pay" width="40"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="bg-light">
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; <script>document.write(new Date().getFullYear());</script> LuxeThreads. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-light text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

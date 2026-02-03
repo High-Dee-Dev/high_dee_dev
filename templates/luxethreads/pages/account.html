@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your LuxeThreads account - Manage orders, profile, and preferences">
+    <title>My Account | LuxeThreads</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/8140dd2669.js" crossorigin="anonymous"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/images/logo.svg" alt="LuxeThreads Logo" height="40">
+                <span class="brand-name">LuxeThreads</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="shopDropdown" role="button" data-bs-toggle="dropdown">
+                            Shop
+                        </a>
+                        <div class="dropdown-menu mega-menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <h6>Women's Fashion</h6>
+                                        <a class="dropdown-item" href="shop.html?category=women-dresses">Dresses</a>
+                                        <a class="dropdown-item" href="shop.html?category=women-tops">Tops</a>
+                                        <a class="dropdown-item" href="shop.html?category=women-jeans">Jeans</a>
+                                        <a class="dropdown-item" href="shop.html?category=women-activewear">Activewear</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6>Men's Fashion</h6>
+                                        <a class="dropdown-item" href="shop.html?category=men-shirts">Shirts</a>
+                                        <a class="dropdown-item" href="shop.html?category=men-pants">Pants</a>
+                                        <a class="dropdown-item" href="shop.html?category=men-jackets">Jackets</a>
+                                        <a class="dropdown-item" href="shop.html?category=men-shoes">Shoes</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6>Accessories</h6>
+                                        <a class="dropdown-item" href="shop.html?category=bags">Bags</a>
+                                        <a class="dropdown-item" href="shop.html?category=jewelry">Jewelry</a>
+                                        <a class="dropdown-item" href="shop.html?category=watches">Watches</a>
+                                        <a class="dropdown-item" href="shop.html?category=sunglasses">Sunglasses</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6>Featured Collections</h6>
+                                        <a class="dropdown-item" href="shop.html?collection=summer">Summer <script>document.write(new Date().getFullYear());</script></a>
+                                        <a class="dropdown-item" href="shop.html?collection=new">New Arrivals</a>
+                                        <a class="dropdown-item" href="shop.html?sale=true">Sale Items</a>
+                                        <a class="dropdown-item" href="shop.html?bestsellers=true">Best Sellers</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex align-items-center">
+                    <a href="#" class="nav-icon me-3" id="searchToggle">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a href="wishlist.html" class="nav-icon me-3">
+                        <i class="far fa-heart"></i>
+                        <span class="badge bg-danger wishlist-count">3</span>
+                    </a>
+                    <a href="account.html" class="nav-icon me-3">
+                        <i class="far fa-user"></i>
+                    </a>
+                    <a href="cart.html" class="nav-icon position-relative">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="badge bg-primary cart-count">2</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-bar-container" id="searchBar">
+                <div class="container">
+                    <form class="search-form">
+                        <input type="text" class="form-control" placeholder="Search for products, brands, or categories...">
+                        <button type="submit" class="btn btn-dark">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <button type="button" class="btn btn-link" id="closeSearch">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Account Header -->
+    <section class="account-header py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold mb-3">My Account</h1>
+                    <p class="lead text-muted">Manage your profile, orders, and preferences</p>
+                </div>
+                <div class="col-lg-6">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-lg-end">
+                            <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Account</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Account Content -->
+    <section class="account-content py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar Navigation -->
+                <div class="col-lg-3 mb-5 mb-lg-0">
+                    <div class="account-sidebar">
+                        <!-- User Profile Summary -->
+                        <div class="user-profile-summary mb-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="user-avatar me-3">
+                                    <img src="../assets/images/testimonials/testimonial3.jpg" alt="User Avatar" class="rounded-circle" width="60" height="60">
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Sarah Johnson</h6>
+                                    <small class="text-muted">Premium Member</small>
+                                </div>
+                            </div>
+                            <div class="user-stats">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="text-muted">Orders</span>
+                                    <span class="fw-medium">12</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span class="text-muted">Loyalty Points</span>
+                                    <span class="fw-medium">1,250</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Navigation -->
+                        <nav class="account-nav">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#dashboard">
+                                        <i class="fas fa-tachometer-alt me-2"></i> Dashboard
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#orders">
+                                        <i class="fas fa-shopping-bag me-2"></i> Orders
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#wishlist">
+                                        <i class="far fa-heart me-2"></i> Wishlist
+                                        <span class="badge bg-danger float-end">3</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#addresses">
+                                        <i class="fas fa-map-marker-alt me-2"></i> Addresses
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#profile">
+                                        <i class="far fa-user me-2"></i> Profile
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#settings">
+                                        <i class="fas fa-cog me-2"></i> Settings
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-danger" href="#logout">
+                                        <i class="fas fa-sign-out-alt me-2"></i> Logout
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        
+                        <!-- Loyalty Program -->
+                        <div class="loyalty-program mt-4 p-3 bg-light rounded">
+                            <h6 class="mb-2"><i class="fas fa-crown me-2"></i>Loyalty Program</h6>
+                            <p class="small mb-2">You have 1,250 points. 250 more points to reach Gold status!</p>
+                            <div class="progress mb-2" style="height: 6px;">
+                                <div class="progress-bar bg-warning" style="width: 83%"></div>
+                            </div>
+                            <a href="#" class="small text-decoration-none">View Benefits →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main Content -->
+                <div class="col-lg-9">
+                    <!-- Dashboard -->
+                    <div class="account-section active" id="dashboard">
+                        <div class="card">
+                            <div class="card-header bg-white border-bottom">
+                                <h5 class="mb-0">Dashboard</h5>
+                            </div>
+                            <div class="card-body">
+                                <!-- Welcome Message -->
+                                <div class="welcome-message mb-5">
+                                    <h4 class="mb-3">Welcome back, Sarah!</h4>
+                                    <p class="text-muted">Here's an overview of your account activity and recent orders.</p>
+                                </div>
+                                
+                                <!-- Quick Stats -->
+                                <div class="quick-stats row mb-5">
+                                    <div class="col-md-3 col-6 mb-3">
+                                        <div class="stat-card text-center p-3 border rounded">
+                                            <div class="stat-icon mb-2">
+                                                <i class="fas fa-shopping-bag fa-2x text-dark"></i>
+                                            </div>
+                                            <h3 class="mb-1">12</h3>
+                                            <p class="text-muted mb-0">Total Orders</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-6 mb-3">
+                                        <div class="stat-card text-center p-3 border rounded">
+                                            <div class="stat-icon mb-2">
+                                                <i class="far fa-heart fa-2x text-dark"></i>
+                                            </div>
+                                            <h3 class="mb-1">3</h3>
+                                            <p class="text-muted mb-0">Wishlist Items</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-6 mb-3">
+                                        <div class="stat-card text-center p-3 border rounded">
+                                            <div class="stat-icon mb-2">
+                                                <i class="fas fa-star fa-2x text-dark"></i>
+                                            </div>
+                                            <h3 class="mb-1">1,250</h3>
+                                            <p class="text-muted mb-0">Loyalty Points</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-6 mb-3">
+                                        <div class="stat-card text-center p-3 border rounded">
+                                            <div class="stat-icon mb-2">
+                                                <i class="fas fa-tag fa-2x text-dark"></i>
+                                            </div>
+                                            <h3 class="mb-1">2</h3>
+                                            <p class="text-muted mb-0">Active Coupons</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Recent Orders -->
+                                <div class="recent-orders mb-5">
+                                    <h5 class="mb-4">Recent Orders</h5>
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Order #</th>
+                                                    <th>Date</th>
+                                                    <th>Items</th>
+                                                    <th>Total</th>
+                                                    <th>Status</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>#LT-7842</td>
+                                                    <td>Mar 15, <script>document.write(new Date().getFullYear());</script></td>
+                                                    <td>2 items</td>
+                                                    <td>$289.98</td>
+                                                    <td><span class="badge bg-success">Delivered</span></td>
+                                                    <td>
+                                                        <a href="#" class="btn btn-sm btn-outline-dark">View</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>#LT-7831</td>
+                                                    <td>Mar 10, <script>document.write(new Date().getFullYear());</script></td>
+                                                    <td>1 item</td>
+                                                    <td>$149.99</td>
+                                                    <td><span class="badge bg-warning">Processing</span></td>
+                                                    <td>
+                                                        <a href="#" class="btn btn-sm btn-outline-dark">Track</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>#LT-7805</td>
+                                                    <td>Mar 2, <script>document.write(new Date().getFullYear());</script></td>
+                                                    <td>3 items</td>
+                                                    <td>$425.50</td>
+                                                    <td><span class="badge bg-success">Delivered</span></td>
+                                                    <td>
+                                                        <a href="#" class="btn btn-sm btn-outline-dark">View</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="text-end mt-3">
+                                        <a href="#orders" class="btn btn-outline-dark view-all-orders">View All Orders</a>
+                                    </div>
+                                </div>
+                                
+                                <!-- Recent Activity -->
+                                <div class="recent-activity">
+                                    <h5 class="mb-4">Recent Activity</h5>
+                                    <div class="timeline">
+                                        <div class="timeline-item">
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h6 class="mb-1">Order #LT-7842 Delivered</h6>
+                                                <p class="text-muted mb-1">Your order has been successfully delivered</p>
+                                                <small class="text-muted">March 16, <script>document.write(new Date().getFullYear());</script></small>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h6 class="mb-1">Product Review Added</h6>
+                                                <p class="text-muted mb-1">You reviewed "Silk Evening Gown" ★★★★★</p>
+                                                <small class="text-muted">March 14, <script>document.write(new Date().getFullYear());</script></small>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h6 class="mb-1">Loyalty Points Earned</h6>
+                                                <p class="text-muted mb-1">You earned 125 points from your recent purchase</p>
+                                                <small class="text-muted">March 10, <script>document.write(new Date().getFullYear());</script></small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Orders Section -->
+                    <div class="account-section" id="orders">
+                        <div class="card">
+                            <div class="card-header bg-white border-bottom">
+                                <h5 class="mb-0">My Orders</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Order #</th>
+                                                <th>Date</th>
+                                                <th>Items</th>
+                                                <th>Total</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>#LT-7842</td>
+                                                <td>Mar 15, <script>document.write(new Date().getFullYear());</script></td>
+                                                <td>Silk Evening Gown (1), Pearl Earrings (1)</td>
+                                                <td>$289.98</td>
+                                                <td><span class="badge bg-success">Delivered</span></td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-outline-dark">View Details</button>
+                                                    <button class="btn btn-sm btn-outline-primary ms-1">Reorder</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>#LT-7831</td>
+                                                <td>Mar 10, <script>document.write(new Date().getFullYear());</script></td>
+                                                <td>Leather Jacket (1)</td>
+                                                <td>$149.99</td>
+                                                <td><span class="badge bg-warning">Processing</span></td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-outline-dark">Track Order</button>
+                                                    <button class="btn btn-sm btn-outline-secondary ms-1">Cancel</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>#LT-7805</td>
+                                                <td>Mar 2, <script>document.write(new Date().getFullYear());</script></td>
+                                                <td>Wool Coat (1), Silk Scarf (1), Leather Gloves (1)</td>
+                                                <td>$425.50</td>
+                                                <td><span class="badge bg-success">Delivered</span></td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-outline-dark">View Details</button>
+                                                    <button class="btn btn-sm btn-outline-primary ms-1">Reorder</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>#LT-7792</td>
+                                                <td>Feb 25, <script>document.write(new Date().getFullYear());</script></td>
+                                                <td>Cashmere Sweater (2)</td>
+                                                <td>$399.98</td>
+                                                <td><span class="badge bg-success">Delivered</span></td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-outline-dark">View Details</button>
+                                                    <button class="btn btn-sm btn-outline-primary ms-1">Reorder</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <!-- Order Filters -->
+                                <div class="order-filters mt-4 p-3 bg-light rounded">
+                                    <h6>Filter Orders</h6>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <select class="form-select form-select-sm">
+                                                <option selected>All Status</option>
+                                                <option>Processing</option>
+                                                <option>Shipped</option>
+                                                <option>Delivered</option>
+                                                <option>Cancelled</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <select class="form-select form-select-sm">
+                                                <option selected>Last 30 Days</option>
+                                                <option>Last 3 Months</option>
+                                                <option>Last 6 Months</option>
+                                                <option>Last Year</option>
+                                                <option>All Time</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button class="btn btn-sm btn-dark">Apply Filters</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Wishlist Section -->
+                    <div class="account-section" id="wishlist">
+                        <div class="card">
+                            <div class="card-header bg-white border-bottom">
+                                <h5 class="mb-0">My Wishlist</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <!-- Wishlist Item 1 -->
+                                    <div class="col-md-4 mb-4">
+                                        <div class="product-card">
+                                            <div class="product-image position-relative">
+                                                <img src="https://images.unsplash.com/photo-1592878904946-b3cd8ae243d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Designer Handbag" class="img-fluid">
+                                                <button class="btn btn-danger btn-sm position-absolute top-0 end-0 m-2 remove-wishlist">
+                                                    <i class="fas fa-times"></i>
+                                                </button>
+                                            </div>
+                                            <div class="product-info mt-3">
+                                                <h6 class="mb-1">Designer Leather Handbag</h6>
+                                                <p class="text-muted small mb-2">Brown, Medium</p>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span class="price">$349.99</span>
+                                                    <button class="btn btn-sm btn-dark">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Wishlist Item 2 -->
+                                    <div class="col-md-4 mb-4">
+                                        <div class="product-card">
+                                            <div class="product-image position-relative">
+                                                <img src="https://images.unsplash.com/photo-1578587018452-892bacefd3f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Gold Necklace" class="img-fluid">
+                                                <button class="btn btn-danger btn-sm position-absolute top-0 end-0 m-2 remove-wishlist">
+                                                    <i class="fas fa-times"></i>
+                                                </button>
+                                            </div>
+                                            <div class="product-info mt-3">
+                                                <h6 class="mb-1">18K Gold Necklace</h6>
+                                                <p class="text-muted small mb-2">With Diamond Pendant</p>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span class="price">$899.99</span>
+                                                    <button class="btn btn-sm btn-dark">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Wishlist Item 3 -->
+                                    <div class="col-md-4 mb-4">
+                                        <div class="product-card">
+                                            <div class="product-image position-relative">
+                                                <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Cashmere Sweater" class="img-fluid">
+                                                <button class="btn btn-danger btn-sm position-absolute top-0 end-0 m-2 remove-wishlist">
+                                                    <i class="fas fa-times"></i>
+                                                </button>
+                                            </div>
+                                            <div class="product-info mt-3">
+                                                <h6 class="mb-1">Cashmere V-Neck Sweater</h6>
+                                                <p class="text-muted small mb-2">Navy Blue, Size M</p>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span class="price">$199.99</span>
+                                                    <button class="btn btn-sm btn-dark">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Empty Wishlist Message (hidden by default) -->
+                                <div class="empty-wishlist text-center py-5" style="display: none;">
+                                    <i class="far fa-heart fa-4x text-muted mb-3"></i>
+                                    <h5 class="mb-3">Your wishlist is empty</h5>
+                                    <p class="text-muted mb-4">Save items you love for later by clicking the heart icon.</p>
+                                    <a href="shop.html" class="btn btn-dark">Start Shopping</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Addresses Section -->
+                    <div class="account-section" id="addresses">
+                        <div class="card">
+                            <div class="card-header bg-white border-bottom">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h5 class="mb-0">My Addresses</h5>
+                                    <button class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#addAddressModal">
+                                        <i class="fas fa-plus me-1"></i> Add New Address
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <!-- Address 1 (Default) -->
+                                    <div class="col-md-6 mb-4">
+                                        <div class="address-card border p-3 h-100">
+                                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                                <h6 class="mb-0">Primary Address</h6>
+                                                <span class="badge bg-dark">Default</span>
+                                            </div>
+                                            <address class="mb-3">
+                                                Sarah Johnson<br>
+                                                123 Fashion Avenue<br>
+                                                Apartment 4B<br>
+                                                New York, NY 10001<br>
+                                                United States
+                                            </address>
+                                            <div class="phone mb-3">
+                                                <strong>Phone:</strong> (555) 123-4567
+                                            </div>
+                                            <div class="address-actions">
+                                                <button class="btn btn-outline-dark btn-sm">Edit</button>
+                                                <button class="btn btn-outline-danger btn-sm ms-2">Remove</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Address 2 -->
+                                    <div class="col-md-6 mb-4">
+                                        <div class="address-card border p-3 h-100">
+                                            <h6 class="mb-3">Work Address</h6>
+                                            <address class="mb-3">
+                                                Sarah Johnson<br>
+                                                456 Business Blvd, Suite 1200<br>
+                                                Manhattan<br>
+                                                New York, NY 10017<br>
+                                                United States
+                                            </address>
+                                            <div class="phone mb-3">
+                                                <strong>Phone:</strong> (555) 987-6543
+                                            </div>
+                                            <div class="address-actions">
+                                                <button class="btn btn-outline-dark btn-sm">Set as Default</button>
+                                                <button class="btn btn-outline-dark btn-sm ms-2">Edit</button>
+                                                <button class="btn btn-outline-danger btn-sm ms-2">Remove</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Empty Address Message (hidden by default) -->
+                                <div class="empty-addresses text-center py-5" style="display: none;">
+                                    <i class="fas fa-map-marker-alt fa-4x text-muted mb-3"></i>
+                                    <h5 class="mb-3">No addresses saved</h5>
+                                    <p class="text-muted mb-4">Add an address for faster checkout.</p>
+                                    <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#addAddressModal">
+                                        Add Your First Address
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Profile Section -->
+                    <div class="account-section" id="profile">
+                        <div class="card">
+                            <div class="card-header bg-white border-bottom">
+                                <h5 class="mb-0">Profile Information</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="profileForm">
+                                    <div class="row">
+                                        <div class="col-md-4 text-center mb-4">
+                                            <div class="profile-picture mb-3">
+                                                <img src="https://images.unsplash.com/photo-1494790108755-2616b786d4d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Profile" class="rounded-circle img-fluid" width="150" height="150">
+                                            </div>
+                                            <button type="button" class="btn btn-outline-dark btn-sm">Change Photo</button>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row">
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="firstName" class="form-label">First Name *</label>
+                                                    <input type="text" class="form-control" id="firstName" value="Sarah" required>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="lastName" class="form-label">Last Name *</label>
+                                                    <input type="text" class="form-control" id="lastName" value="Johnson" required>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="mb-3">
+                                                <label for="email" class="form-label">Email Address *</label>
+                                                <input type="email" class="form-control" id="email" value="sarah.johnson@example.com" required>
+                                            </div>
+                                            
+                                            <div class="row">
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="phone" class="form-label">Phone Number</label>
+                                                    <input type="tel" class="form-control" id="phone" value="(555) 123-4567">
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="birthday" class="form-label">Birthday</label>
+                                                    <input type="date" class="form-control" id="birthday" value="1990-05-15">
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="mb-3">
+                                                <label for="bio" class="form-label">Bio</label>
+                                                <textarea class="form-control" id="bio" rows="3">Fashion enthusiast with a passion for sustainable luxury clothing and timeless accessories.</textarea>
+                                            </div>
+                                            
+                                            <div class="mb-4">
+                                                <label class="form-label">Preferences</label>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="newsletter" checked>
+                                                    <label class="form-check-label" for="newsletter">
+                                                        Subscribe to newsletter and promotions
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="smsAlerts">
+                                                    <label class="form-check-label" for="smsAlerts">
+                                                        Receive SMS order updates
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            
+                                            <button type="submit" class="btn btn-dark">Update Profile</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Settings Section -->
+                    <div class="account-section" id="settings">
+                        <div class="card">
+                            <div class="card-header bg-white border-bottom">
+                                <h5 class="mb-0">Account Settings</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="settings-tabs">
+                                    <ul class="nav nav-tabs" id="settingsTab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active" id="security-tab" data-bs-toggle="tab" data-bs-target="#security">Security</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="notifications-tab" data-bs-toggle="tab" data-bs-target="#notifications">Notifications</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="privacy-tab" data-bs-toggle="tab" data-bs-target="#privacy">Privacy</button>
+                                        </li>
+                                    </ul>
+                                    
+                                    <div class="tab-content mt-4">
+                                        <!-- Security Tab -->
+                                        <div class="tab-pane fade show active" id="security" role="tabpanel">
+                                            <h6>Change Password</h6>
+                                            <form id="passwordForm">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="mb-3">
+                                                            <label for="currentPassword" class="form-label">Current Password</label>
+                                                            <input type="password" class="form-control" id="currentPassword" required>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="newPassword" class="form-label">New Password</label>
+                                                            <input type="password" class="form-control" id="newPassword" required>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="confirmPassword" class="form-label">Confirm New Password</label>
+                                                            <input type="password" class="form-control" id="confirmPassword" required>
+                                                        </div>
+                                                        <button type="submit" class="btn btn-dark">Update Password</button>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="p-3 bg-light rounded">
+                                                            <h6>Password Requirements</h6>
+                                                            <ul class="small text-muted">
+                                                                <li>Minimum 8 characters</li>
+                                                                <li>At least one uppercase letter</li>
+                                                                <li>At least one lowercase letter</li>
+                                                                <li>At least one number</li>
+                                                                <li>At least one special character</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            
+                                            <hr class="my-4">
+                                            
+                                            <h6>Two-Factor Authentication</h6>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <p class="mb-0">Add an extra layer of security to your account</p>
+                                                    <small class="text-muted">Requires a verification code when logging in from new devices</small>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" id="2faToggle" style="transform: scale(1.5);">
+                                                    <label class="form-check-label ms-2" for="2faToggle"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Notifications Tab -->
+                                        <div class="tab-pane fade" id="notifications" role="tabpanel">
+                                            <h6 class="mb-4">Notification Preferences</h6>
+                                            <div class="notification-settings">
+                                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                                    <div>
+                                                        <h6 class="mb-0">Email Notifications</h6>
+                                                        <small class="text-muted">Order updates, promotions, and newsletters</small>
+                                                    </div>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" id="emailNotifications" checked style="transform: scale(1.5);">
+                                                        <label class="form-check-label ms-2" for="emailNotifications"></label>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                                    <div>
+                                                        <h6 class="mb-0">SMS Notifications</h6>
+                                                        <small class="text-muted">Order tracking and delivery updates</small>
+                                                    </div>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" id="smsNotifications" style="transform: scale(1.5);">
+                                                        <label class="form-check-label ms-2" for="smsNotifications"></label>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                                    <div>
+                                                        <h6 class="mb-0">Promotional Offers</h6>
+                                                        <small class="text-muted">Special discounts and sale announcements</small>
+                                                    </div>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" id="promotionalOffers" checked style="transform: scale(1.5);">
+                                                        <label class="form-check-label ms-2" for="promotionalOffers"></label>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                                    <div>
+                                                        <h6 class="mb-0">Price Drop Alerts</h6>
+                                                        <small class="text-muted">Get notified when items in your wishlist go on sale</small>
+                                                    </div>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" id="priceDropAlerts" checked style="transform: scale(1.5);">
+                                                        <label class="form-check-label ms-2" for="priceDropAlerts"></label>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <h6 class="mb-0">New Arrivals</h6>
+                                                        <small class="text-muted">Weekly updates on new products</small>
+                                                    </div>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" id="newArrivals" checked style="transform: scale(1.5);">
+                                                        <label class="form-check-label ms-2" for="newArrivals"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Privacy Tab -->
+                                        <div class="tab-pane fade" id="privacy" role="tabpanel">
+                                            <h6 class="mb-4">Privacy Settings</h6>
+                                            <div class="privacy-settings">
+                                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                                    <div>
+                                                        <h6 class="mb-0">Personalized Recommendations</h6>
+                                                        <small class="text-muted">We use your browsing history to suggest products you might like</small>
+                                                    </div>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" id="personalizedRecs" checked style="transform: scale(1.5);">
+                                                        <label class="form-check-label ms-2" for="personalizedRecs"></label>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                                    <div>
+                                                        <h6 class="mb-0">Data Sharing with Partners</h6>
+                                                        <small class="text-muted">Allow sharing of anonymized data with trusted partners</small>
+                                                    </div>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" id="dataSharing" style="transform: scale(1.5);">
+                                                        <label class="form-check-label ms-2" for="dataSharing"></label>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                                    <div>
+                                                        <h6 class="mb-0">Activity Visibility</h6>
+                                                        <small class="text-muted">Control who can see your reviews and wishlists</small>
+                                                    </div>
+                                                    <div>
+                                                        <select class="form-select" id="activityVisibility">
+                                                            <option selected>Public</option>
+                                                            <option>Friends Only</option>
+                                                            <option>Private</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                
+                                                <hr>
+                                                
+                                                <h6 class="mb-3">Data Management</h6>
+                                                <div class="row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <div class="p-3 border rounded">
+                                                            <h6 class="mb-2">Download Your Data</h6>
+                                                            <p class="small text-muted mb-3">Get a copy of all your personal data</p>
+                                                            <button class="btn btn-outline-dark btn-sm">Request Data</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <div class="p-3 border rounded">
+                                                            <h6 class="mb-2">Delete Account</h6>
+                                                            <p class="small text-muted mb-3">Permanently delete your account and all data</p>
+                                                            <button class="btn btn-outline-danger btn-sm">Delete Account</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <a href="../index.html" class="d-flex align-items-center mb-3 text-white text-decoration-none">
+                        <img src="../assets/images/logo.svg" alt="LuxeThreads Logo" height="40">
+                        <span class="brand-name ms-2">LuxeThreads</span>
+                    </a>
+                    <p class="text-light">Premium fashion and apparel for the modern individual. Quality craftsmanship meets contemporary design.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Shop</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="shop.html" class="text-light text-decoration-none">All Products</a></li>
+                        <li><a href="shop.html?category=women" class="text-light text-decoration-none">Women</a></li>
+                        <li><a href="shop.html?category=men" class="text-light text-decoration-none">Men</a></li>
+                        <li><a href="shop.html?category=accessories" class="text-light text-decoration-none">Accessories</a></li>
+                        <li><a href="shop.html?sale=true" class="text-light text-decoration-none">Sale</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-light text-decoration-none">About Us</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none">Contact Us</a></li>
+                        <li><a href="faq.html" class="text-light text-decoration-none">FAQs</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Shipping Policy</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Return Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled text-light">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Fashion Avenue, New York, NY</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> (555) 123-4567</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> hello@luxethreads.com</li>
+                        <li><i class="fas fa-clock me-2"></i> Mon-Fri: 9AM-6PM EST</li>
+                    </ul>
+                    <div class="payment-methods mt-3 h2">
+                        <i class="fa-brands fa-cc-visa me-2" width="40"></i>
+                        <i class="fa-brands fa-cc-mastercard me-2" width="40"></i>
+                        <i class="fa-brands fa-paypal me-2" width="40"></i>
+                        <i class="fa-brands fa-apple-pay" width="40"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="bg-light">
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; <script>document.write(new Date().getFullYear());</script> LuxeThreads. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-light text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add Address Modal -->
+    <div class="modal fade" id="addAddressModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add New Address</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addAddressForm">
+                        <div class="mb-3">
+                            <label for="addressLabel" class="form-label">Address Label</label>
+                            <input type="text" class="form-control" id="addressLabel" placeholder="e.g., Home, Work" required>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="firstName" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="street" class="form-label">Street Address</label>
+                            <input type="text" class="form-control" id="street" required>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="city" class="form-label">City</label>
+                                <input type="text" class="form-control" id="city" required>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="state" class="form-label">State</label>
+                                <input type="text" class="form-control" id="state" required>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="zip" class="form-label">ZIP Code</label>
+                                <input type="text" class="form-control" id="zip" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="country" class="form-label">Country</label>
+                            <select class="form-select" id="country" required>
+                                <option value="">Select Country</option>
+                                <option value="US" selected>United States</option>
+                                <option value="CA">Canada</option>
+                                <option value="UK">United Kingdom</option>
+                                <!-- Add more countries as needed -->
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="makeDefault">
+                            <label class="form-check-label" for="makeDefault">Set as default address</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-dark">Save Address</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/account.js"></script>
+</body>
+</html>

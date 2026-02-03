@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact LuxeThreads - We're here to help with any questions or concerns">
+    <title>Contact Us | LuxeThreads</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/8140dd2669.js" crossorigin="anonymous"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/images/logo.svg" alt="LuxeThreads Logo" height="40">
+                <span class="brand-name">LuxeThreads</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="shopDropdown" role="button" data-bs-toggle="dropdown">
+                            Shop
+                        </a>
+                        <div class="dropdown-menu mega-menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <h6>Women's Fashion</h6>
+                                        <a class="dropdown-item" href="shop.html?category=women-dresses">Dresses</a>
+                                        <a class="dropdown-item" href="shop.html?category=women-tops">Tops</a>
+                                        <a class="dropdown-item" href="shop.html?category=women-jeans">Jeans</a>
+                                        <a class="dropdown-item" href="shop.html?category=women-activewear">Activewear</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6>Men's Fashion</h6>
+                                        <a class="dropdown-item" href="shop.html?category=men-shirts">Shirts</a>
+                                        <a class="dropdown-item" href="shop.html?category=men-pants">Pants</a>
+                                        <a class="dropdown-item" href="shop.html?category=men-jackets">Jackets</a>
+                                        <a class="dropdown-item" href="shop.html?category=men-shoes">Shoes</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6>Accessories</h6>
+                                        <a class="dropdown-item" href="shop.html?category=bags">Bags</a>
+                                        <a class="dropdown-item" href="shop.html?category=jewelry">Jewelry</a>
+                                        <a class="dropdown-item" href="shop.html?category=watches">Watches</a>
+                                        <a class="dropdown-item" href="shop.html?category=sunglasses">Sunglasses</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6>Featured Collections</h6>
+                                        <a class="dropdown-item" href="shop.html?collection=summer">Summer <script>document.write(new Date().getFullYear());</script></a>
+                                        <a class="dropdown-item" href="shop.html?collection=new">New Arrivals</a>
+                                        <a class="dropdown-item" href="shop.html?sale=true">Sale Items</a>
+                                        <a class="dropdown-item" href="shop.html?bestsellers=true">Best Sellers</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex align-items-center">
+                    <a href="#" class="nav-icon me-3" id="searchToggle">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a href="wishlist.html" class="nav-icon me-3">
+                        <i class="far fa-heart"></i>
+                        <span class="badge bg-danger wishlist-count">3</span>
+                    </a>
+                    <a href="account.html" class="nav-icon me-3">
+                        <i class="far fa-user"></i>
+                    </a>
+                    <a href="cart.html" class="nav-icon position-relative">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="badge bg-primary cart-count">2</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-bar-container" id="searchBar">
+                <div class="container">
+                    <form class="search-form">
+                        <input type="text" class="form-control" placeholder="Search for products, brands, or categories...">
+                        <button type="submit" class="btn btn-dark">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <button type="button" class="btn btn-link" id="closeSearch">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Header -->
+    <section class="contact-header py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold mb-3">Get In Touch</h1>
+                    <p class="lead text-muted">We're here to help with any questions or concerns</p>
+                </div>
+                <div class="col-lg-6">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-lg-end">
+                            <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-content py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Information -->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <div class="contact-info">
+                        <div class="info-card mb-4">
+                            <div class="info-icon mb-3">
+                                <i class="fas fa-map-marker-alt fa-2x text-dark"></i>
+                            </div>
+                            <h4 class="mb-2">Visit Our Store</h4>
+                            <p class="text-muted mb-0">123 Fashion Avenue</p>
+                            <p class="text-muted mb-0">New York, NY 10001</p>
+                            <p class="text-muted">United States</p>
+                            <a href="#" class="small text-decoration-none">Get Directions →</a>
+                        </div>
+                        
+                        <div class="info-card mb-4">
+                            <div class="info-icon mb-3">
+                                <i class="fas fa-phone fa-2x text-dark"></i>
+                            </div>
+                            <h4 class="mb-2">Call Us</h4>
+                            <p class="text-muted mb-0">Main: (555) 123-4567</p>
+                            <p class="text-muted mb-0">Support: (555) 987-6543</p>
+                            <p class="text-muted">Mon-Fri: 9AM-6PM EST</p>
+                        </div>
+                        
+                        <div class="info-card mb-4">
+                            <div class="info-icon mb-3">
+                                <i class="fas fa-envelope fa-2x text-dark"></i>
+                            </div>
+                            <h4 class="mb-2">Email Us</h4>
+                            <p class="text-muted mb-0">General: hello@luxethreads.com</p>
+                            <p class="text-muted mb-0">Support: support@luxethreads.com</p>
+                            <p class="text-muted">Orders: orders@luxethreads.com</p>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="info-icon mb-3">
+                                <i class="fas fa-headset fa-2x text-dark"></i>
+                            </div>
+                            <h4 class="mb-2">Customer Support</h4>
+                            <p class="text-muted mb-3">Our support team is available 24/7 to assist you with any questions or concerns.</p>
+                            <a href="faq.html" class="small text-decoration-none">Visit FAQ Page →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="col-lg-8">
+                    <div class="contact-form-wrapper">
+                        <div class="card">
+                            <div class="card-header bg-white border-bottom">
+                                <h5 class="mb-0">Send Us a Message</h5>
+                            </div>
+                            <div class="card-body">
+                                <form class="contact-form" id="contactForm">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="contactName" class="form-label">Full Name *</label>
+                                            <input type="text" class="form-control" id="contactName" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="contactEmail" class="form-label">Email Address *</label>
+                                            <input type="email" class="form-control" id="contactEmail" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <label for="contactSubject" class="form-label">Subject *</label>
+                                        <select class="form-select" id="contactSubject" required>
+                                            <option value="">Select a subject</option>
+                                            <option value="order">Order Inquiry</option>
+                                            <option value="shipping">Shipping & Delivery</option>
+                                            <option value="returns">Returns & Exchanges</option>
+                                            <option value="product">Product Questions</option>
+                                            <option value="size">Size & Fit Help</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <label for="contactOrder" class="form-label">Order Number (if applicable)</label>
+                                        <input type="text" class="form-control" id="contactOrder">
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <label for="contactMessage" class="form-label">Message *</label>
+                                        <textarea class="form-control" id="contactMessage" rows="6" required></textarea>
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="contactNewsletter">
+                                            <label class="form-check-label" for="contactNewsletter">
+                                                Subscribe to our newsletter for exclusive offers and style tips
+                                            </label>
+                                        </div>
+                                    </div>
+                                    
+                                    <button type="submit" class="btn btn-dark btn-lg w-100">
+                                        Send Message
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        
+                        <!-- Response Times -->
+                        <div class="response-times mt-4">
+                            <h6 class="mb-3">Expected Response Times</h6>
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <div class="response-card p-3 bg-light rounded">
+                                        <h6 class="mb-2"><i class="fas fa-shipping-fast me-2"></i>Order Issues</h6>
+                                        <p class="small mb-0">Response within 2 hours</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="response-card p-3 bg-light rounded">
+                                        <h6 class="mb-2"><i class="fas fa-question-circle me-2"></i>General Questions</h6>
+                                        <p class="small mb-0">Response within 24 hours</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="response-card p-3 bg-light rounded">
+                                        <h6 class="mb-2"><i class="fas fa-exchange-alt me-2"></i>Returns & Exchanges</h6>
+                                        <p class="small mb-0">Response within 4 hours</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FAQ Preview -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header bg-white border-bottom">
+                            <h5 class="mb-0">Frequently Asked Questions</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <h6 class="mb-2">What is your return policy?</h6>
+                                    <p class="small text-muted mb-0">We offer a 30-day return policy for unworn items with tags attached. Returns are free for domestic orders.</p>
+                                    <a href="faq.html" class="small text-decoration-none">Learn more →</a>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <h6 class="mb-2">How long does shipping take?</h6>
+                                    <p class="small text-muted mb-0">Standard shipping takes 3-7 business days. Express shipping (1-3 business days) is available for $14.99.</p>
+                                    <a href="faq.html" class="small text-decoration-none">Learn more →</a>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <h6 class="mb-2">Do you ship internationally?</h6>
+                                    <p class="small text-muted mb-0">Yes, we ship to over 50 countries worldwide. International shipping rates and times vary by location.</p>
+                                    <a href="faq.html" class="small text-decoration-none">Learn more →</a>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <h6 class="mb-2">How do I track my order?</h6>
+                                    <p class="small text-muted mb-0">You'll receive a tracking number via email once your order ships. You can also track orders from your account page.</p>
+                                    <a href="faq.html" class="small text-decoration-none">Learn more →</a>
+                                </div>
+                            </div>
+                            <div class="text-center mt-3">
+                                <a href="faq.html" class="btn btn-outline-dark">View All FAQs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Store Location -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h3 class="mb-4">Visit Our Flagship Store</h3>
+                    <div class="store-location card">
+                        <div class="row g-0">
+                            <div class="col-md-6">
+                                <div class="store-image">
+                                    <img src="../assets/images/banners/winter-collection.jpg" alt="LuxeThreads Store" class="img-fluid h-100 object-fit-cover">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="store-info p-4">
+                                    <h4 class="mb-3">LuxeThreads Flagship Store</h4>
+                                    <p class="text-muted mb-4">Experience our complete collection in person at our New York flagship store. Our expert stylists are available to help you find the perfect pieces.</p>
+                                    
+                                    <div class="store-details mb-4">
+                                        <h6 class="mb-2">Store Hours</h6>
+                                        <p class="small mb-1">Monday - Friday: 10AM - 8PM</p>
+                                        <p class="small mb-1">Saturday: 10AM - 7PM</p>
+                                        <p class="small mb-0">Sunday: 11AM - 6PM</p>
+                                    </div>
+                                    
+                                    <div class="store-features">
+                                        <h6 class="mb-2">Store Features</h6>
+                                        <div class="d-flex flex-wrap gap-2">
+                                            <span class="badge bg-light text-dark">Personal Styling</span>
+                                            <span class="badge bg-light text-dark">Alterations</span>
+                                            <span class="badge bg-light text-dark">Gift Wrapping</span>
+                                            <span class="badge bg-light text-dark">Free Parking</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mb-3">Stay Connected</h2>
+                    <p class="mb-4">Subscribe for new arrivals, exclusive offers, and style inspiration.</p>
+                    <form class="newsletter-form">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Enter your email address" required>
+                            <button class="btn btn-light" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <a href="../index.html" class="d-flex align-items-center mb-3 text-white text-decoration-none">
+                        <img src="../assets/images/logo.svg" alt="LuxeThreads Logo" height="40">
+                        <span class="brand-name ms-2">LuxeThreads</span>
+                    </a>
+                    <p class="text-light">Premium fashion and apparel for the modern individual. Quality craftsmanship meets contemporary design.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Shop</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="shop.html" class="text-light text-decoration-none">All Products</a></li>
+                        <li><a href="shop.html?category=women" class="text-light text-decoration-none">Women</a></li>
+                        <li><a href="shop.html?category=men" class="text-light text-decoration-none">Men</a></li>
+                        <li><a href="shop.html?category=accessories" class="text-light text-decoration-none">Accessories</a></li>
+                        <li><a href="shop.html?sale=true" class="text-light text-decoration-none">Sale</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-light text-decoration-none">About Us</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none">Contact Us</a></li>
+                        <li><a href="faq.html" class="text-light text-decoration-none">FAQs</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Shipping Policy</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Return Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled text-light">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Fashion Avenue, New York, NY</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> (555) 123-4567</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> hello@luxethreads.com</li>
+                        <li><i class="fas fa-clock me-2"></i> Mon-Fri: 9AM-6PM EST</li>
+                    </ul>
+                    <div class="payment-methods mt-3 h2">
+                        <i class="fa-brands fa-cc-visa me-2" width="40"></i>
+                        <i class="fa-brands fa-cc-mastercard me-2" width="40"></i>
+                        <i class="fa-brands fa-paypal me-2" width="40"></i>
+                        <i class="fa-brands fa-apple-pay" width="40"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="bg-light">
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; <script>document.write(new Date().getFullYear());</script> LuxeThreads. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-light text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop premium fashion and apparel at LuxeThreads">
+    <title>Shop | LuxeThreads</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/8140dd2669.js" crossorigin="anonymous"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+</head>
+<body>
+    <!-- Navigation (same as index.html) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/images/logo.svg" alt="LuxeThreads Logo" height="40">
+                <span class="brand-name">LuxeThreads</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="shopDropdown" role="button" data-bs-toggle="dropdown">
+                            Shop
+                        </a>
+                        <div class="dropdown-menu mega-menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <h6>Women's Fashion</h6>
+                                        <a class="dropdown-item" href="shop.html?category=women-dresses">Dresses</a>
+                                        <a class="dropdown-item" href="shop.html?category=women-tops">Tops</a>
+                                        <a class="dropdown-item" href="shop.html?category=women-jeans">Jeans</a>
+                                        <a class="dropdown-item" href="shop.html?category=women-activewear">Activewear</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6>Men's Fashion</h6>
+                                        <a class="dropdown-item" href="shop.html?category=men-shirts">Shirts</a>
+                                        <a class="dropdown-item" href="shop.html?category=men-pants">Pants</a>
+                                        <a class="dropdown-item" href="shop.html?category=men-jackets">Jackets</a>
+                                        <a class="dropdown-item" href="shop.html?category=men-shoes">Shoes</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6>Accessories</h6>
+                                        <a class="dropdown-item" href="shop.html?category=bags">Bags</a>
+                                        <a class="dropdown-item" href="shop.html?category=jewelry">Jewelry</a>
+                                        <a class="dropdown-item" href="shop.html?category=watches">Watches</a>
+                                        <a class="dropdown-item" href="shop.html?category=sunglasses">Sunglasses</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6>Featured Collections</h6>
+                                        <a class="dropdown-item" href="shop.html?collection=summer">Summer <script>document.write(new Date().getFullYear());</script></a>
+                                        <a class="dropdown-item" href="shop.html?collection=new">New Arrivals</a>
+                                        <a class="dropdown-item" href="shop.html?sale=true">Sale Items</a>
+                                        <a class="dropdown-item" href="shop.html?bestsellers=true">Best Sellers</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex align-items-center">
+                    <a href="#" class="nav-icon me-3" id="searchToggle">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a href="wishlist.html" class="nav-icon me-3">
+                        <i class="far fa-heart"></i>
+                        <span class="badge bg-danger wishlist-count">3</span>
+                    </a>
+                    <a href="account.html" class="nav-icon me-3">
+                        <i class="far fa-user"></i>
+                    </a>
+                    <a href="cart.html" class="nav-icon position-relative">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="badge bg-primary cart-count">2</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="search-bar-container" id="searchBar">
+                <div class="container">
+                    <form class="search-form">
+                        <input type="text" class="form-control" placeholder="Search for products, brands, or categories...">
+                        <button type="submit" class="btn btn-dark">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <button type="button" class="btn btn-link" id="closeSearch">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-bar-container" id="searchBar">
+                <div class="container">
+                    <form class="search-form">
+                        <input type="text" class="form-control" placeholder="Search for products, brands, or categories...">
+                        <button type="submit" class="btn btn-dark">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <button type="button" class="btn btn-link" id="closeSearch">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Shop Header -->
+    <section class="shop-header py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold mb-3">Shop Our Collection</h1>
+                    <p class="lead text-muted">Discover premium fashion pieces crafted with attention to detail and timeless design.</p>
+                </div>
+                <div class="col-lg-6">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-lg-end">
+                            <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Shop</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Content -->
+    <section class="shop-content py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar Filters -->
+                <div class="col-lg-3 mb-5 mb-lg-0">
+                    <div class="sticky-top" style="top: 100px;">
+                        <!-- Categories -->
+                        <div class="card mb-4">
+                            <div class="card-header bg-white border-bottom">
+                                <h5 class="mb-0">Categories</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="list-group list-group-flush">
+                                    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center active">
+                                        All Products
+                                        <span class="badge bg-dark rounded-pill">42</span>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                        Women's Clothing
+                                        <span class="badge bg-secondary rounded-pill">18</span>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                        Men's Clothing
+                                        <span class="badge bg-secondary rounded-pill">12</span>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                        Accessories
+                                        <span class="badge bg-secondary rounded-pill">8</span>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                        Shoes
+                                        <span class="badge bg-secondary rounded-pill">6</span>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                        Sale Items
+                                        <span class="badge bg-danger rounded-pill">4</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Price Filter -->
+                        <div class="card mb-4">
+                            <div class="card-header bg-white border-bottom">
+                                <h5 class="mb-0">Price Range</h5>
+                            </div>
+                            <div class="card-body">
+                                <input type="range" class="form-range mb-2" min="0" max="500" step="10" id="priceRange">
+                                <div class="d-flex justify-content-between">
+                                    <span>$<span id="minPrice">0</span></span>
+                                    <span>$<span id="maxPrice">500</span></span>
+                                </div>
+                                <button class="btn btn-sm btn-outline-dark mt-3 w-100" id="applyPrice">Apply Filter</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Size Filter -->
+                        <div class="card mb-4">
+                            <div class="card-header bg-white border-bottom">
+                                <h5 class="mb-0">Size</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="size-filter">
+                                    <button class="btn btn-outline-secondary btn-sm size-btn">XS</button>
+                                    <button class="btn btn-outline-secondary btn-sm size-btn">S</button>
+                                    <button class="btn btn-outline-dark btn-sm size-btn active">M</button>
+                                    <button class="btn btn-outline-secondary btn-sm size-btn">L</button>
+                                    <button class="btn btn-outline-secondary btn-sm size-btn">XL</button>
+                                    <button class="btn btn-outline-secondary btn-sm size-btn">XXL</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Color Filter -->
+                        <div class="card mb-4">
+                            <div class="card-header bg-white border-bottom">
+                                <h5 class="mb-0">Color</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="color-filter">
+                                    <button class="color-option" style="background-color: #000;" title="Black"></button>
+                                    <button class="color-option active" style="background-color: #fff; border: 1px solid #dee2e6;" title="White"></button>
+                                    <button class="color-option" style="background-color: #6c757d;" title="Gray"></button>
+                                    <button class="color-option" style="background-color: #0d6efd;" title="Blue"></button>
+                                    <button class="color-option" style="background-color: #198754;" title="Green"></button>
+                                    <button class="color-option" style="background-color: #dc3545;" title="Red"></button>
+                                    <button class="color-option" style="background-color: #ffc107;" title="Yellow"></button>
+                                    <button class="color-option" style="background-color: #6f42c1;" title="Purple"></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Brand Filter -->
+                        <div class="card mb-4">
+                            <div class="card-header bg-white border-bottom">
+                                <h5 class="mb-0">Brand</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="brand1" checked>
+                                    <label class="form-check-label" for="brand1">
+                                        LuxeThreads
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="brand2">
+                                    <label class="form-check-label" for="brand2">
+                                        Modern Tailor
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="brand3">
+                                    <label class="form-check-label" for="brand3">
+                                        Urban Style
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="brand4">
+                                    <label class="form-check-label" for="brand4">
+                                        Classic Couture
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Clear Filters -->
+                        <button class="btn btn-outline-danger w-100" id="clearFilters">
+                            <i class="fas fa-times me-2"></i>Clear All Filters
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product Grid -->
+                <div class="col-lg-9">
+                    <!-- Sorting and View Options -->
+                    <div class="row mb-4 align-items-center">
+                        <div class="col-md-6 mb-3 mb-md-0">
+                            <p class="mb-0">Showing <strong>1-12</strong> of <strong>42</strong> products</p>
+                        </div>
+                        <div class="col-md-6 text-md-end">
+                            <div class="d-flex align-items-center justify-content-md-end">
+                                <label class="me-2 mb-0">Sort by:</label>
+                                <select class="form-select form-select-sm w-auto" id="sortProducts">
+                                    <option value="featured">Featured</option>
+                                    <option value="newest">Newest First</option>
+                                    <option value="price-low">Price: Low to High</option>
+                                    <option value="price-high">Price: High to Low</option>
+                                    <option value="name">Name A-Z</option>
+                                </select>
+                                <div class="btn-group ms-3" role="group">
+                                    <button type="button" class="btn btn-outline-secondary active" id="gridView">
+                                        <i class="fas fa-th"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-outline-secondary" id="listView">
+                                        <i class="fas fa-list"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Products Grid -->
+                    <div class="row" id="productsGrid">
+                        <!-- Product cards will be loaded here by JavaScript -->
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <nav aria-label="Product pagination" class="mt-5">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mb-3">Get 15% Off Your First Order</h2>
+                    <p class="mb-4">Subscribe to our newsletter for exclusive offers and style inspiration.</p>
+                    <form class="newsletter-form">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Enter your email address" required>
+                            <button class="btn btn-light" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <a href="../index.html" class="d-flex align-items-center mb-3 text-white text-decoration-none">
+                        <img src="../assets/images/logo.svg" alt="LuxeThreads Logo" height="40">
+                        <span class="brand-name ms-2">LuxeThreads</span>
+                    </a>
+                    <p class="text-light">Premium fashion and apparel for the modern individual. Quality craftsmanship meets contemporary design.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Shop</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="shop.html" class="text-light text-decoration-none">All Products</a></li>
+                        <li><a href="shop.html?category=women" class="text-light text-decoration-none">Women</a></li>
+                        <li><a href="shop.html?category=men" class="text-light text-decoration-none">Men</a></li>
+                        <li><a href="shop.html?category=accessories" class="text-light text-decoration-none">Accessories</a></li>
+                        <li><a href="shop.html?sale=true" class="text-light text-decoration-none">Sale</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-light text-decoration-none">About Us</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none">Contact Us</a></li>
+                        <li><a href="faq.html" class="text-light text-decoration-none">FAQs</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Shipping Policy</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Return Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled text-light">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Fashion Avenue, New York, NY</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> (555) 123-4567</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> hello@luxethreads.com</li>
+                        <li><i class="fas fa-clock me-2"></i> Mon-Fri: 9AM-6PM EST</li>
+                    </ul>
+                    <div class="payment-methods mt-3 h2">
+                        <i class="fa-brands fa-cc-visa me-2" width="40"></i>
+                        <i class="fa-brands fa-cc-mastercard me-2" width="40"></i>
+                        <i class="fa-brands fa-paypal me-2" width="40"></i>
+                        <i class="fa-brands fa-apple-pay" width="40"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="bg-light">
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; <script>document.write(new Date().getFullYear());</script> LuxeThreads. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-light text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quick View Modal -->
+    <div class="modal fade" id="quickViewModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Quick View</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Quick view content loaded by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/product.js"></script>
+</body>
+</html>

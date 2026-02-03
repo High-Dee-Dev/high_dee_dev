@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium Silk Evening Dress - LuxeThreads">
+    <title>Silk Evening Dress | LuxeThreads</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/8140dd2669.js" crossorigin="anonymous"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+</head>
+<body>
+    <!-- Navigation (same as index.html) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/images/logo.svg" alt="LuxeThreads Logo" height="40">
+                <span class="brand-name">LuxeThreads</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="shopDropdown" role="button" data-bs-toggle="dropdown">
+                            Shop
+                        </a>
+                        <div class="dropdown-menu mega-menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <h6>Women's Fashion</h6>
+                                        <a class="dropdown-item" href="shop.html?category=women-dresses">Dresses</a>
+                                        <a class="dropdown-item" href="shop.html?category=women-tops">Tops</a>
+                                        <a class="dropdown-item" href="shop.html?category=women-jeans">Jeans</a>
+                                        <a class="dropdown-item" href="shop.html?category=women-activewear">Activewear</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6>Men's Fashion</h6>
+                                        <a class="dropdown-item" href="shop.html?category=men-shirts">Shirts</a>
+                                        <a class="dropdown-item" href="shop.html?category=men-pants">Pants</a>
+                                        <a class="dropdown-item" href="shop.html?category=men-jackets">Jackets</a>
+                                        <a class="dropdown-item" href="shop.html?category=men-shoes">Shoes</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6>Accessories</h6>
+                                        <a class="dropdown-item" href="shop.html?category=bags">Bags</a>
+                                        <a class="dropdown-item" href="shop.html?category=jewelry">Jewelry</a>
+                                        <a class="dropdown-item" href="shop.html?category=watches">Watches</a>
+                                        <a class="dropdown-item" href="shop.html?category=sunglasses">Sunglasses</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6>Featured Collections</h6>
+                                        <a class="dropdown-item" href="shop.html?collection=summer">Summer <script>document.write(new Date().getFullYear());</script></a>
+                                        <a class="dropdown-item" href="shop.html?collection=new">New Arrivals</a>
+                                        <a class="dropdown-item" href="shop.html?sale=true">Sale Items</a>
+                                        <a class="dropdown-item" href="shop.html?bestsellers=true">Best Sellers</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex align-items-center">
+                    <a href="#" class="nav-icon me-3" id="searchToggle">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a href="wishlist.html" class="nav-icon me-3">
+                        <i class="far fa-heart"></i>
+                        <span class="badge bg-danger wishlist-count">3</span>
+                    </a>
+                    <a href="account.html" class="nav-icon me-3">
+                        <i class="far fa-user"></i>
+                    </a>
+                    <a href="cart.html" class="nav-icon position-relative">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="badge bg-primary cart-count">2</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-bar-container" id="searchBar">
+                <div class="container">
+                    <form class="search-form">
+                        <input type="text" class="form-control" placeholder="Search for products, brands, or categories...">
+                        <button type="submit" class="btn btn-dark">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <button type="button" class="btn btn-link" id="closeSearch">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Details -->
+    <section class="product-details py-5">
+        <div class="container">
+            <nav aria-label="breadcrumb" class="mb-4">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="shop.html">Shop</a></li>
+                    <li class="breadcrumb-item"><a href="shop.html?category=women-dresses">Dresses</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Silk Evening Dress</li>
+                </ol>
+            </nav>
+            
+            <div class="row">
+                <!-- Product Images -->
+                <div class="col-lg-6">
+                    <div class="product-gallery">
+                        <div class="main-image mb-3">
+                            <img src="../assets/images/products/product1.jpg" alt="Silk Evening Dress - Front View" class="img-fluid rounded" id="mainProductImage">
+                        </div>
+                        <div class="thumbnail-images d-flex">
+                            <div class="thumb-item active me-2">
+                                <img src="../assets/images/products/product1.jpg" alt="Silk Evening Dress - Front" class="img-fluid rounded" data-image="../assets/images/products/product1.jpg">
+                            </div>
+                            <div class="thumb-item me-2">
+                                <img src="../assets/images/products/product2.jpg" alt="Silk Evening Dress - Back" class="img-fluid rounded" data-image="../assets/images/products/product2.jpg">
+                            </div>
+                            <div class="thumb-item me-2">
+                                <img src="../assets/images/products/product3.jpg" alt="Silk Evening Dress - Side" class="img-fluid rounded" data-image="../assets/images/products/product3.jpg">
+                            </div>
+                            <div class="thumb-item">
+                                <img src="../assets/images/products/product4.jpg" alt="Silk Evening Dress - Detail" class="img-fluid rounded" data-image="../assets/images/products/product4.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Info -->
+                <div class="col-lg-6">
+                    <div class="product-info">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <div>
+                                <span class="badge bg-danger mb-2">Sale</span>
+                                <span class="badge bg-success mb-2">Bestseller</span>
+                            </div>
+                            <div>
+                                <button class="btn btn-outline-secondary btn-sm" id="shareProduct">
+                                    <i class="fas fa-share-alt"></i> Share
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <h1 class="product-title mb-3">Elegant Silk Evening Dress</h1>
+                        
+                        <div class="product-rating mb-3">
+                            <div class="stars">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star-half-alt text-warning"></i>
+                                <span class="ms-2">4.5 (128 reviews)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-price mb-4">
+                            <span class="h2 text-dark">$189.99</span>
+                            <span class="h4 text-muted text-decoration-line-through ms-2">$249.99</span>
+                            <span class="badge bg-danger ms-2">Save 24%</span>
+                        </div>
+                        
+                        <p class="product-description mb-4">
+                            Crafted from premium mulberry silk, this elegant evening dress features a flattering A-line silhouette with delicate spaghetti straps and a subtle cowl neckline. The lightweight fabric drapes beautifully, creating a sophisticated look perfect for formal events, weddings, or special occasions.
+                        </p>
+                        
+                        <div class="product-details-list mb-4">
+                            <h6>Details:</h6>
+                            <ul>
+                                <li>100% Mulberry Silk</li>
+                                <li>Hand-finished seams</li>
+                                <li>Concealed back zipper</li>
+                                <li>Knee-length design</li>
+                                <li>Dry clean only</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Size Selector -->
+                        <div class="size-selector mb-4">
+                            <h6 class="mb-3">Select Size:</h6>
+                            <div class="d-flex flex-wrap">
+                                <button class="btn btn-outline-secondary size-option me-2 mb-2">XS</button>
+                                <button class="btn btn-outline-secondary size-option me-2 mb-2">S</button>
+                                <button class="btn btn-dark size-option me-2 mb-2 active">M</button>
+                                <button class="btn btn-outline-secondary size-option me-2 mb-2">L</button>
+                                <button class="btn btn-outline-secondary size-option me-2 mb-2">XL</button>
+                                <button class="btn btn-outline-secondary size-option mb-2">XXL</button>
+                            </div>
+                            <a href="#" class="small text-decoration-none" data-bs-toggle="modal" data-bs-target="#sizeGuideModal">
+                                <i class="fas fa-ruler me-1"></i> Size Guide
+                            </a>
+                        </div>
+                        
+                        <!-- Color Selector -->
+                        <div class="color-selector mb-4">
+                            <h6 class="mb-3">Select Color:</h6>
+                            <div class="d-flex">
+                                <div class="color-option me-3 active" style="background-color: #000;" data-color="Black">
+                                    <div class="color-preview"></div>
+                                    <span class="color-label">Black</span>
+                                </div>
+                                <div class="color-option me-3" style="background-color: #6c757d;" data-color="Gray">
+                                    <div class="color-preview"></div>
+                                    <span class="color-label">Gray</span>
+                                </div>
+                                <div class="color-option me-3" style="background-color: #8B4513;" data-color="Brown">
+                                    <div class="color-preview"></div>
+                                    <span class="color-label">Brown</span>
+                                </div>
+                                <div class="color-option" style="background-color: #2F4F4F;" data-color="Dark Green">
+                                    <div class="color-preview"></div>
+                                    <span class="color-label">Dark Green</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Quantity & Add to Cart -->
+                        <div class="add-to-cart-section mb-5">
+                            <div class="row align-items-center">
+                                <div class="col-md-4 mb-3 mb-md-0">
+                                    <div class="input-group quantity-selector">
+                                        <button class="btn btn-outline-secondary" type="button" id="decreaseQty">-</button>
+                                        <input type="text" class="form-control text-center" value="1" id="productQty">
+                                        <button class="btn btn-outline-secondary" type="button" id="increaseQty">+</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="d-grid gap-2 d-md-flex">
+                                        <button class="btn btn-dark btn-lg flex-grow-1" id="addToCartBtn">
+                                            <i class="fas fa-shopping-bag me-2"></i> Add to Cart
+                                        </button>
+                                        <button class="btn btn-outline-danger btn-lg" id="addToWishlistBtn">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Trust Badges -->
+                        <div class="trust-info border-top pt-4">
+                            <div class="row">
+                                <div class="col-6 mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-truck text-muted me-3 fs-5"></i>
+                                        <div>
+                                            <h6 class="mb-0">Free Shipping</h6>
+                                            <small class="text-muted">On orders over $100</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-undo text-muted me-3 fs-5"></i>
+                                        <div>
+                                            <h6 class="mb-0">Easy Returns</h6>
+                                            <small class="text-muted">30-day return policy</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-shield-alt text-muted me-3 fs-5"></i>
+                                        <div>
+                                            <h6 class="mb-0">Secure Payment</h6>
+                                            <small class="text-muted">100% secure</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-award text-muted me-3 fs-5"></i>
+                                        <div>
+                                            <h6 class="mb-0">Quality Guarantee</h6>
+                                            <small class="text-muted">Premium materials</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product Tabs -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <ul class="nav nav-tabs" id="productTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description">
+                                Description
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="details-tab" data-bs-toggle="tab" data-bs-target="#details">
+                                Details & Care
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews">
+                                Reviews (128)
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="shipping-tab" data-bs-toggle="tab" data-bs-target="#shipping">
+                                Shipping & Returns
+                            </button>
+                        </li>
+                    </ul>
+                    
+                    <div class="tab-content p-4 border border-top-0 rounded-bottom" id="productTabContent">
+                        <div class="tab-pane fade show active" id="description">
+                            <h5>Elegant Silk Evening Dress</h5>
+                            <p>This stunning silk evening dress is designed for the modern woman who appreciates timeless elegance and premium craftsmanship. The dress features a flattering A-line silhouette that skims the body without clinging, creating a sophisticated and graceful look.</p>
+                            <p>The lightweight mulberry silk fabric feels luxurious against the skin and drapes beautifully, while the delicate spaghetti straps and subtle cowl neckline add a touch of romance to the design. Perfect for weddings, galas, cocktail parties, or any special occasion where you want to make a memorable impression.</p>
+                            <p>Available in four sophisticated colors, each dress is carefully constructed with hand-finished seams and a concealed back zipper for a clean, polished look. The knee-length design makes it versatile for various events and seasons.</p>
+                        </div>
+                        
+                        <div class="tab-pane fade" id="details">
+                            <h5>Product Details & Care Instructions</h5>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6 class="mt-3">Materials & Construction</h6>
+                                    <ul>
+                                        <li>100% Mulberry Silk (outer)</li>
+                                        <li>100% Silk Chiffon (lining)</li>
+                                        <li>Hand-finished French seams</li>
+                                        <li>Concealed brass zipper</li>
+                                        <li>Reinforced stress points</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="mt-3">Care Instructions</h6>
+                                    <ul>
+                                        <li>Dry clean only</li>
+                                        <li>Do not bleach</li>
+                                        <li>Iron on low heat with cloth barrier</li>
+                                        <li>Store in breathable garment bag</li>
+                                        <li>Avoid prolonged sun exposure</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-12">
+                                    <h6>Size & Fit</h6>
+                                    <p>This dress has a standard fit. If you're between sizes, we recommend sizing up. For specific measurements, please refer to our size guide.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-pane fade" id="reviews">
+                            <h5>Customer Reviews</h5>
+                            <div class="row mb-4">
+                                <div class="col-md-4">
+                                    <div class="text-center p-3 border rounded">
+                                        <h2 class="display-4">4.5</h2>
+                                        <div class="stars mb-2">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star-half-alt text-warning"></i>
+                                        </div>
+                                        <p class="text-muted">Based on 128 reviews</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="rating-bars">
+                                        <div class="rating-item d-flex align-items-center mb-2">
+                                            <span class="me-2">5 stars</span>
+                                            <div class="progress flex-grow-1 me-2">
+                                                <div class="progress-bar bg-warning" style="width: 70%"></div>
+                                            </div>
+                                            <span>70%</span>
+                                        </div>
+                                        <div class="rating-item d-flex align-items-center mb-2">
+                                            <span class="me-2">4 stars</span>
+                                            <div class="progress flex-grow-1 me-2">
+                                                <div class="progress-bar bg-warning" style="width: 20%"></div>
+                                            </div>
+                                            <span>20%</span>
+                                        </div>
+                                        <div class="rating-item d-flex align-items-center mb-2">
+                                            <span class="me-2">3 stars</span>
+                                            <div class="progress flex-grow-1 me-2">
+                                                <div class="progress-bar bg-warning" style="width: 5%"></div>
+                                            </div>
+                                            <span>5%</span>
+                                        </div>
+                                        <div class="rating-item d-flex align-items-center mb-2">
+                                            <span class="me-2">2 stars</span>
+                                            <div class="progress flex-grow-1 me-2">
+                                                <div class="progress-bar bg-warning" style="width: 3%"></div>
+                                            </div>
+                                            <span>3%</span>
+                                        </div>
+                                        <div class="rating-item d-flex align-items-center">
+                                            <span class="me-2">1 star</span>
+                                            <div class="progress flex-grow-1 me-2">
+                                                <div class="progress-bar bg-warning" style="width: 2%"></div>
+                                            </div>
+                                            <span>2%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="reviews-list">
+                                <div class="review-item border-bottom pb-4 mb-4">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <div>
+                                            <h6 class="mb-0">Sarah Johnson</h6>
+                                            <div class="stars small">
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                            </div>
+                                        </div>
+                                        <small class="text-muted">2 weeks ago</small>
+                                    </div>
+                                    <p class="mb-0">Absolutely love this dress! The silk is so luxurious and it fits perfectly. I wore it to a wedding and received so many compliments. Worth every penny!</p>
+                                </div>
+                                
+                                <div class="review-item border-bottom pb-4 mb-4">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <div>
+                                            <h6 class="mb-0">Emily Chen</h6>
+                                            <div class="stars small">
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star-half-alt text-warning"></i>
+                                            </div>
+                                        </div>
+                                        <small class="text-muted">1 month ago</small>
+                                    </div>
+                                    <p class="mb-0">Beautiful dress, but it runs a little small. I usually wear a medium but needed a large. Once I got the right size, it was perfect. The quality is exceptional.</p>
+                                </div>
+                                
+                                <button class="btn btn-outline-dark">View All Reviews</button>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-pane fade" id="shipping">
+                            <h5>Shipping & Returns Policy</h5>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6 class="mt-3">Shipping Information</h6>
+                                    <ul>
+                                        <li>Free standard shipping on orders over $100</li>
+                                        <li>Standard shipping: 3-7 business days</li>
+                                        <li>Express shipping: 1-3 business days ($15)</li>
+                                        <li>International shipping available</li>
+                                        <li>Order processing: 1-2 business days</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="mt-3">Returns & Exchanges</h6>
+                                    <ul>
+                                        <li>30-day return policy from delivery date</li>
+                                        <li>Items must be unworn, unwashed, with tags attached</li>
+                                        <li>Free returns for domestic orders</li>
+                                        <li>Refunds processed within 5-10 business days</li>
+                                        <li>Exchanges available for size/color</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Related Products -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h3 class="mb-4">You May Also Like</h3>
+                    <div class="row" id="relatedProducts">
+                        <!-- Related products loaded by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Size Guide Modal -->
+    <div class="modal fade" id="sizeGuideModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Size Guide</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Size</th>
+                                    <th>Bust (in)</th>
+                                    <th>Waist (in)</th>
+                                    <th>Hips (in)</th>
+                                    <th>US Size</th>
+                                    <th>EU Size</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>XS</td>
+                                    <td>32-33</td>
+                                    <td>24-25</td>
+                                    <td>34-35</td>
+                                    <td>0-2</td>
+                                    <td>32</td>
+                                </tr>
+                                <tr>
+                                    <td>S</td>
+                                    <td>34-35</td>
+                                    <td>26-27</td>
+                                    <td>36-37</td>
+                                    <td>4-6</td>
+                                    <td>36</td>
+                                </tr>
+                                <tr>
+                                    <td>M</td>
+                                    <td>36-37</td>
+                                    <td>28-29</td>
+                                    <td>38-39</td>
+                                    <td>8-10</td>
+                                    <td>40</td>
+                                </tr>
+                                <tr>
+                                    <td>L</td>
+                                    <td>38-39</td>
+                                    <td>30-31</td>
+                                    <td>40-41</td>
+                                    <td>12-14</td>
+                                    <td>44</td>
+                                </tr>
+                                <tr>
+                                    <td>XL</td>
+                                    <td>40-41</td>
+                                    <td>32-33</td>
+                                    <td>42-43</td>
+                                    <td>16-18</td>
+                                    <td>48</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="text-muted mt-3">All measurements are in inches. For the best fit, measure your bust, waist, and hips and compare to the chart above.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter -->
+    <section class="newsletter py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mb-3">Stay Updated</h2>
+                    <p class="mb-4">Subscribe for new arrivals, exclusive offers, and style inspiration.</p>
+                    <form class="newsletter-form">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Enter your email address" required>
+                            <button class="btn btn-light" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <a href="../index.html" class="d-flex align-items-center mb-3 text-white text-decoration-none">
+                        <img src="../assets/images/logo.svg" alt="LuxeThreads Logo" height="40">
+                        <span class="brand-name ms-2">LuxeThreads</span>
+                    </a>
+                    <p class="text-light">Premium fashion and apparel for the modern individual. Quality craftsmanship meets contemporary design.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Shop</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="shop.html" class="text-light text-decoration-none">All Products</a></li>
+                        <li><a href="shop.html?category=women" class="text-light text-decoration-none">Women</a></li>
+                        <li><a href="shop.html?category=men" class="text-light text-decoration-none">Men</a></li>
+                        <li><a href="shop.html?category=accessories" class="text-light text-decoration-none">Accessories</a></li>
+                        <li><a href="shop.html?sale=true" class="text-light text-decoration-none">Sale</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-light text-decoration-none">About Us</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none">Contact Us</a></li>
+                        <li><a href="faq.html" class="text-light text-decoration-none">FAQs</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Shipping Policy</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Return Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled text-light">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Fashion Avenue, New York, NY</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> (555) 123-4567</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> hello@luxethreads.com</li>
+                        <li><i class="fas fa-clock me-2"></i> Mon-Fri: 9AM-6PM EST</li>
+                    </ul>
+                    <div class="payment-methods mt-3 h2">
+                        <i class="fa-brands fa-cc-visa me-2" width="40"></i>
+                        <i class="fa-brands fa-cc-mastercard me-2" width="40"></i>
+                        <i class="fa-brands fa-paypal me-2" width="40"></i>
+                        <i class="fa-brands fa-apple-pay" width="40"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="bg-light">
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; <script>document.write(new Date().getFullYear());</script> LuxeThreads. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-light text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quick View Modal -->
+    <div class="modal fade" id="quickViewModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Quick View</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Quick view content loaded by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/product.js"></script>
+</body>
+</html>

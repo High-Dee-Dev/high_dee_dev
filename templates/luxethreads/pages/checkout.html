@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Secure checkout at LuxeThreads">
+    <title>Checkout | LuxeThreads</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/8140dd2669.js" crossorigin="anonymous"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/images/logo.svg" alt="LuxeThreads Logo" height="40">
+                <span class="brand-name">LuxeThreads</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="shopDropdown" role="button" data-bs-toggle="dropdown">
+                            Shop
+                        </a>
+                        <div class="dropdown-menu mega-menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <h6>Women's Fashion</h6>
+                                        <a class="dropdown-item" href="shop.html?category=women-dresses">Dresses</a>
+                                        <a class="dropdown-item" href="shop.html?category=women-tops">Tops</a>
+                                        <a class="dropdown-item" href="shop.html?category=women-jeans">Jeans</a>
+                                        <a class="dropdown-item" href="shop.html?category=women-activewear">Activewear</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6>Men's Fashion</h6>
+                                        <a class="dropdown-item" href="shop.html?category=men-shirts">Shirts</a>
+                                        <a class="dropdown-item" href="shop.html?category=men-pants">Pants</a>
+                                        <a class="dropdown-item" href="shop.html?category=men-jackets">Jackets</a>
+                                        <a class="dropdown-item" href="shop.html?category=men-shoes">Shoes</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6>Accessories</h6>
+                                        <a class="dropdown-item" href="shop.html?category=bags">Bags</a>
+                                        <a class="dropdown-item" href="shop.html?category=jewelry">Jewelry</a>
+                                        <a class="dropdown-item" href="shop.html?category=watches">Watches</a>
+                                        <a class="dropdown-item" href="shop.html?category=sunglasses">Sunglasses</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6>Featured Collections</h6>
+                                        <a class="dropdown-item" href="shop.html?collection=summer">Summer <script>document.write(new Date().getFullYear());</script></a>
+                                        <a class="dropdown-item" href="shop.html?collection=new">New Arrivals</a>
+                                        <a class="dropdown-item" href="shop.html?sale=true">Sale Items</a>
+                                        <a class="dropdown-item" href="shop.html?bestsellers=true">Best Sellers</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex align-items-center">
+                    <a href="#" class="nav-icon me-3" id="searchToggle">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a href="wishlist.html" class="nav-icon me-3">
+                        <i class="far fa-heart"></i>
+                        <span class="badge bg-danger wishlist-count">3</span>
+                    </a>
+                    <a href="account.html" class="nav-icon me-3">
+                        <i class="far fa-user"></i>
+                    </a>
+                    <a href="cart.html" class="nav-icon position-relative">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="badge bg-primary cart-count">2</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-bar-container" id="searchBar">
+                <div class="container">
+                    <form class="search-form">
+                        <input type="text" class="form-control" placeholder="Search for products, brands, or categories...">
+                        <button type="submit" class="btn btn-dark">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <button type="button" class="btn btn-link" id="closeSearch">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Checkout Header -->
+    <section class="checkout-header py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold mb-3">Secure Checkout</h1>
+                    <p class="lead text-muted">Complete your purchase in just a few steps</p>
+                </div>
+                <div class="col-lg-6">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-lg-end">
+                            <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="cart.html">Cart</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checkout Steps -->
+    <section class="checkout-steps py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="steps d-flex justify-content-between">
+                        <div class="step active" data-step="shipping">
+                            <div class="step-circle">1</div>
+                            <div class="step-label">Shipping</div>
+                        </div>
+                        <div class="step" data-step="payment">
+                            <div class="step-circle">2</div>
+                            <div class="step-label">Payment</div>
+                        </div>
+                        <div class="step" data-step="review">
+                            <div class="step-circle">3</div>
+                            <div class="step-label">Review</div>
+                        </div>
+                        <div class="step" data-step="confirmation">
+                            <div class="step-circle">4</div>
+                            <div class="step-label">Confirmation</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checkout Content -->
+    <section class="checkout-content py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Checkout Form -->
+                <div class="col-lg-8 mb-5 mb-lg-0">
+                    <form class="checkout-form" id="checkoutForm">
+                        <!-- Shipping Information -->
+                        <div class="checkout-step active" id="shipping-step">
+                            <div class="card mb-4">
+                                <div class="card-header bg-white border-bottom">
+                                    <h5 class="mb-0">Shipping Information</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="firstName" class="form-label">First Name *</label>
+                                            <input type="text" class="form-control" id="firstName" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="lastName" class="form-label">Last Name *</label>
+                                            <input type="text" class="form-control" id="lastName" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email Address *</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <label for="phone" class="form-label">Phone Number *</label>
+                                        <input type="tel" class="form-control" id="phone" required>
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <label for="address" class="form-label">Street Address *</label>
+                                        <input type="text" class="form-control" id="address" required>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="city" class="form-label">City *</label>
+                                            <input type="text" class="form-control" id="city" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="state" class="form-label">State / Province *</label>
+                                            <select class="form-select" id="state" required>
+                                                <option value="">Select State</option>
+                                                <option value="AL">Alabama</option>
+                                                <option value="CA">California</option>
+                                                <option value="FL">Florida</option>
+                                                <option value="NY">New York</option>
+                                                <option value="TX">Texas</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="zipCode" class="form-label">ZIP / Postal Code *</label>
+                                            <input type="text" class="form-control" id="zipCode" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="country" class="form-label">Country *</label>
+                                            <select class="form-select" id="country" required>
+                                                <option value="US">United States</option>
+                                                <option value="CA">Canada</option>
+                                                <option value="UK">United Kingdom</option>
+                                                <option value="AU">Australia</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Shipping Method -->
+                                    <div class="shipping-method mt-4">
+                                        <h6 class="mb-3">Shipping Method</h6>
+                                        <div class="form-check mb-2">
+                                            <input class="form-check-input" type="radio" name="shippingMethod" id="standardShipping" checked>
+                                            <label class="form-check-label" for="standardShipping">
+                                                Standard Shipping (3-7 business days) - FREE
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="shippingMethod" id="expressShipping">
+                                            <label class="form-check-label" for="expressShipping">
+                                                Express Shipping (1-3 business days) - $14.99
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between">
+                                <a href="cart.html" class="btn btn-outline-dark">
+                                    <i class="fas fa-arrow-left me-2"></i>Back to Cart
+                                </a>
+                                <button type="button" class="btn btn-dark btn-next-step" data-next="payment-step">
+                                    Continue to Payment
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Payment Information -->
+                        <div class="checkout-step" id="payment-step" style="display: none;">
+                            <div class="card mb-4">
+                                <div class="card-header bg-white border-bottom">
+                                    <h5 class="mb-0">Payment Method</h5>
+                                </div>
+                                <div class="card-body">
+                                    <!-- Payment Options -->
+                                    <div class="payment-options mb-4">
+                                        <div class="payment-method active" data-method="credit-card">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard" checked>
+                                                <label class="form-check-label" for="creditCard">
+                                                    <i class="fas fa-credit-card me-2"></i>Credit / Debit Card
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="payment-method" data-method="paypal">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="paymentMethod" id="paypal">
+                                                <label class="form-check-label" for="paypal">
+                                                    <i class="fab fa-paypal me-2"></i>PayPal
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="payment-method" data-method="apple-pay">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="paymentMethod" id="applePay">
+                                                <label class="form-check-label" for="applePay">
+                                                    <i class="fab fa-apple-pay me-2"></i>Apple Pay
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Credit Card Form -->
+                                    <div class="payment-form active" id="credit-card-form">
+                                        <div class="row">
+                                            <div class="col-12 mb-3">
+                                                <label for="cardNumber" class="form-label">Card Number *</label>
+                                                <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <label for="cardName" class="form-label">Name on Card *</label>
+                                                <input type="text" class="form-control" id="cardName" required>
+                                            </div>
+                                            <div class="col-md-3 mb-3">
+                                                <label for="cardExpiry" class="form-label">Expiry Date *</label>
+                                                <input type="text" class="form-control" id="cardExpiry" placeholder="MM/YY" required>
+                                            </div>
+                                            <div class="col-md-3 mb-3">
+                                                <label for="cardCVV" class="form-label">CVV *</label>
+                                                <input type="text" class="form-control" id="cardCVV" placeholder="123" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- PayPal Form (hidden by default) -->
+                                    <div class="payment-form" id="paypal-form" style="display: none;">
+                                        <div class="alert alert-info">
+                                            <p class="mb-0">You will be redirected to PayPal to complete your payment after reviewing your order.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Apple Pay Form (hidden by default) -->
+                                    <div class="payment-form" id="apple-pay-form" style="display: none;">
+                                        <div class="alert alert-info">
+                                            <p class="mb-0">Apple Pay will be available on the review page after confirming your order details.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Billing Address -->
+                                    <div class="billing-address mt-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="sameAsShipping" checked>
+                                            <label class="form-check-label" for="sameAsShipping">
+                                                Billing address is the same as shipping address
+                                            </label>
+                                        </div>
+                                        
+                                        <div id="billingAddressFields" style="display: none;">
+                                            <h6 class="mt-3 mb-3">Billing Address</h6>
+                                            <div class="row">
+                                                <div class="col-12 mb-3">
+                                                    <label for="billingAddress" class="form-label">Street Address *</label>
+                                                    <input type="text" class="form-control" id="billingAddress">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between">
+                                <button type="button" class="btn btn-outline-dark btn-prev-step" data-prev="shipping-step">
+                                    <i class="fas fa-arrow-left me-2"></i>Back to Shipping
+                                </button>
+                                <button type="button" class="btn btn-dark btn-next-step" data-next="review-step">
+                                    Review Order
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Review Order -->
+                        <div class="checkout-step" id="review-step" style="display: none;">
+                            <div class="card mb-4">
+                                <div class="card-header bg-white border-bottom">
+                                    <h5 class="mb-0">Review Your Order</h5>
+                                </div>
+                                <div class="card-body">
+                                    <!-- Order Summary -->
+                                    <div class="order-summary mb-4">
+                                        <h6 class="mb-3">Order Items</h6>
+                                        <div class="order-items" id="orderItems">
+                                            <!-- Order items loaded by JavaScript -->
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Shipping Info -->
+                                    <div class="shipping-info mb-4">
+                                        <h6 class="mb-3">Shipping Information</h6>
+                                        <p id="shippingInfo">Loading...</p>
+                                    </div>
+                                    
+                                    <!-- Payment Info -->
+                                    <div class="payment-info mb-4">
+                                        <h6 class="mb-3">Payment Method</h6>
+                                        <p id="paymentInfo">Loading...</p>
+                                    </div>
+                                    
+                                    <!-- Order Totals -->
+                                    <div class="order-totals">
+                                        <h6 class="mb-3">Order Totals</h6>
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <span>Subtotal:</span>
+                                            <span id="orderSubtotal">$0.00</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <span>Shipping:</span>
+                                            <span id="orderShipping">$0.00</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <span>Tax:</span>
+                                            <span id="orderTax">$0.00</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between fw-bold fs-5">
+                                            <span>Total:</span>
+                                            <span id="orderTotal">$0.00</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Terms & Conditions -->
+                                    <div class="terms-conditions mt-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="termsAgreement" required>
+                                            <label class="form-check-label" for="termsAgreement">
+                                                I agree to the <a href="#" class="text-decoration-none">Terms & Conditions</a> and <a href="#" class="text-decoration-none">Privacy Policy</a> *
+                                            </label>
+                                        </div>
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input" type="checkbox" id="newsletterSignup">
+                                            <label class="form-check-label" for="newsletterSignup">
+                                                Sign me up for the newsletter to receive exclusive offers and style tips
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between">
+                                <button type="button" class="btn btn-outline-dark btn-prev-step" data-prev="payment-step">
+                                    <i class="fas fa-arrow-left me-2"></i>Back to Payment
+                                </button>
+                                <button type="submit" class="btn btn-dark btn-place-order">
+                                    Place Order
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Order Summary Sidebar -->
+                <div class="col-lg-4">
+                    <div class="order-summary-sidebar sticky-top" style="top: 100px;">
+                        <div class="card mb-4">
+                            <div class="card-header bg-white border-bottom">
+                                <h5 class="mb-0">Order Summary</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="order-items-small mb-3" id="orderItemsSmall">
+                                    <!-- Small order items loaded by JavaScript -->
+                                </div>
+                                
+                                <div class="order-totals-small">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Subtotal:</span>
+                                        <span id="orderSubtotalSmall">$0.00</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Shipping:</span>
+                                        <span id="orderShippingSmall">$0.00</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Tax:</span>
+                                        <span id="orderTaxSmall">$0.00</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between fw-bold">
+                                        <span>Total:</span>
+                                        <span id="orderTotalSmall">$0.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Security Badge -->
+                        <div class="security-badge card mb-4">
+                            <div class="card-body text-center">
+                                <i class="fas fa-lock fa-2x text-success mb-3"></i>
+                                <h6 class="mb-2">Secure Checkout</h6>
+                                <p class="small text-muted mb-0">Your payment information is encrypted and secure.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Need Help -->
+                        <div class="need-help card">
+                            <div class="card-body">
+                                <h6 class="mb-3"><i class="fas fa-headset me-2"></i>Need Help?</h6>
+                                <p class="small mb-2">Our customer support team is available 24/7 to assist you.</p>
+                                <a href="contact.html" class="small text-decoration-none">Contact Support →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mb-3">Stay Updated</h2>
+                    <p class="mb-4">Subscribe for new arrivals, exclusive offers, and style inspiration.</p>
+                    <form class="newsletter-form">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Enter your email address" required>
+                            <button class="btn btn-light" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <a href="../index.html" class="d-flex align-items-center mb-3 text-white text-decoration-none">
+                        <img src="../assets/images/logo.svg" alt="LuxeThreads Logo" height="40">
+                        <span class="brand-name ms-2">LuxeThreads</span>
+                    </a>
+                    <p class="text-light">Premium fashion and apparel for the modern individual. Quality craftsmanship meets contemporary design.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Shop</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="shop.html" class="text-light text-decoration-none">All Products</a></li>
+                        <li><a href="shop.html?category=women" class="text-light text-decoration-none">Women</a></li>
+                        <li><a href="shop.html?category=men" class="text-light text-decoration-none">Men</a></li>
+                        <li><a href="shop.html?category=accessories" class="text-light text-decoration-none">Accessories</a></li>
+                        <li><a href="shop.html?sale=true" class="text-light text-decoration-none">Sale</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-light text-decoration-none">About Us</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none">Contact Us</a></li>
+                        <li><a href="faq.html" class="text-light text-decoration-none">FAQs</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Shipping Policy</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Return Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled text-light">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Fashion Avenue, New York, NY</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> (555) 123-4567</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> hello@luxethreads.com</li>
+                        <li><i class="fas fa-clock me-2"></i> Mon-Fri: 9AM-6PM EST</li>
+                    </ul>
+                    <div class="payment-methods mt-3 h2">
+                        <i class="fa-brands fa-cc-visa me-2" width="40"></i>
+                        <i class="fa-brands fa-cc-mastercard me-2" width="40"></i>
+                        <i class="fa-brands fa-paypal me-2" width="40"></i>
+                        <i class="fa-brands fa-apple-pay" width="40"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="bg-light">
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; <script>document.write(new Date().getFullYear());</script> LuxeThreads. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-light text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/cart.js"></script>
+</body>
+</html>

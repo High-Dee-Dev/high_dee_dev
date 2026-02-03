@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frequently Asked Questions - LuxeThreads Customer Support">
+    <title>FAQ | LuxeThreads</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/8140dd2669.js" crossorigin="anonymous"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/images/logo.svg" alt="LuxeThreads Logo" height="40">
+                <span class="brand-name">LuxeThreads</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="shopDropdown" role="button" data-bs-toggle="dropdown">
+                            Shop
+                        </a>
+                        <div class="dropdown-menu mega-menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <h6>Women's Fashion</h6>
+                                        <a class="dropdown-item" href="shop.html?category=women-dresses">Dresses</a>
+                                        <a class="dropdown-item" href="shop.html?category=women-tops">Tops</a>
+                                        <a class="dropdown-item" href="shop.html?category=women-jeans">Jeans</a>
+                                        <a class="dropdown-item" href="shop.html?category=women-activewear">Activewear</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6>Men's Fashion</h6>
+                                        <a class="dropdown-item" href="shop.html?category=men-shirts">Shirts</a>
+                                        <a class="dropdown-item" href="shop.html?category=men-pants">Pants</a>
+                                        <a class="dropdown-item" href="shop.html?category=men-jackets">Jackets</a>
+                                        <a class="dropdown-item" href="shop.html?category=men-shoes">Shoes</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6>Accessories</h6>
+                                        <a class="dropdown-item" href="shop.html?category=bags">Bags</a>
+                                        <a class="dropdown-item" href="shop.html?category=jewelry">Jewelry</a>
+                                        <a class="dropdown-item" href="shop.html?category=watches">Watches</a>
+                                        <a class="dropdown-item" href="shop.html?category=sunglasses">Sunglasses</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6>Featured Collections</h6>
+                                        <a class="dropdown-item" href="shop.html?collection=summer">Summer <script>document.write(new Date().getFullYear());</script></a>
+                                        <a class="dropdown-item" href="shop.html?collection=new">New Arrivals</a>
+                                        <a class="dropdown-item" href="shop.html?sale=true">Sale Items</a>
+                                        <a class="dropdown-item" href="shop.html?bestsellers=true">Best Sellers</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex align-items-center">
+                    <a href="#" class="nav-icon me-3" id="searchToggle">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a href="wishlist.html" class="nav-icon me-3">
+                        <i class="far fa-heart"></i>
+                        <span class="badge bg-danger wishlist-count">3</span>
+                    </a>
+                    <a href="account.html" class="nav-icon me-3">
+                        <i class="far fa-user"></i>
+                    </a>
+                    <a href="cart.html" class="nav-icon position-relative">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="badge bg-primary cart-count">2</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-bar-container" id="searchBar">
+                <div class="container">
+                    <form class="search-form">
+                        <input type="text" class="form-control" placeholder="Search for products, brands, or categories...">
+                        <button type="submit" class="btn btn-dark">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <button type="button" class="btn btn-link" id="closeSearch">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FAQ Header -->
+    <section class="faq-header py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-5 fw-bold mb-3">Frequently Asked Questions</h1>
+                    <p class="lead text-muted mb-4">Find answers to common questions about shopping at LuxeThreads</p>
+                    
+                    <!-- Search Bar -->
+                    <div class="faq-search mb-4">
+                        <div class="input-group input-group-lg">
+                            <span class="input-group-text bg-white border-end-0">
+                                <i class="fas fa-search text-muted"></i>
+                            </span>
+                            <input type="text" class="form-control border-start-0" placeholder="Search for answers..." id="faqSearch">
+                            <button class="btn btn-dark" type="button">Search</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Links -->
+                    <div class="quick-links">
+                        <a href="#ordering" class="btn btn-outline-dark btn-sm me-2 mb-2">Ordering</a>
+                        <a href="#shipping" class="btn btn-outline-dark btn-sm me-2 mb-2">Shipping</a>
+                        <a href="#returns" class="btn btn-outline-dark btn-sm me-2 mb-2">Returns</a>
+                        <a href="#products" class="btn btn-outline-dark btn-sm me-2 mb-2">Products</a>
+                        <a href="#account" class="btn btn-outline-dark btn-sm me-2 mb-2">Account</a>
+                        <a href="#payments" class="btn btn-outline-dark btn-sm mb-2">Payments</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Content -->
+    <section class="faq-content py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar Categories -->
+                <div class="col-lg-3 mb-5 mb-lg-0">
+                    <div class="faq-sidebar sticky-top" style="top: 20px;">
+                        <h5 class="mb-4">Categories</h5>
+                        <div class="list-group">
+                            <a href="#ordering" class="list-group-item list-group-item-action active">
+                                <i class="fas fa-shopping-cart me-2"></i> Ordering
+                            </a>
+                            <a href="#shipping" class="list-group-item list-group-item-action">
+                                <i class="fas fa-shipping-fast me-2"></i> Shipping & Delivery
+                            </a>
+                            <a href="#returns" class="list-group-item list-group-item-action">
+                                <i class="fas fa-exchange-alt me-2"></i> Returns & Exchanges
+                            </a>
+                            <a href="#products" class="list-group-item list-group-item-action">
+                                <i class="fas fa-tshirt me-2"></i> Products & Sizing
+                            </a>
+                            <a href="#account" class="list-group-item list-group-item-action">
+                                <i class="far fa-user me-2"></i> Account & Membership
+                            </a>
+                            <a href="#payments" class="list-group-item list-group-item-action">
+                                <i class="fas fa-credit-card me-2"></i> Payments & Pricing
+                            </a>
+                            <a href="#sustainability" class="list-group-item list-group-item-action">
+                                <i class="fas fa-leaf me-2"></i> Sustainability
+                            </a>
+                            <a href="#contact" class="list-group-item list-group-item-action">
+                                <i class="fas fa-headset me-2"></i> Contact Support
+                            </a>
+                        </div>
+                        
+                        <!-- Support Card -->
+                        <div class="support-card mt-4 p-3 bg-light rounded">
+                            <h6 class="mb-2">Need More Help?</h6>
+                            <p class="small mb-3">Can't find the answer you're looking for? Our support team is here to help.</p>
+                            <a href="contact.html" class="btn btn-sm btn-dark w-100 mb-2">Contact Support</a>
+                            <div class="text-center small">
+                                <i class="fas fa-phone me-1"></i> (555) 123-4567<br>
+                                <i class="far fa-clock me-1"></i> Mon-Fri, 9am-6pm EST
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Items -->
+                <div class="col-lg-9">
+                    <!-- Ordering Section -->
+                    <div class="faq-section mb-5" id="ordering">
+                        <h3 class="mb-4"><i class="fas fa-shopping-cart me-2"></i>Ordering</h3>
+                        <div class="accordion" id="orderingAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ordering1">
+                                        How do I place an order?
+                                    </button>
+                                </h2>
+                                <div id="ordering1" class="accordion-collapse collapse show" data-bs-parent="#orderingAccordion">
+                                    <div class="accordion-body">
+                                        <p>Placing an order is simple! Browse our collection, select your desired items, choose your size and color, then click "Add to Cart." When you're ready, proceed to checkout, enter your shipping and payment information, and confirm your order. You'll receive an order confirmation email immediately.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ordering2">
+                                        Can I modify or cancel my order?
+                                    </button>
+                                </h2>
+                                <div id="ordering2" class="accordion-collapse collapse" data-bs-parent="#orderingAccordion">
+                                    <div class="accordion-body">
+                                        <p>You can modify or cancel your order within 1 hour of placing it by contacting our customer service team at support@luxethreads.com or calling (555) 123-4567. After 1 hour, your order enters our processing system and cannot be modified. However, you can always return items once received following our return policy.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ordering3">
+                                        How do I use a promo code?
+                                    </button>
+                                </h2>
+                                <div id="ordering3" class="accordion-collapse collapse" data-bs-parent="#orderingAccordion">
+                                    <div class="accordion-body">
+                                        <p>During checkout, you'll see a field labeled "Promo Code" or "Discount Code" in the order summary section. Enter your code there and click "Apply." The discount will be immediately reflected in your order total. Note that only one promo code can be used per order.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ordering4">
+                                        Do you offer gift cards?
+                                    </button>
+                                </h2>
+                                <div id="ordering4" class="accordion-collapse collapse" data-bs-parent="#orderingAccordion">
+                                    <div class="accordion-body">
+                                        <p>Yes! LuxeThreads gift cards are available in denominations from $25 to $500. They can be purchased online and are delivered via email. Gift cards never expire and can be used for purchases on our website. They make perfect gifts for any fashion enthusiast!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Shipping Section -->
+                    <div class="faq-section mb-5" id="shipping">
+                        <h3 class="mb-4"><i class="fas fa-shipping-fast me-2"></i>Shipping & Delivery</h3>
+                        <div class="accordion" id="shippingAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#shipping1">
+                                        What shipping options do you offer?
+                                    </button>
+                                </h2>
+                                <div id="shipping1" class="accordion-collapse collapse show" data-bs-parent="#shippingAccordion">
+                                    <div class="accordion-body">
+                                        <p>We offer several shipping options:</p>
+                                        <ul>
+                                            <li><strong>Standard Shipping:</strong> 5-7 business days - $5.99 (Free on orders over $100)</li>
+                                            <li><strong>Express Shipping:</strong> 2-3 business days - $14.99</li>
+                                            <li><strong>Overnight Shipping:</strong> Next business day - $24.99</li>
+                                            <li><strong>International Shipping:</strong> Varies by destination - calculated at checkout</li>
+                                        </ul>
+                                        <p>All orders are processed within 1-2 business days.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#shipping2">
+                                        Do you ship internationally?
+                                    </button>
+                                </h2>
+                                <div id="shipping2" class="accordion-collapse collapse" data-bs-parent="#shippingAccordion">
+                                    <div class="accordion-body">
+                                        <p>Yes, we ship to over 50 countries worldwide. International shipping rates and delivery times vary by destination and will be calculated at checkout. Please note that international orders may be subject to customs duties and taxes, which are the responsibility of the recipient.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#shipping3">
+                                        How can I track my order?
+                                    </button>
+                                </h2>
+                                <div id="shipping3" class="accordion-collapse collapse" data-bs-parent="#shippingAccordion">
+                                    <div class="accordion-body">
+                                        <p>Once your order ships, you'll receive a tracking number via email. You can use this number to track your package on the carrier's website. You can also track your order by logging into your LuxeThreads account and viewing your order history.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#shipping4">
+                                        What if my package is lost or damaged?
+                                    </button>
+                                </h2>
+                                <div id="shipping4" class="accordion-collapse collapse" data-bs-parent="#shippingAccordion">
+                                    <div class="accordion-body">
+                                        <p>If your package is lost in transit or arrives damaged, please contact our customer service team within 7 days of the expected delivery date. We'll work with the shipping carrier to resolve the issue and arrange for a replacement or refund. Please save all packaging materials for damaged items as they may be required for the claims process.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Returns Section -->
+                    <div class="faq-section mb-5" id="returns">
+                        <h3 class="mb-4"><i class="fas fa-exchange-alt me-2"></i>Returns & Exchanges</h3>
+                        <div class="accordion" id="returnsAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#returns1">
+                                        What is your return policy?
+                                    </button>
+                                </h2>
+                                <div id="returns1" class="accordion-collapse collapse show" data-bs-parent="#returnsAccordion">
+                                    <div class="accordion-body">
+                                        <p>We offer a 30-day return policy from the date of delivery. Items must be unworn, unwashed, and in their original condition with all tags attached. Final sale items, personalized items, and underwear/swimwear (for hygiene reasons) cannot be returned. Return shipping is free for U.S. customers.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#returns2">
+                                        How do I initiate a return or exchange?
+                                    </button>
+                                </h2>
+                                <div id="returns2" class="accordion-collapse collapse" data-bs-parent="#returnsAccordion">
+                                    <div class="accordion-body">
+                                        <p>To initiate a return or exchange:</p>
+                                        <ol>
+                                            <li>Log into your LuxeThreads account</li>
+                                            <li>Go to "My Orders" and select the order you wish to return</li>
+                                            <li>Click "Return Items" and follow the prompts</li>
+                                            <li>Print the prepaid return label (for U.S. customers)</li>
+                                            <li>Pack the items securely with the original packaging</li>
+                                            <li>Drop off at any UPS location</li>
+                                        </ol>
+                                        <p>Once we receive and process your return, you'll receive a refund or exchange within 5-7 business days.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#returns3">
+                                        How long do refunds take?
+                                    </button>
+                                </h2>
+                                <div id="returns3" class="accordion-collapse collapse" data-bs-parent="#returnsAccordion">
+                                    <div class="accordion-body">
+                                        <p>Once we receive your return, it takes 3-5 business days to process. Refunds are then issued to your original payment method. The time it takes for the refund to appear on your account depends on your bank or credit card company, but typically takes 5-10 business days.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#returns4">
+                                        Do you offer price adjustments?
+                                    </button>
+                                </h2>
+                                <div id="returns4" class="accordion-collapse collapse" data-bs-parent="#returnsAccordion">
+                                    <div class="accordion-body">
+                                        <p>Yes, we offer price adjustments within 7 days of purchase if an item goes on sale. To request a price adjustment, contact our customer service team with your order number and the item in question. Price adjustments are not available on clearance or final sale items.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Products & Sizing Section -->
+                    <div class="faq-section mb-5" id="products">
+                        <h3 class="mb-4"><i class="fas fa-tshirt me-2"></i>Products & Sizing</h3>
+                        <div class="accordion" id="productsAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#products1">
+                                        How do I find the right size?
+                                    </button>
+                                </h2>
+                                <div id="products1" class="accordion-collapse collapse show" data-bs-parent="#productsAccordion">
+                                    <div class="accordion-body">
+                                        <p>We provide detailed size guides for each product category. When viewing a product, click on the "Size Guide" link near the size selector. This will show measurements in both inches and centimeters. For the best fit, we recommend measuring yourself and comparing to our size chart rather than relying on your usual size, as sizing can vary between brands.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#products2">
+                                        What materials are your products made from?
+                                    </button>
+                                </h2>
+                                <div id="products2" class="accordion-collapse collapse" data-bs-parent="#productsAccordion">
+                                    <div class="accordion-body">
+                                        <p>At LuxeThreads, we prioritize quality and sustainability. Our materials include:</p>
+                                        <ul>
+                                            <li><strong>Natural Fibers:</strong> Organic cotton, linen, silk, wool, and cashmere</li>
+                                            <li><strong>Sustainable Alternatives:</strong> Tencel™, recycled polyester, and bamboo</li>
+                                            <li><strong>Premium Leather:</strong> Responsibly sourced and vegetable-tanned</li>
+                                            <li><strong>Eco-Friendly Materials:</strong> Cork, recycled metals, and conflict-free gemstones</li>
+                                        </ul>
+                                        <p>Each product page lists the exact materials used.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#products3">
+                                        How do I care for my LuxeThreads items?
+                                    </button>
+                                </h2>
+                                <div id="products3" class="accordion-collapse collapse" data-bs-parent="#productsAccordion">
+                                    <div class="accordion-body">
+                                        <p>Care instructions are provided on the label of each item. Generally, we recommend:</p>
+                                        <ul>
+                                            <li><strong>Washing:</strong> Cold water, gentle cycle, or hand wash</li>
+                                            <li><strong>Drying:</strong> Air dry flat to maintain shape</li>
+                                            <li><strong>Ironing:</strong> Low heat or steam, with a cloth barrier for delicate fabrics</li>
+                                            <li><strong>Storage:</strong> Store in cool, dry places away from direct sunlight</li>
+                                            <li><strong>Special Items:</strong> Dry clean only when specified (like silk or wool)</li>
+                                        </ul>
+                                        <p>Proper care will extend the life of your luxury garments.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#products4">
+                                        Are your products ethically made?
+                                    </button>
+                                </h2>
+                                <div id="products4" class="accordion-collapse collapse" data-bs-parent="#productsAccordion">
+                                    <div class="accordion-body">
+                                        <p>Yes, ethical production is at the core of our brand. We:</p>
+                                        <ul>
+                                            <li>Work only with certified factories that ensure fair wages and safe working conditions</li>
+                                            <li>Conduct regular audits of our supply chain</li>
+                                            <li>Source materials from responsible suppliers</li>
+                                            <li>Support artisan communities through fair trade partnerships</li>
+                                            <li>Are transparent about our manufacturing processes</li>
+                                        </ul>
+                                        <p>You can learn more about our ethical practices on our <a href="about.html">About Us</a> page.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Account Section -->
+                    <div class="faq-section mb-5" id="account">
+                        <h3 class="mb-4"><i class="far fa-user me-2"></i>Account & Membership</h3>
+                        <div class="accordion" id="accountAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#account1">
+                                        How do I create an account?
+                                    </button>
+                                </h2>
+                                <div id="account1" class="accordion-collapse collapse show" data-bs-parent="#accountAccordion">
+                                    <div class="accordion-body">
+                                        <p>Creating an account is easy! Click on the user icon in the top navigation and select "Create Account." You can also create an account during checkout. Having an account allows you to track orders, save your address and payment information, create wishlists, and earn loyalty points.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#account2">
+                                        What are the benefits of LuxeThreads membership?
+                                    </button>
+                                </h2>
+                                <div id="account2" class="accordion-collapse collapse" data-bs-parent="#accountAccordion">
+                                    <div class="accordion-body">
+                                        <p>Our membership program offers exclusive benefits:</p>
+                                        <ul>
+                                            <li><strong>Loyalty Points:</strong> Earn 1 point per $1 spent, redeemable for discounts</li>
+                                            <li><strong>Early Access:</strong> Shop new collections 24 hours before the public</li>
+                                            <li><strong>Free Shipping:</strong> Enjoy free standard shipping on all orders</li>
+                                            <li><strong>Birthday Gift:</strong> Receive a special gift during your birthday month</li>
+                                            <li><strong>VIP Events:</strong> Invitations to exclusive sales and events</li>
+                                            <li><strong>Extended Returns:</strong> 45-day return window instead of 30</li>
+                                            <li><strong>Personal Stylist:</strong> Complimentary virtual styling sessions</li>
+                                        </ul>
+                                        <p>Membership is free and automatic when you create an account.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#account3">
+                                        How do I reset my password?
+                                    </button>
+                                </h2>
+                                <div id="account3" class="accordion-collapse collapse" data-bs-parent="#accountAccordion">
+                                    <div class="accordion-body">
+                                        <p>If you've forgotten your password:</p>
+                                        <ol>
+                                            <li>Go to the login page</li>
+                                            <li>Click "Forgot Password"</li>
+                                            <li>Enter the email address associated with your account</li>
+                                            <li>Check your email for a password reset link</li>
+                                            <li>Click the link and create a new password</li>
+                                        </ol>
+                                        <p>If you don't receive the email within 10 minutes, check your spam folder or contact customer service.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#account4">
+                                        Can I merge multiple accounts?
+                                    </button>
+                                </h2>
+                                <div id="account4" class="accordion-collapse collapse" data-bs-parent="#accountAccordion">
+                                    <div class="accordion-body">
+                                        <p>Yes, we can merge multiple accounts to combine your order history and loyalty points. Please contact our customer service team with the email addresses associated with each account you'd like to merge. Note that we can only merge accounts belonging to the same individual.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Still Have Questions? -->
+                    <div class="still-questions mt-5 p-4 bg-light rounded text-center">
+                        <h4 class="mb-3">Still Have Questions?</h4>
+                        <p class="mb-4">Can't find what you're looking for? Our customer support team is ready to help.</p>
+                        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                            <a href="contact.html" class="btn btn-dark btn-lg">
+                                <i class="fas fa-headset me-2"></i>Contact Support
+                            </a>
+                            <a href="tel:5551234567" class="btn btn-outline-dark btn-lg">
+                                <i class="fas fa-phone me-2"></i>Call Now
+                            </a>
+                        </div>
+                        <div class="mt-4">
+                            <p class="mb-1"><strong>Email:</strong> support@luxethreads.com</p>
+                            <p class="mb-0"><strong>Phone:</strong> (555) 123-4567 | <strong>Hours:</strong> Mon-Fri, 9am-6pm EST</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <a href="../index.html" class="d-flex align-items-center mb-3 text-white text-decoration-none">
+                        <img src="../assets/images/logo.svg" alt="LuxeThreads Logo" height="40">
+                        <span class="brand-name ms-2">LuxeThreads</span>
+                    </a>
+                    <p class="text-light">Premium fashion and apparel for the modern individual. Quality craftsmanship meets contemporary design.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Shop</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="shop.html" class="text-light text-decoration-none">All Products</a></li>
+                        <li><a href="shop.html?category=women" class="text-light text-decoration-none">Women</a></li>
+                        <li><a href="shop.html?category=men" class="text-light text-decoration-none">Men</a></li>
+                        <li><a href="shop.html?category=accessories" class="text-light text-decoration-none">Accessories</a></li>
+                        <li><a href="shop.html?sale=true" class="text-light text-decoration-none">Sale</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-light text-decoration-none">About Us</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none">Contact Us</a></li>
+                        <li><a href="faq.html" class="text-light text-decoration-none">FAQs</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Shipping Policy</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Return Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled text-light">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Fashion Avenue, New York, NY</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> (555) 123-4567</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> hello@luxethreads.com</li>
+                        <li><i class="fas fa-clock me-2"></i> Mon-Fri: 9AM-6PM EST</li>
+                    </ul>
+                    <div class="payment-methods mt-3 h2">
+                        <i class="fa-brands fa-cc-visa me-2" width="40"></i>
+                        <i class="fa-brands fa-cc-mastercard me-2" width="40"></i>
+                        <i class="fa-brands fa-paypal me-2" width="40"></i>
+                        <i class="fa-brands fa-apple-pay" width="40"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="bg-light">
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; <script>document.write(new Date().getFullYear());</script> LuxeThreads. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-light text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/faq.js"></script>
+</body>
+</html>

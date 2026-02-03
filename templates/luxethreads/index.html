@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LuxeThreads - Premium fashion and apparel e-commerce template for modern clothing brands">
+    <meta name="keywords" content="fashion, clothing, apparel, ecommerce, bootstrap template">
+    <meta name="author" content="LuxeThreads">
+    
+    <title>LuxeThreads | Premium Fashion & Apparel</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/8140dd2669.js" crossorigin="anonymous"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.svg" alt="LuxeThreads Logo" height="40">
+                <span class="brand-name">LuxeThreads</span>
+            </a>
+            
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Main Navigation -->
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="shopDropdown" role="button" data-bs-toggle="dropdown">
+                            Shop
+                        </a>
+                        <div class="dropdown-menu mega-menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <h6>Women's Fashion</h6>
+                                        <a class="dropdown-item" href="pages/shop.html?category=women-dresses">Dresses</a>
+                                        <a class="dropdown-item" href="pages/shop.html?category=women-tops">Tops</a>
+                                        <a class="dropdown-item" href="pages/shop.html?category=women-jeans">Jeans</a>
+                                        <a class="dropdown-item" href="pages/shop.html?category=women-activewear">Activewear</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6>Men's Fashion</h6>
+                                        <a class="dropdown-item" href="pages/shop.html?category=men-shirts">Shirts</a>
+                                        <a class="dropdown-item" href="pages/shop.html?category=men-pants">Pants</a>
+                                        <a class="dropdown-item" href="pages/shop.html?category=men-jackets">Jackets</a>
+                                        <a class="dropdown-item" href="pages/shop.html?category=men-shoes">Shoes</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6>Accessories</h6>
+                                        <a class="dropdown-item" href="pages/shop.html?category=bags">Bags</a>
+                                        <a class="dropdown-item" href="pages/shop.html?category=jewelry">Jewelry</a>
+                                        <a class="dropdown-item" href="pages/shop.html?category=watches">Watches</a>
+                                        <a class="dropdown-item" href="pages/shop.html?category=sunglasses">Sunglasses</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6>Featured Collections</h6>
+                                        <a class="dropdown-item" href="pages/shop.html?collection=summer">Summer <script>document.write(new Date().getFullYear());</script></a>
+                                        <a class="dropdown-item" href="pages/shop.html?collection=new">New Arrivals</a>
+                                        <a class="dropdown-item" href="pages/shop.html?sale=true">Sale Items</a>
+                                        <a class="dropdown-item" href="pages/shop.html?bestsellers=true">Best Sellers</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/contact.html">Contact</a>
+                    </li>
+                </ul>
+                
+                <!-- Right Navigation Icons -->
+                <div class="d-flex align-items-center">
+                    <a href="#" class="nav-icon me-3" id="searchToggle">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a href="pages/wishlist.html" class="nav-icon me-3">
+                        <i class="far fa-heart"></i>
+                        <span class="badge bg-danger wishlist-count">3</span>
+                    </a>
+                    <a href="pages/account.html" class="nav-icon me-3">
+                        <i class="far fa-user"></i>
+                    </a>
+                    <a href="pages/cart.html" class="nav-icon position-relative">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="badge bg-primary cart-count">2</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Search Bar -->
+            <div class="search-bar-container" id="searchBar">
+                <div class="container">
+                    <form class="search-form">
+                        <input type="text" class="form-control" placeholder="Search for products, brands, or categories...">
+                        <button type="submit" class="btn btn-dark">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <button type="button" class="btn btn-link" id="closeSearch">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="display-4 fw-bold mb-4">Summer Collection <script>document.write(new Date().getFullYear());</script></h1>
+                        <p class="lead mb-4">Discover premium fabrics, timeless designs, and modern silhouettes crafted for the sophisticated individual.</p>
+                        <a href="pages/shop.html?collection=summer" class="btn btn-dark btn-lg px-5 py-3">Shop Collection</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <img src="assets/images/banners/hero-banner.jpg" alt="Summer Fashion Collection <script>document.write(new Date().getFullYear());</script>" class="img-fluid rounded shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="trust-badges py-4 bg-light">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 col-6 mb-3">
+                    <img src="assets/images/icons/shipping.svg" alt="Free Shipping" height="40" width="40" class="mb-2">
+                    <h6 class="mb-1">Free Shipping</h6>
+                    <p class="small text-muted mb-0">On orders over $100</p>
+                </div>
+                <div class="col-md-3 col-6 mb-3">
+                    <i class="fas fa-undo fa-2x mb-2 text-muted" height="40" width="40"></i>
+                    <h6 class="mb-1">Easy Returns</h6>
+                    <p class="small text-muted mb-0">30-day return policy</p>
+                </div>
+                <div class="col-md-3 col-6 mb-3">
+                    <i class="fas fa-shield-alt fa-2x text-muted mb-2" height="40" width="40"></i>
+                    <h6 class="mb-1">Secure Payment</h6>
+                    <p class="small text-muted mb-0">100% secure transactions</p>
+                </div>
+                <div class="col-md-3 col-6 mb-3">
+                    <i class="fas fa-award fa-2x text-muted mb-2" height="40" width="40"></i>
+                    <h6 class="mb-1">Quality Guarantee</h6>
+                    <p class="small text-muted mb-0">Premium craftsmanship</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="section-title">Featured Products</h2>
+                    <p class="section-subtitle">Curated selection of our premium items</p>
+                </div>
+            </div>
+            
+            <div class="row" id="featuredProducts">
+                <!-- Product cards will be loaded here by JavaScript -->
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <a href="pages/shop.html" class="btn btn-outline-dark btn-lg">View All Products</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Section -->
+    <section class="banner-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <div class="banner-card position-relative overflow-hidden rounded shadow">
+                        <img src="assets/images/banners/summer-collection.jpg" alt="Summer Essentials" class="img-fluid">
+                        <div class="banner-content position-absolute">
+                            <h3 class="text-white">Summer Essentials</h3>
+                            <p class="text-white">Lightweight fabrics and breezy styles</p>
+                            <a href="pages/shop.html?category=summer" class="btn btn-light">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="banner-card position-relative overflow-hidden rounded shadow">
+                        <img src="assets/images/banners/winter-collection.jpg" alt="Winter Collection" class="img-fluid">
+                        <div class="banner-content position-absolute">
+                            <h3 class="text-white">Winter Collection</h3>
+                            <p class="text-white">Cozy styles for colder days</p>
+                            <a href="pages/shop.html?category=winter" class="btn btn-light">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="section-title">What Our Customers Say</h2>
+                    <p class="section-subtitle">Join thousands of satisfied shoppers</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card p-4 rounded shadow-sm bg-white h-100">
+                        <div class="rating mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="mb-4">"The quality of the silk dress exceeded my expectations. It fits perfectly and looks even better in person. Shipping was fast too!"</p>
+                        <div class="d-flex align-items-center">
+                            <img src="assets/images/testimonials/testimonial1.jpg" alt="Sarah Johnson" class="rounded-circle me-3" width="50" height="50">
+                            <div>
+                                <h6 class="mb-0">Sarah Johnson</h6>
+                                <small class="text-muted">Los Angeles, CA</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card p-4 rounded shadow-sm bg-white h-100">
+                        <div class="rating mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star-half-alt text-warning"></i>
+                        </div>
+                        <p class="mb-4">"I've ordered multiple times from LuxeThreads and each piece has been impeccable. Their attention to detail is remarkable."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="assets/images/testimonials/testimonial2.jpg" alt="Michael Chen" class="rounded-circle me-3" width="50" height="50">
+                            <div>
+                                <h6 class="mb-0">Michael Chen</h6>
+                                <small class="text-muted">New York, NY</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card p-4 rounded shadow-sm bg-white h-100">
+                        <div class="rating mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="mb-4">"The customer service team helped me choose the right size and the jacket fits perfectly. Will definitely shop here again!"</p>
+                        <div class="d-flex align-items-center">
+                            <img src="assets/images/testimonials/testimonial3.jpg" alt="Jessica Williams" class="rounded-circle me-3" width="50" height="50">
+                            <div>
+                                <h6 class="mb-0">Jessica Williams</h6>
+                                <small class="text-muted">Miami, FL</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Gallery -->
+    <section class="instagram-gallery py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="section-title">Follow Our Style</h2>
+                    <p class="section-subtitle">Tag <strong>@luxethreads</strong> for a chance to be featured</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-2 col-4 mb-3">
+                    <a href="#" class="gallery-item">
+                        <img src="assets/images/gallery/insta1.jpg" alt="Instagram post 1" class="img-fluid rounded">
+                    </a>
+                </div>
+                <div class="col-md-2 col-4 mb-3">
+                    <a href="#" class="gallery-item">
+                        <img src="assets/images/gallery/insta2.jpg" alt="Instagram post 2" class="img-fluid rounded">
+                    </a>
+                </div>
+                <div class="col-md-2 col-4 mb-3">
+                    <a href="#" class="gallery-item">
+                        <img src="assets/images/gallery/insta3.jpg" alt="Instagram post 3" class="img-fluid rounded">
+                    </a>
+                </div>
+                <div class="col-md-2 col-4 mb-3">
+                    <a href="#" class="gallery-item">
+                        <img src="assets/images/gallery/insta4.jpg" alt="Instagram post 4" class="img-fluid rounded">
+                    </a>
+                </div>
+                <div class="col-md-2 col-4 mb-3">
+                    <a href="#" class="gallery-item">
+                        <img src="assets/images/gallery/insta5.jpg" alt="Instagram post 5" class="img-fluid rounded">
+                    </a>
+                </div>
+                <div class="col-md-2 col-4 mb-3">
+                    <a href="#" class="gallery-item">
+                        <img src="assets/images/gallery/insta6.jpg" alt="Instagram post 6" class="img-fluid rounded">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mb-3">Stay In Style</h2>
+                    <p class="mb-4">Subscribe to our newsletter for exclusive offers, style tips, and early access to new collections.</p>
+                    <form class="newsletter-form">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Enter your email address" required>
+                            <button class="btn btn-light" type="submit">Subscribe</button>
+                        </div>
+                        <div class="form-check mx-auto col-lg-9">
+                            <input class="form-check-input" type="checkbox" id="privacyCheck" required>
+                            <label class="form-check-label small" for="privacyCheck">
+                                I agree to receive marketing emails from LuxeThreads. You can unsubscribe at any time.
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <a href="index.html" class="d-flex align-items-center mb-3 text-white text-decoration-none">
+                        <img src="assets/images/logo.svg" alt="LuxeThreads Logo" height="40">
+                        <span class="brand-name ms-2">LuxeThreads</span>
+                    </a>
+                    <p class="text-light">Premium fashion and apparel for the modern individual. Quality craftsmanship meets contemporary design.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Shop</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="pages/shop.html" class="text-light text-decoration-none">All Products</a></li>
+                        <li><a href="pages/shop.html?category=women" class="text-light text-decoration-none">Women</a></li>
+                        <li><a href="pages/shop.html?category=men" class="text-light text-decoration-none">Men</a></li>
+                        <li><a href="pages/shop.html?category=accessories" class="text-light text-decoration-none">Accessories</a></li>
+                        <li><a href="pages/shop.html?sale=true" class="text-light text-decoration-none">Sale</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="pages/about.html" class="text-light text-decoration-none">About Us</a></li>
+                        <li><a href="pages/contact.html" class="text-light text-decoration-none">Contact Us</a></li>
+                        <li><a href="pages/faq.html" class="text-light text-decoration-none">FAQs</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Shipping Policy</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Return Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled text-light">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Fashion Avenue, New York, NY</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> (555) 123-4567</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> hello@luxethreads.com</li>
+                        <li><i class="fas fa-clock me-2"></i> Mon-Fri: 9AM-6PM EST</li>
+                    </ul>
+                    <div class="payment-methods mt-3 h2">
+                        <i class="fa-brands fa-cc-visa me-2" width="40"></i>
+                        <i class="fa-brands fa-cc-mastercard me-2" width="40"></i>
+                        <i class="fa-brands fa-paypal me-2" width="40"></i>
+                        <i class="fa-brands fa-apple-pay" width="40"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="bg-light">
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; <script>document.write(new Date().getFullYear());</script> LuxeThreads. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-light text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quick View Modal -->
+    <div class="modal fade" id="quickViewModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Quick View</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Quick view content loaded by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/product.js"></script>
+</body>
+</html>
