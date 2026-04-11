@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="High Dee Dev — Full-Stack Web Developer. Building practical, scalable web applications with Laravel, PHP, MySQL, and modern frontend technologies." />
+  <meta name="keywords" content="Full-Stack Developer, Laravel, PHP, MySQL, JavaScript, Bootstrap, Web Development" />
+  <meta name="author" content="High Dee Dev" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="High Dee Dev — Full-Stack Web Developer" />
+  <meta property="og:description" content="Building practical, scalable digital solutions with 4+ years of full-stack experience." />
+  <meta property="og:type" content="website" />
+
+  <title>High Dee Dev — Full-Stack Web Developer</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Favicon placeholder -->
+  <link rel="icon" type="image/png" href="assets/images/icon.png" />
+</head>
+<body>
+
+<!-- =========================================================
+     CURSOR DOT (injected by JS)
+     ========================================================= -->
+
+<!-- =========================================================
+     NAVIGATION
+     ========================================================= -->
+<nav id="navbar" aria-label="Primary navigation">
+  <div class="container">
+    <div class="nav-inner">
+
+      <!-- Logo -->
+      <a href="#hero" class="nav-logo" aria-label="Home">
+        &lt;<span>HighDee</span>Dev<span class="cursor"></span>&gt;
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Actions -->
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" title="Toggle light/dark mode">
+          <span class="toggle-knob"><i class="fa-solid fa-moon"></i></span>
+        </button>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Navigation Overlay -->
+<div class="nav-mobile" id="nav-mobile" role="dialog" aria-label="Mobile navigation">
+  <button class="nav-mobile-close" id="nav-mobile-close" aria-label="Close menu">✕</button>
+  <a href="#about">About</a>
+  <a href="#stack">Stack</a>
+  <a href="#projects">Projects</a>
+  <a href="#terminal-section">Terminal</a>
+  <a href="#services">Services</a>
+  <a href="#github">GitHub</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- =========================================================
+     HERO SECTION
+     ========================================================= -->
+<section id="hero" aria-labelledby="hero-name">
+  <div class="container">
+    <div class="hero-inner">
+
+      <!-- Left: Copy -->
+      <div class="hero-left">
+        <div class="hero-eyebrow">Available for freelance & collaborations</div>
+
+        <h1 id="hero-name" class="hero-name">
+          High Dee<br>
+          <span class="line2">Dev</span>
+        </h1>
+
+        <p class="hero-role">
+          <span id="typewriter">Full-Stack Web Developer</span>
+          <span class="separator">|</span>
+        </p>
+
+        <p class="hero-desc">
+          I design and build <strong>practical digital solutions</strong> — from database-driven web apps to clean, responsive interfaces. 4 years of turning complex requirements into <strong>clean, maintainable code</strong> that scales.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#projects" class="btn btn-primary">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg>
+            View Projects
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Contact Me
+          </a>
+        </div>
+
+        <!-- Stats -->
+        <div class="hero-stats">
+          <div class="hero-stat-item">
+            <div class="hero-stat-num">4<span>+</span></div>
+            <div class="hero-stat-label">Years Exp.</div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="hero-stat-num">15<span>+</span></div>
+            <div class="hero-stat-label">Projects</div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="hero-stat-num">10<span>+</span></div>
+            <div class="hero-stat-label">Happy Clients</div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="hero-stat-num">8<span>+</span></div>
+            <div class="hero-stat-label">Tech Skills</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Code Window -->
+      <div class="hero-right">
+        <div class="hero-code-window" aria-hidden="true">
+          <div class="code-win-bar">
+            <span class="dot dot-r"></span>
+            <span class="dot dot-y"></span>
+            <span class="dot dot-g"></span>
+            <span class="code-win-file">UserController.php</span>
+          </div>
+          <div class="code-win-body">
+            <div class="code-line"><span class="ln">1</span><span><span class="cm">// High Dee Dev — Building practical solutions</span></span></div>
+            <div class="code-line"><span class="ln">2</span><span></span></div>
+            <div class="code-line"><span class="ln">3</span><span><span class="kw">namespace</span> <span class="var">App\Http\Controllers</span><span class="op">;</span></span></div>
+            <div class="code-line"><span class="ln">4</span><span></span></div>
+            <div class="code-line"><span class="ln">5</span><span><span class="kw">class</span> <span class="fn">Developer</span> <span class="kw">extends</span> <span class="var">BaseModel</span></span></div>
+            <div class="code-line"><span class="ln">6</span><span><span class="op">{</span></span></div>
+            <div class="code-line"><span class="ln">7</span><span>&nbsp;&nbsp;<span class="kw">protected</span> <span class="prop">$name</span> <span class="op">=</span> <span class="str">'High Dee Dev'</span><span class="op">;</span></span></div>
+            <div class="code-line"><span class="ln">8</span><span>&nbsp;&nbsp;<span class="kw">protected</span> <span class="prop">$years</span> <span class="op">=</span> <span class="num">4</span><span class="op">;</span></span></div>
+            <div class="code-line"><span class="ln">9</span><span></span></div>
+            <div class="code-line"><span class="ln">10</span><span>&nbsp;&nbsp;<span class="kw">public</span> <span class="kw">function</span> <span class="fn">stack</span><span class="op">(): array</span></span></div>
+            <div class="code-line"><span class="ln">11</span><span>&nbsp;&nbsp;<span class="op">{</span></span></div>
+            <div class="code-line"><span class="ln">12</span><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">return</span> <span class="op">[</span></span></div>
+            <div class="code-line"><span class="ln">13</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">'backend'</span>  <span class="op">=></span> <span class="op">[</span><span class="str">'PHP'</span><span class="op">,</span> <span class="str">'Laravel'</span><span class="op">],</span></span></div>
+            <div class="code-line"><span class="ln">14</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">'frontend'</span> <span class="op">=></span> <span class="op">[</span><span class="str">'JS'</span><span class="op">,</span> <span class="str">'Bootstrap'</span><span class="op">],</span></span></div>
+            <div class="code-line"><span class="ln">15</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">'database'</span> <span class="op">=></span> <span class="op">[</span><span class="str">'MySQL'</span><span class="op">],</span></span></div>
+            <div class="code-line"><span class="ln">16</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">'tools'</span>    <span class="op">=></span> <span class="op">[</span><span class="str">'Git'</span><span class="op">,</span> <span class="str">'GitHub'</span><span class="op">],</span></span></div>
+            <div class="code-line"><span class="ln">17</span><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="op">];</span></span></div>
+            <div class="code-line"><span class="ln">18</span><span>&nbsp;&nbsp;<span class="op">}</span></span></div>
+            <div class="code-line"><span class="ln">19</span><span></span></div>
+            <div class="code-line"><span class="ln">20</span><span>&nbsp;&nbsp;<span class="kw">public</span> <span class="kw">function</span> <span class="fn">build</span><span class="op">(</span><span class="prop">$idea</span><span class="op">):</span> <span class="var">Solution</span></span></div>
+            <div class="code-line"><span class="ln">21</span><span>&nbsp;&nbsp;<span class="op">{</span></span></div>
+            <div class="code-line"><span class="ln">22</span><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">return</span> <span class="fn">Solution</span><span class="op">::</span><span class="fn">scalable</span><span class="op">(</span><span class="prop">$idea</span><span class="op">);</span></span></div>
+            <div class="code-line"><span class="ln">23</span><span>&nbsp;&nbsp;<span class="op">}</span></span></div>
+            <div class="code-line"><span class="ln">24</span><span><span class="op">}</span></span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     ABOUT SECTION
+     ========================================================= -->
+<section id="about" class="section-pad" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="about-grid">
+
+      <!-- Left: Visual -->
+      <div class="about-left reveal">
+        <div class="about-avatar-wrap">
+          <div class="about-avatar-placeholder">
+            <img src="assets/images/profile.webp" alt="High Dee Dev" class="img-fluid w-100">
+          </div>
+          <div class="about-badge">
+            <span class="badge-val">4+</span>
+            <span class="badge-lbl">Years of Code</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Story -->
+      <div class="about-story">
+        <span class="section-label">About Me</span>
+        <h2 id="about-heading" class="section-heading reveal">
+          I build things that<br>
+          <span class="text-cyan">actually work.</span>
+        </h2>
+
+        <div class="reveal reveal-delay-1">
+          <p>Hi — I'm <strong>High Dee Dev</strong>, a Full-Stack Web Developer with over 4 years of experience designing and shipping web applications that solve real problems for real users.</p>
+          <p>My journey started with curiosity about how websites worked under the hood. That curiosity grew into a career building everything from data-driven dashboards to multi-user platforms with complex backend logic.</p>
+          <p>I specialise in the full product lifecycle — from database schema design and RESTful API architecture to responsive, accessible front-end interfaces. My go-to stack is <strong>Laravel + MySQL on the backend</strong> and <strong>vanilla JS + Bootstrap on the frontend</strong>, but I'm always learning new tools when the job demands it.</p>
+        </div>
+
+        <!-- Philosophy quote -->
+        <div class="about-philosophy reveal reveal-delay-2">
+          <h4>// Development Philosophy</h4>
+          <p>"Deliver working software early, keep it simple, and iterate. Premature optimisation is the enemy of shipped products."</p>
+        </div>
+        </div>
+        </div>
+        <!-- Pillars -->
+        <div class="about-pillars reveal reveal-delay-3">
+          <div class="pillar">
+            <div class="pillar-icon"><i class="fa-solid fa-bullseye"></i></div>
+            <h4>Problem First</h4>
+            <p>Understand the real problem before writing a single line of code.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon"><i class="fa-solid fa-bolt"></i></div>
+            <h4>Performance</h4>
+            <p>Fast UIs and optimised queries are non-negotiable.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon"><i class="fa-solid fa-lock"></i></div>
+            <h4>Security</h4>
+            <p>Validation, sanitisation, and auth baked in from day one.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon"><i class="fa-solid fa-box"></i></div>
+            <h4>Clean Code</h4>
+            <p>Readable, maintainable code that your future self will thank you for.</p>
+          </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     TECH STACK SECTION
+     ========================================================= -->
+<section id="stack" aria-labelledby="stack-heading">
+  <div class="container section-pad">
+
+    <div class="stack-header">
+      <span class="section-label">Tech Stack</span>
+      <h2 id="stack-heading" class="section-heading reveal">Tools of the trade</h2>
+      <p class="section-subtext reveal reveal-delay-1">The technologies I use to build reliable, scalable applications — each chosen for a reason.</p>
+    </div>
+
+    <div class="stack-categories">
+
+      <!-- Frontend -->
+      <div class="stack-cat reveal reveal-delay-1" data-cat="frontend">
+        <div class="cat-header">
+          <div class="cat-icon"><i class="fa-solid fa-desktop"></i></div>
+          <span class="cat-name">Frontend</span>
+        </div>
+        <div class="skill-items">
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">HTML5</span><span class="skill-pct">95%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="95"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">CSS3</span><span class="skill-pct">92%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="92"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">JavaScript</span><span class="skill-pct">88%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="88"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">Bootstrap</span><span class="skill-pct">90%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="90"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">Ajax</span><span class="skill-pct">85%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="85"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backend -->
+      <div class="stack-cat reveal reveal-delay-2" data-cat="backend">
+        <div class="cat-header">
+          <div class="cat-icon"><i class="fa-solid fa-gear"></i></div>
+          <span class="cat-name">Backend</span>
+        </div>
+        <div class="skill-items">
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">PHP</span><span class="skill-pct">87%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="87"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">Laravel</span><span class="skill-pct">90%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="90"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">RESTful APIs</span><span class="skill-pct">84%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="84"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">MVC Architecture</span><span class="skill-pct">92%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="92"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Database -->
+      <div class="stack-cat reveal reveal-delay-3" data-cat="database">
+        <div class="cat-header">
+          <div class="cat-icon"><i class="fa-solid fa-database"></i></div>
+          <span class="cat-name">Database</span>
+        </div>
+        <div class="skill-items">
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">MySQL</span><span class="skill-pct">83%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="83"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">Schema Design</span><span class="skill-pct">80%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="80"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">Query Optimisation</span><span class="skill-pct">78%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="78"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">Laravel Eloquent</span><span class="skill-pct">88%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="88"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div class="stack-cat reveal reveal-delay-4" data-cat="tools">
+        <div class="cat-header">
+          <div class="cat-icon"><i class="fa-solid fa-wrench"></i></div>
+          <span class="cat-name">Tools &amp; Workflow</span>
+        </div>
+        <div class="skill-items">
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">Git</span><span class="skill-pct">88%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="88"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">GitHub</span><span class="skill-pct">86%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="86"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">CLI / Terminal</span><span class="skill-pct">80%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="80"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">VS Code</span><span class="skill-pct">94%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="94"></div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     PROJECTS SECTION
+     ========================================================= -->
+<section id="projects" class="section-pad" aria-labelledby="projects-heading">
+  <div class="container">
+
+    <div class="projects-header">
+      <span class="section-label">Featured Projects</span>
+      <h2 id="projects-heading" class="section-heading reveal">Things I've built</h2>
+      <p class="section-subtext reveal reveal-delay-1">A selection of real-world projects showcasing my full-stack capabilities.</p>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar reveal reveal-delay-2" role="group" aria-label="Filter projects by technology">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="laravel">Laravel</button>
+      <button class="filter-btn" data-filter="php">PHP</button>
+      <button class="filter-btn" data-filter="javascript">JavaScript</button>
+      <button class="filter-btn" data-filter="mysql">MySQL</button>
+      <button class="filter-btn" data-filter="bootstrap">Bootstrap</button>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="projects-grid">
+
+      <!-- Project 1 -->
+      <article class="project-card reveal" data-tags="php mysql bootstrap ajax">
+        <div class="project-thumb" style="--thumb-gradient: linear-gradient(135deg, #06172d 0%, #0a2a50 100%)">
+          <img src="assets/images/hightrack.webp" class="img-fluid">
+          <div class="project-links-overlay">
+            <a href="https://hightrack.ct.ws/" target="_blank" rel="noopener" class="project-link-btn demo">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Live Demo
+            </a>
+          </div>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Inventory and Sales Management System</h3>
+          <p class="project-desc">A complete inventory and sales management system that tracks stock in real time, supports role-based access, sends automatic low-stock alerts, and provides detailed reporting dashboards.</p>
+          <div class="project-tags">
+            <span class="project-tag">PHP</span>
+            <span class="project-tag">MySQL</span>
+            <span class="project-tag">Bootstrap</span>
+            <span class="project-tag">Ajax</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project-card reveal" data-tags="javascript bootstrap">
+        <div class="project-thumb" style="--thumb-gradient: linear-gradient(135deg, #06172d 0%, #0a2a50 100%)">
+          <img src="assets/images/kta_analytic.webp" class="img-fluid">
+          <div class="project-links-overlay">
+            <a href="https://analyticsprogram-kwaratech.vercel.app/" target="_blank" rel="noopener" class="project-link-btn demo">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Live Demo
+            </a>
+          </div>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Data Analytics Training Program</h3>
+          <p class="project-desc">A 12-week program designed to train individuals in practical data analytics skills and prepare them for global opportunities.</p>
+          <div class="project-tags">
+            <span class="project-tag">javascript</span>
+            <span class="project-tag">Bootstrap</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project-card reveal" data-tags="javascript bootstrap">
+        <div class="project-thumb" style="--thumb-gradient: linear-gradient(135deg, #06172d 0%, #0a2a50 100%)">
+          <img src="assets/images/medialens.webp" class="img-fluid">
+          <div class="project-links-overlay">
+            <a href="https://medialens.highdeedev.space/" target="_blank" rel="noopener" class="project-link-btn demo">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Live Demo
+            </a>
+          </div>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Social Media Preview Tool</h3>
+          <p class="project-desc">A tool that lets you paste links and instantly preview social media content in a clean and organized way.</p>
+          <div class="project-tags">
+            <span class="project-tag">javascript</span>
+            <span class="project-tag">Bootstrap</span>
+          </div>
+        </div>
+      </article>
+    </div>
+    <!-- /projects-grid -->
+  </div>
+</section>
+
+<!-- =========================================================
+     INTERACTIVE TERMINAL SECTION
+     ========================================================= -->
+<section id="terminal-section" aria-labelledby="terminal-heading">
+  <div class="container">
+    <div class="terminal-wrap">
+
+      <div class="terminal-header">
+        <span class="section-label">Interactive Terminal</span>
+        <h2 id="terminal-heading" class="section-heading reveal">Think like a developer</h2>
+        <p class="section-subtext reveal reveal-delay-1">Type commands to explore my background. Try: <code>help</code>, <code>whoami</code>, <code>skills</code>, <code>projects</code></p>
+      </div>
+
+      <div class="terminal-window reveal reveal-delay-2" id="terminal-window" role="region" aria-label="Interactive terminal">
+        <!-- Title bar -->
+        <div class="terminal-bar">
+          <span class="dot dot-r"></span>
+          <span class="dot dot-y"></span>
+          <span class="dot dot-g"></span>
+          <span class="terminal-title">bash — HighDeeDev@portfolio ~ </span>
+          <div class="terminal-actions">
+            <button class="terminal-action-btn" id="terminal-clear" title="Clear terminal">clear</button>
+          </div>
+        </div>
+
+        <!-- Output -->
+        <div class="terminal-body" id="terminal-body" role="log" aria-live="polite" aria-label="Terminal output"></div>
+
+        <!-- Input row -->
+        <div class="terminal-input-row">
+          <span class="terminal-prompt-prefix">
+            <span class="t-at">visitor</span>@<span class="t-at">HighDeeDev</span><span class="t-path"> ~&nbsp;$&nbsp;</span>
+          </span>
+          <input
+            type="text"
+            id="terminal-input"
+            autocomplete="off"
+            autocorrect="off"
+            autocapitalize="off"
+            spellcheck="false"
+            placeholder="type a command..."
+            aria-label="Terminal input"
+          />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     SERVICES SECTION
+     ========================================================= -->
+<section id="services" class="section-pad" aria-labelledby="services-heading">
+  <div class="container">
+
+    <span class="section-label">Services</span>
+    <h2 id="services-heading" class="section-heading reveal">What I can build for you</h2>
+    <p class="section-subtext reveal reveal-delay-1">From MVPs to production-ready systems — I take projects from brief to deployment.</p>
+
+    <div class="services-grid">
+
+      <div class="service-card reveal">
+        <div class="service-num">01</div>
+        <div class="service-icon-wrap"><i class="fa-solid fa-globe"></i></div>
+        <h3 class="service-title">Custom Website Development</h3>
+        <p class="service-desc">Bespoke, responsive websites built from scratch. Clean code, fast performance, and optimised for conversions and search engines.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-num">02</div>
+        <div class="service-icon-wrap"><i class="fa-solid fa-gear"></i></div>
+        <h3 class="service-title">Web Application Development</h3>
+        <p class="service-desc">Full-stack web apps with complex business logic, multi-user roles, real-time features, and scalable architecture.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-num">03</div>
+        <div class="service-icon-wrap"><i class="fa-solid fa-database"></i></div>
+        <h3 class="service-title">Database-Driven Systems</h3>
+        <p class="service-desc">Well-designed relational database schemas, query optimisation, migrations, and data management dashboards built on MySQL.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-num">04</div>
+        <div class="service-icon-wrap"><i class="fa-solid fa-plug"></i></div>
+        <h3 class="service-title">API Integration</h3>
+        <p class="service-desc">Third-party API integration — payment gateways, SMS providers, social auth, maps, data feeds — reliably wired into your app.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-num">05</div>
+        <div class="service-icon-wrap"><i class="fa-solid fa-bolt"></i></div>
+        <h3 class="service-title">Website Optimisation</h3>
+        <p class="service-desc">Performance audits, lazy loading, query caching, code refactoring, and Lighthouse score improvements for existing applications.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-num">06</div>
+        <div class="service-icon-wrap"><i class="fa-solid fa-lock"></i></div>
+        <h3 class="service-title">Security & Code Review</h3>
+        <p class="service-desc">Identify vulnerabilities, implement auth hardening, input validation, CSRF protection, and security best practices in your Laravel apps.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     GITHUB ACTIVITY SECTION
+     ========================================================= -->
+<section id="github" aria-labelledby="github-heading">
+  <div class="container section-pad">
+    <div class="github-inner">
+
+      <!-- Left: Stats -->
+      <div>
+        <span class="section-label">GitHub Activity</span>
+        <h2 id="github-heading" class="section-heading reveal">Always shipping</h2>
+        <p class="section-subtext reveal reveal-delay-1">Consistent contributions across personal projects, client work, and open-source.</p>
+
+        <div class="github-stats-grid" style="margin-top: 36px;">
+          <div class="gh-stat-card reveal">
+            <div class="gh-stat-num">30<span>+</span></div>
+            <div class="gh-stat-lbl">Repositories</div>
+          </div>
+          <div class="gh-stat-card reveal reveal-delay-1">
+            <div class="gh-stat-num">500<span>+</span></div>
+            <div class="gh-stat-lbl">Contributions</div>
+          </div>
+          <div class="gh-stat-card reveal reveal-delay-2">
+            <div class="gh-stat-num">15<span>+</span></div>
+            <div class="gh-stat-lbl">Projects Shipped</div>
+          </div>
+          <div class="gh-stat-card reveal reveal-delay-3">
+            <div class="gh-stat-num">4<span>+</span></div>
+            <div class="gh-stat-lbl">Years Active</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Profile + contribution grid -->
+      <div class="reveal reveal-delay-2">
+        <div class="github-card">
+          <div class="github-profile-row">
+            <div class="gh-avatar" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </div>
+            <div>
+              <div class="gh-username">High Dee Dev</div>
+              <div class="gh-handle">@High-Dee-Dev</div>
+            </div>
+            <a href="https://github.com/High-Dee-Dev/" target="_blank" rel="noopener" class="gh-open-btn" aria-label="Open GitHub profile">
+              View Profile ↗
+            </a>
+          </div>
+
+          <div class="gh-contribution-label">Contribution Activity — last 12 months</div>
+          <div class="contribution-grid" id="contribution-grid" role="img" aria-label="GitHub contribution graph"></div>
+          <div class="contrib-legend" aria-label="Contribution level legend">
+            Less
+            <span class="legend-box"></span>
+            <span class="legend-box l1"></span>
+            <span class="legend-box l2"></span>
+            <span class="legend-box l3"></span>
+            <span class="legend-box l4"></span>
+            More
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     CONTACT SECTION
+     ========================================================= -->
+<section id="contact" class="section-pad" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Left: Info -->
+      <div class="contact-info">
+        <span class="section-label">Get In Touch</span>
+        <h2 id="contact-heading" class="section-heading reveal">Let's build something<br><span class="text-cyan">together.</span></h2>
+        <p class="reveal reveal-delay-1">Have a project in mind, a problem to solve, or just want to talk code? My inbox is always open. I typically respond within 24 hours.</p>
+
+        <div class="contact-channels reveal reveal-delay-2">
+          <a href="https://github.com/High-Dee-Dev/" target="_blank" rel="noopener" class="contact-channel" aria-label="Visit GitHub profile">
+            <div class="ch-icon gh">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </div>
+            <div>
+              <div class="ch-label">GitHub</div>
+              <div class="ch-value">github.com/High-Dee-Dev</div>
+            </div>
+          </a>
+
+          <a href="https://linkedin.com/in/highdeedev" target="_blank" rel="noopener" class="contact-channel" aria-label="Visit LinkedIn profile">
+            <div class="ch-icon li">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </div>
+            <div>
+              <div class="ch-label">LinkedIn</div>
+              <div class="ch-value">linkedin.com/in/highdeedev</div>
+            </div>
+          </a>
+
+          <a href="mailto:high.dee.dev@gmail.com" class="contact-channel" aria-label="Send email">
+            <div class="ch-icon em">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="ch-label">Email</div>
+              <div class="ch-value">high.dee.dev@gmail.com</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="reveal reveal-delay-2">
+        <div class="contact-form-wrap">
+          <form id="contact-form" novalidate aria-label="Contact form">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name">Name *</label>
+                <input type="text" id="contact-name" name="name" placeholder="High Dee" required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email *</label>
+                <input type="email" id="contact-email" name="email" placeholder="highdee@example.com" required autocomplete="email" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-subject">Subject</label>
+              <input type="text" id="contact-subject" name="subject" placeholder="Project enquiry / Freelance work..." />
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message">Message *</label>
+              <textarea id="contact-message" name="message" placeholder="Tell me about your project, timeline, and budget..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send Message
+            </button>
+
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+
+      <div class="footer-logo">&lt;<span>HighDee</span>Dev&gt;</div>
+
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="#about">About</a>
+        <a href="#stack">Stack</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="footer-social" aria-label="Social links">
+        <a href="https://github.com/High-Dee-Dev/" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/highdeedev" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="mailto:high.dee.dev@gmail.com" aria-label="Email">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
+
+      <div class="footer-copy">
+        <p>HighDeeDev &copy; <script>document.write(new Date().getFullYear());</script>, all right reserved.</p>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+<!-- =========================================================
+     BACK TO TOP
+     ========================================================= -->
+<button id="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+
+<!-- =========================================================
+     SCRIPTS
+     ========================================================= -->
+<!-- Bootstrap 5 JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://kit.fontawesome.com/8140dd2669.js" crossorigin="anonymous"></script>
+
+<!-- Portfolio JavaScript -->
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
